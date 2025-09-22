@@ -31,9 +31,6 @@ Homepage = "https://github.com/munch-group/mit-ihh-pib"
 Repository = "https://github.com/munch-group/mit-ihh-pib"
 Documentation = "https://munch-group.org/mit-ihh-pib"
 
-[project.scripts]
-mit-ihh-pib = "mit_ihh_pib:mit_ihh_pib"
-
 [tool.setuptools]
 include-package-data = true
 
@@ -45,11 +42,15 @@ exclude = ["test*"]
 mit_ihh_pib = ["data/*.txt", "data/*.csv", "data/*.pickle", "data/*.h5"]
 
 [tool.pixi.workspace]
-channels = ["conda-forge", "munch-group"]
-platforms = ["osx-arm64", "win-64", "osx-64", "linux-64"]
+channels = ["conda-forge", "munch-group", "bioconda"]
+platforms = ["linux-64"]
 
 [tool.pixi.dependencies]
 python = ">=3.9"
+quarto = ">=1.8.24,<2"
+nbconvert = ">=7.16.6,<8"
+jupyter = ">=1.1.1,<2"
+ipykernel = ">=6.30.1,<7"
 
 # [tool.pixi.pypi-dependencies]
 # Optional PyPI dependencies can be added here
@@ -78,7 +79,8 @@ nodejs = "*"
 seaborn = "*"
 pytables = "*"
 pip = "*"
-
+hapbin = "*"
+quarto = "*"
 
 [tool.pixi.tasks.init-project]
 cmd = "./.scripts/template_init.py && ./.scripts/init-project.sh -y"
