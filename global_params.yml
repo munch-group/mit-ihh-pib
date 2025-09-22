@@ -1,3 +1,6 @@
-
 sample_size: 24
+questions:
+  - I enjoy working with bioinformatics
+  - I feel confident using the cluster
+  - I understand reproducible research
 
