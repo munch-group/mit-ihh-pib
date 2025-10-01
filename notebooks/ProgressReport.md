@@ -193,3 +193,20 @@ done
 ### Pixi environment confusion 
 * Encountered permission errors when trying to run/install in some cluster directories (\faststorage ...) 
 * Now working with detached environments --> how to fix this? Sometimes still running into 'access denied' where can I run pixi? WHere can't i? 
+
+### What I have done so far
+
+I set up the project structure with separate `data/` and `scripts/` folders to keep things  organized.  
+I wrote three bash scripts to automate the preparation of 1000 Genomes Phase 3 data:  
+
+1. **Download** per-chromosome VCFs + tabix index files from the official FTP site.  
+2. **Create sample lists** for specific populations (GBR, YRI) from the 1000 Genomes panel file.  
+3. **Subset the VCFs** by chromosome and by population into smaller, SNP-only files.  
+
+I started with **chromosome 22** because it’s the smallest autosome, so I could quickly test whether the scripts, tools, and indexing worked before scaling to all chromosomes.  
+
+So far, I now have population-specific, phased, SNP-only VCFs for chr22 stored in `data/subsets/`, which are the necessary inputs for the next step: converting into hapbin’s `.hap/.legend/.sample` format for iHS analysis.
+
+pyyaml
+import yaml 
+Do everything on 1 chr first (22) 
