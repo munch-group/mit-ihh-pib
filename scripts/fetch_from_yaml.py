@@ -2,7 +2,7 @@
 #Minimal Python helper to read the YAML and download a test chromosome (chr22) first, validate pipeline
 import sys, os, subprocess, yaml, pathlib
 
-yml = yaml.safe_load(open("config/grch38_sources.yml"))
+yml = yaml.safe_load(open("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/Config.yaml"))
 chrom = sys.argv[1] if len(sys.argv) > 1 else "chr22"
 
 outdir = pathlib.Path("/home/vanbruggenmit/mit-ihh-pib/data/grch38/raw")
