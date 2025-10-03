@@ -210,3 +210,55 @@ So far, I now have population-specific, phased, SNP-only VCFs for chr22 stored i
 pyyaml
 import yaml 
 Do everything on 1 chr first (22) 
+
+# 031025 Meeting
+## What I’ve done so far
+
+* Set up the working environment inside my repo so that pixi run uses the local pyproject.toml configuration. This way all dependencies (bcftools, samtools, pysam, etc.) are available in a reproducible way.
+
+* Collected the required GRCh38 inputs for chromosome 22: the imputed haplotype file (.hap.gz), the corresponding legend file (.legend.gz), the human ancestor FASTA sequence for chr22, and the Decode sex-averaged recombination map (.tsv). I’m using the Decode map because it is widely applied in selection scan studies: it is high-resolution, based on a large Icelandic pedigree dataset, and provides sex-averaged genetic distances in centiMorgans, which are the format hapbin requires.
+
+* Resolved a mismatch between the --chr argument and the FASTA header. The ancestor FASTA doesn’t use plain 22, but a long contig identifier (ANCESTOR_for_chromosome:GRCh38:22:1:50818468:1). Adjusted the script so pysam can locate the correct sequence.
+
+* Indexed the ancestor FASTA (.fai) so pysam can quickly fetch single bases by genomic position. (Without the index, every fetch call would rescan the entire file, making the run impractically slow.)
+
+* Successfully ran the impute2hapbin_chr22.py script (which chatgpt helped me write) with --verbose. This script reads variants from the impute2 files, looks up the ancestral allele from the FASTA, places the variant on the recombination map, and outputs hapbin-formatted .hap and .map files.
+
+  * The run processed ~1.07M variants.
+
+  * Of these, ~870k were kept and ~200k were skipped (due to missing ancestral alleles, non-biallelic sites, or positions not covered by the recombination map). This ratio is in line with expectations.
+
+Generated hapbin output files (chr22.hapbin.hap and chr22.hapbin.map) that can be used as direct input to hapbin (e.g. for iHS).
+
+## Next steps
+
+* QC of the chr22 output
+
+  Confirm the .hap and .map files agree in the number of variants.
+
+  Check that physical positions are strictly increasing and that recombination map positions (cM) are non-decreasing.
+
+* Test hapbin downstream
+
+  Run iHS on chr22 using the generated .hap and .map to ensure hapbin parses the files correctly and produces reasonable outputs.
+
+* Generalization of the pipeline
+
+  Modify the conversion script so it works for all chromosomes (1–22). Ideally, the script should automatically detect the correct contig name in each ancestor FASTA file rather than requiring it to be passed manually.
+
+* Scaling up to the whole genome
+
+  Write a loop or job array to process all chromosomes in parallel on the cluster.
+
+  Store hapbin outputs in a consistent directory structure for downstream analysis.
+
+* Genome-wide selection scans
+
+  Once hapbin inputs are available for all chromosomes, run iHS per chromosome, then standardize the results genome-wide.
+
+  For population comparisons, generate XP-EHH scores using subsets of the samples.
+
+  Perform QC on the distributions (e.g. proportion of |iHS| > 2, correlation with recombination rate).
+
+
+
