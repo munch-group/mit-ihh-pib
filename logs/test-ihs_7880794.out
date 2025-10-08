@@ -1,0 +1,15 @@
+cn-1046
+Usage: ihsbin --map input.map --hap input.hap [--ascii] [--out outfile]
+
+	-h,--help			Show this help
+	-v,--version			Version information
+	-d,--hap			Hap file
+	-m,--map			Map file
+	-o,--out			Output file
+	-c,--cutoff			EHH cutoff value (default: 0.05)
+	-f,--minmaf			Minimum allele frequency (default: 0.05)
+	-s,--scale			Gap scale parameter in bp, used to scale gaps > scale parameter as in Voight, et al.
+	-b,--bin			Number of frequency bins for iHS normalization (default: 50)
+	-e,--max-extend			Maximum distance in bp to traverse when calculating EHH (default: 0 (disabled))
+	-a,--binom			Use binomial coefficients rather than frequency squared for EHH
+OK

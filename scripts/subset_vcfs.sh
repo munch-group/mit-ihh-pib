@@ -11,7 +11,7 @@ CHRS=${CHRS:-22}
 mkdir -p "${DATA_ROOT}/subsets"
 
 for chr in ${CHRS}; do
-  vcf="${DATA_ROOT}/vcfs/ALL.chr${chr}.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz"
+  vcf="${DATA_ROOT}/grch38/raw/chr${chr}/chr${chr}.vcf.gz"
   for POP in ${POPS}; do
     pixi run bcftools view -S "${DATA_ROOT}/panels/${POP}.samples" -m2 -M2 -v snps \
       -Oz -o "${DATA_ROOT}/subsets/${POP}.chr${chr}.snps.vcf.gz" "${vcf}"

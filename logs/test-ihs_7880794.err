@@ -1,0 +1,4 @@
++ IHSBIN=/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/bin/ihsbin
++ hostname
++ srun /home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/bin/ihsbin -h
++ echo OK

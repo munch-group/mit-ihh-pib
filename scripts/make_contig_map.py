@@ -7,7 +7,7 @@ out_file = out_dir / "contig_map_chr_to_plain.tsv"
 
 mapping = (
     [(f"chr{i}", str(i)) for i in range(1, 23)]
-    + [("chrX", "X")]  # add ("chrY","Y"), ("chrM","MT") if needed
+    + [("chrX", "X")]  # I could add ("chrY","Y"), ("chrM","MT") if needed
 )
 
 with out_file.open("w") as f:

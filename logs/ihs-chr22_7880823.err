@@ -1,0 +1,17 @@
++ REPO=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
++ HAP=/home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.hap
++ MAP=/home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.map
++ OUTDIR=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs
++ OUTPREFIX=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr22
++ IHSBIN=/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/bin/ihsbin
++ mkdir -p /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs
++ export OMP_NUM_THREADS=8
++ OMP_NUM_THREADS=8
++ test -s /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.hap
++ test -s /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.map
++ hostname
++ echo 'Using IHSBIN: /home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/bin/ihsbin'
++ srun /home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/bin/ihsbin --hap /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.hap --map /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr22.hapbin.map --out /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr22 --minmaf 0.05 --cutoff 0.1
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+[2025-10-08T14:52:17.943] error: *** STEP 7880823.0 ON cn-1044 CANCELLED AT 2025-10-08T14:52:17 DUE to SIGNAL Terminated ***
+[2025-10-08T14:52:17.944] error: *** JOB 7880823 ON cn-1044 CANCELLED AT 2025-10-08T14:52:17 DUE to SIGNAL Terminated ***
