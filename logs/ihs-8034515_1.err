@@ -1,0 +1,1 @@
+Could not find a .hap for chr22. Tried: data/grch38/hapbin/chr22.hapbin.hap data/grch38/hapbin/ALL.chr22.hap data/grch38/hapbin/*chr22*.hap results/hapbin/chr22.hapbin.hap results/hapbin/ALL.chr22.hap results/hapbin/*chr22*.hap

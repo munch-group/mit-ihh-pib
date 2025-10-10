@@ -1,0 +1,25 @@
+==========================================
+iHS calculation for chromosome 21
+==========================================
+Repo root: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
+Inputs:
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap
+  MAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map
+Output:
+  OUT: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv
+Threads: 8
+
+Running iHS for chr21...
+
+Attempt: long flags
+Command: pixi run ihsbin --hap /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap --map /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map --out /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv --threads 8
+⚠ Failed with: long flags (exit code: 1)
+Attempt: long flags alt
+Command: pixi run ihsbin -h /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap -m /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map -o /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv -t 8
+⚠ Failed with: long flags alt (exit code: 1)
+Attempt: positional args
+Command: pixi run ihsbin /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv 8
+⚠ Failed with: positional args (exit code: 1)
+Attempt: minimal flags
+Command: pixi run ihsbin --hap /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap --map /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map --out /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv
+Chromosomes per SNP: 6404
