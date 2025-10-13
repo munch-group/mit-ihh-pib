@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 9 (Job ID: 8597162, Array ID: 9)
+==========================================
+Found HAP/LEGEND in: work/chr9/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:9:1:138394717:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr9
+  Output: 2916394 SNPs (35G)

@@ -1,0 +1,32 @@
+Loaded recomb map: 28873 positions, range 764389-58082142 bp
+Opening ancestral FASTA: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_19.fa
+Available chromosomes in FASTA: ['ANCESTOR_for_chromosome:GRCh38:19:1:58617616:1']...
+...processed 100000 SNPs (kept 100000, skipped 13193)
+...processed 200000 SNPs (kept 200000, skipped 22217)
+...processed 300000 SNPs (kept 300000, skipped 35487)
+...processed 400000 SNPs (kept 400000, skipped 43969)
+...processed 500000 SNPs (kept 500000, skipped 56011)
+...processed 600000 SNPs (kept 600000, skipped 132121)
+...processed 700000 SNPs (kept 700000, skipped 172290)
+...processed 800000 SNPs (kept 800000, skipped 177005)
+...processed 900000 SNPs (kept 900000, skipped 188448)
+...processed 1000000 SNPs (kept 1000000, skipped 230348)
+...processed 1100000 SNPs (kept 1100000, skipped 236966)
+...processed 1200000 SNPs (kept 1200000, skipped 249605)
+...processed 1300000 SNPs (kept 1300000, skipped 286577)
+
+============================================================
+SUMMARY:
+  Total processed: 1376058
+  Kept: 1376058
+  Skipped: 296871
+    - No/invalid ancestral: 280027
+    - Ancestral mismatch: 16844
+
+First few skip examples:
+  pos 60729: anc='.' (not ACGT)
+  pos 60730: anc='.' (not ACGT)
+  pos 60740: anc='.' (not ACGT)
+  pos 60772: anc='.' (not ACGT)
+  pos 60779: anc='.' (not ACGT)
+============================================================

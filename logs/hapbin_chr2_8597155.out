@@ -1,0 +1,9 @@
+==========================================
+Processing chromosome 2 (Job ID: 8597155, Array ID: 2)
+==========================================
+Found HAP/LEGEND in: work/chr2/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:2:1:242193529:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✗ Failed to convert chr2

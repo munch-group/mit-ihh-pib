@@ -1,0 +1,13 @@
+==========================================
+Downloading and converting chromosome 10
+==========================================
+Downloading VCF for chr10...
+Downloading VCF index...
+
+Converting VCF to HAP/LEGEND format...
+
+✓ Conversion complete for chr10
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr10/chr10.impute.hap.gz
+  LEGEND: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr10/chr10.impute.legend.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib 617M Oct 13 13:13 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr10/chr10.impute.hap.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  24M Oct 13 13:13 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr10/chr10.impute.legend.gz

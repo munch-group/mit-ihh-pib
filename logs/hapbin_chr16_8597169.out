@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 16 (Job ID: 8597169, Array ID: 16)
+==========================================
+Found HAP/LEGEND in: work/chr16/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:16:1:90338345:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr16
+  Output: 2120931 SNPs (26G)

@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 12 (Job ID: 8597165, Array ID: 12)
+==========================================
+Found HAP/LEGEND in: work/chr12/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:12:1:133275309:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr12
+  Output: 3071488 SNPs (37G)

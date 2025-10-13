@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 19 (Job ID: 8597172, Array ID: 19)
+==========================================
+Found HAP/LEGEND in: work/chr19/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:19:1:58617616:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr19
+  Output: 1376058 SNPs (17G)

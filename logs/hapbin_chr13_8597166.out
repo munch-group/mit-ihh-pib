@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 13 (Job ID: 8597166, Array ID: 13)
+==========================================
+Found HAP/LEGEND in: work/chr13/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:13:1:114364328:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr13
+  Output: 2298746 SNPs (28G)

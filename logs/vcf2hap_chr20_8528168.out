@@ -1,0 +1,13 @@
+==========================================
+Downloading and converting chromosome 20
+==========================================
+Downloading VCF for chr20...
+Downloading VCF index...
+
+Converting VCF to HAP/LEGEND format...
+
+✓ Conversion complete for chr20
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr20/chr20.impute.hap.gz
+  LEGEND: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr20/chr20.impute.legend.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib 280M Oct 13 12:47 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr20/chr20.impute.hap.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  12M Oct 13 12:47 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr20/chr20.impute.legend.gz

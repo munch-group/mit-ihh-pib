@@ -1,0 +1,13 @@
+==========================================
+Downloading and converting chromosome 7
+==========================================
+Downloading VCF for chr7...
+Downloading VCF index...
+
+Converting VCF to HAP/LEGEND format...
+
+✓ Conversion complete for chr7
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr7/chr7.impute.hap.gz
+  LEGEND: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr7/chr7.impute.legend.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib 721M Oct 13 13:07 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr7/chr7.impute.hap.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  28M Oct 13 13:07 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr7/chr7.impute.legend.gz

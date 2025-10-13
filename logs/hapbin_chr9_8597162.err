@@ -1,0 +1,48 @@
+Loaded recomb map: 51734 positions, range 689568-137658312 bp
+Opening ancestral FASTA: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_9.fa
+Available chromosomes in FASTA: ['ANCESTOR_for_chromosome:GRCh38:9:1:138394717:1']...
+...processed 100000 SNPs (kept 100000, skipped 5380)
+...processed 200000 SNPs (kept 200000, skipped 8446)
+...processed 300000 SNPs (kept 300000, skipped 12301)
+...processed 400000 SNPs (kept 400000, skipped 15722)
+...processed 500000 SNPs (kept 500000, skipped 22197)
+...processed 600000 SNPs (kept 600000, skipped 26041)
+...processed 700000 SNPs (kept 700000, skipped 30408)
+...processed 800000 SNPs (kept 800000, skipped 33968)
+...processed 900000 SNPs (kept 900000, skipped 37672)
+...processed 1000000 SNPs (kept 1000000, skipped 45521)
+...processed 1100000 SNPs (kept 1100000, skipped 53073)
+...processed 1200000 SNPs (kept 1200000, skipped 148709)
+...processed 1300000 SNPs (kept 1300000, skipped 153845)
+...processed 1400000 SNPs (kept 1400000, skipped 157510)
+...processed 1500000 SNPs (kept 1500000, skipped 161279)
+...processed 1600000 SNPs (kept 1600000, skipped 167649)
+...processed 1700000 SNPs (kept 1700000, skipped 178857)
+...processed 1800000 SNPs (kept 1800000, skipped 185047)
+...processed 1900000 SNPs (kept 1900000, skipped 189828)
+...processed 2000000 SNPs (kept 2000000, skipped 199034)
+...processed 2100000 SNPs (kept 2100000, skipped 203523)
+...processed 2200000 SNPs (kept 2200000, skipped 208421)
+...processed 2300000 SNPs (kept 2300000, skipped 212776)
+...processed 2400000 SNPs (kept 2400000, skipped 216425)
+...processed 2500000 SNPs (kept 2500000, skipped 219978)
+...processed 2600000 SNPs (kept 2600000, skipped 228652)
+...processed 2700000 SNPs (kept 2700000, skipped 233909)
+...processed 2800000 SNPs (kept 2800000, skipped 239706)
+...processed 2900000 SNPs (kept 2900000, skipped 249217)
+
+============================================================
+SUMMARY:
+  Total processed: 2916394
+  Kept: 2916394
+  Skipped: 252934
+    - No/invalid ancestral: 223218
+    - Ancestral mismatch: 29716
+
+First few skip examples:
+  pos 10421: anc='.' (not ACGT)
+  pos 10425: anc='.' (not ACGT)
+  pos 10433: anc='.' (not ACGT)
+  pos 10521: anc='.' (not ACGT)
+  pos 10526: anc='.' (not ACGT)
+============================================================

@@ -1,0 +1,18 @@
+Loaded recomb map: 89860 positions, range 535043-241537572 bp
+Opening ancestral FASTA: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_2.fa
+Available chromosomes in FASTA: ['ANCESTOR_for_chromosome:GRCh38:2:1:242193529:1']...
+Traceback (most recent call last):
+  File "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py", line 188, in <module>
+    main()
+    ~~~~^^
+  File "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py", line 89, in main
+    leg_in = auto_open(args.legend, 'rt')
+  File "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py", line 11, in auto_open
+    return gzip.open(path, mode) if path.endswith('.gz') else open(path, mode)
+           ~~~~~~~~~^^^^^^^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/gzip.py", line 66, in open
+    binary_file = GzipFile(filename, gz_mode, compresslevel)
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/gzip.py", line 203, in __init__
+    fileobj = self.myfileobj = builtins.open(filename, mode or 'rb')
+                               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr2/chr2.impute.legend.gz'

@@ -1,0 +1,41 @@
+Loaded recomb map: 40969 positions, range 19155620-113823135 bp
+Opening ancestral FASTA: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_13.fa
+Available chromosomes in FASTA: ['ANCESTOR_for_chromosome:GRCh38:13:1:114364328:1']...
+...processed 100000 SNPs (kept 100000, skipped 95205)
+...processed 200000 SNPs (kept 200000, skipped 104636)
+...processed 300000 SNPs (kept 300000, skipped 108766)
+...processed 400000 SNPs (kept 400000, skipped 112907)
+...processed 500000 SNPs (kept 500000, skipped 118570)
+...processed 600000 SNPs (kept 600000, skipped 123985)
+...processed 700000 SNPs (kept 700000, skipped 131039)
+...processed 800000 SNPs (kept 800000, skipped 138254)
+...processed 900000 SNPs (kept 900000, skipped 143572)
+...processed 1000000 SNPs (kept 1000000, skipped 147319)
+...processed 1100000 SNPs (kept 1100000, skipped 155109)
+...processed 1200000 SNPs (kept 1200000, skipped 159202)
+...processed 1300000 SNPs (kept 1300000, skipped 162840)
+...processed 1400000 SNPs (kept 1400000, skipped 166329)
+...processed 1500000 SNPs (kept 1500000, skipped 170423)
+...processed 1600000 SNPs (kept 1600000, skipped 174350)
+...processed 1700000 SNPs (kept 1700000, skipped 178156)
+...processed 1800000 SNPs (kept 1800000, skipped 181874)
+...processed 1900000 SNPs (kept 1900000, skipped 185763)
+...processed 2000000 SNPs (kept 2000000, skipped 189311)
+...processed 2100000 SNPs (kept 2100000, skipped 192792)
+...processed 2200000 SNPs (kept 2200000, skipped 196950)
+
+============================================================
+SUMMARY:
+  Total processed: 2298746
+  Kept: 2298746
+  Skipped: 214202
+    - No/invalid ancestral: 190182
+    - Ancestral mismatch: 24020
+
+First few skip examples:
+  pos 16000187: anc='.' (not ACGT)
+  pos 16000200: anc='.' (not ACGT)
+  pos 16000214: anc='.' (not ACGT)
+  pos 16000271: anc='.' (not ACGT)
+  pos 16000295: anc='.' (not ACGT)
+============================================================

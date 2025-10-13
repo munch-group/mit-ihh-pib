@@ -1,0 +1,13 @@
+==========================================
+Downloading and converting chromosome 16
+==========================================
+Downloading VCF for chr16...
+Downloading VCF index...
+
+Converting VCF to HAP/LEGEND format...
+
+✓ Conversion complete for chr16
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr16/chr16.impute.hap.gz
+  LEGEND: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr16/chr16.impute.legend.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib 383M Oct 13 12:53 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr16/chr16.impute.hap.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  16M Oct 13 12:53 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chr16/chr16.impute.legend.gz

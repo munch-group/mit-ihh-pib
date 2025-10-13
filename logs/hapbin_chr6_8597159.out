@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 6 (Job ID: 8597159, Array ID: 6)
+==========================================
+Found HAP/LEGEND in: work/chr6/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:6:1:170805979:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr6
+  Output: 4080334 SNPs (49G)

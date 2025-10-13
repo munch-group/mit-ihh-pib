@@ -1,0 +1,10 @@
+==========================================
+Processing chromosome 1 (Job ID: 8597154, Array ID: 1)
+==========================================
+Found HAP/LEGEND in: work/chr1/
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:1:1:248956422:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chr1
+  Output: 5165649 SNPs (62G)
