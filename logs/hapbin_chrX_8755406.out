@@ -1,0 +1,16 @@
+==========================================
+Processing chromosome X (Job ID: 8755406)
+==========================================
+Found HAP/LEGEND in: work/chrX/
+  ⚠ Adjusted map not found, checking standard location...
+Using recombination map: /home/vanbruggenmit/mit-ihh-pib/data/grch38/maps/chrX.decode.sexavg.cm.tsv
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:X:1:156040895:1
+Using Python script: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/ThisWorks/convert_to_hapbin.py
+
+
+  ✓ Successfully converted chrX
+  Output: 2578259 SNPs (24G)
+
+==========================================
+Chromosome X processing complete
+==========================================

@@ -77,50 +77,34 @@ ls -lh "$WORK_DIR/chr${CHR}.impute."*
 
 echo ""
 echo "=========================================="
-echo "Processing recombination map for chrX"
+echo "Verifying recombination map for chrX"
 echo "=========================================="
 
-# Path to your recombination map file
-RECOMB_MAP="data/decode_hg38_sexavg_per_gen.tsv"
-RECOMB_MAP_CHRX="$WORK_DIR/genetic_map_chrX_adjusted.txt"
+# The chrX map should already be created in the maps directory with 2/3 adjustment applied
+MAPS_DIR="$DATA_ROOT/maps"
+RECOMB_MAP_CHRX="$MAPS_DIR/chrX.decode.sexavg.cm.tsv"
 
 # Check if recombination map exists
-if [[ ! -f "$RECOMB_MAP" ]]; then
-    echo "ERROR: Recombination map not found: $RECOMB_MAP"
-    echo "Please ensure the file exists at the location specified in your config"
+if [[ ! -f "$RECOMB_MAP_CHRX" ]]; then
+    echo "ERROR: Recombination map not found: $RECOMB_MAP_CHRX"
+    echo "Please run: bash scripts/ThisWorks/extract_chrX_from_decode.sh"
     exit 1
 fi
 
-# Extract chrX data and multiply genetic distances by 2/3
-echo "Extracting and adjusting chrX recombination rates (multiplying by 2/3)..."
-
-# Assuming the recombination map has columns: chr, position, rate, cM
-# Adjust based on your actual file format
-awk 'BEGIN {OFS="\t"} 
-NR==1 {print; next}  # Print header
-$1 == "chrX" || $1 == "X" {
-    # Multiply the genetic distance column by 2/3
-    # Adjust column numbers based on your file format
-    # Common formats have cM in column 3 or 4
-    if (NF >= 4) {
-        $4 = $4 * 2.0/3.0  # Assuming column 4 is cM
-    } else if (NF == 3) {
-        $3 = $3 * 2.0/3.0  # Assuming column 3 is cM
-    }
-    print
-}' "$RECOMB_MAP" > "$RECOMB_MAP_CHRX"
-
-if [[ $? -ne 0 ]]; then
-    echo "ERROR: Failed to create adjusted recombination map"
-    exit 1
-fi
-
-echo "✓ Adjusted recombination map created: $RECOMB_MAP_CHRX"
-echo ""
-echo "First 10 lines of adjusted map:"
-head -10 "$RECOMB_MAP_CHRX"
+echo "✓ Found adjusted chrX recombination map: $RECOMB_MAP_CHRX"
+LINE_COUNT=$(wc -l < "$RECOMB_MAP_CHRX")
+FINAL_CM=$(tail -1 "$RECOMB_MAP_CHRX" | awk '{print $3}')
+echo "  Positions: $LINE_COUNT"
+echo "  Total genetic length (2/3 adjusted): $FINAL_CM cM"
 
 echo ""
 echo "=========================================="
 echo "All processing complete for chromosome X"
 echo "=========================================="
+echo ""
+echo "Files ready:"
+echo "  HAP: $WORK_DIR/chr${CHR}.impute.hap.gz"
+echo "  LEGEND: $WORK_DIR/chr${CHR}.impute.legend.gz"
+echo "  MAP (2/3 adjusted): $RECOMB_MAP_CHRX"
+echo ""
+echo "Next step: sbatch hapbin_chrX.sh"

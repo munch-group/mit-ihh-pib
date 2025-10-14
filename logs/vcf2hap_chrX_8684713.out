@@ -1,0 +1,19 @@
+==========================================
+Downloading and converting chromosome X
+==========================================
+VCF already exists: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz
+
+Converting VCF to HAP/LEGEND format...
+
+✓ Conversion complete for chrX
+  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.hap.gz
+  LEGEND: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib 350M Oct 14 10:09 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.hap.gz
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  44M Oct 14 10:09 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend
+-rw-rw-r-- 1 vanbruggenmit mit-ihh-pib  11M Oct 14 09:27 /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz
+
+==========================================
+Processing recombination map for chrX
+==========================================
+ERROR: Recombination map not found: data/decode_hg38_sexavg_per_gen.tsv
+Please ensure the file exists at the location specified in your config
