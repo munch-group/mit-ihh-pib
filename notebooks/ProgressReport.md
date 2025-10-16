@@ -260,5 +260,87 @@ Generated hapbin output files (chr22.hapbin.hap and chr22.hapbin.map) that can b
 
   Perform QC on the distributions (e.g. proportion of |iHS| > 2, correlation with recombination rate).
 
+# 161025: Progress report
+## Summary
+Converted all chromosome tsvs to .hap and .map format/ 
+Completed data processing and iHS calculations for all chromosomes (1-22 + X). Discovered that chromosome X data only contains pseudoautosomal regions (PAR), which limits the project scope for studying X-linked selection.
 
+## By now
+1. Data preparation 
+- VCF files: Downloaded and verified for all chromosomes from 1000 Genomes (3,202 individuals)
+- Genetic maps: Created recombination maps for all chromosomes
+  -  Applied 2/3 adjustment for chrX (accounts for female-only recombination)
+- Phased haplotypes: Converted VCFs to .hap and .map format for hapbin
+
+2. iHS Calculations
+- Completed: iHS scan for all 23 chromosomes (chr1-22 + chrX)
+- Sample size: 6,404 haplotypes (3,202 individuals × 2)
+- Output: TSV files with iHS scores for ~2.86M variants per chromosome
+- Status: All jobs completed successfully (except X - canceled)
+
+3. QC and discovery of PAR issue 
+Found: while monitoring the iHS hob logs, i noticed every chromosome reported 
+``` Chromosomes per SNP: 6404 ```
+
+This was **unexpected for chrX** because:
+- Males have only 1 X chromosome (hemizygous)
+- Expected chrX to show ~4,800 haplotypes (females: 2 × ~1,600 = 3,200; males: 1 × ~1,600 = 1,600)
+- Instead, chrX showed 6,404 - same as autosomes
+
+#### Investigation revealed:
+1. **All 3,202 samples present on chrX** (should be ~3,200 if males excluded)
+2. **Males show heterozygous genotypes** on chrX (impossible outside PAR regions)
+3. **All 2.86M chrX variants are in PAR regions**:
+   - PAR1 (positions 10,001-2,781,479): 1,368,031 variants
+   - Non-PAR (positions 2,781,480-155,701,382): **0 variants**
+   - PAR2 (positions 155,701,383+): 1,490,153 variants
+
+#### Root cause:
+The 1000 Genomes file specified in `config.yaml` only contains phased PAR regions:
+
+CCDG_14151_B01_GRM_WGS_2020-08-05_chrX.filtered.eagle2-phased.v2.vcf.gz 
+
+### SHow variant distribution across X chrom
+
+cd /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
+
+# Count variants in each region
+pixi run bcftools query -f '%POS\n' \
+  /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz | \
+  awk '{
+    if ($1 <= 2781479) par1++;
+    else if ($1 >= 155701383) par2++;
+    else nonpar++;
+  }
+  END {
+    print "PAR1 (0-2,781,479): " par1;
+    print "Non-PAR (2,781,480-155,701,382): " nonpar;
+    print "PAR2 (155,701,383+): " par2;
+  }'
+```
+
+**Expected output:**
+```
+PAR1 (0-2,781,479): 1368031
+Non-PAR (2,781,480-155,701,382): 0
+PAR2 (155,701,383+): 1490153
+
+### SHow male has heterozygous genotypes (only possible in PAR)
+# HG00096 is male (confirmed from 1000G metadata)
+# Check for heterozygous sites in PAR1
+pixi run bcftools query -f '%CHROM\t%POS\t[%GT]\n' \
+  -s HG00096 \
+  -r X:10000-2781479 \
+  /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz | \
+  grep -E "0\|1|1\|0" | head -10
+
+### Verify non-PAR region is empty 
+# Try to find any variants in non-PAR region
+pixi run bcftools view -H -r X:2781480-155701382 \
+  /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz | wc -l
+
+# Impact on project goals 
+PAR regions behave like autosomes (recombine in both sexes)
+Most X-linked genes are in non-PAR regions (currently missing)
+Cannot study X-specific selection patterns with current data
 
