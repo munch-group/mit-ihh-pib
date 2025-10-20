@@ -1,0 +1,30 @@
+Checking available files for chromosomes 1-22...
+
+Chr | HAP/LEGEND | Ancestral FASTA | Recomb Map | Status
+----+------------+-----------------+------------+--------
+  1 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  2 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  3 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  4 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  5 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  6 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  7 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  8 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+  9 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 10 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 11 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 12 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 13 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 14 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 15 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 16 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 17 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 18 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 19 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 20 | ✗        | ✓             | ✓        | ✗ Missing: HAP
+ 21 | ✓        | ✓             | ✓        | ✓ Ready
+ 22 | ✓        | ✓             | ✓        | ✓ Ready
+
+Already converted:
+  Chr21: 779286 SNPs (9.3G)
+  Chr22: 869568 SNPs (11G)

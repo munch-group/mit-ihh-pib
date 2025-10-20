@@ -1,0 +1,30 @@
+==========================================
+Converting fixed chrX HAP to hapbin format
+==========================================
+
+Input files:
+  Fixed HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.hap.fixed.gz (329M)
+  Legend: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz
+  Ancestral: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_X.fa
+  Recomb map: /home/vanbruggenmit/mit-ihh-pib/data/grch38/maps/chrX.decode.sexavg.cm.tsv
+
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:X:1:156040895:1
+
+Backing up old hapbin files...
+✓ Old files backed up
+
+Running conversion to hapbin format...
+
+==========================================
+✓ Conversion complete!
+==========================================
+
+Output files:
+  /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chrX.hapbin.hap
+  /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chrX.hapbin.map
+
+  Size: 22G
+
+Next: Delete old iHS results and rerun
+  rm results/ihs/ALL.chrX.ihs.tsv
+  sbatch --array=22 scripts/ThisWorks/ihs_all.slurm
