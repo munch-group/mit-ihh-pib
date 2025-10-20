@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --partition=normal
 
-# Chromosome X processing script
+# Chromosome X processing script: OLD - DON'T USE THIS ANYMORE
 CHR="X"
 
 DATA_ROOT="/home/vanbruggenmit/mit-ihh-pib/data/grch38"
