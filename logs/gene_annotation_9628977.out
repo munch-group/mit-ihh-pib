@@ -1,0 +1,34 @@
+==========================================
+Running Gene Annotation (Phase 3)
+==========================================
+Start time: Thu Oct 23 09:22:58 PM CEST 2025
+
+======================================================================
+Gene Annotation using GENCODE v44
+======================================================================
+
+Downloading GENCODE v44 GTF file...
+  URL: https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.annotation.gtf.gz
+  Destination: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/data/annotations/gencode.v44.annotation.gtf.gz
+  Size: ~45 MB (compressed), ~1.5 GB (uncompressed)
+
+  This is a one-time download and will be cached for future use.
+  Downloading... (may take 2-5 minutes depending on connection)
+
+✓ Download complete!
+
+Step 1: Loading GENCODE gene annotations...
+  Parsing gencode.v44.annotation.gtf.gz...
+  ✓ Parsed 62,700 genes from GENCODE v44
+  Gene types: {'protein_coding': 20046, 'lncRNA': 18866, 'processed_pseudogene': 10146, 'unprocessed_pseudogene': 2609, 'misc_RNA': 2212}
+  Chromosomes: ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '3', '4', '5', '6', '7', '8', '9', 'M', 'X', 'Y']
+
+Step 2: Annotating regions with genes (±50kb flank)...
+  Loaded 4,666 regions
+  Chromosomes: ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '22', '3', '4', '5', '6', '7', '8', '9', 'X', 'chr21']
+
+
+==========================================
+Gene Annotation Complete
+==========================================
+End time: Thu Oct 23 09:23:07 PM CEST 2025

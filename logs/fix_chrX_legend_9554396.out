@@ -1,0 +1,33 @@
+==========================================
+Fixing chrX legend file with proper IDs
+==========================================
+
+Backing up old legend file...
+✓ Backup created: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz.backup
+
+Creating new legend file with proper variant IDs...
+Input VCF: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz
+Output: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend
+
+Compressing legend file...
+
+==========================================
+✓ Legend file fixed successfully!
+==========================================
+
+Output file: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz
+File size: 12M
+Variant count: 2858184
+
+First 10 variants:
+id position a0 a1
+X:13189:G:A	13189	G	A
+X:13205:T:C	13205	T	C
+X:13221:T:C	13221	T	C
+X:13223:G:C	13223	G	C
+X:13230:G:T	13230	G	T
+X:13236:G:C	13236	G	C
+X:13242:C:T	13242	C	T
+X:13262:G:C	13262	G	C
+X:13280:C:G	13280	C	G
+X:13284:C:T	13284	C	T

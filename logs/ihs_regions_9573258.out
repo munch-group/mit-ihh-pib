@@ -1,0 +1,31 @@
+==========================================
+Running iHS Region Definition
+==========================================
+Start time: Thu Oct 23 01:56:38 PM CEST 2025
+
+======================================================================
+iHS Selection Region Definition
+======================================================================
+
+Configuration:
+  Window size: 500,000 bp (500 kb)
+  Minimum SNPs per region: 2
+  Autosome threshold: |Std iHS| >= 2.5
+  X chromosome threshold: |Std iHS| >= 2.9
+
+Step 1: Loading candidates...
+Loading candidates from: ALL_candidates_moderate.tsv
+  Total candidates: 210,352
+
+Step 2: Applying chromosome-specific thresholds...
+  After chromosome-specific thresholds:
+    Autosomes (|Std iHS| >= 2.5): 202,231
+    X chromosome (|Std iHS| >= 2.9): 4,259
+    Total retained: 206,490
+
+Step 3: Clustering candidates into regions (min 2 SNPs)...
+
+==========================================
+Region Definition Complete
+==========================================
+End time: Thu Oct 23 01:56:50 PM CEST 2025

@@ -1,0 +1,32 @@
+==========================================
+Running iHS Candidate Identification
+==========================================
+Start time: Thu Oct 23 01:30:16 PM CEST 2025
+
+============================================================
+iHS Selection Candidate Identification
+============================================================
+
+Step 1: Processing each chromosome separately...
+
+  Processing chr1... 585,512 variants - Done
+  Processing chr2... 616,217 variants - Done
+  Processing chr3... 536,408 variants - Done
+  Processing chr4... 555,532 variants - Done
+  Processing chr5... 477,889 variants - Done
+  Processing chr6... 498,613 variants - Done
+  Processing chr7... 437,094 variants - Done
+  Processing chr8... 417,729 variants - Done
+  Processing chr9... 335,830 variants - Done
+  Processing chr10... 386,015 variants - Done
+  Processing chr11... 358,529 variants - Done
+  Processing chr12... 362,324 variants - Done
+  Processing chr13... 281,992 variants - Done
+  Processing chr14... 244,940 variants - Done
+  Processing chr15... 218,943 variants - Done
+  Processing chr16... 237,640 variants - Done
+  Processing chr17... 209,746 variants - Done
+  Processing chr18... 221,425 variants - Done
+  Processing chr19... 164,955 variants - Done
+  Processing chr20... 170,326 variants - Done
+  Processing chr21... 

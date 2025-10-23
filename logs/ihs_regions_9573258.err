@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/02_define_selection_regions.py", line 193, in <module>
+    regions = cluster_candidates_to_regions(filtered_candidates, WINDOW_SIZE, MIN_SNPS)
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/02_define_selection_regions.py", line 92, in cluster_candidates_to_regions
+    for chr_name in sorted(candidates['chr'].unique(), key=lambda x: (x != 'X', x)):
+                    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'

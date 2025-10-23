@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/01_identify_ihs_candidates.py", line 308, in <module>
+    ax.bar(data['chr'], data['n'], label=chr_type, color=colors[chr_type])
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/__init__.py", line 1524, in inner
+    return func(
+        ax,
+        *map(cbook.sanitize_sequence, args),
+        **{k: cbook.sanitize_sequence(v) for k, v in kwargs.items()})
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/axes/_axes.py", line 2555, in bar
+    self._process_unit_info(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        [("x", x), ("y", y), ("y", height)], kwargs, convert=False)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/axes/_base.py", line 2663, in _process_unit_info
+    axis.update_units(data)
+    ~~~~~~~~~~~~~~~~~^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/axis.py", line 1754, in update_units
+    default = self._converter.default_units(data, self)
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/category.py", line 106, in default_units
+    axis.set_units(UnitData(data))
+                   ~~~~~~~~^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/category.py", line 182, in __init__
+    self.update(data)
+    ~~~~~~~~~~~^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/category.py", line 217, in update
+    _api.check_isinstance((str, bytes), value=val)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vanbruggenmit/.pixi-detached-envs/mit-ihh-pib-16785450186575381143/envs/default/lib/python3.13/site-packages/matplotlib/_api/__init__.py", line 92, in check_isinstance
+    raise TypeError(
+    ...<4 lines>...
+            type_name(type(v))))
+TypeError: 'value' must be an instance of str or bytes, not a float

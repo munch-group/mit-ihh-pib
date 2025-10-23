@@ -1,4 +1,0 @@
-Error: Unknown argument --threads
-Error: Unknown argument /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap
-Error: Unknown argument /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap
-[2025-10-10T12:14:09.798] error: *** JOB 8035221 ON cn-1041 CANCELLED AT 2025-10-10T12:14:09 DUE to SIGNAL Terminated ***

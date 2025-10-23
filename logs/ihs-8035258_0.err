@@ -1,2 +1,0 @@
-ERROR: Map file must have the same number of loci as hap file! Hap file has 878477 SNPs. Map file has 0 SNPs.
-Perhaps the Map file format is wrong?

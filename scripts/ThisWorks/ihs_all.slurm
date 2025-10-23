@@ -3,7 +3,7 @@
 #SBATCH -A mit-ihh-pib
 #SBATCH -p normal
 #SBATCH -c 8
-#SBATCH -t 06:00:00  # All chromosomes, more time needed
+#SBATCH -t 36:00:00  # All chromosomes, more time needed
 #SBATCH -o /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/ihs-%A_%a.out
 #SBATCH -e /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/ihs-%A_%a.err
 #SBATCH --array=0-22  # 22 autosomes + X chromosome

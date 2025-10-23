@@ -1,7 +1,0 @@
-Repo root: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
-Inputs:
-  HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.hap
-  MAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/hapbin/chr21.hapbin.map
-Output:
-  OUT: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chr21.ihs.tsv
-Running iHS for chr21 with 8 threads...

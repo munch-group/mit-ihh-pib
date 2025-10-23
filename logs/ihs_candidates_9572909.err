@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/01_identify_ihs_candidates.py", line 15, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'

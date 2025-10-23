@@ -60,7 +60,7 @@ fi
 
 # Run conversion
 echo "Running conversion to hapbin format..."
-python3 "$SCRIPT_DIR/convert_to_hapbin.py" \
+pixi run python3 "$SCRIPT_DIR/convert_to_hapbin.py" \
     --hap "$HAP_FIXED" \
     --legend "$LEG_IN" \
     --anc-fasta "$ANC" \
@@ -69,6 +69,7 @@ python3 "$SCRIPT_DIR/convert_to_hapbin.py" \
     --no-header \
     --pos-col 1 \
     --cm-col 2 \
+    --sep " " \
     --out-prefix "$OUT_DIR/chr${CHR}.hapbin" \
     --verbose
 

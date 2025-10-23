@@ -1,0 +1,1 @@
+ERROR: pysam not installed. Use 'pixi add pysam' or 'python -m pip install --user pysam'.

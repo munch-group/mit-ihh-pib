@@ -1,0 +1,161 @@
+==========================================
+Running iHS Candidate Identification
+==========================================
+Start time: Thu Oct 23 01:40:16 PM CEST 2025
+
+============================================================
+iHS Selection Candidate Identification
+============================================================
+
+Step 1: Processing each chromosome separately...
+
+  Processing chr1... 585,512 variants - Done
+  Processing chr2... 616,217 variants - Done
+  Processing chr3... 536,408 variants - Done
+  Processing chr4... 555,532 variants - Done
+  Processing chr5... 477,889 variants - Done
+  Processing chr6... 498,613 variants - Done
+  Processing chr7... 437,094 variants - Done
+  Processing chr8... 417,729 variants - Done
+  Processing chr9... 335,830 variants - Done
+  Processing chr10... 386,015 variants - Done
+  Processing chr11... 358,529 variants - Done
+  Processing chr12... 362,324 variants - Done
+  Processing chr13... 281,992 variants - Done
+  Processing chr14... 244,940 variants - Done
+  Processing chr15... 218,943 variants - Done
+  Processing chr16... 237,640 variants - Done
+  Processing chr17... 209,746 variants - Done
+  Processing chr18... 221,425 variants - Done
+  Processing chr19... 164,955 variants - Done
+  Processing chr20... 170,326 variants - Done
+  Processing chr21... 88,167 variants - Done
+  Processing chr22... 97,460 variants - Done
+  Processing chrX... 428,414 variants - Done
+
+Step 2: Calculating summary statistics...
+
+=== Distribution Check (Voight et al. 2006) ===
+Standardized iHS should have mean ~0, variance ~1 under neutrality
+
+Overall Statistics by Chromosome Type:
+              n_chromosomes  total_variants  mean_std_iHS  sd_std_iHS       q99      q995  mean_variants_per_chr
+chr_type                                                                                                        
+Autosome                 22         7503286  1.256075e-09    1.000002  3.390167  4.018706          341058.454545
+X chromosome              1          428414 -1.945226e-10    1.000001  2.896117  3.290597          428414.000000
+
+=== Empirical Percentiles (|Std iHS|) ===
+These show the empirical thresholds for top 1%, 0.5%, 0.1% of SNPs
+chr     chr_type      q99     q995     q999
+  1     Autosome 3.274418 3.873483 5.189830
+  2     Autosome 3.313334 3.933224 5.363754
+  3     Autosome 3.300319 3.869864 5.340037
+  4     Autosome 3.374046 3.980497 5.246280
+  5     Autosome 3.414546 4.015601 5.292108
+  6     Autosome 3.334236 3.900400 5.322420
+  7     Autosome 3.349272 3.945318 5.340451
+  8     Autosome 3.396802 3.995396 5.396945
+  9     Autosome 3.358421 3.960031 5.203505
+ 10     Autosome 3.328894 3.990805 5.461845
+ 11     Autosome 3.397931 4.033539 5.330925
+ 12     Autosome 3.415419 4.022573 5.236023
+ 13     Autosome 3.500190 4.181648 5.525087
+ 14     Autosome 3.411061 4.031826 5.352558
+ 15     Autosome 3.399616 4.142189 5.727946
+ 16     Autosome 3.369553 4.004784 5.400908
+ 17     Autosome 3.352791 3.960259 5.332860
+ 18     Autosome 3.396924 4.074261 5.551845
+ 19     Autosome 3.454030 4.179594 5.507991
+ 20     Autosome 3.417940 4.092041 5.391881
+ 21     Autosome 3.227761 3.920014 5.450325
+ 22     Autosome 3.796160 4.304190 5.321156
+  X X chromosome 2.896117 3.290597 4.053738
+
+=== Full Per-chromosome Statistics ===
+chr  n_variants  mean_iHS  median_iHS   sd_iHS  mean_std_iHS  median_std_iHS  sd_std_iHS  max_abs_std_iHS      q99     q995     q999     chr_type
+  1      585512 -0.673019   -0.694808 1.450488 -1.362910e-09        0.039588    1.000001          9.85324 3.274418 3.873483 5.189830     Autosome
+  2      616217 -0.671489   -0.680240 1.467209 -1.478711e-09        0.043884    1.000001          9.15883 3.313334 3.933224 5.363754     Autosome
+  3      536408 -0.703142   -0.716147 1.505589  1.451579e-09        0.047485    1.000001          9.60763 3.300319 3.869864 5.340037     Autosome
+  4      555532 -0.691535   -0.702529 1.532226 -3.661314e-10        0.045560    1.000001          9.88670 3.374046 3.980497 5.246280     Autosome
+  5      477889 -0.693467   -0.700464 1.511770  5.313607e-09        0.046290    1.000001          9.29479 3.414546 4.015601 5.292108     Autosome
+  6      498613 -0.709258   -0.727436 1.591391  9.704727e-11        0.042784    1.000001         10.45800 3.334236 3.900400 5.322420     Autosome
+  7      437094 -0.686016   -0.693402 1.508354  4.284370e-09        0.040013    1.000001          8.88097 3.349272 3.945318 5.340451     Autosome
+  8      417729 -0.704787   -0.702342 1.532188 -2.313156e-09        0.048762    1.000001          8.94344 3.396802 3.995396 5.396945     Autosome
+  9      335830 -0.714037   -0.701445 1.511627 -1.098588e-09        0.050737    1.000001          8.85458 3.358421 3.960031 5.203505     Autosome
+ 10      386015 -0.689458   -0.698442 1.511131  1.384609e-09        0.044175    1.000001          8.90945 3.328894 3.990805 5.461845     Autosome
+ 11      358529 -0.700161   -0.698983 1.534286 -2.666681e-09        0.048438    1.000001         10.01130 3.397931 4.033539 5.330925     Autosome
+ 12      362324 -0.714791   -0.721249 1.548968 -4.702498e-10        0.050491    1.000001          8.62011 3.415419 4.022573 5.236023     Autosome
+ 13      281992 -0.689998   -0.704390 1.532205  5.069753e-09        0.045274    1.000002          9.37205 3.500190 4.181648 5.525087     Autosome
+ 14      244940 -0.727653   -0.733408 1.564921  1.906958e-09        0.052339    1.000002          8.57033 3.411061 4.031826 5.352558     Autosome
+ 15      218943 -0.677352   -0.670750 1.506126 -6.360739e-10        0.046077    1.000002          9.17788 3.399616 4.142189 5.727946     Autosome
+ 16      237640 -0.681496   -0.666603 1.493917 -6.490778e-09        0.052158    1.000002          9.95802 3.369553 4.004784 5.400908     Autosome
+ 17      209746 -0.604876   -0.604637 1.454199  5.317261e-09        0.042032    1.000002          8.30007 3.352791 3.960259 5.332860     Autosome
+ 18      221425 -0.692212   -0.693444 1.520798  1.314388e-09        0.051997    1.000002          8.19151 3.396924 4.074261 5.551845     Autosome
+ 19      164955 -0.579403   -0.592480 1.441043  4.585065e-09        0.036403    1.000003          9.30495 3.454030 4.179594 5.507991     Autosome
+ 20      170326 -0.650168   -0.637557 1.486704  6.425763e-09        0.048289    1.000003          8.88832 3.417940 4.092041 5.391881     Autosome
+ 21       88167 -0.826497   -0.801174 1.406292  2.786527e-09        0.040234    1.000006          9.45413 3.227761 3.920014 5.450325     Autosome
+ 22       97460 -0.835906   -0.711893 2.149204  4.580003e-09        0.086377    1.000005          8.03692 3.796160 4.304190 5.321156     Autosome
+  X      428414 10.122721    9.892080 2.551860 -1.945226e-10       -0.168600    1.000001          5.73914 2.896117 3.290597 4.053738 X chromosome
+
+  Saved: candidates/chromosome_statistics.tsv
+  Saved: candidates/empirical_percentiles.tsv
+
+=== Normality Check ===
+For standard normal, mean should be ~0, SD should be ~1
+chr     chr_type  mean_std_iHS  sd_std_iHS  mean_deviation  sd_deviation
+  1     Autosome -1.362910e-09    1.000001    1.362910e-09  8.518078e-07
+  2     Autosome -1.478711e-09    1.000001    1.478711e-09  8.127564e-07
+  3     Autosome  1.451579e-09    1.000001    1.451579e-09  9.297998e-07
+  4     Autosome -3.661314e-10    1.000001    3.661314e-10  8.989203e-07
+  5     Autosome  5.313607e-09    1.000001    5.313607e-09  1.049421e-06
+  6     Autosome  9.704727e-11    1.000001    9.704727e-11  9.992034e-07
+  7     Autosome  4.284370e-09    1.000001    4.284370e-09  1.142987e-06
+  8     Autosome -2.313156e-09    1.000001    2.313156e-09  1.196790e-06
+  9     Autosome -1.098588e-09    1.000001    1.098588e-09  1.496195e-06
+ 10     Autosome  1.384609e-09    1.000001    1.384609e-09  1.297586e-06
+ 11     Autosome -2.666681e-09    1.000001    2.666681e-09  1.395175e-06
+ 12     Autosome -4.702498e-10    1.000001    4.702498e-10  1.380327e-06
+ 13     Autosome  5.069753e-09    1.000002    5.069753e-09  1.772685e-06
+ 14     Autosome  1.906958e-09    1.000002    1.906958e-09  2.042269e-06
+ 15     Autosome -6.360739e-10    1.000002    6.360739e-10  2.275880e-06
+ 16     Autosome -6.490778e-09    1.000002    6.490778e-09  2.110589e-06
+ 17     Autosome  5.317261e-09    1.000002    5.317261e-09  2.385889e-06
+ 18     Autosome  1.314388e-09    1.000002    1.314388e-09  2.258257e-06
+ 19     Autosome  4.585065e-09    1.000003    4.585065e-09  3.037720e-06
+ 20     Autosome  6.425763e-09    1.000003    6.425763e-09  2.932958e-06
+ 21     Autosome  2.786527e-09    1.000006    2.786527e-09  5.673214e-06
+ 22     Autosome  4.580003e-09    1.000005    4.580003e-09  5.126586e-06
+  X X chromosome -1.945226e-10    1.000001    1.945226e-10  1.166670e-06
+
+Note: Large deviations suggest non-normal distribution (Salazar-Tortosa et al. 2023)
+      Consider using empirical percentiles rather than fixed thresholds
+
+Step 3: Combining candidates across chromosomes...
+
+  Liberal threshold (|Std iHS| >= 2.0): 395,725 variants
+    - Autosomes: 375,218 (94.8%)
+    - X chromosome: 20,507 (5.2%)
+    Saved: candidates/ALL_candidates_liberal.tsv
+
+  Moderate threshold (|Std iHS| >= 2.5): 210,352 variants
+    - Autosomes: 202,231 (96.1%)
+    - X chromosome: 8,121 (3.9%)
+    Saved: candidates/ALL_candidates_moderate.tsv
+
+  Stringent threshold (|Std iHS| >= 3.0): 117,104 variants
+    - Autosomes: 113,517 (96.9%)
+    - X chromosome: 3,587 (3.1%)
+    Saved: candidates/ALL_candidates_stringent.tsv
+
+Step 4: Testing for X chromosome enrichment...
+
+  X chromosome candidates: 8,121 / 428,414 (1.90%)
+  Autosome candidates: 202,231 / 7,503,286 (2.70%)
+  Odds ratio: 0.698
+  P-value: 1.71e-242
+
+  Saved: candidates/x_enrichment_test.tsv
+
+Step 5: Creating visualizations...
+
+  Plotting candidate counts by chromosome...

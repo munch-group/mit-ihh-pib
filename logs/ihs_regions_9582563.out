@@ -1,0 +1,140 @@
+==========================================
+Running iHS Region Definition
+==========================================
+Start time: Thu Oct 23 04:59:12 PM CEST 2025
+
+======================================================================
+iHS Selection Region Definition
+======================================================================
+
+Configuration:
+  Window size: 500,000 bp (500 kb)
+  Minimum SNPs per region: 2
+  Autosome threshold: |Std iHS| >= 2.5
+  X chromosome threshold: |Std iHS| >= 2.9
+
+Step 1: Loading candidates...
+Loading candidates from: ALL_candidates_moderate.tsv
+  Total candidates: 210,352
+
+Step 2: Applying chromosome-specific thresholds...
+  After chromosome-specific thresholds:
+    Autosomes (|Std iHS| >= 2.5): 202,231
+    X chromosome (|Std iHS| >= 2.9): 4,259
+    Total retained: 206,490
+
+Step 3: Clustering candidates into regions (min 2 SNPs)...
+    chr1: 15009 candidates -> 383 regions
+    chr2: 16127 candidates -> 403 regions
+    chr3: 14544 candidates -> 335 regions
+    chr4: 14886 candidates -> 319 regions
+    chr5: 12836 candidates -> 296 regions
+    chr6: 13744 candidates -> 283 regions
+    chr7: 11637 candidates -> 262 regions
+    chr8: 11542 candidates -> 240 regions
+    chr9: 9029 candidates -> 192 regions
+    chr10: 10189 candidates -> 221 regions
+    chr11: 10265 candidates -> 224 regions
+    chr12: 9991 candidates -> 223 regions
+    chr13: 7819 candidates -> 162 regions
+    chr14: 6586 candidates -> 145 regions
+    chr15: 5716 candidates -> 126 regions
+    chr16: 6317 candidates -> 130 regions
+    chr17: 5668 candidates -> 134 regions
+    chr18: 5775 candidates -> 126 regions
+    chr19: 4393 candidates -> 90 regions
+    chr20: 4535 candidates -> 101 regions
+    chr20: 83 candidates -> 26 regions
+    chrchr21: 2192 candidates -> 50 regions
+    chr22: 3348 candidates -> 59 regions
+    chrX: 4259 candidates -> 136 regions
+
+======================================================================
+Region Summary
+======================================================================
+
+Total regions identified: 4666
+
+Autosome:
+  Regions: 4530
+  Mean SNPs per region: 44.6
+  Median SNPs per region: 36
+  Mean region length: 413.9 kb
+  Mean max |Std iHS|: 5.24
+
+X chromosome:
+  Regions: 136
+  Mean SNPs per region: 31.2
+  Median SNPs per region: 18
+  Mean region length: 225.4 kb
+  Mean max |Std iHS|: 4.16
+
+Top 10 regions by max |Std iHS|:
+  6:15,966,140-16,230,744 (265 kb, 46 SNPs, max |Std iHS|=10.46)
+  11:68,207,213-68,706,406 (499 kb, 65 SNPs, max |Std iHS|=10.01)
+  16:79,287,118-79,749,337 (462 kb, 148 SNPs, max |Std iHS|=9.96)
+  4:77,291,111-77,744,353 (453 kb, 84 SNPs, max |Std iHS|=9.89)
+  1:86,715,206-87,152,524 (437 kb, 51 SNPs, max |Std iHS|=9.85)
+  3:21,439,203-21,927,253 (488 kb, 163 SNPs, max |Std iHS|=9.61)
+  chr21:14,788,593-14,820,124 (32 kb, 69 SNPs, max |Std iHS|=9.45)
+  13:90,707,152-91,148,292 (441 kb, 31 SNPs, max |Std iHS|=9.37)
+  11:3,887,984-4,370,299 (482 kb, 122 SNPs, max |Std iHS|=9.32)
+  19:29,454,894-29,910,999 (456 kb, 45 SNPs, max |Std iHS|=9.30)
+
+X chromosome regions: 136
+Top 5 X chromosome regions:
+  X:122,303,906-122,714,169 (410 kb, 58 SNPs, max |Std iHS|=5.74)
+  X:57,475,958-57,511,540 (36 kb, 34 SNPs, max |Std iHS|=5.68)
+  X:111,798,727-112,124,702 (326 kb, 6 SNPs, max |Std iHS|=5.59)
+  X:3,983,501-4,293,152 (310 kb, 88 SNPs, max |Std iHS|=5.56)
+  X:97,195,776-97,479,943 (284 kb, 67 SNPs, max |Std iHS|=5.42)
+
+Step 5: Saving results...
+  Saved: selection_regions_500kb_min2snps.tsv
+  Saved: selection_regions_autosomes.tsv (4530 regions)
+  Saved: selection_regions_X_chromosome.tsv (136 regions)
+
+Creating stringent regions (min 3 SNPs)...
+    chr1: 15009 candidates -> 382 regions
+    chr2: 16127 candidates -> 402 regions
+    chr3: 14544 candidates -> 334 regions
+    chr4: 14886 candidates -> 318 regions
+    chr5: 12836 candidates -> 296 regions
+    chr6: 13744 candidates -> 283 regions
+    chr7: 11637 candidates -> 262 regions
+    chr8: 11542 candidates -> 238 regions
+    chr9: 9029 candidates -> 192 regions
+    chr10: 10189 candidates -> 220 regions
+    chr11: 10265 candidates -> 221 regions
+    chr12: 9991 candidates -> 223 regions
+    chr13: 7819 candidates -> 162 regions
+    chr14: 6586 candidates -> 145 regions
+    chr15: 5716 candidates -> 125 regions
+    chr16: 6317 candidates -> 130 regions
+    chr17: 5668 candidates -> 133 regions
+    chr18: 5775 candidates -> 126 regions
+    chr19: 4393 candidates -> 90 regions
+    chr20: 4535 candidates -> 100 regions
+    chr20: 83 candidates -> 10 regions
+    chrchr21: 2192 candidates -> 50 regions
+    chr22: 3348 candidates -> 58 regions
+    chrX: 4259 candidates -> 130 regions
+  Saved: selection_regions_500kb_min3snps.tsv (4630 regions)
+
+Step 6: Creating BED files for genome visualization...
+  Saved: selection_regions.bed
+  Saved: selection_regions_stringent.bed
+
+======================================================================
+Region definition complete!
+======================================================================
+
+Next steps:
+  1. Review regions in genome browser using BED files
+  2. Annotate regions with genes (Phase 3)
+  3. Test for enrichment of reproductive/immune genes
+
+==========================================
+Region Definition Complete
+==========================================
+End time: Thu Oct 23 04:59:18 PM CEST 2025

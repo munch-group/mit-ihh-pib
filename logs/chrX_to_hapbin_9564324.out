@@ -1,0 +1,13 @@
+==========================================
+Converting fixed chrX HAP to hapbin format
+==========================================
+
+Input files:
+  Fixed HAP: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.hap.fixed.gz (329M)
+  Legend: /home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX/chrX.impute.legend.gz
+  Ancestral: /home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/homo_sapiens_ancestor_GRCh38/homo_sapiens_ancestor_X.fa
+  Recomb map: /home/vanbruggenmit/mit-ihh-pib/data/grch38/maps/chrX.decode.sexavg.cm.tsv
+
+Using FASTA chromosome name: ANCESTOR_for_chromosome:GRCh38:X:1:156040895:1
+
+Running conversion to hapbin format...
