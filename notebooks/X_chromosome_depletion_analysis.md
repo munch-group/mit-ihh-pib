@@ -76,7 +76,7 @@ The X chromosome shows excellent standardization but different scale:
 
 ## Implications for Analysis
 
-### 1. X-Specific Thresholds Recommended
+### 1. X-Specific Thresholds ?
 
 Given the X chromosome's systematically lower empirical percentiles, consider using chromosome-specific thresholds:
 
@@ -86,7 +86,7 @@ Given the X chromosome's systematically lower empirical percentiles, consider us
 | **Moderate** | \|Std iHS\| ≥ 2.5 | \|Std iHS\| ≥ 2.2 | Match ~top 1% |
 | **Stringent** | \|Std iHS\| ≥ 3.0 | \|Std iHS\| ≥ 2.6 | Match ~top 0.5% |
 
-**Recommendation**: Use the X chromosome's **99th percentile (2.90)** as the moderate threshold for X-specific analysis, which roughly corresponds to the autosomal threshold of 2.5.
+**So**: Using the X chromosome's **99th percentile (2.90)** as the moderate threshold for X-specific analysis, which roughly corresponds to the autosomal threshold of 2.5.
 
 ### 2. Region Definition Strategy
 
@@ -128,13 +128,13 @@ When testing for reproductive/immune gene enrichment on X:
    - Focused primarily on autosomes
    - Did not extensively calibrate for X
 
-6. **Crisci et al. (2016)** - Genome Biology and Evolution
+6. **Crisci et al. (2013)** 
    - iHS performance depends on demographic history
-   - X chromosome may require population-specific calibration
+   - X chromosome may require population-specific calibration ??
 
-## Recommendations for Manuscript
+## For in Manuscript
 
-### Key Points to Discuss
+### Key Points 
 
 1. **Expected finding**: X chromosome depletion is biologically plausible given:
    - Hemizygosity effects
@@ -164,7 +164,7 @@ When testing for reproductive/immune gene enrichment on X:
 5. → Investigate specific X chromosome candidate regions
 6. → Compare X vs autosomal selection patterns in final analysis
 
-## Files Referenced
+## Files i refer to here
 
 - [results/analysis/candidates/chromosome_statistics.tsv](../results/analysis/candidates/chromosome_statistics.tsv)
 - [results/analysis/candidates/x_enrichment_test.tsv](../results/analysis/candidates/x_enrichment_test.tsv)

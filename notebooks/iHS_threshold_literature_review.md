@@ -180,14 +180,6 @@ The updated script (`01_identify_ihs_candidates.R`) provides:
 
 1. Voight BF, Kudaravalli S, Wen X, Pritchard JK (2006). A map of recent positive selection in the human genome. PLoS Biol 4(3):e72.
 
-2. Paul S, et al. (2024). Genome-wide scan for selection signatures reveals novel insights into the adaptive capacity in local Italian cattle. BMC Genomics 25:87.
-
-3. Salazar-Tortosa D, et al. (2023). Selection scans revisited: An unbiased approach to detecting selection from genomic data. Molecular Ecology 32:2988-3007.
-
-4. Qanbari S, et al. (2011). A genome-wide scan for signatures of recent selection in Holstein cattle. Animal Genetics 42:377-389.
-
-5. Liu S, et al. (2013). Population genomics reveal recent speciation and rapid evolutionary adaptation in polar bears. Cell 157:785-794.
-
 ---
 
 ## Decision Matrix for Your Project
@@ -198,6 +190,5 @@ The updated script (`01_identify_ihs_candidates.R`) provides:
 | Distributions deviate from normality | Empirical: top 0.5-1% |
 | X chromosome differs from autosomes | X-specific empirical percentiles |
 | Want to minimize false positives | Combined: \|iHS\| ≥ 2.5 AND -log10(p) > 4 |
-| Following literature closely | Paul et al. 2024 approach |
 
 **Next step:** Run analysis and examine normality diagnostics to decide!

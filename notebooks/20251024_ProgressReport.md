@@ -7,7 +7,9 @@
 
 ## Executive Summary
 
-I have successfully completed **Phases 1-3** of the X chromosome selection analysis, processing 7.9 million variants across all chromosomes to identify 4,666 selection regions containing 48,678 genes. A key finding is that the X chromosome shows significant depletion of selection signals (~30% fewer than autosomes), which led me to implement chromosome-specific thresholds—a novel methodological contribution. The analysis is now ready for Phase 4 (functional enrichment testing) to address the core hypothesis about reproductive and immune gene enrichment.
+- Successfully completed **Phases 1-3** of the X chromosome selection analysis, processing 7.9 million variants across all chromosomes to identify 4,666 selection regions containing 48,678 genes. 
+- Key finding is that the X chromosome shows significant depletion of selection signals (~30% fewer than autosomes), which led me to implement chromosome-specific thresholds. 
+- Now ready for Phase 4 (functional enrichment testing) to address the core hypothesis about reproductive and immune gene enrichment.
 
 ### Completed Work
 - ✓ **Phase 1:** Candidate identification (210,352 significant variants)
@@ -60,7 +62,7 @@ All 23 chromosomes showed near-perfect standardization:
 - **Mean Std iHS:** ~0 (within 10⁻⁹)
 - **SD Std iHS:** ~1.000 (within 0.000006)
 
-**Interpretation:** The standardization worked perfectly. Statistical assumptions are met, p-values are reliable, and we can trust the thresholds derived from the standard normal distribution.
+**Interpretation:** The standardization worked well. Statistical assumptions are met, p-values are reliable, and we can trust the thresholds derived from the standard normal distribution.
 
 ### Key Finding #1: X Chromosome Depletion
 
@@ -74,17 +76,18 @@ All 23 chromosomes showed near-perfect standardization:
 - **Fisher's exact test:** P = 1.71×10⁻²⁴²
 - **Odds ratio:** 0.698 (X has 30% fewer signals)
 
-**This was unexpected but biologically important.**
+**This was unexpected but maybe biologically important.**
 
-### Biological Interpretation of X Depletion
+### Biological Interpretation of X Depletion (?)
 
-I investigated four potential explanations:
+Possible explan.:
 
 #### 1. Hemizygosity in Males
 - Males have only one X chromosome
 - Selection acts immediately on all X-linked alleles in males
 - Reduces extreme haplotype homozygosity patterns
-- **iHS specifically detects extended homozygosity**, which is rarer on X
+- BUT **iHS specifically detects extended homozygosity**, which is then short-lived  on X 
+So: Because X-linked alleles are exposed to selection in hemizygous males, beneficial alleles fix more rapidly. This shortens the window during which extended haplotype homozygosity can be observed, making ongoing sweeps and thus high iHS values rarer in cross-sectional data.
 
 #### 2. Effective Population Size
 - Ne(X) = 3/4 × Ne(autosomes) due to 3 X copies per 4 autosomes
@@ -100,12 +103,11 @@ I investigated four potential explanations:
 
 #### 4. Different Selection Modes
 - X chromosome enriched for sex-specific genes
-- May experience **balancing selection** rather than directional sweeps
-- Sexual antagonism (male vs female fitness optima)
+- May experience **balancing selection** rather than directional sweeps?
 - Frequency-dependent selection
 - **iHS detects directional sweeps best** - other selection modes give weaker signals
 
-**Verdict:** The depletion is **biologically expected** and has been reported in previous selection studies. This is not a problem—it's an important finding that informs our analysis strategy.
+**Verdict:** The depletion may be **biologically expected** ? (Villegas‐Mirón et al., 2021, Meisel and Connallon, 2013)
 
 ### Methodological Response: X-Specific Thresholds
 
@@ -114,11 +116,10 @@ Given the systematic X chromosome depletion, I implemented **chromosome-specific
 | Chromosome | Threshold | Rationale |
 |-----------|-----------|-----------|
 | **Autosomes** | \|Std iHS\| ≥ 2.5 | Standard moderate threshold (Paul et al. 2024) |
-| **X chromosome** | \|Std iHS\| ≥ 2.9 | Empirical 99th percentile (matches autosomal stringency) |
+| **X chromosome** | \|Std iHS\| ≥ 2.9 | Empirical 99th percentile 
 
-**This maintains comparable selection stringency across the genome.**
+**This maintains comparable selection stringency across the genome (hopefully?)**
 
-**Novel contribution:** Most studies apply uniform thresholds. Our X-specific calibration accounts for the chromosome's unique evolutionary dynamics.
 
 ### Phase 1 Results Summary
 
@@ -143,7 +144,7 @@ Given the systematic X chromosome depletion, I implemented **chromosome-specific
 
 ### Methodology
 
-**Clustering approach** (based on Liu et al. 2013):
+**Clustering approach** :
 - **Window size:** 500 kb sliding windows
 - **Minimum SNPs:** ≥2 significant SNPs per region
 - **Merging:** Overlapping windows combined
@@ -308,7 +309,7 @@ These files are ready for enrichment tools like **g:Profiler**, **DAVID**, or **
 
 **Standard approach:** Apply uniform |iHS| ≥ 2.5 to all chromosomes
 
-**Our approach:**
+**My approach:**
 - Autosomes: |iHS| ≥ 2.5
 - X chromosome: |iHS| ≥ 2.9 (empirical 99th percentile)
 

@@ -36,17 +36,13 @@ SLURM script that:
 
 ## Usage
 
-### Option 1: Run via SLURM (Recommended)
+### Option 1: Run via SLURM 
 
 ```bash
 cd /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
 sbatch scripts/ThisWorks/reprocess_chrX_hapbin.sh
 ```
 
-This will:
-- Process the data (takes ~2-4 hours)
-- Output fixed files to `data/grch38/hapbin/`
-- Backup old files with `.backup` extension
 
 ### Option 2: Run manually
 
