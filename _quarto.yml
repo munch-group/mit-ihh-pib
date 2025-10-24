@@ -40,7 +40,10 @@ book:
       - thesis/index.qmd 
     - part: "Notebooks"
       chapters: 
-      - notebooks/example.ipynb
+      - "notebooks/*.ipynb"
+    - part: "Reports"
+      chapters:     
+      - "reports/*.qmd"
     - part: "Workflows"
       chapters: 
       - workflow.py
