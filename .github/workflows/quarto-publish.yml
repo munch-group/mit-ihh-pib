@@ -43,7 +43,9 @@ jobs:
 
       - name: Install TinyTeX
         run: |
+          export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           quarto install tinytex --no-prompt
+          
 
       - name: Install Chrome
         uses: browser-actions/setup-chrome@v2
