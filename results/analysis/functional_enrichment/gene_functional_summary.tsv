@@ -1,0 +1,12 @@
+Gene	Total_GO_Terms	Biological_Process	Molecular_Function	Cellular_Component	Reproduction_Terms	Immunity_Terms	Neurodevelopment_Terms	Development_Terms	Primary_Function
+DACH2	7	2	3	2	0	0	0	1	development
+DIAPH2	15	5	3	7	2	0	0	1	reproduction
+FAAH2	7	3	2	2	0	0	0	0	other
+GPC3	50	39	3	8	0	0	0	14	development
+HTR2C	34	20	9	5	0	1	8	1	neurodevelopment
+IL1RAPL2	15	6	5	4	0	4	4	2	immunity
+KDM6A	16	4	8	4	0	0	0	1	development
+NAP1L2	10	4	4	2	0	0	2	2	neurodevelopment
+NCBP2L	6	2	3	1	0	0	0	0	other
+TRPC5	34	16	10	8	0	0	9	4	neurodevelopment
+ZMAT1	5	0	4	1	0	0	0	0	other

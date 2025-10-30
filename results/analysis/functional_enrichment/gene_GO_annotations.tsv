@@ -1,0 +1,200 @@
+Gene	GO_ID	GO_Name	GO_Category	Functional_Categories
+DACH2	GO:0000978	RNA polymerase II cis-regulatory region sequence-specific DNA binding	molecular_function	other
+DACH2	GO:0000981	DNA-binding transcription factor activity, RNA polymerase II-specific	molecular_function	other
+DACH2	GO:0003677	DNA binding	molecular_function	other
+DACH2	GO:0005634	nucleus	cellular_component	other
+DACH2	GO:0005667	transcription regulator complex	cellular_component	other
+DACH2	GO:0006357	regulation of transcription by RNA polymerase II	biological_process	other
+DACH2	GO:0046545	development of primary female sexual characteristics	biological_process	development
+DIAPH2	GO:0003779	actin binding	molecular_function	other
+DIAPH2	GO:0005102	signaling receptor binding	molecular_function	other
+DIAPH2	GO:0005730	nucleolus	cellular_component	other
+DIAPH2	GO:0005737	cytoplasm	cellular_component	other
+DIAPH2	GO:0005768	endosome	cellular_component	other
+DIAPH2	GO:0005769	early endosome	cellular_component	other
+DIAPH2	GO:0005783	endoplasmic reticulum	cellular_component	other
+DIAPH2	GO:0005829	cytosol	cellular_component	other
+DIAPH2	GO:0005884	actin filament	cellular_component	other
+DIAPH2	GO:0007292	female gamete generation	biological_process	reproduction
+DIAPH2	GO:0030036	actin cytoskeleton organization	biological_process	other
+DIAPH2	GO:0030041	actin filament polymerization	biological_process	other
+DIAPH2	GO:0030154	cell differentiation	biological_process	development
+DIAPH2	GO:0031267	small GTPase binding	molecular_function	other
+DIAPH2	GO:0048477	oogenesis	biological_process	reproduction
+FAAH2	GO:0005811	lipid droplet	cellular_component	other
+FAAH2	GO:0006629	lipid metabolic process	biological_process	other
+FAAH2	GO:0016020	membrane	cellular_component	other
+FAAH2	GO:0016042	lipid catabolic process	biological_process	other
+FAAH2	GO:0016787	hydrolase activity	molecular_function	other
+FAAH2	GO:0017064	fatty acid amide hydrolase activity	molecular_function	other
+FAAH2	GO:0019369	arachidonate metabolic process	biological_process	other
+GPC3	GO:0001658	branching involved in ureteric bud morphogenesis	biological_process	development
+GPC3	GO:0001822	kidney development	biological_process	development
+GPC3	GO:0005515	protein binding	molecular_function	other
+GPC3	GO:0005764	lysosome	cellular_component	other
+GPC3	GO:0005788	endoplasmic reticulum lumen	cellular_component	other
+GPC3	GO:0005796	Golgi lumen	cellular_component	other
+GPC3	GO:0005886	plasma membrane	cellular_component	other
+GPC3	GO:0007224	smoothened signaling pathway	biological_process	other
+GPC3	GO:0008285	negative regulation of cell population proliferation	biological_process	other
+GPC3	GO:0009617	response to bacterium	biological_process	other
+GPC3	GO:0009653	anatomical structure morphogenesis	biological_process	development
+GPC3	GO:0009887	animal organ morphogenesis	biological_process	development
+GPC3	GO:0009948	anterior/posterior axis specification	biological_process	development
+GPC3	GO:0009966	regulation of signal transduction	biological_process	other
+GPC3	GO:0009986	cell surface	cellular_component	other
+GPC3	GO:0010171	body morphogenesis	biological_process	development
+GPC3	GO:0016020	membrane	cellular_component	other
+GPC3	GO:0016477	cell migration	biological_process	other
+GPC3	GO:0030282	bone mineralization	biological_process	other
+GPC3	GO:0030316	osteoclast differentiation	biological_process	development
+GPC3	GO:0030324	lung development	biological_process	development
+GPC3	GO:0030414	peptidase inhibitor activity	molecular_function	other
+GPC3	GO:0030513	positive regulation of BMP signaling pathway	biological_process	other
+GPC3	GO:0035116	embryonic hindlimb morphogenesis	biological_process	development
+GPC3	GO:0040008	regulation of growth	biological_process	other
+GPC3	GO:0042074	cell migration involved in gastrulation	biological_process	other
+GPC3	GO:0043202	lysosomal lumen	cellular_component	other
+GPC3	GO:0045732	positive regulation of protein catabolic process	biological_process	other
+GPC3	GO:0045807	positive regulation of endocytosis	biological_process	other
+GPC3	GO:0045879	negative regulation of smoothened signaling pathway	biological_process	other
+GPC3	GO:0045880	positive regulation of smoothened signaling pathway	biological_process	other
+GPC3	GO:0045926	negative regulation of growth	biological_process	other
+GPC3	GO:0046326	positive regulation of D-glucose import	biological_process	other
+GPC3	GO:0050673	epithelial cell proliferation	biological_process	other
+GPC3	GO:0050680	negative regulation of epithelial cell proliferation	biological_process	other
+GPC3	GO:0060070	canonical Wnt signaling pathway	biological_process	other
+GPC3	GO:0060071	Wnt signaling pathway, planar cell polarity pathway	biological_process	other
+GPC3	GO:0060422	peptidyl-dipeptidase inhibitor activity	molecular_function	other
+GPC3	GO:0060828	regulation of canonical Wnt signaling pathway	biological_process	other
+GPC3	GO:0060976	coronary vasculature development	biological_process	development
+GPC3	GO:0072111	cell proliferation involved in kidney development	biological_process	development
+GPC3	GO:0072138	mesenchymal cell proliferation involved in ureteric bud development	biological_process	development
+GPC3	GO:0072180	mesonephric duct morphogenesis	biological_process	development
+GPC3	GO:0072203	cell proliferation involved in metanephros development	biological_process	development
+GPC3	GO:0090090	negative regulation of canonical Wnt signaling pathway	biological_process	other
+GPC3	GO:0090263	positive regulation of canonical Wnt signaling pathway	biological_process	other
+GPC3	GO:0098552	side of membrane	cellular_component	other
+GPC3	GO:1905475	regulation of protein localization to membrane	biological_process	other
+GPC3	GO:2000050	regulation of non-canonical Wnt signaling pathway	biological_process	other
+GPC3	GO:2000096	positive regulation of Wnt signaling pathway, planar cell polarity pathway	biological_process	other
+HTR2C	GO:0001587	Gq/11-coupled serotonin receptor activity	molecular_function	other
+HTR2C	GO:0001662	behavioral fear response	biological_process	neurodevelopment
+HTR2C	GO:0004930	G protein-coupled receptor activity	molecular_function	other
+HTR2C	GO:0004993	G protein-coupled serotonin receptor activity	molecular_function	other
+HTR2C	GO:0005515	protein binding	molecular_function	other
+HTR2C	GO:0005886	plasma membrane	cellular_component	other
+HTR2C	GO:0006874	intracellular calcium ion homeostasis	biological_process	other
+HTR2C	GO:0007165	signal transduction	biological_process	other
+HTR2C	GO:0007186	G protein-coupled receptor signaling pathway	biological_process	other
+HTR2C	GO:0007187	G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger	biological_process	other
+HTR2C	GO:0007200	phospholipase C-activating G protein-coupled receptor signaling pathway	biological_process	other
+HTR2C	GO:0007208	phospholipase C-activating serotonin receptor signaling pathway	biological_process	other
+HTR2C	GO:0007210	serotonin receptor signaling pathway	biological_process	other
+HTR2C	GO:0007268	chemical synaptic transmission	biological_process	neurodevelopment
+HTR2C	GO:0007626	locomotory behavior	biological_process	neurodevelopment
+HTR2C	GO:0007631	feeding behavior	biological_process	neurodevelopment
+HTR2C	GO:0010513	positive regulation of phosphatidylinositol biosynthetic process	biological_process	other
+HTR2C	GO:0016020	membrane	cellular_component	other
+HTR2C	GO:0030425	dendrite	cellular_component	neurodevelopment
+HTR2C	GO:0030594	neurotransmitter receptor activity	molecular_function	neurodevelopment
+HTR2C	GO:0031644	regulation of nervous system process	biological_process	neurodevelopment
+HTR2C	GO:0032098	regulation of appetite	biological_process	other
+HTR2C	GO:0042802	identical protein binding	molecular_function	other
+HTR2C	GO:0043397	regulation of corticotropin-releasing hormone secretion	biological_process	other
+HTR2C	GO:0045202	synapse	cellular_component	neurodevelopment
+HTR2C	GO:0045600	positive regulation of fat cell differentiation	biological_process	immunity;development
+HTR2C	GO:0050850	positive regulation of calcium-mediated signaling	biological_process	other
+HTR2C	GO:0051209	release of sequestered calcium ion into cytosol	biological_process	other
+HTR2C	GO:0051378	serotonin binding	molecular_function	other
+HTR2C	GO:0070374	positive regulation of ERK1 and ERK2 cascade	biological_process	other
+HTR2C	GO:0071886	1-(4-iodo-2,5-dimethoxyphenyl)propan-2-amine binding	molecular_function	other
+HTR2C	GO:0098664	G protein-coupled serotonin receptor signaling pathway	biological_process	other
+HTR2C	GO:0098666	G protein-coupled serotonin receptor complex	cellular_component	other
+HTR2C	GO:0099589	serotonin receptor activity	molecular_function	other
+IL1RAPL2	GO:0004896	cytokine receptor activity	molecular_function	immunity
+IL1RAPL2	GO:0004908	interleukin-1 receptor activity	molecular_function	immunity
+IL1RAPL2	GO:0004910	interleukin-1, type II, blocking receptor activity	molecular_function	immunity
+IL1RAPL2	GO:0005886	plasma membrane	cellular_component	other
+IL1RAPL2	GO:0007165	signal transduction	biological_process	other
+IL1RAPL2	GO:0007166	cell surface receptor signaling pathway	biological_process	other
+IL1RAPL2	GO:0007399	nervous system development	biological_process	neurodevelopment;development
+IL1RAPL2	GO:0007417	central nervous system development	biological_process	neurodevelopment;development
+IL1RAPL2	GO:0009986	cell surface	cellular_component	other
+IL1RAPL2	GO:0016020	membrane	cellular_component	other
+IL1RAPL2	GO:0016787	hydrolase activity	molecular_function	other
+IL1RAPL2	GO:0019221	cytokine-mediated signaling pathway	biological_process	immunity
+IL1RAPL2	GO:0061809	NAD+ nucleosidase activity, cyclic ADP-ribose generating	molecular_function	other
+IL1RAPL2	GO:0098978	glutamatergic synapse	cellular_component	neurodevelopment
+IL1RAPL2	GO:1905606	regulation of presynapse assembly	biological_process	neurodevelopment
+KDM6A	GO:0000978	RNA polymerase II cis-regulatory region sequence-specific DNA binding	molecular_function	other
+KDM6A	GO:0005515	protein binding	molecular_function	other
+KDM6A	GO:0005634	nucleus	cellular_component	other
+KDM6A	GO:0005654	nucleoplasm	cellular_component	other
+KDM6A	GO:0006325	chromatin organization	biological_process	other
+KDM6A	GO:0006338	chromatin remodeling	biological_process	other
+KDM6A	GO:0007507	heart development	biological_process	development
+KDM6A	GO:0010468	regulation of gene expression	biological_process	other
+KDM6A	GO:0016491	oxidoreductase activity	molecular_function	other
+KDM6A	GO:0031490	chromatin DNA binding	molecular_function	other
+KDM6A	GO:0032452	histone demethylase activity	molecular_function	other
+KDM6A	GO:0035097	histone methyltransferase complex	cellular_component	other
+KDM6A	GO:0044666	MLL3/4 complex	cellular_component	other
+KDM6A	GO:0046872	metal ion binding	molecular_function	other
+KDM6A	GO:0051213	dioxygenase activity	molecular_function	other
+KDM6A	GO:0071558	histone H3K27me2/H3K27me3 demethylase activity	molecular_function	other
+NAP1L2	GO:0000785	chromatin	cellular_component	other
+NAP1L2	GO:0003682	chromatin binding	molecular_function	other
+NAP1L2	GO:0005515	protein binding	molecular_function	other
+NAP1L2	GO:0005634	nucleus	cellular_component	other
+NAP1L2	GO:0006334	nucleosome assembly	biological_process	other
+NAP1L2	GO:0030182	neuron differentiation	biological_process	neurodevelopment;development
+NAP1L2	GO:0035034	histone acetyltransferase regulator activity	molecular_function	other
+NAP1L2	GO:0042393	histone binding	molecular_function	other
+NAP1L2	GO:0045666	positive regulation of neuron differentiation	biological_process	neurodevelopment;development
+NAP1L2	GO:2000035	regulation of stem cell division	biological_process	other
+NCBP2L	GO:0000339	RNA cap binding	molecular_function	other
+NCBP2L	GO:0000398	mRNA splicing, via spliceosome	biological_process	other
+NCBP2L	GO:0003676	nucleic acid binding	molecular_function	other
+NCBP2L	GO:0003723	RNA binding	molecular_function	other
+NCBP2L	GO:0005846	nuclear cap binding complex	cellular_component	other
+NCBP2L	GO:0045292	mRNA cis splicing, via spliceosome	biological_process	other
+TRPC5	GO:0003779	actin binding	molecular_function	other
+TRPC5	GO:0005216	monoatomic ion channel activity	molecular_function	other
+TRPC5	GO:0005262	calcium channel activity	molecular_function	other
+TRPC5	GO:0005515	protein binding	molecular_function	other
+TRPC5	GO:0005886	plasma membrane	cellular_component	other
+TRPC5	GO:0006811	monoatomic ion transport	biological_process	other
+TRPC5	GO:0006816	calcium ion transport	biological_process	other
+TRPC5	GO:0007204	positive regulation of cytosolic calcium ion concentration	biological_process	other
+TRPC5	GO:0007399	nervous system development	biological_process	neurodevelopment;development
+TRPC5	GO:0008284	positive regulation of cell population proliferation	biological_process	other
+TRPC5	GO:0015279	store-operated calcium channel activity	molecular_function	other
+TRPC5	GO:0016020	membrane	cellular_component	other
+TRPC5	GO:0030182	neuron differentiation	biological_process	neurodevelopment;development
+TRPC5	GO:0030276	clathrin binding	molecular_function	other
+TRPC5	GO:0030425	dendrite	cellular_component	neurodevelopment
+TRPC5	GO:0030426	growth cone	cellular_component	other
+TRPC5	GO:0034220	monoatomic ion transmembrane transport	biological_process	other
+TRPC5	GO:0034703	cation channel complex	cellular_component	other
+TRPC5	GO:0034704	calcium channel complex	cellular_component	other
+TRPC5	GO:0042805	actinin binding	molecular_function	other
+TRPC5	GO:0043025	neuronal cell body	cellular_component	neurodevelopment
+TRPC5	GO:0045666	positive regulation of neuron differentiation	biological_process	neurodevelopment;development
+TRPC5	GO:0045773	positive regulation of axon extension	biological_process	neurodevelopment
+TRPC5	GO:0046872	metal ion binding	molecular_function	other
+TRPC5	GO:0050774	negative regulation of dendrite morphogenesis	biological_process	neurodevelopment;development
+TRPC5	GO:0051117	ATPase binding	molecular_function	other
+TRPC5	GO:0051402	neuron apoptotic process	biological_process	neurodevelopment
+TRPC5	GO:0051480	regulation of cytosolic calcium ion concentration	biological_process	other
+TRPC5	GO:0055085	transmembrane transport	biological_process	other
+TRPC5	GO:0070588	calcium ion transmembrane transport	biological_process	other
+TRPC5	GO:0070679	inositol 1,4,5 trisphosphate binding	molecular_function	other
+TRPC5	GO:0070782	phosphatidylserine exposure on apoptotic cell surface	biological_process	other
+TRPC5	GO:0098793	presynapse	cellular_component	neurodevelopment
+TRPC5	GO:1902630	regulation of membrane hyperpolarization	biological_process	other
+ZMAT1	GO:0003676	nucleic acid binding	molecular_function	other
+ZMAT1	GO:0003677	DNA binding	molecular_function	other
+ZMAT1	GO:0005634	nucleus	cellular_component	other
+ZMAT1	GO:0008270	zinc ion binding	molecular_function	other
+ZMAT1	GO:0046872	metal ion binding	molecular_function	other
