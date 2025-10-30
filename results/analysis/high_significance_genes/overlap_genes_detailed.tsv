@@ -1,0 +1,12 @@
+gene_symbol	functional_category	in_phase3	near_high_sig_SNP
+DACH2	developmental	YES	YES
+DIAPH2	developmental	YES	YES
+FAAH2	other	YES	YES
+GPC3	other	YES	YES
+HTR2C	neural	YES	YES
+IL1RAPL2	immune; neural	YES	YES
+KDM6A	other	YES	YES
+NAP1L2	neural	YES	YES
+NCBP2L	other	YES	YES
+TRPC5	immune; neural	YES	YES
+ZMAT1	other	YES	YES

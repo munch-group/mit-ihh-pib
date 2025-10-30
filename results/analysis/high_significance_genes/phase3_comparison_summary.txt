@@ -1,0 +1,70 @@
+======================================================================
+HIGH-CONFIDENCE GENES vs PHASE 3 COMPARISON
+======================================================================
+
+SUMMARY STATISTICS:
+- High-confidence protein-coding genes (from 43 SNPs with -log10(p-value) ≥ 6): 13 genes
+- Phase 3 protein-coding genes (|Std iHS| ≥ 2.9): 241 genes
+- Overlap between lists: 11 genes (84.6% of high-confidence genes)
+- Genes NOT in Phase 3 list: 2 genes (15.4%)
+
+======================================================================
+GENES WITH STRONGEST COMBINED EVIDENCE (11 genes in both lists):
+======================================================================
+
+1. DACH2 - dachshund family transcription factor 2
+2. DIAPH2 - diaphanous related formin 2
+3. FAAH2 - fatty acid amide hydrolase 2
+4. GPC3 - glypican 3
+5. HTR2C - 5-hydroxytryptamine receptor 2C
+6. IL1RAPL2 - interleukin 1 receptor accessory protein like 2
+7. KDM6A - lysine demethylase 6A
+8. NAP1L2 - nucleosome assembly protein 1 like 2
+9. NCBP2L - nuclear cap binding protein subunit 2 like
+10. TRPC5 - transient receptor potential cation channel subfamily C member 5
+11. ZMAT1 - zinc finger matrin-type 1
+
+These genes have BOTH:
+- Highly significant p-values (-log10(p-value) ≥ 6, i.e., p < 10^-6)
+- Located within or near significant selection regions from Phase 3
+
+======================================================================
+GENES NOT IN PHASE 3 LIST (2 genes):
+======================================================================
+
+1. KLHL13 - kelch like family member 13
+   - Position: X:117897812-118117340
+   - SNP: X:117424856:T:C (-log10(p-value) = 6.18)
+   - Distance: 472,956 bp downstream
+   - NOTE: This SNP is DISTAL to KLHL13 (>470kb away)
+
+2. PCDH11X - protocadherin 11 X-linked
+   - Position: X:91779374-92623230
+   - SNP: X:93062356:A:G (-log10(p-value) = 7.18)
+   - Distance: 439,126 bp upstream
+   - NOTE: This SNP is DISTAL to PCDH11X (>430kb away)
+
+INTERPRETATION:
+These two genes may not appear in the Phase 3 list because:
+1. The high-significance SNPs are very far from the genes (>400kb)
+2. The genes themselves may not have strong iHS signals across their regions
+3. They were identified only due to being the "nearest gene" to distal SNPs
+4. The actual selection signal may be acting on other genes or regulatory regions
+
+======================================================================
+CONCLUSION:
+======================================================================
+
+84.6% (11/13) of high-confidence genes overlap with Phase 3 results,
+confirming that the most statistically significant SNPs (-log10(p-value) ≥ 6)
+are concentrated in the previously identified selection regions.
+
+The 2 non-overlapping genes (KLHL13, PCDH11X) are associated with very
+distal SNPs (>400kb away) and likely represent false positives from the
+"nearest gene" mapping approach rather than true selection targets.
+
+RECOMMENDATION:
+Focus on the 11 OVERLAP GENES for downstream analysis, as these have
+the strongest combined evidence from both Phase 3 regional analysis
+and individual high-significance SNPs (p < 10^-6).
+
