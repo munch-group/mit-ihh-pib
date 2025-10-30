@@ -59,6 +59,7 @@ pyyaml = ">=6.0.3,<7"
 samtools = ">=1.22.1,<2"
 pysam = ">=0.23.3,<0.24"
 hapbin = { version = ">=1.3.0,<2", channel = "bioconda" }
+geneinfo = ">=5.5.32,<6"
 
 # [tool.pixi.pypi-dependencies]
 # Optional PyPI dependencies can be added here
@@ -128,7 +129,10 @@ description = "Run tests"
 
  
 
-# setup-kernel = "python -m ipykernel install --user --name franklin --display-name 'Franklin Python'"
+[tool.pixi.tasks.setup-kernel]
+cmd = "python -m ipykernel install --user --name mit-ihh-pib --display-name 'Python (mit-ihh-pib)'"
+description = "Install Jupyter kernel for the pixi environment"
+
 # quarto-render = { cmd = "quarto render", env = { QUARTO_PYTHON = ".pixi/envs/default/bin/python" } }
 
 [tool.pixi.tasks.bump-version]
