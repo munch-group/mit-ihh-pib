@@ -180,4 +180,3 @@ Based on the literature, you might expect to find:
 - Think about male vs female selection pressures
 - Link findings to pregnancy/fertility outcomes
 
-Good luck! Let me know when you're ready to proceed with the next steps.
