@@ -1,0 +1,2 @@
+/var/spool/slurmd/job10568517/slurm_script: line 26: 3786298 Killed                  /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/bin/python scripts/retrieve_GO_terms_X_genes.py
+[2025-10-31T07:47:11.350] error: Detected 1 oom_kill event in StepId=10568517.batch. Some of the step tasks have been OOM Killed.
