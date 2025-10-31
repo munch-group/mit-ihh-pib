@@ -3,9 +3,9 @@
 #SBATCH --output=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_retrieval_X_%j.out
 #SBATCH --error=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_retrieval_X_%j.err
 #SBATCH --time=12:00:00
-#SBATCH --mem=8G
+#SBATCH --mem=32G
 #SBATCH --cpus-per-task=1
-#SBATCH --partition=general
+#SBATCH --partition=normal
 
 # GO Term Retrieval for X Chromosome Genes
 # This job retrieves GO annotations for ~664 X chromosome genes

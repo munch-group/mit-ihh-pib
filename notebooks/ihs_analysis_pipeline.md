@@ -182,7 +182,8 @@ for region in regions:
     )
 ```
 
-### Phase 4: Gene Enrichment Analysis (Week 3-4)
+### Phase 4: Gene Enrichment Analysis (Week 3-4) - 
+Update 301025: seee step 6&7 in /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/notebooks/20251029_Phase4_NextSteps_geneinfo_Analysis.md 
 
 #### 4.1 Prepare Gene Lists
 Extract genes from:

@@ -63,8 +63,5 @@ The 2 non-overlapping genes (KLHL13, PCDH11X) are associated with very
 distal SNPs (>400kb away) and likely represent false positives from the
 "nearest gene" mapping approach rather than true selection targets.
 
-RECOMMENDATION:
-Focus on the 11 OVERLAP GENES for downstream analysis, as these have
-the strongest combined evidence from both Phase 3 regional analysis
-and individual high-significance SNPs (p < 10^-6).
+
 

@@ -144,10 +144,6 @@ comm -12 <(sort high_confidence_X_genes.txt) <(sort X_protein_coding_genes.txt) 
 - Genes related to **immunity** (immune response, inflammation, pathogen defense)
 - X-inactivation escapees (enriched for dosage-sensitive functions)
 
-**Check if these genes appear in results:**
-- AXTRT1 (mentioned by professor)
-- AFF2 (mentioned by professor)
-- KIAA2022 (expected near top SNP X:122707710)
 
 ---
 
