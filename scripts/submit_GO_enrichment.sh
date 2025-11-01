@@ -1,19 +1,20 @@
 #!/bin/bash
-#SBATCH --job-name=GO_retrieval_X
-#SBATCH --output=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_retrieval_X_%j.out
-#SBATCH --error=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_retrieval_X_%j.err
+#SBATCH --job-name=GO_enrichment
+#SBATCH --output=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_enrichment_%j.out
+#SBATCH --error=/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/logs/GO_enrichment_%j.err
 #SBATCH --time=00:30:00
-#SBATCH --mem=16G
+#SBATCH --mem=24G
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=normal
 
-# GO Term Retrieval for X Chromosome Genes
-# This job retrieves GO annotations for ~664 X chromosome genes
-# Using bulk download approach - completes in ~2-5 minutes
-# Note: Needs 16GB for loading ~500K GO annotations + gene info tables
+# GO Enrichment Analysis for X Chromosome Selection Study
+# Performs three analyses:
+# A. High-confidence genes vs all X genes
+# B. High-confidence genes vs X genes under selection
+# C. X genes under selection vs autosomal genes under selection
 
 echo "=================================================="
-echo "GO Term Retrieval for X Chromosome Genes"
+echo "GO Enrichment Analysis"
 echo "Job ID: $SLURM_JOB_ID"
 echo "Started: $(date)"
 echo "=================================================="
@@ -24,7 +25,7 @@ cd /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
 
 # Activate pixi environment and run script
 /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/bin/python \
-    scripts/retrieve_GO_terms_X_genes.py
+    scripts/run_GO_enrichment_comprehensive.py
 
 exit_code=$?
 

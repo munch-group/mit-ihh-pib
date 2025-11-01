@@ -1,0 +1,3 @@
+GO_ID	GO_Name	GO_Category	Enrichment	p_uncorrected	p_fdr_bh	Study_Count	Study_Total	Pop_Count	Pop_Total	Study_Genes	Depth
+GO:0016037	light absorption	BP	e	6.731756166900383e-07	0.006981840908500732	4	229	6	15541	OPN1LW,OPN1MW,OPN1MW2,OPN1MW3	2
+GO:0016038	absorption of visible light	BP	e	6.731756166900383e-07	0.006981840908500732	4	229	6	15541	OPN1LW,OPN1MW,OPN1MW2,OPN1MW3	3

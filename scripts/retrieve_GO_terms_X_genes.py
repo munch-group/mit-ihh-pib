@@ -8,6 +8,11 @@ This script retrieves GO annotations for:
 
 Output is saved as a comprehensive GO annotation table that can be used
 for fast enrichment analysis.
+
+Features:
+- Efficient bulk retrieval using gene_annotation_table()
+- No need for batching or checkpointing (completes in seconds)
+- Progress tracking and detailed logging
 """
 
 import geneinfo.ontology as go
@@ -20,7 +25,7 @@ import sys
 from datetime import datetime
 
 # Set email for NCBI queries
-go.email('vanbruggenmit@birc.au.dk')
+go.email('au799024@uni.au.dk')
 
 # Define paths
 BASE_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
@@ -76,67 +81,87 @@ print(f"  Loaded {len(godag)} GO terms")
 print()
 
 # ============================================================================
-# Retrieve GO terms for all genes
+# Retrieve GO annotations for all human genes at once
 # ============================================================================
 
-print("Step 3: Retrieving GO terms for all genes...")
-print(f"  This will take approximately {len(all_genes) * 3 / 3600:.1f} hours")
-print(f"  (estimating ~3 seconds per gene)")
+print("Step 3: Retrieving all human gene-GO annotations...")
+print("  This will download the complete human GO annotation table")
+print("  (this may take 1-2 minutes for the first download)")
 print()
 
-gene_go_data = []
-genes_with_terms = 0
-genes_without_terms = 0
-errors = []
+try:
+    # Get all human gene-GO annotations in one call
+    # This returns: taxid, GeneID, GO_ID, Evidence, Qualifier, GO_term, PubMed, Category
+    all_annotations = go.go_annotation_table(taxid=9606)
+    print(f"  Successfully retrieved {len(all_annotations)} gene-GO annotations")
+    print(f"  Covering {all_annotations['GeneID'].nunique()} unique gene IDs")
+    print()
+except Exception as e:
+    print(f"  ERROR: Failed to retrieve gene annotations: {e}")
+    sys.exit(1)
 
-for i, gene in enumerate(all_genes):
-    if (i + 1) % 10 == 0:
-        elapsed_pct = ((i + 1) / len(all_genes)) * 100
-        print(f"  Progress: {i+1}/{len(all_genes)} genes ({elapsed_pct:.1f}%) - "
-              f"Success: {genes_with_terms}, No terms: {genes_without_terms}, "
-              f"Errors: {len(errors)}")
-
-    try:
-        # Get GO term IDs for this gene
-        go_term_ids = go.get_go_terms_for_genes([gene])
-
-        if go_term_ids:
-            genes_with_terms += 1
-
-            # Get details for each GO term
-            for go_id in go_term_ids:
-                if go_id in godag:
-                    go_term = godag[go_id]
-                    gene_go_data.append({
-                        'Gene': gene,
-                        'GO_ID': go_id,
-                        'GO_Name': go_term.name,
-                        'GO_Category': go_term.namespace,
-                        'In_X_Selection': gene in x_selection_genes,
-                        'In_All_X': gene in all_x_genes
-                    })
-                else:
-                    # GO term not in database
-                    gene_go_data.append({
-                        'Gene': gene,
-                        'GO_ID': go_id,
-                        'GO_Name': 'Unknown',
-                        'GO_Category': 'Unknown',
-                        'In_X_Selection': gene in x_selection_genes,
-                        'In_All_X': gene in all_x_genes
-                    })
-        else:
-            genes_without_terms += 1
-
-    except Exception as e:
-        errors.append({'Gene': gene, 'Error': str(e)})
-        print(f"  ERROR retrieving GO terms for {gene}: {e}")
-
+# Get gene ID to symbol mapping
+print("Step 4: Getting gene ID to symbol mapping...")
+gene_info = go.gene_annotation_table(taxid=9606)
+gene_id_to_symbol = dict(zip(gene_info['GeneID'], gene_info['Symbol']))
+print(f"  Loaded mapping for {len(gene_id_to_symbol)} genes")
 print()
-print(f"  Completed GO term retrieval!")
+
+# ============================================================================
+# Filter annotations for X chromosome genes
+# ============================================================================
+
+print("Step 5: Filtering annotations for X chromosome genes...")
+
+# Add gene symbols to annotations
+all_annotations['Symbol'] = all_annotations['GeneID'].map(gene_id_to_symbol)
+
+# Filter for our genes of interest
+x_gene_annotations = all_annotations[all_annotations['Symbol'].isin(all_genes)].copy()
+
+print(f"  Found annotations for {x_gene_annotations['Symbol'].nunique()} / {len(all_genes)} genes")
+print(f"  Total GO annotations: {len(x_gene_annotations)}")
+print()
+
+# Check which genes have no annotations
+genes_with_annotations = set(x_gene_annotations['Symbol'].unique())
+genes_without_annotations = set(all_genes) - genes_with_annotations
+
+if genes_without_annotations:
+    print(f"  Genes without GO annotations: {len(genes_without_annotations)}")
+    print(f"    Examples: {', '.join(list(genes_without_annotations)[:10])}")
+    if len(genes_without_annotations) > 10:
+        print(f"    ... and {len(genes_without_annotations) - 10} more")
+    print()
+
+# ============================================================================
+# Process annotations and add metadata
+# ============================================================================
+
+print("Step 6: Processing annotations and adding metadata...")
+
+# Add flags for gene lists
+x_gene_annotations['In_X_Selection'] = x_gene_annotations['Symbol'].isin(x_selection_genes)
+x_gene_annotations['In_All_X'] = x_gene_annotations['Symbol'].isin(all_x_genes)
+
+# Rename and select columns
+# Available columns: taxid, GeneID, GO_ID, Evidence, Qualifier, GO_term, PubMed, Category, Symbol
+x_gene_annotations = x_gene_annotations.rename(columns={
+    'Symbol': 'Gene',
+    'GO_term': 'GO_Name',
+    'Category': 'GO_Category'
+})
+
+# Select output columns
+output_columns = ['Gene', 'GO_ID', 'GO_Name', 'GO_Category', 'Evidence', 'In_X_Selection', 'In_All_X']
+gene_go_data = x_gene_annotations[output_columns].copy()
+
+genes_with_terms = len(genes_with_annotations)
+genes_without_terms = len(genes_without_annotations)
+
+print(f"  Processing complete!")
 print(f"    Genes with GO terms: {genes_with_terms}/{len(all_genes)} ({genes_with_terms/len(all_genes)*100:.1f}%)")
 print(f"    Genes without GO terms: {genes_without_terms}")
-print(f"    Errors: {len(errors)}")
 print(f"    Total GO annotations: {len(gene_go_data)}")
 print()
 
@@ -144,44 +169,48 @@ print()
 # Save results
 # ============================================================================
 
-print("Step 4: Saving results...")
+print("Step 7: Saving results...")
 
 # Save main GO annotations
-if gene_go_data:
-    df = pd.DataFrame(gene_go_data)
+if len(gene_go_data) > 0:
     output_file = OUTPUT_DIR / 'X_chromosome_GO_annotations_complete.tsv'
-    df.to_csv(output_file, sep='\t', index=False)
+    gene_go_data.to_csv(output_file, sep='\t', index=False)
     print(f"  Saved GO annotations: {output_file}")
 
     # Summary statistics
     print()
     print("  Summary by GO category:")
-    category_counts = df.groupby('GO_Category').size().sort_values(ascending=False)
-    for cat, count in category_counts.items():
-        print(f"    {cat:25s}: {count:5d} annotations")
+    if 'GO_Category' in gene_go_data.columns:
+        category_counts = gene_go_data.groupby('GO_Category').size().sort_values(ascending=False)
+        for cat, count in category_counts.items():
+            print(f"    {cat:25s}: {count:5d} annotations")
+    else:
+        print("    Warning: GO_Category column not found")
 
     print()
     print("  Genes with most GO terms:")
-    gene_term_counts = df.groupby('Gene').size().sort_values(ascending=False).head(10)
+    gene_term_counts = gene_go_data.groupby('Gene').size().sort_values(ascending=False).head(10)
     for gene, count in gene_term_counts.items():
         print(f"    {gene:15s}: {count:3d} GO terms")
 
-# Save error log
-if errors:
-    error_df = pd.DataFrame(errors)
-    error_file = OUTPUT_DIR / 'X_chromosome_GO_retrieval_errors.tsv'
-    error_df.to_csv(error_file, sep='\t', index=False)
+# Save genes without annotations
+if genes_without_annotations:
+    missing_file = OUTPUT_DIR / 'X_chromosome_genes_without_GO.txt'
+    with open(missing_file, 'w') as f:
+        for gene in sorted(genes_without_annotations):
+            f.write(f"{gene}\n")
     print()
-    print(f"  Saved error log: {error_file}")
+    print(f"  Saved genes without GO annotations: {missing_file}")
 
 # Save summary statistics
+unique_go_terms = len(gene_go_data['GO_ID'].unique()) if len(gene_go_data) > 0 else 0
+
 summary = {
     'Total_Genes': len(all_genes),
     'Genes_With_GO_Terms': genes_with_terms,
     'Genes_Without_GO_Terms': genes_without_terms,
-    'Genes_With_Errors': len(errors),
     'Total_GO_Annotations': len(gene_go_data),
-    'Unique_GO_Terms': len(df['GO_ID'].unique()) if gene_go_data else 0,
+    'Unique_GO_Terms': unique_go_terms,
     'Completion_Time': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 }
 

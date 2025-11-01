@@ -1,0 +1,9 @@
+GO Term Retrieval Summary
+==================================================
+
+Total_Genes                   : 653
+Genes_With_GO_Terms           : 229
+Genes_Without_GO_Terms        : 424
+Total_GO_Annotations          : 5084
+Unique_GO_Terms               : 1639
+Completion_Time               : 2025-11-01 19:27:29
