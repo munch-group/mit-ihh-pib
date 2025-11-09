@@ -21,22 +21,24 @@ echo "=========================================="
 echo ""
 
 # Run Relate using the parallel script for faster execution
+# Using biallelic-only files to avoid duplicate position errors
 ./scripts/RelateParallel/RelateParallel.sh \
-    --haps /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.haps \
-    --sample /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.sample \
+    --haps /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps \
+    --sample /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample \
     --map /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.relate.map \
     -m 0.83e-8 \
     -N 20000 \
     --seed 1 \
     --threads $SLURM_CPUS_PER_TASK \
-    -o chrX_nonPAR_output
+    -o chrX_nonPAR_biallelic_output
 
 echo ""
 echo "Job completed at $(date)"
 echo ""
 echo "Output files:"
-echo "  Trees: chrX_nonPAR_output.anc"
-echo "  Mutations: chrX_nonPAR_output.mut"
+echo "  Trees: chrX_nonPAR_biallelic_output.anc"
+echo "  Mutations: chrX_nonPAR_biallelic_output.mut"
 echo ""
-echo "Note: This analysis covers the non-PAR region only (98% of chrX)"
+echo "Note: This analysis uses biallelic SNPs only (2,276,950 SNPs)"
+echo "Covers non-PAR region only: chrX:2,781,480-155,701,382 (98% of chrX)"
 echo "PAR regions excluded: PAR1 (10,001-2,781,479) and PAR2 (155,701,383-156,030,895)"
