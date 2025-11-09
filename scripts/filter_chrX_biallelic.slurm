@@ -9,7 +9,7 @@
 
 echo "==========================================  "
 echo "Filtering chrX VCF to biallelic SNPs only"
-echo "Region: chrX:2,781,480-155,701,382 (non-PAR)"
+echo "Region: chrX:3,533,229-154,781,072 (matching genetic map coverage)"
 echo "=========================================="
 echo ""
 
@@ -17,10 +17,11 @@ echo ""
 cd /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
 eval "$(pixi shell-hook)"
 
-# Filter to region and SNPs only, split multiallelics, and remove duplicate positions
+# Filter to region matching genetic map coverage and SNPs only, split multiallelics, and remove duplicate positions
+# Genetic map covers: 3,533,229 to 154,781,072
 # -m -snps splits multiallelic sites into biallelic records
 # -d snps removes duplicate SNP records (keeps first occurrence)
-bcftools view -r chrX:2781480-155701382 -v snps \
+bcftools view -r chrX:3533229-154781072 -v snps \
   /faststorage/project/mit-ihh-pib/data/grch38/raw/chrX/chrX.vcf.gz \
   -O v | \
 bcftools norm -m -snps -O v | \
