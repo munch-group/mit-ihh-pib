@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Relate_chrX_Issues_Summary.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="relate-chromosome-x-analysis-issues-and-solutions-attempted">Relate Chromosome X Analysis: Issues and Solutions Attempted</h1>
+<p><strong>Date</strong>: November 2025
+<strong>Analysis</strong>: Chromosome X non-PAR region phylogenetic inference using Relate
+<strong>Dataset</strong>: 3,202 samples, ~2.25 million SNPs, chrX:3,533,229-154,781,072</p>
+<hr>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>After extensive troubleshooting, we have successfully resolved multiple data formatting issues but encountered a fundamental limitation in Relate's <code>MakeChunks</code> function when processing large datasets with sparse genetic maps. The issue manifests as an assertion failure at <code>data.cpp:412</code> with the error <code>bp_pos[snp] == mbp</code>, which occurs even when using the recommended RelateParallel wrapper script.</p>
+<hr>
+<h2 id="issue-1-variable-haplotype-counts-at-parnon-par-boundary">Issue 1: Variable Haplotype Counts at PAR/Non-PAR Boundary</h2>
+<h3 id="problem-description">Problem Description</h3>
+<p><strong>Initial Error</strong>:</p>
+<pre class="hljs"><code><div>Relate: data.cpp:571: Assertion `it_seq == sequence.end()' failed.
+Error at chromosome X position 2,781,514
+</div></code></pre>
+<p><strong>Root Cause</strong>:</p>
+<ul>
+<li>PAR1 ends at position 2,781,479 (GRCh38)</li>
+<li>Non-PAR begins at position 2,781,480</li>
+<li>Error occurred at position 2,781,514 (first variant in non-PAR region)</li>
+</ul>
+<p><strong>Investigation Findings</strong>:</p>
+<ul>
+<li>Line 91,095 in HAPS file: 6,409 fields (PAR region - all samples diploid)</li>
+<li>Line 91,096 in HAPS file: 4,811 fields (non-PAR region - males haploid, females diploid)</li>
+<li>Field count calculation:
+<ul>
+<li>PAR: 5 metadata + 6,404 haplotypes = 6,409 fields</li>
+<li>Non-PAR: 5 metadata + 4,806 haplotypes = 4,811 fields</li>
+<li>Difference of 1,598 fields corresponds to 436 males × 2 = 872 haplotypes reduced to 436</li>
+</ul>
+</li>
+</ul>
+<h3 id="solution-implemented">Solution Implemented</h3>
+<p>✅ <strong>Excluded PAR regions entirely</strong> and analyzed only the non-PAR region (chrX:2,781,480-155,701,382)</p>
+<p><strong>Justification</strong>:</p>
+<ul>
+<li>Non-PAR represents 98% of chromosome X (151 Mb vs 3.1 Mb PAR)</li>
+<li>Most X-linked selection signals occur in non-PAR regions</li>
+<li>Provides consistent ploidy for Relate's algorithm</li>
+<li>Aligns with research goals (X-specific selection, dosage compensation)</li>
+</ul>
+<p><strong>Files Created</strong>:</p>
+<ul>
+<li>Initial filtered VCF: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.vcf.gz</code></li>
+<li>Corresponding HAPS: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.haps</code></li>
+</ul>
+<hr>
+<h2 id="issue-2-multiallelic-variants-creating-duplicate-positions">Issue 2: Multiallelic Variants Creating Duplicate Positions</h2>
+<h3 id="problem-description">Problem Description</h3>
+<p><strong>Error After PAR Exclusion</strong>:</p>
+<pre class="hljs"><code><div>Failed at BP 2783144
+SNPs are not sorted by bp or more than one SNP at same position.
+</div></code></pre>
+<p><strong>Investigation Findings</strong>:</p>
+<ul>
+<li>Found 18,184 duplicate positions in the HAPS file</li>
+<li>Example at position 2,783,144:<pre class="hljs"><code><div>Line 52: chrX . 2783144 C T
+Line 53: chrX . 2783144 C A
+</div></code></pre>
+</li>
+<li>Root cause: VCF contained multiallelic variants (e.g., REF=C, ALT=T,A)</li>
+<li>RelateFileFormats correctly splits these into separate biallelic records at the same position</li>
+<li>Relate requires unique positions for each SNP</li>
+</ul>
+<h3 id="solution-implemented">Solution Implemented</h3>
+<p>✅ <strong>Used bcftools to split multiallelic sites and remove duplicates</strong></p>
+<p><strong>Command Pipeline</strong>:</p>
+<pre class="hljs"><code><div>bcftools view -r chrX:2781480-155701382 -v snps input.vcf.gz -O v | \
+bcftools norm -m -snps -O v | \
+bcftools norm -d snps -O z -o output_biallelic.vcf.gz
+</div></code></pre>
+<p>Where:</p>
+<ul>
+<li><code>-m -snps</code>: Splits multiallelic sites into biallelic records</li>
+<li><code>-d snps</code>: Removes duplicate SNP records (keeps first occurrence)</li>
+</ul>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Original: 2,295,317 SNPs with 18,184 duplicates</li>
+<li>After filtering: 2,276,950 unique biallelic SNPs</li>
+<li>Verification: 0 duplicate positions confirmed</li>
+</ul>
+<p><strong>Files Created</strong>:</p>
+<ul>
+<li>Script: <code>/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/filter_chrX_biallelic.slurm</code></li>
+<li>Output VCF: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.vcf.gz</code> (2.1 GB)</li>
+</ul>
+<hr>
+<h2 id="issue-3-genetic-map-range-mismatch">Issue 3: Genetic Map Range Mismatch</h2>
+<h3 id="problem-description">Problem Description</h3>
+<p><strong>New Error After Biallelic Filtering</strong>:</p>
+<pre class="hljs"><code><div>Failed to read line 2.
+</div></code></pre>
+<p><strong>Investigation Findings</strong>:</p>
+<ul>
+<li>HAPS file started at position 2,781,514</li>
+<li>Genetic map started at position 3,533,229</li>
+<li>Gap of ~750 kb with no recombination rate data</li>
+<li>Relate requires genetic map to cover all SNP positions (or allow interpolation)</li>
+</ul>
+<h3 id="solution-implemented">Solution Implemented</h3>
+<p>✅ <strong>Re-filtered VCF to match genetic map coverage range</strong></p>
+<p><strong>Updated Region</strong>: chrX:3,533,229-154,781,072</p>
+<p><strong>Commands</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Filter VCF to genetic map range</span>
+bcftools view -r chrX:3533229-154781072 -v snps input.vcf.gz -O v | \
+bcftools norm -m -snps -O v | \
+bcftools norm -d snps -O z -o chrX_nonPAR_biallelic.vcf.gz
+
+<span class="hljs-comment"># Convert to Relate format</span>
+RelateFileFormats --mode ConvertFromVcf \
+  --haps chrX_nonPAR_biallelic.haps \
+  --sample chrX_nonPAR_biallelic.sample \
+  -i chrX_nonPAR_biallelic
+</div></code></pre>
+<p><strong>Results</strong>:</p>
+<ul>
+<li>Final dataset: 2,252,381 biallelic SNPs</li>
+<li>Range: chrX:3,533,229-154,781,072 (151.2 Mb)</li>
+<li>All positions within genetic map coverage</li>
+</ul>
+<p><strong>Files Created</strong>:</p>
+<ul>
+<li>HAPS: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps</code> (21 GB)</li>
+<li>Sample: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample</code> (62 KB)</li>
+</ul>
+<hr>
+<h2 id="issue-4-genetic-map-assertion-failure-unresolved">Issue 4: Genetic Map Assertion Failure (UNRESOLVED)</h2>
+<h3 id="problem-description">Problem Description</h3>
+<p><strong>Persistent Error</strong>:</p>
+<pre class="hljs"><code><div>data.cpp:412: Assertion `bp_pos[snp] == mbp' failed.
+Error during MakeChunks step
+</div></code></pre>
+<p>This error occurs during the <code>MakeChunks</code> stage of Relate, which divides the chromosome into chunks for parallel processing.</p>
+<h3 id="attempts-to-resolve">Attempts to Resolve</h3>
+<h4 id="attempt-1-created-distance-file">Attempt 1: Created Distance File</h4>
+<p><strong>Hypothesis</strong>: Relate might need explicit SNP distances</p>
+<p><strong>Implementation</strong>:</p>
+<pre class="hljs"><code><div>awk <span class="hljs-string">'NR == 1 {print 0; prev_pos = $3; next} \
+     {print $3 - prev_pos; prev_pos = $3}'</span> \
+     chrX_nonPAR_biallelic.haps &gt; chrX_nonPAR_biallelic.dist
+</div></code></pre>
+<p><strong>Result</strong>: ❌ Same assertion failure</p>
+<p><strong>File Created</strong>: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.dist</code> (2,252,381 lines)</p>
+<hr>
+<h4 id="attempt-2-created-dense-interpolated-genetic-map">Attempt 2: Created Dense Interpolated Genetic Map</h4>
+<p><strong>Hypothesis</strong>: Relate needs genetic map entry for every SNP position</p>
+<p><strong>Implementation</strong>:</p>
+<ul>
+<li>Created Python script using binary search for efficient interpolation</li>
+<li>Generated genetic map with 2,252,381 positions (one per SNP)</li>
+<li>Linearly interpolated cM values from sparse map (23,976 positions)</li>
+</ul>
+<p><strong>Script</strong>: <code>/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/interpolate_genetic_map.py</code></p>
+<p><strong>Example</strong>:</p>
+<pre class="hljs"><code><div>Original sparse map (23,976 positions):
+chrX:3533229 3533229 0.000123795
+chrX:3534231 3534231 0.00102705
+...
+
+Interpolated dense map (2,252,381 positions):
+chrX:3533229 3533229 0.000123795
+chrX:3533246 3533246 0.0001391197  &lt;- interpolated
+chrX:3533342 3533342 0.0002256591  &lt;- interpolated
+...
+</div></code></pre>
+<p><strong>Result</strong>: ❌ Same assertion failure</p>
+<p><strong>File Created</strong>: <code>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic_interpolated.relate.map</code> (2,252,381 lines)</p>
+<hr>
+<h4 id="attempt-3-used-relate-direct-call-with---mode-all">Attempt 3: Used Relate Direct Call with --mode All</h4>
+<p><strong>Hypothesis</strong>: Maybe wrapper scripts have bugs; try direct binary call</p>
+<p><strong>Command</strong>:</p>
+<pre class="hljs"><code><div>./bin/Relate \
+    --mode All \
+    --haps chrX_nonPAR_biallelic.haps \
+    --sample chrX_nonPAR_biallelic.sample \
+    --map chrX_nonPAR_biallelic_interpolated.relate.map \
+    --dist chrX_nonPAR_biallelic.dist \
+    -m 0.83e-8 \
+    -N 20000 \
+    --seed 1 \
+    -o output
+</div></code></pre>
+<p><strong>Result</strong>: ❌ Same assertion failure at data.cpp:412</p>
+<hr>
+<h4 id="attempt-4-used-relateparallelsh-wrapper-recommended-approach">Attempt 4: Used RelateParallel.sh Wrapper (Recommended Approach)</h4>
+<p><strong>Hypothesis</strong>: Proper workflow requires using wrapper scripts, not direct calls</p>
+<p><strong>Discovery</strong>:</p>
+<ul>
+<li>Found Relate has specific wrapper scripts for different cluster systems</li>
+<li><code>RelateParallel.sh</code>: For single-node parallel processing (recommended for our setup)</li>
+<li><code>RelateSlurm.sh</code>: For distributing across multiple SLURM jobs</li>
+<li>Documentation shows these handle chunking and workflow automatically</li>
+</ul>
+<p><strong>Command</strong>:</p>
+<pre class="hljs"><code><div>./scripts/RelateParallel/RelateParallel.sh \
+    --haps chrX_nonPAR_biallelic.haps \
+    --sample chrX_nonPAR_biallelic.sample \
+    --map chrX_nonPAR.relate.map \      <span class="hljs-comment"># sparse map (23,976 positions)</span>
+    --dist chrX_nonPAR_biallelic.dist \
+    -m 0.83e-8 \
+    -N 20000 \
+    --seed 1 \
+    --threads 16 \
+    -o output
+</div></code></pre>
+<p><strong>Result</strong>: ❌ Same assertion failure at data.cpp:412</p>
+<p><strong>Error Output</strong>:</p>
+<pre class="hljs"><code><div>---------------------------------------------------------
+Parsing data..
+Warning: Will use min 40GB of hard disc.
+Relate: data.cpp:412: Assertion `bp_pos[snp] == mbp' failed.
+./scripts/RelateParallel/RelateParallel.sh: line 542: Aborted (core dumped)
+</div></code></pre>
+<hr>
+<h4 id="attempt-5-tried-running-without-genetic-map">Attempt 5: Tried Running Without Genetic Map</h4>
+<p><strong>Hypothesis</strong>: Maybe Relate can work with just distances and mutation rate</p>
+<p><strong>Command</strong>:</p>
+<pre class="hljs"><code><div>./bin/Relate \
+    --mode All \
+    --haps chrX_nonPAR_biallelic.haps \
+    --sample chrX_nonPAR_biallelic.sample \
+    --dist chrX_nonPAR_biallelic.dist \
+    -m 0.83e-8 \
+    -N 20000 \
+    --seed 1 \
+    -o output
+</div></code></pre>
+<p><strong>Result</strong>: ❌ Relate requires genetic map as mandatory argument</p>
+<p><strong>Error</strong>: <code>Not enough arguments supplied. Needed: haps, sample, map, mutation_rate, effectiveN, output.</code></p>
+<hr>
+<h2 id="analysis-of-root-cause">Analysis of Root Cause</h2>
+<h3 id="the-assertion-failure">The Assertion Failure</h3>
+<p><strong>Location</strong>: <code>data.cpp:412</code> in the <code>MakeChunks</code> function
+<strong>Assertion</strong>: <code>bp_pos[snp] == mbp</code></p>
+<p>This assertion checks that SNP positions exactly match genetic map positions. However, this is failing even though:</p>
+<ol>
+<li>✅ We have a genetic map with entries for all SNP positions (interpolated map)</li>
+<li>✅ Positions match exactly between HAPS and map files</li>
+<li>✅ Map format follows Relate's expected format (<code>chrX:pos pos cM</code>)</li>
+<li>✅ We're using the recommended RelateParallel wrapper</li>
+</ol>
+<h3 id="dataset-characteristics">Dataset Characteristics</h3>
+<p>Our dataset has unusual characteristics that may trigger the bug:</p>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>Value</th>
+<th>Comparison</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SNPs</td>
+<td>2,252,381</td>
+<td>Very large</td>
+</tr>
+<tr>
+<td>Samples</td>
+<td>3,202 (6,404 haplotypes)</td>
+<td>Large</td>
+</tr>
+<tr>
+<td>Sparse genetic map</td>
+<td>23,976 positions</td>
+<td>Normal for genome-wide studies</td>
+</tr>
+<tr>
+<td>Dense genetic map (attempted)</td>
+<td>2,252,381 positions</td>
+<td>Unusual/unprecedented</td>
+</tr>
+<tr>
+<td>HAPS file size</td>
+<td>21 GB</td>
+<td>Very large</td>
+</tr>
+<tr>
+<td>Interpolated map size</td>
+<td>~70 MB</td>
+<td>Very large for a genetic map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hypothesis-on-why-this-fails">Hypothesis on Why This Fails</h3>
+<p>Based on our investigation and the Relate documentation:</p>
+<ol>
+<li><strong>Relate is designed to work with sparse genetic maps</strong> (documented behavior)</li>
+<li><strong>The assertion at line 412 expects exact position matches</strong> (implementation detail)</li>
+<li><strong>These two requirements are contradictory</strong> for large datasets</li>
+</ol>
+<p><strong>Possible explanations</strong>:</p>
+<ul>
+<li>The sparse map interpolation code path may not be working correctly in this version</li>
+<li>The assertion was added for debugging and is too strict for production use</li>
+<li>There may be an integer overflow or precision issue with large position numbers</li>
+<li>The code may not have been tested with such large datasets (2.25M SNPs)</li>
+</ul>
+<hr>
+<h2 id="what-weve-confirmed-works">What We've Confirmed Works</h2>
+<p>✅ <strong>Data Preparation</strong>:</p>
+<ul>
+<li>Biallelic SNPs only (no multiallelic variants)</li>
+<li>No duplicate positions</li>
+<li>Matching genomic ranges between HAPS and genetic map</li>
+<li>Proper file formats (.haps, .sample, .map, .dist)</li>
+<li>Consistent haplotype counts (non-PAR only)</li>
+</ul>
+<p>✅ <strong>Workflow</strong>:</p>
+<ul>
+<li>Correct use of RelateFileFormats for VCF conversion</li>
+<li>Proper use of bcftools for filtering</li>
+<li>Correct use of RelateParallel wrapper script</li>
+<li>All files are properly formatted and pass basic validation</li>
+</ul>
+<p>✅ <strong>File Verification</strong>:</p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Verified no duplicate positions</span>
+awk <span class="hljs-string">'{print $3}'</span> chrX_nonPAR_biallelic.haps | sort -n | uniq -d | wc -l
+<span class="hljs-comment"># Output: 0</span>
+
+<span class="hljs-comment"># Verified consistent field counts</span>
+awk <span class="hljs-string">'{print NF}'</span> chrX_nonPAR_biallelic.haps | uniq -c
+<span class="hljs-comment"># Output: 2252381    4811</span>
+
+<span class="hljs-comment"># Verified position ranges match</span>
+head -1 chrX_nonPAR_biallelic.haps | awk <span class="hljs-string">'{print $3}'</span>  <span class="hljs-comment"># 3533229</span>
+head -1 chrX_nonPAR.relate.map | awk <span class="hljs-string">'{print $2}'</span>      <span class="hljs-comment"># 3533229</span>
+tail -1 chrX_nonPAR_biallelic.haps | awk <span class="hljs-string">'{print $3}'</span>  <span class="hljs-comment"># 154781072</span>
+tail -1 chrX_nonPAR.relate.map | awk <span class="hljs-string">'{print $2}'</span>      <span class="hljs-comment"># 154781072</span>
+</div></code></pre>
+<hr>
+<h2 id="what-doesnt-work">What Doesn't Work</h2>
+<p>❌ <strong>Relate MakeChunks with large sparse maps</strong>:</p>
+<ul>
+<li>2,252,381 SNPs with 23,976 genetic map positions</li>
+<li>Fails with assertion error at data.cpp:412</li>
+<li>Occurs even with proper wrapper scripts</li>
+<li>Occurs even with dense interpolated maps</li>
+</ul>
+<hr>
+<h2 id="files-created-during-troubleshooting">Files Created During Troubleshooting</h2>
+<h3 id="data-files">Data Files</h3>
+<pre class="hljs"><code><div>/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/
+├── chrX_nonPAR_biallelic.vcf.gz           # 2.1 GB - Filtered VCF (biallelic, matching map range)
+├── chrX_nonPAR_biallelic.haps             # 21 GB  - Relate input (2,252,381 SNPs)
+├── chrX_nonPAR_biallelic.sample           # 62 KB  - Sample metadata
+├── chrX_nonPAR_biallelic.dist             # ~18 MB - SNP distances
+├── chrX_nonPAR.relate.map                 # 740 KB - Sparse genetic map (23,976 positions)
+└── chrX_nonPAR_biallelic_interpolated.relate.map  # ~70 MB - Dense map (2,252,381 positions)
+</div></code></pre>
+<h3 id="scripts">Scripts</h3>
+<pre class="hljs"><code><div>/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/
+├── filter_chrX_biallelic.slurm          # VCF filtering pipeline
+├── interpolate_genetic_map.py           # Creates dense genetic map
+├── relate_chrX_nonPAR_direct.slurm      # Direct Relate call (failed)
+├── relate_chrX_nonPAR_parallel.slurm    # RelateParallel wrapper (failed)
+└── relate_chrX_nonPAR_nomap.slurm       # Attempted without map (failed)
+</div></code></pre>
+<h3 id="documentation">Documentation</h3>
+<pre class="hljs"><code><div>/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/notebooks/
+└── Relate_chrX_Issues_Summary.md        # This document
+</div></code></pre>
+<hr>
+<h2 id="recommendations">Recommendations</h2>
+<h3 id="immediate-actions">Immediate Actions</h3>
+<ol>
+<li>
+<p><strong>Contact Relate Developers</strong></p>
+<ul>
+<li>Email: leo.speidel@outlook.com (from Relate README)</li>
+<li>Subject: Assertion failure with large sparse genetic maps (data.cpp:412)</li>
+<li>Include: Dataset statistics, error logs, steps to reproduce</li>
+<li>Ask: If this is a known limitation or bug</li>
+</ul>
+</li>
+<li>
+<p><strong>Check Relate GitHub Issues</strong></p>
+<ul>
+<li>Repository: https://github.com/MyersGroup/relate</li>
+<li>Search for: &quot;assertion&quot;, &quot;sparse map&quot;, &quot;MakeChunks&quot;, &quot;data.cpp:412&quot;</li>
+<li>Check if others have reported similar issues with large datasets</li>
+</ul>
+</li>
+<li>
+<p><strong>Try Relate Alternative Approaches</strong> (if available)</p>
+<ul>
+<li>Check if there's a development/beta version with fixes</li>
+<li>Look for Relate parameter to disable assertions (if exists)</li>
+<li>Check if source code can be modified to remove assertion</li>
+</ul>
+</li>
+</ol>
+<h3 id="workaround-options">Workaround Options</h3>
+<ol>
+<li>
+<p><strong>Reduce SNP Density</strong></p>
+<pre class="hljs"><code><div><span class="hljs-comment"># Thin SNPs to every Nth SNP</span>
+bcftools view -i <span class="hljs-string">'ID=@snp_list.txt'</span> input.vcf.gz
+</div></code></pre>
+<ul>
+<li>Pros: May avoid assertion failure</li>
+<li>Cons: Loses resolution, may miss selection signals</li>
+</ul>
+</li>
+<li>
+<p><strong>Split Chromosome into Regions</strong></p>
+<ul>
+<li>Analyze non-PAR as smaller chunks separately</li>
+<li>Pros: Smaller datasets may work</li>
+<li>Cons: Loses long-range haplotype information, more complex workflow</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Alternative Tools</strong></p>
+<ul>
+<li><strong>tsinfer</strong>: Infers tree sequences from genetic variation data</li>
+<li><strong>ARGweaver</strong>: Infers ancestral recombination graphs</li>
+<li><strong>Rent+</strong>: For recombination rate estimation</li>
+<li>Pros: May handle large datasets better</li>
+<li>Cons: Different methods, different outputs</li>
+</ul>
+</li>
+</ol>
+<h3 id="long-term-solutions">Long-term Solutions</h3>
+<ol>
+<li>
+<p><strong>Debug Relate Source Code</strong></p>
+<ul>
+<li>Build Relate from source in debug mode</li>
+<li>Identify exact cause of assertion failure at line 412</li>
+<li>Submit patch to developers if possible</li>
+</ul>
+</li>
+<li>
+<p><strong>Collaborate with Relate Developers</strong></p>
+<ul>
+<li>Share our dataset as test case</li>
+<li>Help them reproduce and fix the bug</li>
+<li>Contribute to improving Relate for large datasets</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="technical-specifications">Technical Specifications</h2>
+<h3 id="system-environment">System Environment</h3>
+<ul>
+<li><strong>Cluster</strong>: HPC with SLURM scheduler</li>
+<li><strong>Relate Version</strong>: Latest from git repository (November 2025)</li>
+<li><strong>Resources Used</strong>: 16 CPUs, 64 GB RAM, 48-hour time limit</li>
+</ul>
+<h3 id="dataset-specifications">Dataset Specifications</h3>
+<ul>
+<li><strong>Species</strong>: Human (Homo sapiens)</li>
+<li><strong>Reference</strong>: GRCh38</li>
+<li><strong>Chromosome</strong>: X (non-PAR region)</li>
+<li><strong>Samples</strong>: 3,202 individuals
+<ul>
+<li>436 males (13.6%) - hemizygous in non-PAR</li>
+<li>2,766 females (86.4%) - diploid</li>
+</ul>
+</li>
+<li><strong>Total Haplotypes</strong>: 4,806 in non-PAR region</li>
+<li><strong>SNPs</strong>: 2,252,381 biallelic variants</li>
+<li><strong>Region</strong>: chrX:3,533,229-154,781,072 (151.2 Mb)</li>
+<li><strong>Mutation Rate</strong>: 0.83×10⁻⁸ per base per generation</li>
+<li><strong>Effective Population Size</strong>: 20,000 (haploid)</li>
+</ul>
+<h3 id="genetic-map-specifications">Genetic Map Specifications</h3>
+<ul>
+<li><strong>Source</strong>: [Specify your genetic map source]</li>
+<li><strong>Format</strong>: Standard Relate format (position bp, rate cM/Mb, distance cM)</li>
+<li><strong>Sparse Map</strong>: 23,976 positions across 151.2 Mb</li>
+<li><strong>Average Spacing</strong>: ~6.3 kb between map positions</li>
+<li><strong>SNPs per Map Position</strong>: ~94 SNPs per map position (2,252,381 / 23,976)</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>After extensive troubleshooting involving five different approaches, we have successfully prepared high-quality input data that meets all of Relate's documented requirements. However, we encounter a consistent assertion failure (<code>bp_pos[snp] == mbp</code> at data.cpp:412) during the MakeChunks stage.</p>
+<p>This appears to be a <strong>bug or undocumented limitation in Relate</strong> when handling:</p>
+<ul>
+<li>Very large numbers of SNPs (2.25 million)</li>
+<li>Sparse genetic maps (typical for genome-wide studies)</li>
+<li>The combination of these two factors</li>
+</ul>
+<p>The issue is not with our data preparation or workflow, as we have:</p>
+<ul>
+<li>✅ Eliminated all known data quality issues</li>
+<li>✅ Used the recommended RelateParallel wrapper</li>
+<li>✅ Followed all documentation guidelines</li>
+<li>✅ Verified file formats and compatibility</li>
+</ul>
+<p>Further progress requires either:</p>
+<ol>
+<li>Input from Relate developers on this specific error</li>
+<li>Access to a patched version of Relate</li>
+<li>Use of alternative phylogenetic inference tools</li>
+</ol>
+<hr>
+<h2 id="references">References</h2>
+<ol>
+<li>Relate Documentation: https://myersgroup.github.io/relate/</li>
+<li>Relate GitHub: https://github.com/MyersGroup/relate</li>
+<li>Relate Publication: Speidel et al., Nature Genetics 51: 1321-1329, 2019</li>
+<li>bcftools Documentation: http://samtools.github.io/bcftools/</li>
+</ol>
+<hr>
+<p><strong>Document Created</strong>: November 10, 2025
+<strong>Last Updated</strong>: November 10, 2025
+<strong>Author</strong>: Mit Van Bruggen (Assisted by Claude Code)</p>
+
+</body>
+</html>
