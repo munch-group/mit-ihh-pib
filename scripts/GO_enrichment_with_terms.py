@@ -32,7 +32,7 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 # My study genes (high-confidence X chromosome genes)
 study_genes = ['DACH2', 'DIAPH2', 'FAAH2', 'GPC3', 'HTR2C',
                'IL1RAPL2', 'KDM6A', 'NAP1L2', 'NCBP2L',
-               'TRPC5', 'ZMAT1']
+               'TRPC5', 'ZMAT1', 'KLHL13', 'PCDH11X']
 
 # Create a GeneList object
 study_gl = glist(study_genes)
@@ -53,23 +53,53 @@ print()
 
 KEYWORD_CATEGORIES = {
     'reproduction': [
-        'meiosis', 'gamete', 'fertility', 'gonad', 'sperm', 'oocyte',
-        'spermatogenesis', 'oogenesis', 'germ cell', 'reproductive',
-        'fertilization', 'ovary', 'testis'
+        'fertility', 'sperm', 'oocyte', 'spermatogenesis', 'oogenesis', 'reproductive',
+        'fertilization', 'ovary', 'testis', 'gamete', 'meiosis', 'gonad', 'gametogenesis',
+        'ovulation', 'spermiogenesis', 'acrosome', 'zona pellucida', 'follicle',
+        'seminiferous', 'leydig', 'sertoli', 'corpus luteum', 'placenta', 'pregnancy',
+        'implantation', 'zygote', 'conception', 'sex determination', 'steroidogenesis',
+        'testosterone', 'estrogen', 'progesterone', 'luteinizing', 'follicle-stimulating',
+        'sexual maturation', 'puberty', 'reproductive behavior', 'mating'
     ],
     'immunity': [
         'immune', 'inflammation', 'defense', 'cytokine', 'antibody',
         'inflammatory', 'innate immune', 'adaptive immune', 'lymphocyte',
-        'T cell', 'B cell', 'interferon', 'interleukin', 'antigen'
+        'T cell', 'B cell', 'interferon', 'interleukin', 'antigen',
+        'immunoglobulin', 'macrophage', 'dendritic cell', 'neutrophil', 'eosinophil',
+        'basophil', 'monocyte', 'natural killer', 'complement', 'chemokine',
+        'major histocompatibility', 'MHC', 'HLA', 'toll-like receptor', 'TLR',
+        'inflammasome', 'pathogen', 'phagocytosis', 'opsonization', 'apoptosis',
+        'immunological', 'leukocyte', 'cytotoxic', 'helper T cell', 'regulatory T cell',
+        'plasma cell', 'germinal center', 'thymus', 'spleen', 'lymph node',
+        'autoimmun', 'allergy', 'hypersensitivity', 'immunodeficiency'
     ],
     'neurodevelopment': [
         'neuron', 'synapse', 'cognition', 'brain', 'neural', 'axon',
         'dendrite', 'synaptic', 'neuronal', 'nervous system', 'learning',
-        'memory', 'behavior', 'neurogenesis', 'neurotransmitter'
+        'memory', 'behavior', 'neurogenesis', 'neurotransmitter',
+        'dopamine', 'serotonin', 'glutamate', 'GABA', 'acetylcholine', 'norepinephrine',
+        'neuropeptide', 'receptor', 'ion channel', 'voltage-gated', 'ligand-gated',
+        'plasticity', 'long-term potentiation', 'LTP', 'long-term depression', 'LTD',
+        'cortex', 'hippocampus', 'amygdala', 'cerebellum', 'striatum', 'thalamus',
+        'hypothalamus', 'brainstem', 'spinal cord', 'peripheral nerve',
+        'myelination', 'oligodendrocyte', 'astrocyte', 'microglia', 'glia',
+        'neuroplasticity', 'neuroprotection', 'neurodegener', 'neurodevelopmental',
+        'neural tube', 'neural crest', 'migration', 'neurite', 'growth cone',
+        'guidance', 'circuit', 'network', 'sensory', 'motor', 'psychiatric'
     ],
     'development': [
         'development', 'differentiation', 'morphogenesis', 'organogenesis',
-        'embryo', 'pattern', 'specification', 'determination'
+        'embryo', 'pattern', 'specification', 'determination',
+        'embryonic', 'fetal', 'gastrulation', 'somite', 'mesoderm', 'endoderm', 'ectoderm',
+        'germ layer', 'axis', 'anterior-posterior', 'dorsal-ventral', 'left-right',
+        'segmentation', 'limb', 'organ', 'tissue', 'cell fate',
+        'lineage', 'progenitor', 'stem cell', 'pluripotent', 'multipotent',
+        'proliferation', 'apoptosis', 'cell death', 'growth factor', 'signaling pathway',
+        'Wnt', 'Notch', 'Hedgehog', 'TGF-beta', 'BMP', 'FGF', 'EGF',
+        'transcription factor', 'HOX', 'homeobox', 'morphogen', 'gradient',
+        'induction', 'competence', 'commitment', 'maturation', 'remodeling',
+        'angiogenesis', 'vasculogenesis', 'cardiogenesis', 'myogenesis', 'osteogenesis',
+        'chondrogenesis', 'adipogenesis', 'hematopoiesis'
     ]
 }
 
@@ -151,216 +181,315 @@ print(f"  Immunity:         {len(immunity_genes)} genes")
 print(f"  Development:      {len(development_genes)} genes")
 
 #==============================================================================
-# Step 5: Define background gene sets
+# Step 5: Define background gene set - All protein-coding X chromosome genes
 #==============================================================================
 
-print("\n\nStep 5: Defining background gene sets...")
+print("\n\nStep 5: Defining background gene set...")
 print()
 
-# Background 1: All X chromosome genes
-gene_table = go.gene_annotation_table()
-all_x_genes = gene_table[gene_table['chromosome'] == 'X']['Symbol'].tolist()
-x_background = glist(all_x_genes)
-print(f"  Background 1: All X chromosome genes - {len(x_background)} genes")
-
-# Background 2: All protein-coding genes
+# Get all protein-coding genes, then filter for X chromosome
 all_protein_coding = go.all_protein_coding()
-pc_background = glist(all_protein_coding)
-print(f"  Background 2: All protein-coding genes - {len(pc_background)} genes")
 
-# Background 3: X chromosome genes under selection (from Phase 3)
-x_selection_file = PROJECT_DIR / 'results/analysis/gene_annotation/X_protein_coding_genes.tsv'
-if x_selection_file.exists():
-    x_selection_df = pd.read_csv(x_selection_file, sep='\t')
-    x_selection_genes = x_selection_df['gene_name'].unique().tolist()
-    x_sel_background = glist(x_selection_genes)
-    print(f"  Background 3: X chromosome genes under selection - {len(x_sel_background)} genes")
-else:
-    print(f"  Background 3: Warning - File not found: {x_selection_file}")
+# Get X chromosome gene symbols from gene annotation table
+gene_table = go.gene_annotation_table()
+x_gene_symbols = set(gene_table[gene_table['chromosome'] == 'X']['Symbol'].tolist())
 
-# Background 4: Only genes in specific GO categories
-# (e.g., neuron-related genes as background)
-neurodevelopment_background = glist(neurodevelopment_genes)
-reproduction_background = glist(reproduction_genes)
-immunity_background = glist(immunity_genes)
-development_background = glist(development_genes)
+# Filter protein-coding genes to only those on X chromosome
+all_x_protein_coding = [gene for gene in all_protein_coding if gene in x_gene_symbols]
 
-print(f"  Background 4: Neurodevelopment genes - {len(neurodevelopment_background)} genes")
-print(f"  Background 4: Reproduction genes - {len(reproduction_background)} genes")
-print(f"  Background 4: Immunity genes - {len(immunity_background)} genes")
-print(f"  Background 4: Development genes - {len(development_background)} genes")
-
+background_genes = all_x_protein_coding
+print(f"  Background: All protein-coding X chromosome genes")
+print(f"  Total background genes: {len(background_genes)}")
 print()
 
 #==============================================================================
-# Step 6: Visualize GO term hierarchies using DAGs
+# Step 6: Filter category genes to only include X chromosome genes
 #==============================================================================
 
-print("\nStep 6: Visualizing GO term hierarchies as DAGs...")
+print("Step 6: Filtering category genes to X chromosome only...")
 print()
 
-# Visualize the hierarchy for each functional category
-for category, terms in category_terms.items():
-    print(f"  Creating DAG for {category} ({len(terms)} terms)...")
+# Only keep category genes that are on X chromosome (in background)
+background_set = set(background_genes)
 
-    # Create the DAG visualization
-    # Note: show_go_dag_for_terms() saves to cache_dir/plot.png
-    go.show_go_dag_for_terms(terms)
+neurodevelopment_x = [g for g in neurodevelopment_genes if g in background_set]
+reproduction_x = [g for g in reproduction_genes if g in background_set]
+immunity_x = [g for g in immunity_genes if g in background_set]
+development_x = [g for g in development_genes if g in background_set]
 
-    # Copy the cached plot to our output directory
-    cache_plot = Path(go.cache_dir) / 'plot.png'
-    output_fig = OUTPUT_DIR / f'GO_DAG_{category}.png'
-
-    if cache_plot.exists():
-        shutil.copy2(cache_plot, output_fig)
-        print(f"    ✓ DAG saved to: {output_fig}")
-    else:
-        print(f"    ✗ Warning: Cache plot not found at {cache_plot}")
-    print()
-
-#==============================================================================
-# Step 7: Perform Fisher's Exact Tests for enrichment
-#==============================================================================
-
-print("\nStep 7: Performing Fisher's exact tests for enrichment...")
+print(f"  Neurodevelopment (X only): {len(neurodevelopment_x)} genes")
+print(f"  Reproduction (X only):     {len(reproduction_x)} genes")
+print(f"  Immunity (X only):         {len(immunity_x)} genes")
+print(f"  Development (X only):      {len(development_x)} genes")
 print()
 
-def custom_enrichment_test(study_genes, category_genes, background_genes):
-    """
-    Perform Fisher's exact test for enrichment
+#==============================================================================
+# Step 7: Perform Fisher's exact tests for enrichment
+#==============================================================================
 
-    Parameters:
-    - study_genes: Your genes of interest (e.g., high-confidence X genes)
-    - category_genes: Genes in a specific GO category (e.g., neuron genes)
-    - background_genes: All possible genes for comparison
+print("Step 7: Performing Fisher's exact tests for enrichment...")
+print("Using GeneList.fisher() method as described by https://munch-group.org/geneinfo/pages/gene_lists.html")
+print()
 
-    Returns: odds ratio, p-value, contingency table
-    """
-    # Convert to sets for faster operations
-    study_set = set(study_genes)
-    category_set = set(category_genes)
-    background_set = set(background_genes)
+# Convert study genes to GeneList object
+study_gl = glist(study_genes)
 
-    # Build 2x2 contingency table
-    a = len(study_set & category_set)  # In study AND in category
-    b = len(study_set - category_set)  # In study, NOT in category
-    c = len(category_set - study_set)  # NOT in study, IN category
-    d = len(background_set - study_set - category_set)  # Neither
+# Create GeneList objects for X-filtered categories
+neurodevelopment_gl_x = glist(neurodevelopment_x)
+reproduction_gl_x = glist(reproduction_x)
+immunity_gl_x = glist(immunity_x)
+development_gl_x = glist(development_x)
 
-    contingency_table = [[a, b], [c, d]]
+# Background: all protein-coding X chromosome genes
+background_gl = glist(background_genes)
 
-    # Fisher's exact test (one-sided: testing for enrichment)
-    odds_ratio, p_value = fisher_exact(contingency_table, alternative='greater')
-
-    return odds_ratio, p_value, contingency_table, a
-
-# Store results for each test
+# Store results
 enrichment_results = []
 
-# Define the backgrounds to test against
-backgrounds = {
-    'X chromosome genes': (x_background, all_x_genes),
-    'All protein-coding genes': (pc_background, all_protein_coding),
-    'X genes under selection': (x_sel_background, x_selection_genes) if x_selection_file.exists() else None
+# Define functional categories
+categories = {
+    'neurodevelopment': (neurodevelopment_gl_x, neurodevelopment_x),
+    'reproduction': (reproduction_gl_x, reproduction_x),
+    'immunity': (immunity_gl_x, immunity_x),
+    'development': (development_gl_x, development_x)
 }
 
-# Define the functional categories to test
-category_gene_sets = {
-    'neurodevelopment': neurodevelopment_genes,
-    'reproduction': reproduction_genes,
-    'immunity': immunity_genes,
-    'development': development_genes
-}
+# Perform Fisher's exact test for each category
+# Using: study_genes.fisher(category_genes, background=background_genes)
+print("Results:")
+print("-" * 80)
+for category_name, (category_gl, category_genes_list) in categories.items():
+    # Perform Fisher's exact test
+    p_value = study_gl.fisher(category_gl, background=background_gl)
 
-# Perform enrichment tests for each category against each background
-for bg_name, bg_data in backgrounds.items():
-    if bg_data is None:
-        continue
+    # Calculate overlap
+    study_set = set(study_genes)
+    category_set = set(category_genes_list)
+    overlap_genes = list(study_set & category_set)
 
-    bg_genelist, bg_genes = bg_data
+    # Calculate odds ratio manually for reporting
+    a = len(study_set & category_set)  # In study AND in category
+    b = len(study_set - category_set)  # In study but NOT in category
+    c = len(category_set - study_set)  # In category but NOT in study
+    d = len(set(background_genes) - study_set - category_set)  # In neither
 
-    print(f"\nTesting against background: {bg_name}")
-    print(f"  Background size: {len(bg_genes)} genes")
+    # Odds ratio = (a/b) / (c/d) = (a*d) / (b*c)
+    if b > 0 and c > 0:
+        odds_ratio = (a * d) / (b * c)
+    else:
+        odds_ratio = float('inf') if a > 0 else 0.0
+
+    # Store results
+    enrichment_results.append({
+        'Category': category_name,
+        'Study_genes_total': len(study_genes),
+        'Category_genes_total': len(category_genes_list),
+        'Background_genes_total': len(background_genes),
+        'Overlap': len(overlap_genes),
+        'Overlapping_genes': ', '.join(sorted(overlap_genes)) if overlap_genes else 'None',
+        'Odds_Ratio': odds_ratio,
+        'P_value': p_value,
+        'In_study_in_category': a,
+        'In_study_not_category': b,
+        'Not_study_in_category': c,
+        'Not_study_not_category': d
+    })
+
+    # Print results with significance markers
+    sig = "***" if p_value < 0.001 else "**" if p_value < 0.01 else "*" if p_value < 0.05 else ""
+    print(f"{category_name:20s}: OR={odds_ratio:6.2f}, p={p_value:.4e} {sig:3s}")
+    print(f"  Overlap: {len(overlap_genes)}/{len(study_genes)} study genes")
+    if overlap_genes:
+        print(f"  Genes: {', '.join(sorted(overlap_genes))}")
     print()
 
-    for category, category_genes in category_gene_sets.items():
-        or_val, p_val, table, overlap = custom_enrichment_test(
-            study_genes=study_genes,
-            category_genes=category_genes,
-            background_genes=bg_genes
-        )
+print("-" * 80)
 
-        # Store results
-        enrichment_results.append({
-            'Background': bg_name,
-            'Category': category,
-            'Study_genes': len(study_genes),
-            'Category_genes': len(category_genes),
-            'Overlap': overlap,
-            'Odds_Ratio': or_val,
-            'P_value': p_val,
-            'In_study_in_category': table[0][0],
-            'In_study_not_category': table[0][1],
-            'Not_study_in_category': table[1][0],
-            'Not_study_not_category': table[1][1]
-        })
-
-        # Print results
-        significance = "***" if p_val < 0.001 else "**" if p_val < 0.01 else "*" if p_val < 0.05 else ""
-        print(f"  {category:20s}: OR={or_val:6.2f}, p={p_val:.2e} {significance} (overlap: {overlap}/{len(study_genes)})")
-
-print()
-
-# Save enrichment results to file
+# Create results dataframe
 enrichment_df = pd.DataFrame(enrichment_results)
 
-# Apply FDR correction (Benjamini-Hochberg method) for multiple testing
-print("Applying FDR correction for multiple testing...")
-print(f"  Total tests performed: {len(enrichment_df)}")
-print()
-
-# Perform FDR correction using Benjamini-Hochberg method
-reject, pvals_corrected, alphacSidak, alphacBonf = multipletests(
+# Apply FDR correction (Benjamini-Hochberg)
+from statsmodels.stats.multitest import multipletests
+reject, pvals_corrected, _, _ = multipletests(
     enrichment_df['P_value'],
     alpha=0.05,
     method='fdr_bh'
 )
 
-# Add FDR-corrected p-values to the dataframe
-enrichment_df['FDR'] = pvals_corrected
+enrichment_df['FDR_corrected'] = pvals_corrected
 enrichment_df['Significant_FDR_0.05'] = reject
 
 # Sort by p-value
 enrichment_df = enrichment_df.sort_values('P_value')
 
-# Save complete results
-enrichment_output = OUTPUT_DIR / 'enrichment_results.tsv'
+# Save results
+enrichment_output = OUTPUT_DIR / 'fisher_exact_test_results.tsv'
 enrichment_df.to_csv(enrichment_output, sep='\t', index=False)
-print(f"Enrichment results saved to: {enrichment_output}")
 
-# Print summary with FDR values
-print("\nSummary of all tests (sorted by p-value):")
-print("-" * 90)
-for idx, row in enrichment_df.iterrows():
-    sig_nominal = "*" if row['P_value'] < 0.05 else ""
-    sig_fdr = "***" if row['FDR'] < 0.001 else "**" if row['FDR'] < 0.01 else "*" if row['FDR'] < 0.05 else ""
-    print(f"{row['Background']:30s} | {row['Category']:15s} | p={row['P_value']:.3e} {sig_nominal:3s} | FDR={row['FDR']:.3e} {sig_fdr:3s}")
-
-# Create a summary of significant results (FDR < 0.05)
-significant_results = enrichment_df[enrichment_df['FDR'] < 0.05].copy()
-if len(significant_results) > 0:
-    sig_output = OUTPUT_DIR / 'significant_enrichments_FDR.tsv'
-    significant_results.to_csv(sig_output, sep='\t', index=False)
-    print(f"\n{'='*90}")
-    print(f"Significant enrichments (FDR < 0.05) saved to: {sig_output}")
-    print(f"Found {len(significant_results)} significant enrichments after FDR correction")
-    print(f"{'='*90}")
-else:
-    print(f"\n{'='*90}")
-    print("No significant enrichments found after FDR correction (FDR < 0.05)")
-    print(f"{'='*90}")
-
+print(f"\nResults saved to: {enrichment_output}")
 print()
-print("="*70)
-print("GO enrichment analysis with functional categories completed.")
-print(f"\nAll results saved to: {OUTPUT_DIR}")
+
+# Print summary table
+print("Summary with FDR correction:")
+print("=" * 80)
+for _, row in enrichment_df.iterrows():
+    sig_fdr = "***" if row['FDR_corrected'] < 0.001 else "**" if row['FDR_corrected'] < 0.01 else "*" if row['FDR_corrected'] < 0.05 else ""
+    print(f"{row['Category']:20s}: p={row['P_value']:.4e}, FDR={row['FDR_corrected']:.4e} {sig_fdr}")
+
+print("=" * 80)
+
+#==============================================================================
+# Step 8: Test enrichment for combined/intersecting categories
+#==============================================================================
+
+print("\n\nStep 8: Testing enrichment for combined functional categories...")
+print("(genes that belong to multiple categories simultaneously)")
+print()
+
+# Create intersections using GeneList set operations (&)
+combined_categories = {
+    'reproduction_AND_development': (
+        reproduction_gl_x & development_gl_x,
+        'Reproduction AND Development'
+    ),
+    'reproduction_AND_neurodevelopment': (
+        reproduction_gl_x & neurodevelopment_gl_x,
+        'Reproduction AND Neurodevelopment'
+    ),
+    'reproduction_AND_immunity': (
+        reproduction_gl_x & immunity_gl_x,
+        'Reproduction AND Immunity'
+    ),
+    'neurodevelopment_AND_immunity': (
+        neurodevelopment_gl_x & immunity_gl_x,
+        'Neurodevelopment AND Immunity'
+    ),
+    'neurodevelopment_AND_development': (
+        neurodevelopment_gl_x & development_gl_x,
+        'Neurodevelopment AND Development'
+    ),
+    'immunity_AND_development': (
+        immunity_gl_x & development_gl_x,
+        'Immunity AND Development'
+    ),
+    # Triple combinations
+    'reproduction_AND_neurodevelopment_AND_development': (
+        reproduction_gl_x & neurodevelopment_gl_x & development_gl_x,
+        'Reproduction AND Neurodevelopment AND Development'
+    ),
+    'reproduction_AND_immunity_AND_development': (
+        reproduction_gl_x & immunity_gl_x & development_gl_x,
+        'Reproduction AND Immunity AND Development'
+    ),
+    'neurodevelopment_AND_immunity_AND_development': (
+        neurodevelopment_gl_x & immunity_gl_x & development_gl_x,
+        'Neurodevelopment AND Immunity AND Development'
+    ),
+    'reproduction_AND_neurodevelopment_AND_immunity': (
+        reproduction_gl_x & neurodevelopment_gl_x & immunity_gl_x,
+        'Reproduction AND Neurodevelopment AND Immunity'
+    ),
+    # Quadruple combination - all four categories
+    'reproduction_AND_neurodevelopment_AND_immunity_AND_development': (
+        reproduction_gl_x & neurodevelopment_gl_x & immunity_gl_x & development_gl_x,
+        'Reproduction AND Neurodevelopment AND Immunity AND Development (ALL FOUR)'
+    ),
+}
+
+# Store combined results
+combined_results = []
+
+print("Combined category sizes (X chromosome only):")
+for cat_name, (cat_gl, display_name) in combined_categories.items():
+    print(f"  {display_name:55s}: {len(cat_gl):3d} genes")
+print()
+
+print("Results:")
+print("-" * 80)
+
+for cat_name, (category_gl, display_name) in combined_categories.items():
+    # Skip if category is empty or too small
+    if len(category_gl) == 0:
+        print(f"{display_name:55s}: No genes in this combination (skipped)")
+        print()
+        continue
+
+    # Perform Fisher's exact test using GeneList.fisher()
+    p_value = study_gl.fisher(category_gl, background=background_gl)
+
+    # Calculate overlap
+    study_set = set(study_genes)
+    cat_genes_set = set(list(category_gl))
+    overlap_genes = list(study_set & cat_genes_set)
+
+    # Calculate odds ratio
+    a = len(study_set & cat_genes_set)
+    b = len(study_set - cat_genes_set)
+    c = len(cat_genes_set - study_set)
+    d = len(set(background_genes) - study_set - cat_genes_set)
+
+    if b > 0 and c > 0:
+        odds_ratio = (a * d) / (b * c)
+    else:
+        odds_ratio = float('inf') if a > 0 else 0.0
+
+    # Store results
+    combined_results.append({
+        'Category': display_name,
+        'Study_genes_total': len(study_genes),
+        'Category_genes_total': len(category_gl),
+        'Background_genes_total': len(background_genes),
+        'Overlap': len(overlap_genes),
+        'Overlapping_genes': ', '.join(sorted(overlap_genes)) if overlap_genes else 'None',
+        'Odds_Ratio': odds_ratio,
+        'P_value': p_value,
+        'In_study_in_category': a,
+        'In_study_not_category': b,
+        'Not_study_in_category': c,
+        'Not_study_not_category': d
+    })
+
+    # Print results
+    sig = "***" if p_value < 0.001 else "**" if p_value < 0.01 else "*" if p_value < 0.05 else ""
+    print(f"{display_name:55s}: OR={odds_ratio:6.2f}, p={p_value:.4e} {sig:3s}")
+    print(f"  Overlap: {len(overlap_genes)}/{len(study_genes)} study genes (category size: {len(category_gl)} genes)")
+    if overlap_genes:
+        print(f"  Genes: {', '.join(sorted(overlap_genes))}")
+    print()
+
+print("-" * 80)
+
+# Create combined results dataframe
+if len(combined_results) > 0:
+    combined_df = pd.DataFrame(combined_results)
+
+    # Apply FDR correction
+    reject, pvals_corrected, _, _ = multipletests(
+        combined_df['P_value'],
+        alpha=0.05,
+        method='fdr_bh'
+    )
+
+    combined_df['FDR_corrected'] = pvals_corrected
+    combined_df['Significant_FDR_0.05'] = reject
+
+    # Sort by p-value
+    combined_df = combined_df.sort_values('P_value')
+
+    # Save combined results
+    combined_output = OUTPUT_DIR / 'fisher_exact_test_combined_categories.tsv'
+    combined_df.to_csv(combined_output, sep='\t', index=False)
+
+    print(f"\nCombined category results saved to: {combined_output}")
+    print()
+
+    # Print summary with FDR
+    print("Summary with FDR correction (combined categories):")
+    print("=" * 80)
+    for _, row in combined_df.iterrows():
+        sig_fdr = "***" if row['FDR_corrected'] < 0.001 else "**" if row['FDR_corrected'] < 0.01 else "*" if row['FDR_corrected'] < 0.05 else ""
+        print(f"{row['Category']:55s}: p={row['P_value']:.4e}, FDR={row['FDR_corrected']:.4e} {sig_fdr}")
+    print("=" * 80)
+
+print("\nAnalysis complete!")
+
