@@ -17,6 +17,7 @@ from geneinfo.genelist import GeneList as glist
 import geneinfo.ontology as go
 import shutil
 from scipy.stats import fisher_exact
+from statsmodels.stats.multitest import multipletests
 import numpy as np
 
 # Set your email for GO database access
@@ -312,20 +313,52 @@ print()
 
 # Save enrichment results to file
 enrichment_df = pd.DataFrame(enrichment_results)
+
+# Apply FDR correction (Benjamini-Hochberg method) for multiple testing
+print("Applying FDR correction for multiple testing...")
+print(f"  Total tests performed: {len(enrichment_df)}")
+print()
+
+# Perform FDR correction using Benjamini-Hochberg method
+reject, pvals_corrected, alphacSidak, alphacBonf = multipletests(
+    enrichment_df['P_value'],
+    alpha=0.05,
+    method='fdr_bh'
+)
+
+# Add FDR-corrected p-values to the dataframe
+enrichment_df['FDR'] = pvals_corrected
+enrichment_df['Significant_FDR_0.05'] = reject
+
+# Sort by p-value
+enrichment_df = enrichment_df.sort_values('P_value')
+
+# Save complete results
 enrichment_output = OUTPUT_DIR / 'enrichment_results.tsv'
 enrichment_df.to_csv(enrichment_output, sep='\t', index=False)
 print(f"Enrichment results saved to: {enrichment_output}")
 
-# Create a summary of significant results (p < 0.05)
-significant_results = enrichment_df[enrichment_df['P_value'] < 0.05].copy()
+# Print summary with FDR values
+print("\nSummary of all tests (sorted by p-value):")
+print("-" * 90)
+for idx, row in enrichment_df.iterrows():
+    sig_nominal = "*" if row['P_value'] < 0.05 else ""
+    sig_fdr = "***" if row['FDR'] < 0.001 else "**" if row['FDR'] < 0.01 else "*" if row['FDR'] < 0.05 else ""
+    print(f"{row['Background']:30s} | {row['Category']:15s} | p={row['P_value']:.3e} {sig_nominal:3s} | FDR={row['FDR']:.3e} {sig_fdr:3s}")
+
+# Create a summary of significant results (FDR < 0.05)
+significant_results = enrichment_df[enrichment_df['FDR'] < 0.05].copy()
 if len(significant_results) > 0:
-    significant_results = significant_results.sort_values('P_value')
-    sig_output = OUTPUT_DIR / 'significant_enrichments.tsv'
+    sig_output = OUTPUT_DIR / 'significant_enrichments_FDR.tsv'
     significant_results.to_csv(sig_output, sep='\t', index=False)
-    print(f"Significant enrichments saved to: {sig_output}")
-    print(f"\nFound {len(significant_results)} significant enrichments (p < 0.05)")
+    print(f"\n{'='*90}")
+    print(f"Significant enrichments (FDR < 0.05) saved to: {sig_output}")
+    print(f"Found {len(significant_results)} significant enrichments after FDR correction")
+    print(f"{'='*90}")
 else:
-    print("\nNo significant enrichments found (p < 0.05)")
+    print(f"\n{'='*90}")
+    print("No significant enrichments found after FDR correction (FDR < 0.05)")
+    print(f"{'='*90}")
 
 print()
 print("="*70)
