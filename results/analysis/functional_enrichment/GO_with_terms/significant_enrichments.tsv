@@ -1,0 +1,2 @@
+Background	Category	Study_genes	Category_genes	Overlap	Odds_Ratio	P_value	In_study_in_category	In_study_not_category	Not_study_in_category	Not_study_not_category
+All protein-coding genes	development	11	7738	8	4.574730487279	0.01717244621454459	8	3	7730	13261
