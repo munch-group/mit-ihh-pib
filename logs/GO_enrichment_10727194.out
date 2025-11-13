@@ -1,0 +1,137 @@
+==================================================
+GO Enrichment Analysis
+Job ID: 10727194
+Started: Sat Nov  1 09:59:12 PM CET 2025
+==================================================
+
+================================================================================
+Comprehensive GO Enrichment Analysis for X Chromosome Selection
+Started: 2025-11-01 21:59:35
+================================================================================
+
+Step 1: Loading GO annotations...
+  Found X chromosome GO annotations file: X_chromosome_GO_annotations_complete.tsv
+
+Step 2: Loading GO database...
+/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/lib/python3.13/site-packages/geneinfo/cache/go-basic.obo: fmt(1.2) rel(2025-10-10) 42,666 Terms; optional_attrs(relationship)
+  Loaded 42666 GO terms
+
+Step 3: Loading gene lists...
+  High-confidence X genes: 13
+  X genes under selection: 242
+  All X chromosome genes: 664
+  Autosomal genes under selection: 16323
+
+================================================================================
+ANALYSIS A: High-confidence X genes vs All X chromosome genes
+================================================================================
+
+Loading X chromosome GO annotations...
+  Created mapping for 229 X chromosome genes
+
+Running Analysis: Analysis A
+  Study set: 13 genes
+  Population: 664 genes
+  Study genes with GO: 11/13
+  Population genes with GO: 230/664
+
+Load  Ontology Enrichment Analysis ...
+Propagating term counts up: is_a
+100%    230 of    230 population items found in association
+
+Runing  Ontology Analysis: current study set of 11 IDs.
+100%     11 of     11 study items found in association
+100%     11 of     11 study items found in population(230)
+Calculating 3,478 uncorrected p-values using fisher_scipy_stats
+   3,478 terms are associated with    229 of    230 population items
+     534 terms are associated with     11 of     11 study items
+  METHOD fdr_bh:
+       0 GO terms found significant (< 0.05=alpha) (  0 enriched +   0 purified): statsmodels fdr_bh
+       0 study items associated with significant GO IDs (enriched)
+       0 study items associated with significant GO IDs (purified)
+  Total GO terms tested: 3478
+  Significant GO terms (FDR < 0.05): 0
+
+  Saved all results: analysis_A_highconf_vs_all_X_all.tsv
+  No significant results to save
+================================================================================
+ANALYSIS B: High-confidence X genes vs X genes under selection
+================================================================================
+
+Running Analysis: Analysis B
+  Study set: 13 genes
+  Population: 242 genes
+  Study genes with GO: 11/13
+  Population genes with GO: 229/242
+
+Load  Ontology Enrichment Analysis ...
+Propagating term counts up: is_a
+100%    229 of    229 population items found in association
+
+Runing  Ontology Analysis: current study set of 11 IDs.
+100%     11 of     11 study items found in association
+100%     11 of     11 study items found in population(229)
+Calculating 3,478 uncorrected p-values using fisher_scipy_stats
+   3,478 terms are associated with    229 of    229 population items
+     534 terms are associated with     11 of     11 study items
+  METHOD fdr_bh:
+       0 GO terms found significant (< 0.05=alpha) (  0 enriched +   0 purified): statsmodels fdr_bh
+       0 study items associated with significant GO IDs (enriched)
+       0 study items associated with significant GO IDs (purified)
+  Total GO terms tested: 3478
+  Significant GO terms (FDR < 0.05): 0
+
+  Saved all results: analysis_B_highconf_vs_X_selection_all.tsv
+  No significant results to save
+================================================================================
+ANALYSIS C: X genes under selection vs Autosomal genes under selection
+================================================================================
+
+Freed X-specific GO annotations from memory
+
+Loading all human GO annotations for Analysis C...
+  (This may take 1-2 minutes)
+  Retrieved 503951 total GO annotations
+  Filtered to 416256 annotations for genes in study
+  Created mapping for 15541 genes
+
+Running Analysis: Analysis C
+  Study set: 242 genes
+  Population: 16565 genes
+  Study genes with GO: 229/242
+  Population genes with GO: 15541/16565
+
+Load  Ontology Enrichment Analysis ...
+Propagating term counts up: is_a
+100% 15,541 of 15,541 population items found in association
+
+Runing  Ontology Analysis: current study set of 229 IDs.
+100%    229 of    229 study items found in association
+100%    229 of    229 study items found in population(15541)
+Calculating 20,743 uncorrected p-values using fisher_scipy_stats
+  20,743 terms are associated with 15,541 of 15,541 population items
+   3,478 terms are associated with    229 of    229 study items
+  METHOD fdr_bh:
+       2 GO terms found significant (< 0.05=alpha) (  2 enriched +   0 purified): statsmodels fdr_bh
+       4 study items associated with significant GO IDs (enriched)
+       0 study items associated with significant GO IDs (purified)
+  Total GO terms tested: 20743
+  Significant GO terms (FDR < 0.05): 2
+
+  Saved all results: analysis_C_X_vs_autosome_selection_all.tsv
+  Saved significant results: analysis_C_X_vs_autosome_selection_significant.tsv
+================================================================================
+SUMMARY REPORT
+================================================================================
+
+Summary report saved: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/functional_enrichment/GO_enrichment_summary_report.txt
+
+================================================================================
+GO Enrichment Analysis Complete!
+Finished: 2025-11-01 22:01:20
+================================================================================
+
+==================================================
+Job completed: Sat Nov  1 10:01:21 PM CET 2025
+Exit code: 0
+==================================================

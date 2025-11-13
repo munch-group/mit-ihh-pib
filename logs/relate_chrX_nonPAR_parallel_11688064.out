@@ -1,0 +1,25 @@
+==========================================
+Running RelateParallel on chrX non-PAR region
+Region: chrX:3,533,229-154,781,072
+Using biallelic SNPs only (2,252,381 SNPs)
+==========================================
+
+********************************
+Parameters passed to Relate:
+haps   = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps
+sample = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample
+map    = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.relate.map
+Ne     = 20000
+mu     = 0.83e-8
+output = chrX_nonPAR_parallel_output
+dist   = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.dist
+painting   = 0.001,1
+seed   = 1
+Maximum number of threads: 16
+********************************
+
+Job completed at Mon Nov 10 12:33:34 AM CET 2025
+
+Output files:
+  Trees: chrX_nonPAR_parallel_output.anc
+  Mutations: chrX_nonPAR_parallel_output.mut

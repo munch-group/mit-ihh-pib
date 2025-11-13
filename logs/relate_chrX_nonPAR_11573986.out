@@ -1,0 +1,27 @@
+==========================================
+Running Relate on chrX non-PAR region
+Region: chrX:2,781,480-155,701,382 (non-PAR)
+This excludes PAR1 and PAR2 to avoid variable haplotype counts
+==========================================
+
+********************************
+Parameters passed to Relate:
+haps   = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.haps
+sample = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.sample
+map    = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.relate.map
+Ne     = 20000
+mu     = 0.83e-8
+output = chrX_nonPAR_output
+painting   = 0.001,1
+seed   = 1
+Maximum number of threads: 16
+********************************
+
+Job completed at Sun Nov  9 01:13:04 AM CET 2025
+
+Output files:
+  Trees: chrX_nonPAR_output.anc
+  Mutations: chrX_nonPAR_output.mut
+
+Note: This analysis covers the non-PAR region only (98% of chrX)
+PAR regions excluded: PAR1 (10,001-2,781,479) and PAR2 (155,701,383-156,030,895)

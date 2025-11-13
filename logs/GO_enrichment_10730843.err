@@ -1,0 +1,7 @@
+2 GO IDs NOT FOUND IN ASSOCIATION: GO:0010737 GO:0019934
+2 GO IDs NOT FOUND IN ASSOCIATION: GO:0010737 GO:0019934
+Traceback (most recent call last):
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/run_GO_enrichment_comprehensive.py", line 307, in <module>
+    df_c, df_c_sig = save_results(results_c, 'analysis_C_X_vs_autosome_selection', 'Analysis C')
+    ^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object

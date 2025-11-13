@@ -1,0 +1,78 @@
+==================================================
+GO Term Retrieval for X Chromosome Genes
+Job ID: 10713484
+Started: Sat Nov  1 07:25:26 PM CET 2025
+==================================================
+
+======================================================================
+GO Term Retrieval for X Chromosome Genes
+Started: 2025-11-01 19:25:55
+======================================================================
+
+Step 1: Loading gene lists...
+  Total X genes to annotate: 653
+    All X chromosome genes: 664
+    X genes under selection: 242
+
+Step 2: Loading GO database...
+  Loading GO DAG from /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/lib/python3.13/site-packages/geneinfo/cache/go-basic.obo
+/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/lib/python3.13/site-packages/geneinfo/cache/go-basic.obo: fmt(1.2) rel(2025-10-10) 42,666 Terms; optional_attrs(relationship)
+  Loaded 42666 GO terms
+
+Step 3: Retrieving all human gene-GO annotations...
+  This will download the complete human GO annotation table
+  (this may take 1-2 minutes for the first download)
+
+  Successfully retrieved 503951 gene-GO annotations
+  Covering 20835 unique gene IDs
+
+Step 4: Getting gene ID to symbol mapping...
+  Loaded mapping for 20595 genes
+
+Step 5: Filtering annotations for X chromosome genes...
+  Found annotations for 229 / 653 genes
+  Total GO annotations: 5084
+
+  Genes without GO annotations: 424
+    Examples: ZFX-AS1, ENSG00000270413, PLS3-AS1, ENSG00000238485, HCCS-DT, FCF1P9, ENSG00000235071, GK-IT1, MIR548AM, ENSG00000288059
+    ... and 414 more
+
+Step 6: Processing annotations and adding metadata...
+  Processing complete!
+    Genes with GO terms: 229/653 (35.1%)
+    Genes without GO terms: 424
+    Total GO annotations: 5084
+
+Step 7: Saving results...
+  Saved GO annotations: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/functional_enrichment/X_chromosome_GO_annotations_complete.tsv
+
+  Summary by GO category:
+    Process                  :  1989 annotations
+    Component                :  1736 annotations
+    Function                 :  1359 annotations
+
+  Genes with most GO terms:
+    AR             : 128 GO terms
+    DDX3X          : 122 GO terms
+    MECP2          : 110 GO terms
+    BTK            :  99 GO terms
+    FLNA           :  92 GO terms
+    IRAK1          :  86 GO terms
+    DMD            :  77 GO terms
+    USP9X          :  70 GO terms
+    GPC3           :  63 GO terms
+    HSD17B10       :  60 GO terms
+
+  Saved genes without GO annotations: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/functional_enrichment/X_chromosome_genes_without_GO.txt
+
+  Saved summary: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/functional_enrichment/X_chromosome_GO_retrieval_summary.txt
+
+======================================================================
+GO term retrieval complete!
+Finished: 2025-11-01 19:27:29
+======================================================================
+
+==================================================
+Job completed: Sat Nov  1 07:27:30 PM CET 2025
+Exit code: 0
+==================================================

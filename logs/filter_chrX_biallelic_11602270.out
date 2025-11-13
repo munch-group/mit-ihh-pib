@@ -1,0 +1,19 @@
+==========================================  
+Filtering chrX VCF to biallelic SNPs only
+Region: chrX:2,781,480-155,701,382 (non-PAR)
+==========================================
+
+
+Indexing filtered VCF...
+
+Filtering completed!
+Output: /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.vcf.gz
+Total biallelic SNPs: 2295317
+
+Converting to Relate format...
+
+Verifying no duplicate positions...
+Number of duplicate positions: 18184
+✗ WARNING: Still found 18184 duplicate positions
+
+Job completed at Sun Nov  9 09:29:06 AM CET 2025

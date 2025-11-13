@@ -1,0 +1,8 @@
+Lines   total/split/joined/realigned/mismatch_removed/dup_removed/skipped:	2295317/0/0/0/0/0/0
+Lines   total/split/joined/realigned/mismatch_removed/dup_removed/skipped:	2295317/0/0/0/0/18367/0
+---------------------------------------------------------
+Converting vcf file format to haps/sample file format..
+Output written to /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps and /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample.
+CPU Time spent: 362.098094s; Max Memory usage: 3.072Mb.
+---------------------------------------------------------
+

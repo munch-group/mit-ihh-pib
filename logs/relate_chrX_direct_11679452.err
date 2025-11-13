@@ -1,0 +1,21 @@
+
+*********************************************************
+---------------------------------------------------------
+Relate
+ * Authors: Leo Speidel, Marie Forest, Sinan Shi, Simon Myers.
+ * Doc:     https://myersgroup.github.io/relate
+---------------------------------------------------------
+
+---------------------------------------------------------
+Using:
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic_interpolated.relate.map
+with mu = 8.3e-09 and 2Ne = 20000.
+---------------------------------------------------------
+
+---------------------------------------------------------
+Parsing data..
+Warning: Will use min 40GB of hard disc.
+Relate: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/relate/relate/include/src/data.cpp:412: void Data::MakeChunks(const string&, const string&, const string&, const string&, const string&, bool, float): Assertion `bp_pos[snp] == mbp' failed.
+/var/spool/slurmd/job11679452/slurm_script: line 34: 2558837 Aborted                 (core dumped) ./bin/Relate --mode All --haps /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps --sample /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample --map /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic_interpolated.relate.map --dist /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.dist -m 0.83e-8 -N 20000 --seed 1 -o chrX_nonPAR_direct_output

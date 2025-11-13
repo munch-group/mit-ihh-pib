@@ -1,0 +1,2 @@
+/var/spool/slurmd/job10719190/slurm_script: line 28: 3094471 Killed                  /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/bin/python scripts/run_GO_enrichment_comprehensive.py
+[2025-11-01T21:55:24.709] error: Detected 1 oom_kill event in StepId=10719190.batch. Some of the step tasks have been OOM Killed.

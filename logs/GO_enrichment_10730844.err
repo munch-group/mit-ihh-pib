@@ -1,0 +1,14 @@
+2 GO IDs NOT FOUND IN ASSOCIATION: GO:0010737 GO:0019934
+2 GO IDs NOT FOUND IN ASSOCIATION: GO:0010737 GO:0019934
+62 GO IDs NOT FOUND IN ASSOCIATION: GO:0060049 GO:0032078 GO:0010707 GO:0019934 GO:0036456 GO:0090074 GO:0008469 GO:0019933 GO:0045935 GO:0043950 GO:0098660 GO:0032412 GO:0098661 GO:0009071 GO:0043951 GO:0015101 GO:0060050 GO:0060316 GO:0010753 GO:0009069 GO:0043225 GO:1903825 GO:0150178 GO:0010737 GO:0010738 GO:0045914 GO:0031587 GO:0070085 GO:0034508 GO:0033861 GO:0000821 GO:0010739 GO:1904251 GO:0015347 GO:0032773 GO:0043250 GO:1904407 GO:0032076 GO:0050783 GO:0098662 GO:0009066 GO:0010706 GO:0034317 GO:0006529 GO:2000376 GO:0031585 GO:0000820 GO:0008513 GO:0036065 GO:0034255 GO:0008514 GO:0098742 GO:2000213 GO:0030504 GO:0036071 GO:0090230 GO:0022890 GO:0006486 GO:0005342 GO:0010980 GO:0050666 GO:0060051
+Traceback (most recent call last):
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/run_GO_enrichment_comprehensive.py", line 309, in <module>
+    df_c, df_c_sig = save_results(results_c, 'analysis_C_X_vs_autosome_selection', 'Analysis C')
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/faststorage/project/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/run_GO_enrichment_comprehensive.py", line 191, in save_results
+    df = df.sort_values('p_fdr_bh')
+  File "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/lib/python3.13/site-packages/pandas/core/frame.py", line 7196, in sort_values
+    k = self._get_label_or_level_values(by[0], axis=axis)
+  File "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/.pixi/envs/default/lib/python3.13/site-packages/pandas/core/generic.py", line 1911, in _get_label_or_level_values
+    raise KeyError(key)
+KeyError: 'p_fdr_bh'

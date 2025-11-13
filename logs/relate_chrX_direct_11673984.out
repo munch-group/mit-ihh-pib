@@ -1,0 +1,59 @@
+==========================================
+Running Relate DIRECTLY (not RelateParallel) on chrX non-PAR region
+Region: chrX:3,533,229-154,781,072 (matching genetic map)
+==========================================
+
+####### error #######
+Invalid or missing mode.
+Options for --mode are:
+All, Clean, MakeChunks, Paint, BuildTopology, FindEquivalentBranches, InferBranchLengths, CombineSections, Finalize, OptimizeParameters, PostProcess.
+Not enough arguments supplied.
+
+Usage:
+  Relate [OPTION...]
+
+      --help            Print help.
+      --mode            Choose which part of the algorithm to run.
+      --haps            Filename of haps file (Output file format of
+                        Shapeit).
+      --sample          Filename of sample file (Output file format of
+                        Shapeit).
+      --map             Genetic map.
+  -m, --mutation_rate   Mutation rate.
+  -N, --effectiveN      Effective population size.
+  -o, --output          Filename of output without file extension.
+      --dist            Optional but recommended. Distance in BP between
+                        SNPs. Can be generated using RelateFileFormats. If
+                        unspecified, distances in haps are used.
+      --annot           Optional. Filename of file containing additional
+                        annotation of snps. Can be generated using
+                        RelateFileFormats.
+      --memory          Optional. Approximate memory allowance in GB for
+                        storing distance matrices. Default is 5GB.
+      --sample_ages     Optional. Filename of file containing sample ages
+                        (one per line).
+      --chunk_index     Optional. Index of chunk. (Use when running parts of
+                        the algorithm on an individual chunk.)
+      --first_section   Optional. Index of first section to infer. (Use when
+                        running parts of algorithm on an individual chunk.)
+      --last_section    Optional. Index of last section to infer. (Use when
+                        running parts of algorithm on an individual chunk.)
+      --coal            Optional. Filename of file containing coalescent
+                        rates. If specified, it will overwrite --effectiveN.
+      --fb              Optional. Force build a new tree every x bases.
+      --consistency     Optional. Disable consistency option 0. Keep
+                        consistency 1. Add focal SNP weighting 2. Default 1.
+      --transversion    Only use transversion for bl estimation.
+      --postprocess     (beta option) Postprocess topology.
+      --randomise       (beta option) Randomise topology in post processing
+                        step.
+      --debug           Debug mode. Outputs chromopainter matrix at every SNP
+                        where tree is built.
+  -i, --input           Filename of input.
+      --painting        Optional. Copying and transition parameters in
+                        chromosome painting algorithm. Format: theta,rho. Default:
+                        0.001,1.
+      --seed            Optional. Seed for MCMC in branch lengths estimation.
+
+
+Job completed at Sun Nov  9 07:35:38 PM CET 2025

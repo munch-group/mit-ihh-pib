@@ -1,0 +1,7 @@
+/var/spool/slurmd/job11602269/slurm_script: line 17: bcftools: command not found
+/var/spool/slurmd/job11602269/slurm_script: line 23: bcftools: command not found
+/var/spool/slurmd/job11602269/slurm_script: line 30: bcftools: command not found
+---------------------------------------------------------
+Converting vcf file format to haps/sample file format..
+Error opening file /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.vcf(.gz)
+awk: fatal: cannot open file `/home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps' for reading: No such file or directory

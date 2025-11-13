@@ -1,0 +1,6 @@
+--2025-11-08 17:54:33--  https://github.com/MyersGroup/relate/releases/download/v1.2.1/relate_v1.2.1_x86_64_static.tgz
+Resolving proxy-default (proxy-default)... 10.220.101.1
+Connecting to proxy-default (proxy-default)|10.220.101.1|:3128... connected.
+Proxy request sent, awaiting response... 404 Not Found
+2025-11-08 17:54:33 ERROR 404: Not Found.
+

@@ -1,0 +1,20 @@
+
+*********************************************************
+---------------------------------------------------------
+Relate
+ * Authors: Leo Speidel, Marie Forest, Sinan Shi, Simon Myers.
+ * Doc:     https://myersgroup.github.io/relate
+---------------------------------------------------------
+
+---------------------------------------------------------
+Using:
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.haps
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR_biallelic.sample
+  /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX_nonPAR/chrX_nonPAR.relate.map
+with mu = 8.3e-09 and 2Ne = 20000.
+---------------------------------------------------------
+
+---------------------------------------------------------
+Parsing data..
+Warning: Will use min 40GB of hard disc.
+Error: Failed to read line 2.

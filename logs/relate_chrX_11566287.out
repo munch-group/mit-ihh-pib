@@ -1,0 +1,13 @@
+********************************
+Parameters passed to Relate:
+haps   = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX/chrX.haps
+sample = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX/chrX.sample
+map    = /home/vanbruggenmit/mit-ihh-pib/data/relate/chrX/chrX.relate.map
+Ne     = 20000
+mu     = 0.83e-8
+output = chrX_output
+painting   = 0.001,1
+seed   = 1
+Maximum number of threads: 16
+********************************
+Job completed at Sat Nov  8 09:42:55 PM CET 2025

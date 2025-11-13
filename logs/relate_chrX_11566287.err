@@ -1,0 +1,5 @@
+---------------------------------------------------------
+Parsing data..
+chrX . 2781514
+Relate: /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/relate/relate/include/src/data.cpp:571: void haps::ReadSNP(std::vector<char, std::allocator<char> >&, int&): Assertion `it_seq == sequence.end()' failed.
+./scripts/RelateParallel/RelateParallel.sh: line 542: 28036 Aborted                 (core dumped) ${PATH_TO_RELATE}/bin/Relate --mode "MakeChunks" --haps ${haps} --sample ${sample} -o ${output} --map ${map}
