@@ -59,106 +59,128 @@ def create_snp_ideogram():
 
     print(f"  Loaded {len(snps)} high-significance SNPs")
 
-    # Create figure with much more vertical space for labels
-    fig = plt.figure(figsize=(24, 20))
-
-    # Create ideogram - place it lower to give more room for labels above
-    g = gplt.ChromIdeogram('chrX', assembly='hg38', font_size=10)
-    g.draw_chromosomes(base=5, height=0.5)
-
     # Label the 11 overlap genes (highest confidence)
     overlap_genes = ['DACH2', 'DIAPH2', 'FAAH2', 'GPC3', 'HTR2C',
                      'IL1RAPL2', 'KDM6A', 'NAP1L2', 'NCBP2L', 'TRPC5', 'ZMAT1']
 
-    # Create color scale based on p-value
-    cmap = plt.get_cmap('Reds')
-    norm = mcolors.Normalize(vmin=6, vmax=snps['neg_log10_p'].max())
-
-    # Prepare SNP labels - for overlap genes only, use the most significant SNP per gene
-    snp_labels = []
+    # Get gene positions for labeling on chromosome
+    gene_labels_data = []
+    snps_sorted = snps.sort_values('neg_log10_p', ascending=False)
     labeled_genes = set()
 
-    # Sort SNPs by significance
-    snps_sorted = snps.sort_values('neg_log10_p', ascending=False)
-
-    for idx, snp in snps_sorted.iterrows():
+    for _, snp in snps_sorted.iterrows():
         gene = snp_mapping[snp_mapping['snp_location'] == snp['Location']]['nearest_gene'].values
         gene_name = gene[0] if len(gene) > 0 else ''
 
-        # Label if it's an overlap gene and we haven't labeled it yet
         if gene_name in overlap_genes and gene_name not in labeled_genes:
-            label = gene_name
-            color = mcolors.to_hex(cmap(norm(snp['neg_log10_p'])))
-            snp_labels.append(('chrX', snp['pos'], label, color))
+            gene_labels_data.append(('chrX', snp['pos'], gene_name, 'darkred'))
             labeled_genes.add(gene_name)
 
-    # Add SNP labels with much more space above ideogram
-    if snp_labels:
-        import random
+    # Create ideogram with labels on chromosome
+    g = gplt.ChromIdeogram('chrX', assembly='hg38', font_size=9)
+    g.draw_chromosomes(base=2, facecolor='lightgray', height=0.8)
 
-        label_positions = []
-        for i, (chrom, pos, label, color) in enumerate(snp_labels):
-            # kleine hoogteverschuiving per label (0.3 × cyclus van 4 labels)
-            offset = g.ideogram_height * (4.0 + 0.3 * (i % 4))
-            label_positions.append((chrom, pos, label, color, offset))
+    # Add gene labels on the chromosome
+    if gene_labels_data:
+        g.add_labels(gene_labels_data, base=g.ideogram_base,
+                    min_height=g.ideogram_height*2.5, bold=overlap_genes)
 
-        for chrom, pos, label, color, offset in label_positions:
-            g.add_labels([(chrom, pos, label, color)],
-                        base=g.ideogram_base,
-                        min_height=offset)
+    # Add three axes below the chromosome
+    new_ax, new_ax2, new_ax3 = g.add_axes(3, height_ratio=0.5, hspace=0.5)
 
-    # Add scatter plot below
-    new_ax = g.add_axes(1, height_ratio=0.6, hspace=0.4)
+    import matplotlib.ticker as ticker
 
-    # Scatter plot
-    sizes = ((snps['neg_log10_p'] - 6) / (snps['neg_log10_p'].max() - 6)) * 150 + 30
-    colors = [mcolors.to_hex(cmap(norm(p))) for p in snps['neg_log10_p']]
+    #--------------------------------------------------------------------------
+    # First axis: Manhattan-style scatter plot
+    #--------------------------------------------------------------------------
+    # Create color scale
+    cmap = plt.get_cmap('Reds')
+    norm = mcolors.Normalize(vmin=6, vmax=snps['neg_log10_p'].max())
+    sizes = ((snps['neg_log10_p'] - 6) / (snps['neg_log10_p'].max() - 6)) * 100 + 20
+    colors = [cmap(norm(p)) for p in snps['neg_log10_p']]
 
     new_ax.scatter(snps['pos'], snps['neg_log10_p'],
                   s=sizes, c=colors, alpha=0.8, edgecolors='black', linewidth=0.5,
-                  zorder=3)
-
-    # Better axis labels
-    new_ax.set_ylabel('-log₁₀(p-value)', fontsize=13, fontweight='bold')
-    new_ax.set_xlabel('Position on X chromosome (Mb)', fontsize=13, fontweight='bold')
-
-    # Threshold line
-    new_ax.axhline(y=6, color='red', linestyle='--', linewidth=2, alpha=0.5,
+                  label='High-significance SNPs', zorder=3)
+    new_ax.axhline(y=6, color='red', linestyle='--', linewidth=1.5, alpha=0.7,
                    label='Threshold: p = 10⁻⁶', zorder=1)
 
-    new_ax.set_ylim(5.8, snps['neg_log10_p'].max() + 0.3)
-    new_ax.grid(True, alpha=0.2, zorder=0)
-    new_ax.legend(loc='upper right', fontsize=11, framealpha=0.9)
-
-    # Format x-axis to show Mb
-    import matplotlib.ticker as ticker
+    new_ax.set_ylabel('-log₁₀(p-value)', fontsize=11, fontweight='bold')
+    new_ax.set_xlabel('')
+    new_ax.set_ylim(5.5, snps['neg_log10_p'].max() + 0.5)
+    new_ax.legend(loc='center left', bbox_to_anchor=(1.02, 0.5),
+                 fontsize=9, frameon=False)
     new_ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f'{int(x/1e6)}'))
+    new_ax.tick_params(axis='both', which='major', labelsize=10)
+    new_ax.grid(True, alpha=0.2)
 
-    # Increase tick label size
-    new_ax.tick_params(axis='both', which='major', labelsize=11)
+    #--------------------------------------------------------------------------
+    # Second axis: Smoothed trend line
+    #--------------------------------------------------------------------------
+    new_ax2.scatter(snps['pos'], snps['neg_log10_p'],
+                   s=15, c='black', alpha=0.5, label='Individual SNPs')
 
-    # Add colorbar to show what darkness means
-    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
-    sm.set_array([])
-    cbar = plt.colorbar(sm, ax=new_ax, orientation='vertical',
-                        pad=0.02, aspect=20, shrink=0.8)
-    cbar.set_label('-log₁₀(p-value)\n(darker = more significant)',
-                   fontsize=11, fontweight='bold')
-    cbar.ax.tick_params(labelsize=10)
+    # Use lowess smoothing from utils if available, otherwise use simple smoothing
+    try:
+        fit = utils.fit_lowess(snps.assign(x=snps['pos'], y=snps['neg_log10_p']),
+                              'x', 'y', frac=0.2)
+        new_ax2.plot(fit.x, fit.y, c='red', linewidth=2.5,
+                    label='LOWESS trend', zorder=4)
+    except:
+        # Fallback to simple smoothing
+        from scipy.signal import savgol_filter
+        snps_sorted_pos = snps.sort_values('pos')
+        if len(snps_sorted_pos) > 5:
+            window = min(11, len(snps_sorted_pos) if len(snps_sorted_pos) % 2 == 1
+                        else len(snps_sorted_pos) - 1)
+            smoothed = savgol_filter(snps_sorted_pos['neg_log10_p'], window, 3)
+            new_ax2.plot(snps_sorted_pos['pos'], smoothed,
+                        c='red', linewidth=2.5, label='Smoothed trend', zorder=4)
 
-    # Simple title
+    new_ax2.axhline(y=6, color='red', linestyle='--', linewidth=1.5, alpha=0.5)
+    new_ax2.set_ylabel('-log₁₀(p-value)', fontsize=11, fontweight='bold')
+    new_ax2.set_xlabel('')
+    new_ax2.set_ylim(5.5, snps['neg_log10_p'].max() + 0.5)
+    new_ax2.legend(loc='center left', bbox_to_anchor=(1.02, 0.5),
+                  fontsize=9, frameon=False)
+    new_ax2.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f'{int(x/1e6)}'))
+    new_ax2.tick_params(axis='both', which='major', labelsize=10)
+    new_ax2.grid(True, alpha=0.2)
+
+    #--------------------------------------------------------------------------
+    # Third axis: Histogram of SNP density
+    #--------------------------------------------------------------------------
+    x_length = utils.chrom_lengths['hg38']['chrX']
+    bins = np.arange(0, x_length, 5_000_000)  # 5 Mb bins for cleaner visualization
+    counts, bin_edges = np.histogram(snps['pos'], bins=bins)
+    bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+
+    new_ax3.bar(bin_centers, counts, width=5_000_000*0.9,
+               color='steelblue', alpha=0.7, edgecolor='black', linewidth=0.8,
+               label='SNP density')
+
+    new_ax3.set_ylabel('Number of SNPs\n(5 Mb bins)', fontsize=11, fontweight='bold')
+    new_ax3.set_xlabel('Position on X chromosome (Mb)', fontsize=11, fontweight='bold')
+    new_ax3.set_ylim(0, max(counts) + 1)
+    new_ax3.legend(loc='center left', bbox_to_anchor=(1.02, 0.5),
+                  fontsize=9, frameon=False)
+    new_ax3.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, p: f'{int(x/1e6)}'))
+    new_ax3.tick_params(axis='both', which='major', labelsize=10)
+    new_ax3.grid(True, alpha=0.2, axis='y')
+
+    # Add title
     plt.suptitle('Distribution of 43 High-Significance SNPs on X Chromosome',
-                fontsize=15, fontweight='bold', y=0.98)
+                fontsize=14, fontweight='bold', y=0.97)
 
     # Add subtitle
-    fig.text(0.5, 0.93,
-             'Point/label color and size indicate significance level. 11 overlap genes labeled (found in both high-sig SNP and Phase 3).',
-             ha='center', fontsize=10, style='italic', color='#555555')
+    plt.gcf().text(0.5, 0.945,
+                  f'{len(overlap_genes)} high-confidence genes labeled on chromosome (overlap between high-sig SNPs and Phase 3 regions)',
+                  ha='center', fontsize=9, style='italic', color='#555555')
 
     # Save
     output_file = FIGURES_DIR / 'X_chromosome_ideogram_high_significance_snps.png'
-    plt.tight_layout()
-    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    plt.tight_layout(rect=[0, 0, 0.98, 0.94])
+    plt.savefig(output_file, dpi=300, bbox_inches='tight', facecolor='white')
     print(f"  Saved: {output_file.name}")
     plt.close()
 

@@ -9,6 +9,7 @@ This script:
 
 Author: MIT van Bruggen
 Date: 2025-11-11
+Updated: 2025-11-12
 """
 
 import pandas as pd
@@ -20,7 +21,6 @@ from scipy.stats import fisher_exact
 from statsmodels.stats.multitest import multipletests
 import numpy as np
 
-# Set your email for GO database access
 go.email('au799024@uni.au.dk')
 
 # Setup paths
@@ -48,7 +48,7 @@ print()
 # Step 1: Define functional categories (same as get_GO_annotations.py)
 #==============================================================================
 
-print("Step 1: Defining functional categories...") #had some help defining the keywords 
+print("Step 1: Defining functional categories...") #had some help defining the keywords (Claude)
 print()
 
 KEYWORD_CATEGORIES = {
