@@ -1,0 +1,21 @@
+{
+  "category": "fertility_sperm",
+  "description": "Male fertility,sperm development and motility",
+  "seed_terms": [
+    "GO:0007283",
+    "GO:0007286",
+    "GO:0030317",
+    "GO:0097722"
+  ],
+  "descendant_terms": [
+    "GO:0030317",
+    "GO:0097723"
+  ],
+  "all_terms": [
+    "GO:0007283",
+    "GO:0007286",
+    "GO:0030317",
+    "GO:0097722",
+    "GO:0097723"
+  ]
+}

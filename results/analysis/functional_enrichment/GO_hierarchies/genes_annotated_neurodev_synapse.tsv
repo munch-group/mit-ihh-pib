@@ -1,0 +1,532 @@
+symbol	name	chrom	start	end
+GRIN3B	glutamate ionotropic receptor NMDA type subunit 3B	19	1000418	1009731
+SLC17A8	solute carrier family 17 member 8	12	100357073	100422054
+ACHE	acetylcholinesterase (Yt blood group)	7	100896993	100889993
+DRP2	dystrophin related protein 2	X	101219785	101264501
+GRIK2	glutamate ionotropic receptor kainate type subunit 2	6	101393707	102070082
+GRIN3A	glutamate ionotropic receptor NMDA type subunit 3A	9	101738646	101569351
+GRIN2A	glutamate ionotropic receptor NMDA type subunit 2A	16	10182907	9753403
+KCNIP2	potassium voltage-gated channel interacting protein 2	10	101843799	101825973
+AGRN	agrin	1	1020119	1056115
+KIF1B	kinesin family member 1B	1	10210569	10381602
+SNAP25	synaptosome associated protein 25	20	10218829	10307417
+PMCH	pro-melanin concentrating hormone	12	102197832	102196458
+GHRL	ghrelin and obestatin prepropeptide	3	10292946	10285665
+RIMS2	regulating synaptic membrane exocytosis 2	8	103500609	104256093
+PLP1	proteolipid protein 1	X	103776505	103792618
+CORT	cortistatin	1	10450030	10451997
+GRIA4	glutamate ionotropic receptor AMPA type subunit 4	11	105609993	105982089
+SYPL1	synaptophysin like 1	7	106112575	106090504
+PTPRD	protein tyrosine phosphatase receptor type D	9	10613001	8314245
+ABTB3	ankyrin repeat and BTB domain containing 3	12	107318433	107659641
+SLC5A7	solute carrier family 5 member 7	2	107986523	108013993
+COL4A5	collagen type IV alpha 5 chain	X	108439837	108697544
+NRCAM	neuronal cell adhesion molecule	7	108456719	108147648
+SSH1	slingshot protein phosphatase 1	12	108857582	108778190
+CNTN6	contactin 6	3	1093023	1404216
+SORT1	sortilin 1	1	109397917	109309574
+SYBU	syntabulin	8	109691599	109573977
+LRIT3	leucine rich repeat, Ig-like and transmembrane domains 3	4	109848106	109872314
+SLC6A1	solute carrier family 6 member 1	3	10992747	11039246
+WASF1	WASP family member 1	6	110179669	110099818
+KCNC4	potassium voltage-gated channel subfamily C member 4	1	110210313	110284079
+COL4A1	collagen type IV alpha 1 chain	13	110307156	110148962
+MUSK	muscle associated receptor tyrosine kinase	9	110668790	110806557
+SLC25A46	solute carrier family 25 member 46	5	110738144	110765156
+CHRDL1	chordin like 1	X	110795816	110673855
+PAK3	p21 (RAC1) activated kinase 3	X	110944396	111227360
+HRH1	histamine receptor H1	3	11137237	11263556
+DIXDC1	DIX domain containing 1	11	111927314	112022652
+KCND3	potassium voltage-gated channel subfamily D member 3	1	111989667	111770661
+SHISA6	shisa family member 6	17	11241212	11564062
+DRD2	dopamine receptor D2	11	113475397	113409604
+HTR3B	5-hydroxytryptamine receptor 3B	11	113898922	113949078
+HTR3A	5-hydroxytryptamine receptor 3A	11	113975107	113990312
+SYT6	synaptotagmin 6	1	114153868	114089291
+DRD3	dopamine receptor D3	3	114199406	114127579
+HTR2C	5-hydroxytryptamine receptor 2C	X	114584085	114910060
+TNC	tenascin C	9	115118156	115019574
+SLC12A7	solute carrier family 12 member 7	5	1155898	1050383
+SLC18A2	solute carrier family 18 member A2	10	117241113	117279429
+VSIG10	V-set and immunoglobulin domain containing 10	12	118104010	118063592
+EXT1	exostosin glycosyltransferase 1	8	118111825	117794489
+SCN2B	sodium voltage-gated channel beta subunit 2	11	118176638	118162805
+CTNND2	catenin delta 2	5	11904445	10971835
+PGRMC1	progesterone receptor membrane component 1	X	119236284	119244465
+SYN2	synapsin II	3	12004387	12192031
+KCND2	potassium voltage-gated channel subfamily D member 2	7	120272907	120750336
+GRIK4	glutamate ionotropic receptor kainate type subunit 4	11	120511747	120988905
+SRGAP2C	SLIT-ROBO Rho GTPase activating protein 2C	1	121184974	121392873
+LRP6	LDL receptor related protein 6	12	12267043	12116024
+GRIA3	glutamate ionotropic receptor AMPA type subunit 3	X	123184277	123490914
+SDF4	stromal cell derived factor 4	1	1232000	1216930
+AFG3L2	AFG3 like matrix AAA peptidase subunit 2	18	12377226	12328943
+PLXNA1	plexin A1	3	126983114	127037388
+KIRREL3	kirre like nephrin family adhesion molecule 3	11	127003393	126423357
+NPS	neuropeptide S	10	127549308	127553539
+STXBP1	syntaxin binding protein 1	9	127611911	127696028
+ARHGAP44	Rho GTPase activating protein 44	17	12789497	12991642
+LRRC4	leucine rich repeat containing 4	7	128032127	128027070
+ZDHHC12	zDHHC palmitoyltransferase 12	9	128724126	128720872
+PLXND1	plexin D1	3	129606675	129555213
+HMCN2	hemicentin 2	9	130265759	130434122
+RIMBP2	RIMS binding protein 2	12	130716298	130396132
+PDLIM4	PDZ and LIM domain 4	5	132257695	132273453
+KCNQ3	potassium voltage-gated channel subfamily Q member 3	8	132481094	132120860
+P2RX2	purinergic receptor P2X 2	12	132618775	132622387
+PLXNA4	plexin A4	7	132648687	132123339
+LYPD1	LY6/PLAUR domain containing 1	2	132671525	132643285
+TSC1	TSC complex subunit 1	9	132945377	132891348
+EXOC4	exocyst complex component 4	7	133253077	134100950
+DBH	dopamine beta-hydroxylase	9	133636362	133659328
+VDAC1	voltage dependent anion channel 1	5	134114539	133971870
+RYK	receptor like tyrosine kinase	3	134250858	134157132
+KY	kyphoscoliosis peptidase	3	134651021	134599922
+DVL1	dishevelled segment polarity protein 1	1	1349417	1335277
+CACNA1A	calcium voltage-gated channel subunit alpha1 A	19	13506478	13206441
+PDE7B	phosphodiesterase 7B	6	135851700	136195573
+CHRM2	cholinergic receptor muscarinic 2	7	136868651	137020212
+GRIN1	glutamate ionotropic receptor NMDA type subunit 1	9	137139153	137168755
+MYOT	myotilin	5	137867859	137887850
+CACNA1B	calcium voltage-gated channel subunit alpha1 B	9	137877781	138124618
+WNT7A	Wnt family member 7A	3	13880070	13816257
+LRRTM2	leucine rich repeat transmembrane neuronal 2	5	138875334	138868920
+FGF13	fibroblast growth factor 13	X	139205022	138614726
+GRIN2B	glutamate ionotropic receptor NMDA type subunit 2B	12	13982133	13537336
+CLSTN2	calsyntenin 2	3	139935184	140577396
+PCDHB2	protocadherin beta 2	5	141094614	141098702
+PCDHB3	protocadherin beta 3	5	141100472	141103826
+PCDHB4	protocadherin beta 4	5	141121817	141125622
+PCDHB5	protocadherin beta 5	5	141135205	141138614
+PCDHB6	protocadherin beta 6	5	141150056	141153286
+PCDHB16	protocadherin beta 16	5	141182386	141186225
+PCDHB9	protocadherin beta 9	5	141187160	141191540
+PCDHB10	protocadherin beta 10	5	141192352	141195646
+PCDHB11	protocadherin beta 11	5	141199626	141203778
+PCDHB13	protocadherin beta 13	5	141213918	141218978
+PCDHB14	protocadherin beta 14	5	141223342	141227758
+PCDHGC3	protocadherin gamma subfamily C, 3	5	141475965	141512974
+PCDHGC4	protocadherin gamma subfamily C, 4	5	141485029	141512974
+PCDHGC5	protocadherin gamma subfamily C, 5	5	141489080	141512974
+FCHSD1	FCH and double SH3 domains 1	5	141651417	141639301
+LYNX1	Ly6/neurotoxin 1	8	142777871	142771196
+FLRT3	fibronectin leucine rich transmembrane protein 3	20	14337611	14322984
+NR3C1	nuclear receptor subfamily 3 group C member 1	5	143435511	143277930
+GIPC1	GIPC PDZ domain containing family member 1	19	14496126	14477761
+GRM1	glutamate metabotropic receptor 1	6	146027706	146437600
+HTR4	5-hydroxytryptamine receptor 4	5	148654526	148451031
+EZH2	enhancer of zeste 2 polycomb repressive complex 2 subunit	7	148884290	148807382
+SV2A	synaptic vesicle glycoprotein 2A	1	149917843	149903317
+PFN2	profilin 2	3	149970894	149964903
+SLC1A6	solute carrier family 1 member 6	19	15010642	14950032
+ANXA9	annexin A9	1	150977305	150995633
+CDK5	cyclin dependent kinase 5	7	151057896	151053814
+GLRA1	glycine receptor alpha 1	5	151924850	151822512
+GABRE	gamma-aminobutyric acid type A receptor subunit epsilon	X	151974675	151953123
+CACNB4	calcium voltage-gated channel auxiliary subunit beta 4	2	152099166	151832770
+GABRA3	gamma-aminobutyric acid type A receptor subunit alpha3	X	152451314	152166233
+GABRQ	gamma-aminobutyric acid type A receptor subunit theta	X	152637894	152658964
+PMP22	peripheral myelin protein 22	17	15265325	15229778
+GRIA1	glutamate ionotropic receptor AMPA type subunit 1	5	153489614	153813868
+SNAPIN	SNAP associated protein	1	153658653	153661851
+PLXNB3	plexin B3	X	153764248	153779340
+L1CAM	L1 cell adhesion molecule	X	153886172	153861513
+MECP2	methyl-CpG binding protein 2	X	154097716	154021572
+PLXNA3	plexin A3	X	154458280	154477778
+CHRNB2	cholinergic receptor nicotinic beta 2 subunit	1	154567777	154580012
+HTR5A	5-hydroxytryptamine receptor 5A	7	155070323	155087391
+RAB39B	RAB39B, member RAS oncogene family	X	155264490	155258234
+BCAN	brevican	1	156642116	156659527
+GLRB	glycine receptor beta	4	157076149	157172089
+GRIA2	glutamate ionotropic receptor AMPA type subunit 2	4	157220119	157366074
+USP14	ubiquitin specific peptidase 14	18	158556	214628
+MPZ	myelin protein zero	1	161309967	161303599
+GABRB2	gamma-aminobutyric acid type A receptor subunit beta2	5	161548403	161288435
+GABRA6	gamma-aminobutyric acid type A receptor subunit alpha6	5	161685720	161702591
+GABRA1	gamma-aminobutyric acid type A receptor subunit alpha1	5	161847190	161899970
+GABRG2	gamma-aminobutyric acid type A receptor subunit gamma2	5	162067464	162155538
+PRKN	parkin RBR E3 ubiquitin protein ligase	6	162727765	161347416
+NPY5R	neuropeptide Y receptor Y5	4	163343891	163352402
+SLITRK3	SLIT and NTRK like family member 3	3	165197108	165186719
+LMX1A	LIM homeobox transcription factor 1 alpha	1	165356714	165201866
+ELFN1	extracellular leucine rich repeat and fibronectin type III domain containing 1	7	1666063	1747945
+RPS6KA2	ribosomal protein S6 kinase A2	6	166862772	166409363
+CLCN3	chloride voltage-gated channel 3	4	169620577	169723672
+KCNIP1	potassium voltage-gated channel interacting protein 1	5	170353486	170736631
+KCNMB1	potassium calcium-activated channel subfamily M regulatory beta subunit 1	5	170389366	170374670
+GABRP	gamma-aminobutyric acid type A receptor subunit pi	5	170782719	170814046
+GAD1	glutamate decarboxylase 1	2	170813209	170861150
+ZDHHC2	zDHHC palmitoyltransferase 2	8	17156481	17224798
+DNM3	dynamin 3	1	171841497	172418465
+NLGN1	neuroligin 1	3	173395951	174294371
+CHRNA1	cholinergic receptor nicotinic alpha 1 subunit	2	174764471	174747591
+DRD1	dopamine receptor D1	5	175444181	175440035
+HRH2	histamine receptor H2	5	175658070	175710755
+TNR	tenascin R	1	175743594	175315193
+GPM6A	glycoprotein M6A	4	176002392	175632936
+SNCB	synuclein beta	5	176630533	176620081
+UNC13A	unc-13 homolog A	19	17688353	17601335
+GRM6	glutamate metabotropic receptor 6	5	178995319	178978326
+KCNN1	potassium calcium-activated channel subfamily N member 1	19	17951289	18000084
+CCDC39	coiled-coil domain 39 molecular ruler complex subunit	3	180679488	180614007
+IGSF21	immunoglobin superfamily member 21	1	18107797	18378482
+CACNA1E	calcium voltage-gated channel subunit alpha1 E	1	181317698	181808083
+CACNB2	calcium voltage-gated channel auxiliary subunit beta 2	10	18140423	18543556
+DOC2B	double C2 domain beta	17	181649	142788
+RAB3A	RAB3A, member RAS oncogene family	19	18204041	18196783
+HTR3D	5-hydroxytryptamine receptor 3D	3	184031543	184039368
+HTR3C	5-hydroxytryptamine receptor 3C	3	184053046	184060672
+HTR3E	5-hydroxytryptamine receptor 3E	3	184097063	184106994
+ETV5	ETS variant transcription factor 5	3	186109088	186046313
+SST	somatostatin	3	187670393	187668911
+GLS	glutaminase	2	190880820	190965551
+HAPLN4	hyaluronan and proteoglycan link protein 4	19	19262803	19254755
+FGF12	fibroblast growth factor 12	3	192727540	192139389
+FBXO45	F-box protein 45	3	196568659	196589058
+HTR6	5-hydroxytryptamine receptor 6	1	19664874	19680965
+DLG1	discs large MAGUK scaffold protein 1	3	197299320	197042559
+COMT	catechol-O-methyltransferase	22	19941771	19969974
+PDYN	prodynorphin	20	1994284	1978755
+CACNA1S	calcium voltage-gated channel subunit alpha1 S	1	201112425	201039511
+ALS2	alsin Rho guanine nucleotide exchange factor ALS2	2	201780932	201700266
+GABRD	gamma-aminobutyric acid type A receptor subunit delta	1	2019344	2030757
+RPS6KA3	ribosomal protein S6 kinase A3	X	20267096	20149910
+PPFIA4	PPFI scaffold protein A4	1	203026490	203078735
+CNTN2	contactin 2	1	205042948	205078288
+RAB29	RAB29, member RAS oncogene family	1	205775481	205767985
+SLC6A5	solute carrier family 6 member 5	11	20599607	20659284
+SRGAP2	SLIT-ROBO Rho GTPase activating protein 2	1	206203540	206464435
+FZD5	frizzled class receptor 5	2	207769905	207762597
+PLXNA2	plexin A2	1	208244383	208022241
+CNTN4	contactin 4	3	2098865	3057958
+ERBB4	erb-b2 receptor tyrosine kinase 4	2	212538801	211375716
+TH	tyrosine hydroxylase	11	2171814	2163928
+KCNJ8	potassium inwardly rectifying channel subfamily J member 8	12	21774705	21764954
+MAPK1	mitogen-activated protein kinase 1	22	21867679	21759656
+EPHA4	EPH receptor A4	2	221574201	221418026
+SLC17A6	solute carrier family 17 member 6	11	22338380	22379502
+CNIH3	cornichon family AMPA receptor auxiliary protein 3	1	224434639	224740553
+C1QA	complement C1q A chain	1	22636462	22639677
+C1QC	complement C1q C chain	1	22643632	22648107
+C1QB	complement C1q B chain	1	22653235	22661636
+EGR3	early growth response 3	8	22693479	22687658
+DNER	delta/notch like EGF repeat containing	2	229714554	229357628
+HTR2B	5-hydroxytryptamine receptor 2B	2	231125041	231108229
+GNPAT	glyceronephosphate O-acyltransferase	1	231241211	231277972
+HTR1D	5-hydroxytryptamine receptor 1D	1	23217501	23191894
+CHRND	cholinergic receptor nicotinic delta subunit	2	232526159	232536663
+CHRNG	cholinergic receptor nicotinic gamma subunit	2	232539691	232548114
+PTCHD1	patched domain containing 1	X	23334395	23404373
+NAPB	NSF attachment protein beta	20	23421487	23374521
+CHCHD10	coiled-coil-helix-coiled-coil-helix domain containing 10	22	23767971	23765833
+RER1	retention in endoplasmic reticulum sorting receptor 1	1	2391840	2405435
+CHRM3	cholinergic receptor muscarinic 3	1	239386567	239915449
+NPY	neuropeptide Y	7	24284189	24291861
+NFATC4	nuclear factor of activated T cells 4	14	24366910	24379603
+ADORA2A	adenosine A2a receptor	22	24423596	24442356
+CBLN3	cerebellin 3 precursor	14	24429667	24426544
+HRH4	histamine receptor H4	18	24460636	24479973
+ALDH5A1	aldehyde dehydrogenase 5 family member A1	6	24494968	24537206
+LGI2	leucine rich repeat LGI family member 2	4	25030945	24992080
+PAFAH1B1	platelet activating factor acetylhydrolase 1b regulatory subunit 1	17	2593182	2685614
+SEZ6L	seizure related 6 homolog like	22	26169461	26383595
+APP	amyloid beta precursor protein	21	26171127	25880549
+GAD2	glutamate decarboxylase 2	10	26216371	26304557
+ACP1	acid phosphatase 1	2	264946	278282
+RPS6KA1	ribosomal protein S6 kinase A1	1	26529760	26575024
+WASF3	WASP family member 3	13	26539138	26688947
+KCNK3	potassium two pore domain channel subfamily K member 3	2	26692721	26733419
+GABRB3	gamma-aminobutyric acid type A receptor subunit beta3	15	26773762	26543551
+GABRA5	gamma-aminobutyric acid type A receptor subunit alpha5	15	26866718	26949207
+GABRG3	gamma-aminobutyric acid type A receptor subunit gamma3	15	26971180	27541983
+CHRNA2	cholinergic receptor nicotinic alpha 2 subunit	8	27479260	27459755
+PPFIBP1	PPFIB scaffold protein 1	12	27524205	27695563
+BDNF	brain derived neurotrophic factor	11	27722029	27654892
+GSG1L	GSG1 like	16	28063713	27787527
+CDH2	cadherin 2	18	28177129	27932878
+PNOC	prepronociceptin	8	28316987	28343350
+SARM1	sterile alpha and TIR motif containing 1	17	28371693	28404048
+UNC119	unc-119 lipid binding chaperone	17	28552627	28546706
+IL1RAPL1	interleukin 1 receptor accessory protein like 1	X	28587445	29956717
+APBA2	amyloid beta precursor protein binding family A member 2	15	28885973	29118314
+SEZ6	seizure related 6 homolog	17	29006439	28954904
+GIT1	GIT ArfGAP 1	17	29589647	29573474
+GABBR1	gamma-aminobutyric acid type B receptor subunit 1	6	29633182	29602237
+SEZ6L2	seizure related 6 homolog like 2	16	29899549	29871158
+GRIK1	glutamate ionotropic receptor kainate type subunit 1	21	29939995	29536932
+DOC2A	double C2 domain alpha	16	30023227	30005513
+CHRFAM7A	CHRNA7 (exons 5-10) and FAM7A (exons A-E) fusion	15	30393899	30360565
+ITGAM	integrin subunit alpha M	16	31259974	31332876
+HCRTR1	hypocretin receptor 1	1	31617688	31634491
+MYLK2	myosin light chain kinase 2	20	31819355	31834683
+CHRNA7	cholinergic receptor nicotinic alpha 7 subunit	15	32030482	32173017
+PRRT1	proline rich transmembrane protein 1	6	32153082	32148362
+CEP89	centrosomal protein 89	19	32971957	32875924
+SDK1	sidekick cell adhesion molecule 1	7	3301251	4268999
+SYN3	synapsin III	22	33058380	32507819
+SYNGAP1	synaptic Ras GTPase activating protein 1	6	33418166	33453688
+SYT10	synaptotagmin 10	12	33439818	33374237
+LARGE1	LARGE xylosyl- and glucuronyltransferase 1	22	33922823	33066662
+CHRM5	cholinergic receptor muscarinic 5	15	33968496	34067457
+CAPRIN1	cell cycle associated protein 1	11	34051730	34102609
+GRM4	glutamate metabotropic receptor 4	6	34155621	34018642
+ASIC2	acid sensing ion channel subunit 2	17	34156767	33013086
+CSMD2	CUB and Sushi multiple domains 2	1	34165841	33513997
+SLC12A6	solute carrier family 12 member 6	15	34338056	34229783
+DTNA	dystrobrevin alpha	18	34493311	34891843
+DOK7	docking protein 7	4	3463305	3501481
+GJD2	gap junction protein delta 2	15	34754997	34751031
+DLGAP3	DLG associated protein 3	1	34929649	34865435
+UNC13B	unc-13 homolog B	9	35162008	35405334
+SLC1A2	solute carrier family 1 member 2	11	35420506	35251204
+RASD2	RASD family member 2	22	35532805	35553998
+AP2B1	adaptor related protein complex 2 subunit beta 1	17	35587321	35726412
+NPR2	natriuretic peptide receptor 2	9	35791590	35809730
+DLGAP4	DLG associated protein 4	20	36306338	36528632
+SLC1A3	solute carrier family 1 member 3	5	36596587	36688333
+CACNG2	calcium voltage-gated channel auxiliary subunit gamma 2	22	36703751	36560856
+CHRNA10	cholinergic receptor nicotinic alpha 10 subunit	11	3671383	3665586
+PVALB	parvalbumin	22	36819498	36800702
+GRIK3	glutamate ionotropic receptor kainate type subunit 3	1	37034514	36795526
+ELFN2	extracellular leucine rich repeat and fibronectin type III domain containing 2	22	37427478	37340643
+APBA3	amyloid beta precursor protein binding family A member 3	19	3761691	3750771
+MDGA1	MAM domain containing glycosylphosphatidylinositol anchor 1	6	37697882	37630678
+GALR3	galanin receptor 3	22	37823381	37825484
+AMPH	amphiphysin	7	38631372	38383703
+P2RX1	purinergic receptor P2X 1	17	3916464	3896591
+CACNB1	calcium voltage-gated channel auxiliary subunit beta 1	17	39197668	39173452
+CX3CR1	C-X3-C motif chemokine receptor 1	3	39292965	39263493
+GET1	guided entry of tail-anchored proteins factor 1	21	39380325	39428527
+ERBB2	erb-b2 receptor tyrosine kinase 2	17	39688093	39728657
+GPR176	G protein-coupled receptor 176	15	39920265	39799007
+CAP1	cyclase associated actin cytoskeleton regulatory protein 1	1	40040239	40072647
+LRRK2	leucine rich repeat kinase 2	12	40224996	40369284
+CHRNA9	cholinergic receptor nicotinic alpha 9 subunit	4	40335332	40355216
+SPTBN4	spectrin beta, non-erythrocytic 4	19	40467000	40576463
+RIMS3	regulating synaptic membrane exocytosis 3	1	40692065	40620679
+DSCAM	DS cell adhesion molecule	21	40847157	40010998
+TREM2	triggering receptor expressed on myeloid cells 2	6	41163115	41158507
+CTNNB1	catenin beta 1	3	41199504	41240442
+APBB2	amyloid beta precursor protein binding family B member 2	4	41214541	40810026
+ITPKA	inositol-trisphosphate 3-kinase A	15	41493873	41503550
+HAP1	huntingtin associated protein 1	17	41734645	41717738
+CNP	2'',3''-cyclic nucleotide 3'' phosphodiesterase	17	41966794	41977739
+GRIK5	glutamate ionotropic receptor kainate type subunit 5	19	42070205	41998323
+HCRT	hypocretin neuropeptide precursor	17	42185451	42184059
+VDAC3	voltage dependent anion channel 3	8	42391879	42405936
+PRICKLE1	prickle planar cell polarity protein 1	12	42589745	42456756
+CNTNAP1	contactin associated protein 1	17	42682530	42699992
+CHRNB3	cholinergic receptor nicotinic beta 3 subunit	8	42697365	42737406
+CHRNA6	cholinergic receptor nicotinic alpha 6 subunit	8	42768785	42752619
+FNTA	farnesyltransferase, CAAX box, subunit alpha	8	43056322	43085784
+PTK7	protein tyrosine kinase 7 (inactive)	6	43076313	43161714
+RIT2	Ras like without CAAX 2	18	43115684	42743226
+NSG1	neuronal vesicle trafficking associated 1	4	4386531	4419057
+DBNL	drebrin like	7	44044701	44069455
+DNAJA3	DnaJ heat shock protein family (Hsp40) member A3	16	4425867	4456774
+GRN	granulin precursor	17	44345301	44353105
+DLGAP1	DLG associated protein 1	18	4455306	3496031
+SPG11	SPG11 vesicle trafficking associated, spatacsin	15	44663661	44562695
+GJC1	gap junction protein gamma 1	17	44831363	44794103
+SLC1A1	solute carrier family 1 member 1	9	4490467	4587468
+APOE	apolipoprotein E	19	44905795	44909392
+C1QL1	complement C1q like 1	17	44968302	44959692
+ADARB1	adenosine deaminase RNA specific B1	21	45074577	45226562
+PRKCE	protein kinase C epsilon	2	45651278	46187989
+MAPT	microtubule associated protein tau	17	45894553	46028333
+WNT7B	Wnt family member 7B	22	45977161	45920365
+SLC12A5	solute carrier family 12 member 5	20	46021685	46060149
+GABRG1	gamma-aminobutyric acid type A receptor subunit gamma1	4	46124053	46035768
+GABRA2	gamma-aminobutyric acid type A receptor subunit alpha2	4	46390299	46243547
+CHRM4	cholinergic receptor muscarinic 4	11	46391775	46383788
+HTR2A	5-hydroxytryptamine receptor 2A	13	46898081	46831545
+LRP4	LDL receptor related protein 4	11	46918549	46856716
+GABRA4	gamma-aminobutyric acid type A receptor subunit alpha4	4	46993580	46918899
+GABRB1	gamma-aminobutyric acid type A receptor subunit beta1	4	46993646	47426446
+ADGRF1	adhesion G protein-coupled receptor F1	6	47042331	46997707
+ITGB3	integrin subunit beta 3	17	47253826	47313742
+RAPSN	receptor associated protein of the synapse	11	47449135	47437763
+SLC8A2	solute carrier family 8 member A2	19	47471892	47428016
+CD2AP	CD2 associated protein	6	47477788	47627262
+NAPA	NSF attachment protein alpha	19	47515062	47484529
+SYN1	synapsin I	X	47619856	47571900
+MINK1	misshapen like kinase 1	17	4833339	4898060
+GRIN2D	glutamate ionotropic receptor NMDA type subunit 2D	19	48393667	48444930
+PLXNB1	plexin B1	3	48430309	48403853
+CACNB3	calcium voltage-gated channel auxiliary subunit beta 3	12	48814479	48828940
+CHRNE	cholinergic receptor nicotinic epsilon subunit	17	4908676	4897770
+PPFIA3	PPFI scaffold protein A3	19	49119543	49151025
+LAMB2	laminin subunit beta 2	3	49133049	49121113
+TUBA1A	tubulin alpha 1a	12	49189079	49184794
+ABI3	ABI family member 3	17	49210706	49223224
+STAU1	staufen double-stranded RNA binding protein 1	20	49219294	49113338
+CBLN1	cerebellin 1 precursor	16	49281837	49277916
+SLC17A7	solute carrier family 17 member 7	19	49441526	49429400
+PFN1	profilin 1	17	4948529	4945651
+BSN	bassoon presynaptic cytomatrix protein	3	49554476	49673129
+CHAT	choline O-acetyltransferase	10	49609094	49667941
+SLC18A3	solute carrier family 18 member A3	10	49610309	49612719
+ARF6	ARF GTPase 6	14	49893081	49897053
+PLXNB2	plexin B2	22	50307645	50274978
+CACNA2D2	calcium voltage-gated channel auxiliary subunit alpha2delta 2	3	50504243	50362612
+MYCBPAP	MYCBP associated protein	17	50507777	50531500
+CACNA1G	calcium voltage-gated channel subunit alpha1 G	17	50560714	50627473
+SYT3	synaptotagmin 3	19	50658104	50621976
+SHANK3	SH3 and multiple ankyrin repeat domains 3	22	50672822	50733211
+SHANK1	SH3 and multiple ankyrin repeat domains 1	19	50719801	50659254
+TPGS1	tubulin polyglutamylase complex subunit 1	19	507496	519653
+KLK8	kallikrein related peptidase 8	19	51001603	50996007
+NRXN1	neurexin 1	2	51032131	49918502
+GRM2	glutamate metabotropic receptor 2	3	51707067	51718612
+TMOD2	tropomodulin 2	15	51751596	51816362
+DKK1	dickkopf Wnt signaling pathway inhibitor 1	10	52314280	52317656
+PCDH8	protocadherin 8	13	52848639	52842888
+NPBWR1	neuropeptides B and W receptor 1	8	52939181	52943733
+OPRK1	opioid receptor kappa 1	8	53251636	53225723
+LRP8	LDL receptor related protein 8	1	53328069	53242363
+PTPRS	protein tyrosine phosphatase receptor type S	19	5340811	5205507
+NPFF	neuropeptide FF-amide peptide precursor	12	53507483	53506687
+LNX1	ligand of numb-protein X 1	4	53652476	53459300
+UNC13C	unc-13 homolog C	15	53837601	54633439
+PRKCG	protein kinase C gamma	19	53881093	53907651
+HCRTR2	hypocretin receptor 2	6	55106468	55284712
+SYT5	synaptotagmin 5	19	55180288	55171195
+WNT5A	Wnt family member 5A	3	55505262	55465714
+SLC6A2	solute carrier family 6 member 2	16	55655987	55706191
+NEDD4	NEDD4 E3 ubiquitin protein ligase	15	55993611	55826916
+CBLN4	cerebellin 4 precursor	20	56005518	55997356
+PENK	proenkephalin	8	56446640	56440956
+ERC2	ELKS/RAB6-interacting/CAST family member 2	3	56468466	55508310
+REST	RE1 silencing transcription factor	4	56907899	56935843
+APPL1	adaptor protein, phosphotyrosine interacting with PH domain and leucine zipper 1	3	57227728	57273470
+STAC3	SH3 and cysteine rich domain 3	12	57251186	57243457
+P2RX3	purinergic receptor P2X 3	11	57335949	57372395
+CX3CL1	C-X3-C motif chemokine ligand 1	16	57372489	57385043
+KIF5A	kinesin family member 5A	12	57550043	57586632
+NEDD4L	NEDD4 like E3 ubiquitin protein ligase	18	58044225	58401539
+SDCBP	syndecan binding protein	8	58553260	58582857
+ANK3	ankyrin 3	10	60733527	60026297
+NFIA	nuclear factor I A	1	61077226	61462787
+ADGRL3	adhesion G protein-coupled receptor L3	4	61200325	62078334
+CDH8	cadherin 8	16	62036437	61647249
+HRH3	histamine receptor H3	20	62220277	62214959
+NLGN4X	neuroligin 4 X-linked	X	6228866	5890041
+NTSR1	neurotensin receptor 1	20	62708835	62762770
+CHRM1	cholinergic receptor muscarinic 1	11	62921877	62908678
+CHRNA4	cholinergic receptor nicotinic alpha 4 subunit	20	63361348	63343222
+KCNQ2	potassium voltage-gated channel subfamily Q member 2	20	63472654	63400207
+DRD4	dopamine receptor D4	11	637268	640705
+RAC1	Rac family small GTPase 1	7	6374526	6403966
+HTR1A	5-hydroxytryptamine receptor 1A	5	63962444	63957873
+VPS54	VPS54 subunit of GARP complex	2	64019427	63892149
+OPRL1	opioid related nociceptin receptor 1	20	64080081	64100642
+AKAP5	A-kinase anchoring protein 5	14	64465498	64474502
+NRXN2	neurexin 2	11	64723196	64606173
+SPTB	spectrin beta, erythrocytic	14	64879906	64746282
+SLC1A4	solute carrier family 1 member 4	2	64988478	65023864
+ZC4H2	zinc finger C4H2-type containing	X	65034740	64915806
+CFL1	cofilin 1	11	65858179	65854672
+CRH	corticotropin releasing hormone	8	66178463	66176375
+CNIH2	cornichon family AMPA receptor auxiliary protein 2	11	66278174	66284205
+NPAS4	neuronal PAS domain protein 4	11	66409157	66426706
+GPHN	gephyrin	14	66508146	67735354
+SPTBN2	spectrin beta, non-erythrocytic 2	11	66744681	66682496
+C3	complement C3	19	6720649	6677703
+SLC12A4	solute carrier family 12 member 4	16	67968693	67943473
+OPHN1	oligophrenin 1	X	68433840	68042343
+RAP1B	RAP1B, member of RAS oncogene family	12	68610898	68671900
+GRM7	glutamate metabotropic receptor 7	3	6861114	7741532
+ADGRB3	adhesion G protein-coupled receptor B3	6	68635281	69389505
+CDH1	cadherin 1	16	68737291	68835536
+APBA1	amyloid beta precursor protein binding family A member 1	9	69673012	69427531
+NQO1	NAD(P)H quinone dehydrogenase 1	16	69726559	69709400
+SLC8A3	solute carrier family 8 member A3	14	70189404	70044214
+PPFIA1	PPFI scaffold protein A1	11	70270689	70384395
+KCNMB4	potassium calcium-activated channel subfamily M regulatory beta subunit 4	12	70366289	70434291
+CTTN	cortactin	11	70398528	70436574
+DLG3	discs large MAGUK scaffold protein 3	X	70444834	70505489
+ADD2	adducin 2	2	70768199	70656783
+PALM	paralemmin	19	708934	748328
+NLGN3	neuroligin 3	X	71144840	71175306
+SHANK2	SH3 and multiple ankyrin repeat domains 2	11	71253233	70467853
+CLSTN3	calsyntenin 3	12	7129092	7158944
+PMCHL2	pro-melanin concentrating hormone like 2 (pseudogene)	5	71375784	71385992
+CARTPT	CART prepropeptide	5	71719274	71721044
+RIMS1	regulating synaptic membrane exocytosis 1	6	71886549	72403144
+SPOCK2	SPARC (osteonectin), cwcv and kazal like domains proteoglycan 2	10	72089031	72059033
+MAP1B	microtubule associated protein 1B	5	72107474	72209564
+DLG4	discs large MAGUK scaffold protein 4	17	7220049	7187186
+SYT9	synaptotagmin 9	11	7238777	7469042
+GABARAP	GABA type A receptor-associated protein	17	7242448	7240007
+CBLN2	cerebellin 2 precursor	18	72638520	72536680
+PSEN1	presenilin 1	14	73136416	73223690
+FCHSD2	FCH and double SH3 domains 2	11	73142317	72836744
+FBXO41	F-box protein 41	2	73284477	73254689
+PDZRN3	PDZ domain containing ring finger 3	3	73624940	73382430
+NPTN	neuroplastin	15	73633388	73560013
+SDK2	sidekick cell adhesion molecule 2	17	73644444	73334383
+DLGAP2	DLG associated protein 2	8	737627	1708475
+NLGN2	neuroligin 2	17	7404652	7419859
+DCTN1	dynactin subunit 1	2	74391865	74361154
+CHRNB1	cholinergic receptor nicotinic beta 1 subunit	17	7445060	7457709
+GRIN2C	glutamate ionotropic receptor NMDA type subunit 2C	17	74861531	74842022
+PPFIBP2	PPFIB scaffold protein 2	11	7513998	7667303
+FILIP1	filamin A interacting protein 1	6	75493799	75291858
+SV2C	synaptic vesicle glycoprotein 2C	5	75847463	76353938
+F2R	coagulation factor II thrombin receptor	5	76716125	76735769
+CRHBP	corticotropin releasing hormone binding protein	5	76953044	76981158
+OMP	olfactory marker protein	11	77102839	77103330
+MBP	myelin basic protein	18	77133707	76978832
+HTR1B	5-hydroxytryptamine receptor 1B	6	77463490	77460923
+CHRNA5	cholinergic receptor nicotinic alpha 5 subunit	15	78565519	78595268
+POU4F1	POU class 4 homeobox 1	13	78603551	78598361
+CHRNA3	cholinergic receptor nicotinic alpha 3 subunit	15	78620995	78593051
+CHRNB4	cholinergic receptor nicotinic beta 4 subunit	15	78661640	78624110
+SYT1	synaptotagmin 1	12	78863981	79452007
+UTS2	urotensin 2	1	7913248	7847611
+CTNNA2	catenin alpha 2	2	79185376	80648779
+HOMER1	homer scaffold protein 1	5	79514133	79372635
+PARK7	Parkinsonism associated deglycase	1	7961710	7985504
+LRRTM1	leucine rich repeat transmembrane neuronal 1	2	80304751	80288355
+NPTX1	neuronal pentraxin 1	17	80476606	80466833
+ADGRL2	adhesion G protein-coupled receptor L2	1	81306131	81993931
+RIC3	RIC3 acetylcholine receptor chaperone	11	8169024	8092964
+PPFIA2	PPFI scaffold protein A2	12	81759349	81257974
+NRG3	neuregulin 3	10	81875193	82987178
+RAC3	Rac family small GTPase 3	17	82031677	82034203
+TPBG	trophoblast glycoprotein	6	82362982	82367419
+CPLX1	complexin 1	4	826128	784956
+PCLO	piccolo presynaptic cytomatrix protein	7	83162883	82754011
+SEMA3E	semaphorin 3E	7	83649138	83363237
+SLITRK1	SLIT and NTRK like family member 1	13	83882473	83877204
+LPAR3	lysophosphatidic acid receptor 3	1	84893205	84811601
+DLG2	discs large MAGUK scaffold protein 2	11	85628372	83455011
+SLITRK6	SLIT and NTRK like family member 6	13	85799418	85792789
+GRID1	glutamate ionotropic receptor delta type subunit 1	10	86366794	85599551
+GRM3	glutamate metabotropic receptor 3	7	86643908	86864878
+HTR1E	5-hydroxytryptamine receptor 1E	6	86937527	87016678
+SNCG	synuclein gamma	10	86955758	86963257
+SLITRK5	SLIT and NTRK like family member 5	13	87671370	87679615
+HTR1F	5-hydroxytryptamine receptor 1F	3	87792705	87993838
+PTEN	phosphatase and tensin homolog	10	87863624	87971929
+GRM5	glutamate metabotropic receptor 5	11	89065981	88504641
+GABRR1	gamma-aminobutyric acid type A receptor subunit rho1	6	89231287	89177503
+GPRIN3	GPRIN family member 3	4	89307799	89236382
+GABRR2	gamma-aminobutyric acid type A receptor subunit rho2	6	89315298	89254463
+SNCA	synuclein alpha	4	89838303	89724098
+GJA10	gap junction protein alpha 10	6	89894468	89896119
+HTR7	5-hydroxytryptamine receptor 7	10	90858038	90740822
+SV2B	synaptic vesicle glycoprotein 2B	15	91099587	91302564
+AKAP9	A-kinase anchoring protein 9	7	91940861	92110672
+ATXN3	ataxin 3	14	92106581	92044774
+GRID2	glutamate ionotropic receptor delta type subunit 2	4	92303965	93810455
+MTNR1B	melatonin receptor 1B	11	92969650	92984959
+PLXNC1	plexin C1	12	94148576	94307674
+TAC1	tachykinin precursor 1	7	97732085	97740471
+DRD5	dopamine receptor D5	4	9781633	9784008
+GABRR3	gamma-aminobutyric acid type A receptor subunit rho3	3	98035314	97985101
+FARP1	FERM, ARH/RhoGEF and pleckstrin domain protein 1	13	98142588	98455175
+PIN1	peptidylprolyl cis/trans isomerase, NIMA-interacting 1	19	9835317	9849688
+NPTX2	neuronal pentraxin 2	7	98617284	98629868
+GABBR2	gamma-aminobutyric acid type B receptor subunit 2	9	98708934	98288108
+ERC1	ELKS/RAB6-interacting/CAST family member 1	12	989958	1495932

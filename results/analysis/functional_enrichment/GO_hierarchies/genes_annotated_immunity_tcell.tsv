@@ -1,0 +1,327 @@
+symbol	name	chrom	start	end
+CLEC7A	C-type lectin domain containing 7A	12	10130303	10116776
+PPP3CA	protein phosphatase 3 catalytic subunit alpha	4	101347525	101023417
+NFKBIZ	NFKB inhibitor zeta	3	101827989	101861021
+IL18R1	interleukin 18 receptor 1	2	102355795	102398775
+ICAM1	intercellular adhesion molecule 1	19	10271119	10286614
+KLRC1	killer cell lectin like receptor C1	12	10454684	10442263
+JAG2	jagged canonical Notch ligand 2	14	105168775	105140994
+NCK2	NCK adaptor protein 2	2	105744452	105894271
+CBLB	Cbl proto-oncogene B	3	105869448	105655460
+ATG5	autophagy related 5	6	106325759	106184475
+PIK3CG	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit gamma	7	106865281	106908979
+LEF1	lymphoid enhancer binding factor 1	4	108168931	108047547
+LIG4	DNA ligase 4	13	108218348	108207441
+TNFSF13B	TNF superfamily member 13b	13	108269628	108308483
+TRAF3IP2	TRAF3 interacting protein 2	6	111605877	111555380
+FYN	FYN proto-oncogene, Src family tyrosine kinase	6	111873451	111660331
+GPAM	glycerol-3-phosphate acyltransferase, mitochondrial	10	112227676	112149864
+DTX1	deltex E3 ubiquitin ligase 1	12	113056729	113098024
+CUL4A	cullin 4A	13	113208192	113267107
+PTPN22	protein tyrosine phosphatase non-receptor type 22	1	113871758	113813810
+TNFSF8	TNF superfamily member 8	9	114930594	114893342
+CD2	CD2 molecule	1	116754429	116769228
+TLR4	toll like receptor 4	9	117704402	117724734
+JAML	junction adhesion molecule like	11	118225010	118193724
+CD3E	CD3 epsilon subunit of T-cell receptor complex	11	118304729	118316172
+CD3D	CD3 delta subunit of T-cell receptor complex	11	118342704	118338953
+CD3G	CD3 gamma subunit of T-cell receptor complex	11	118344343	118355160
+KMT2A	lysine methyltransferase 2A	11	118436491	118526831
+CD80	CD80 molecule	3	119559613	119524292
+NKAP	NFKB activating protein	X	119943750	119920671
+STK11	serine/threonine kinase 11	19	1205777	1228430
+RABL3	RAB, member of RAS oncogene family like 3	3	120742679	120684937
+P2RX7	purinergic receptor P2X 7	12	121132875	121188031
+TNFRSF4	TNF receptor superfamily member 4	1	1214152	1211339
+CD86	CD86 molecule	3	122055361	122121135
+IL2	interleukin 2	4	122456724	122451469
+IL21	interleukin 21	4	122621065	122610107
+RC3H2	ring finger and CCCH-type domains 2	9	122905358	122844555
+PLXNA1	plexin A1	3	126983114	127037388
+MYC	MYC proto-oncogene, bHLH transcription factor	8	127735433	127742950
+THEMIS	thymocyte selection associated	6	127918594	127696627
+PRDX2	peroxiredoxin 2	19	12801799	12796822
+LEP	leptin	7	128241277	128257628
+PTPN2	protein tyrosine phosphatase non-receptor type 2	18	12884236	12785477
+SASH3	SAM and SH3 domain containing 3	X	129779948	129795200
+ELF4	E74 like ETS transcription factor 4	X	130111857	130063954
+ABL1	ABL proto-oncogene 1, non-receptor tyrosine kinase	9	130713042	130887674
+IRF1	interferon regulatory factor 1	5	132490772	132481608
+IL4	interleukin 4	5	132673988	132682677
+TSC1	TSC complex subunit 1	9	132945377	132891348
+TCF7	transcription factor 7	5	134108217	134148209
+MYB	MYB proto-oncogene, transcription factor	6	135181307	135219171
+NCK1	NCK adaptor protein 1	3	136862207	136951605
+TRAF2	TNF receptor associated factor 2	9	136881957	136926606
+IL20RB	interleukin 20 receptor subunit beta	3	136957982	137011084
+FUT7	fucosyltransferase 7	9	137032087	137030173
+NRARP	NOTCH regulated ankyrin repeat protein	9	137302270	137299630
+EGR1	early growth response 1	5	138465478	138469302
+FKBP1A	FKBP prolyl isomerase 1A	20	1393053	1368977
+BRAF	B-Raf proto-oncogene, serine/threonine kinase	7	140924928	140713327
+CD83	CD83 molecule	6	14117255	14136917
+IL15	interleukin 15	4	141636582	141733986
+NDFIP1	Nedd4 family interacting protein 1	5	142108778	142154439
+TRBC1	T cell receptor beta constant 1	7	142791693	142793140
+TRBC2	T cell receptor beta constant 2	7	142801040	142802528
+GPR89A	G protein-coupled receptor 89A	1	145607987	145670649
+GPR89B	G protein-coupled receptor 89B	1	147928419	148025933
+CD74	CD74 molecule	5	150412909	150401638
+TNFAIP8L2	TNF alpha induced protein 8 like 2	1	151156648	151159748
+RORC	RAR related orphan receptor C	1	151831801	151806070
+ZBTB7B	zinc finger and BTB domain containing 7B	1	155001749	155018522
+GBA1	glucosylceramidase beta 1	1	155244626	155234451
+SHH	sonic hedgehog signaling molecule	7	155812462	155799979
+SEMA4A	semaphorin 4A	1	156147372	156177743
+SH2D2A	SH2 domain containing 2A	1	156816847	156806242
+ITK	IL2 inducible T cell kinase	5	157180839	157255184
+CD1D	CD1d molecule	1	158178029	158186426
+CD1C	CD1c molecule	1	158289922	158294773
+IL12B	interleukin 12B	5	159330486	159314779
+SLAMF9	SLAM family member 9	1	159983983	159951491
+IL12A	interleukin 12A	3	159988834	159996018
+NCSTN	nicastrin	1	160343382	160358948
+SLAMF6	SLAM family member 6	1	160523254	160485035
+CD84	CD84 molecule	1	160579495	160541097
+SLAMF7	SLAM family member 7	1	160739056	160754820
+LY9	lymphocyte antigen 9	1	160796173	160828254
+FCER1G	Fc epsilon receptor Ig	1	161215294	161219244
+HSH2D	hematopoietic SH2 domain containing	19	16134027	16158574
+DPP4	dipeptidyl peptidase 4	2	162074214	161992244
+CCR6	C-C motif chemokine receptor 6	6	167111794	167139140
+CD247	CD247 molecule	1	167518528	167430639
+DOCK2	dedicator of cytokinesis 2	5	169637274	170083381
+TNFSF18	TNF superfamily member 18	1	173050940	173039201
+TNFSF4	TNF superfamily member 4	1	173450732	173172869
+NCR3LG1	natural killer cell cytotoxicity receptor 3 ligand 1	11	17351799	17381660
+SP3	Sp3 transcription factor	2	173965701	173900774
+RC3H1	ring finger and CCCH-type domains 1	1	174022356	173931083
+CXADR	CXADR cell adhesion molecule	21	17513042	17636261
+ATF2	activating transcription factor 2	2	175168202	175072258
+PRR7	proline rich 7, synaptic	5	177445994	177456285
+IL12RB1	interleukin 12 receptor subunit beta 1	19	18098926	18058994
+MR1	major histocompatibility complex, class I-related	1	181033386	181061937
+PIK3R2	phosphoinositide-3-kinase regulatory subunit 2	19	18153162	18170531
+ALKBH5	alkB homolog 5, RNA demethylase	17	18183827	18209953
+BCL6	BCL6 transcription repressor	3	187745467	187721376
+STAT4	signal transducer and activator of transcription 4	2	191151595	191029575
+HES1	hes family bHLH transcription factor 1	3	194136147	194138731
+DLG1	discs large MAGUK scaffold protein 1	3	197299320	197042559
+HSPD1	heat shock protein family D (Hsp60) member 1	2	197500273	197486583
+PTPRC	protein tyrosine phosphatase receptor type C	1	198638712	198757475
+PLA2G2D	phospholipase A2 group IID	1	20119535	20111938
+CASP8	caspase 8	2	201233462	201287710
+FZD7	frizzled class receptor 7	2	202033854	202038440
+CD28	CD28 molecule	2	203706481	203738911
+ICOS	inducible T cell costimulator	2	203936762	203961576
+SOX13	SRY-box transcription factor 13	1	204073114	204127742
+RAB29	RAB29, member RAS oncogene family	1	205775481	205767985
+DDOST	dolichyl-diphosphooligosaccharide--protein glycosyltransferase non-catalytic subunit	1	20661368	20651776
+FZD5	frizzled class receptor 5	2	207769905	207762597
+IFNB1	interferon beta 1	9	21077941	21077103
+DOCK8	dedicator of cytokinesis 8	9	211256	465254
+IFNW1	interferon omega 1	9	21141831	21140631
+IFNA21	interferon alpha 21	9	21166659	21165636
+IFNA4	interferon alpha 4	9	21187586	21186617
+IFNA7	interferon alpha 7	9	21202204	21201468
+IFNA10	interferon alpha 10	9	21207142	21206180
+IFNA16	interferon alpha 16	9	21217310	21216372
+IFNA17	interferon alpha 17	9	21228221	21227242
+IFNA14	interferon alpha 14	9	21240004	21239001
+IFNA5	interferon alpha 5	9	21305312	21304325
+IFNA6	interferon alpha 6	9	21350886	21350317
+IFNA2	interferon alpha 2	9	21385397	21384254
+IFNA8	interferon alpha 8	9	21409116	21410184
+IFNA1	interferon alpha 1	9	21440438	21441315
+IFNE	interferon epsilon	9	21482312	21480838
+SOX4	SRY-box transcription factor 4	6	21593750	21598618
+INS	insulin	11	2161208	2159778
+SLC11A1	solute carrier family 11 member 1	2	218382272	218396893
+NHEJ1	non-homologous end joining factor 1	2	219160814	219069356
+HLX	H2.0 like homeobox	1	220879442	220885058
+WNT4	Wnt family member 4	1	22143096	22117312
+TRDC	T cell receptor delta constant	14	22462931	22466576
+TRAC	T cell receptor alpha constant	14	22547505	22552131
+ITPKB	inositol-trisphosphate 3-kinase B	1	226739281	226631689
+ASCL2	achaete-scute family bHLH transcription factor 2	11	2270587	2268497
+IL6	interleukin 6	7	22727199	22731997
+TSPAN32	tetraspanin 32	11	2302012	2318203
+PSMB11	proteasome subunit beta 11	14	23042211	23044059
+FKBP1B	FKBP prolyl isomerase 1B	2	24033205	24063680
+RIPK3	receptor interacting serine/threonine kinase 3	14	24339990	24336024
+LFNG	LFNG O-fucosylpeptide 3-beta-N-acetylglucosaminyltransferase	7	2512528	2529176
+BTN3A1	butyrophilin subfamily 3 member A1	6	26402274	26415207
+APBB1IP	amyloid beta precursor protein binding family B member 1 interacting protein	10	26438340	26567802
+IL4R	interleukin 4 receptor	16	27313755	27364777
+IFNK	interferon kappa	9	27524289	27526497
+EOMES	eomesodermin	3	27722712	27715952
+AZI2	5-azacytidine induced 2	3	28348823	28321046
+FOSL2	FOS like 2, AP-1 transcription factor subunit	2	28392857	28417316
+LAT	linker for activation of T cells	16	28984802	28990783
+KIF13B	kinesin family member 13B	8	29263387	29067277
+SPN	sialophorin	16	29662962	29670875
+HLA-A	major histocompatibility complex, class I, A	6	29942531	29945869
+CORO1A	coronin 1A	16	30183601	30189075
+CARD11	caspase recruitment domain family member 11	7	3043866	2906141
+ITGAL	integrin subunit alpha L	16	30472741	30523184
+HLA-E	major histocompatibility complex, class I, E	6	30489508	30494193
+HMGB1	high mobility group box 1	13	30617596	30456703
+PATZ1	POZ/BTB and AT hook containing zinc finger 1	22	31346345	31325803
+MICA	MHC class I polypeptide-related sequence A	6	31400710	31415314
+ARMC5	armadillo repeat containing 5	16	31458303	31467166
+MICB	MHC class I polypeptide-related sequence B	6	31494917	31511123
+NCR3	natural cytotoxicity triggering receptor 3	6	31593005	31588894
+BAG6	BAG cochaperone 6	6	31652660	31639027
+LCK	LCK proto-oncogene, Src family tyrosine kinase	1	32251264	32286164
+TMEM98	transmembrane protein 98	17	32928152	32944314
+DCAF12	DDB1 and CUL4 associated factor 12	9	34126697	34086386
+ITCH	itchy E3 ubiquitin protein ligase	20	34363272	34511772
+STOML2	stomatin like 2	9	35103194	35099775
+CD44	CD44 molecule (IN blood group)	11	35139170	35232401
+FZD8	frizzled class receptor 8	10	35642295	35638246
+NLRC3	NLR family CARD domain containing 3	16	3577402	3539032
+IL7R	interleukin 7 receptor	5	35856890	35879602
+TYROBP	transmembrane immune signaling adaptor TYROBP	19	35908294	35904402
+RAG1	recombination activating 1	11	36510352	36579761
+RAG2	recombination activating 2	11	36598235	36590995
+SLA2	Src like adaptor 2	20	36646195	36612317
+CRACR2A	calcium release activated channel regulator 2A	12	3753108	3615327
+TRGC1	T cell receptor gamma constant 1	7	38265677	38260087
+RASGRP1	RAS guanyl releasing protein 1	15	38564813	38488102
+SOS1	SOS Ras/Rac guanine nucleotide exchange factor 1	2	39124867	38981548
+IRF4	interferon regulatory factor 4	6	391751	411442
+ERBB2	erb-b2 receptor tyrosine kinase 2	17	39688093	39728657
+IKZF3	IKAROS family zinc finger 3	17	39864311	39757714
+IDO1	indoleamine 2,3-dioxygenase 1	8	39913890	39928789
+EIF2AK4	eukaryotic translation initiation factor 2 alpha kinase 4	15	39934114	40035590
+RHOH	ras homolog family member H	4	40191079	40246966
+CCR7	C-C motif chemokine receptor 7	17	40565471	40553768
+PTGER4	prostaglandin E receptor 4	5	40679914	40746799
+MAFB	MAF bZIP transcription factor B	20	40689235	40685847
+DLL4	delta like canonical Notch ligand 4	15	40929339	40939072
+RBX1	ring-box 1	22	40951377	40973308
+CTPS1	CTP synthase 1	1	40979695	41012564
+TREM2	triggering receptor expressed on myeloid cells 2	6	41163115	41158507
+CTNNB1	catenin beta 1	3	41199504	41240442
+TREML2	triggering receptor expressed on myeloid cells like 2	6	41201148	41189748
+TGFB1	transforming growth factor beta 1	19	41353921	41330322
+CEACAM21	CEA cell adhesion molecule 21	19	41549517	41586843
+CCND3	cyclin D3	6	42050034	41934932
+GLI3	GLI family zinc finger 3	7	42264267	41960948
+STAT5A	signal transducer and activator of transcription 5A	17	42287438	42311942
+STAT5B	signal transducer and activator of transcription 5B	17	42288369	42199176
+EBI3	Epstein-Barr virus induced 3	19	4229522	4237527
+PTCRA	pre T cell antigen receptor alpha	6	42916052	42925837
+PKNOX1	PBX/knotted 1 homeobox 1	21	42974561	43033930
+SRF	serum response factor	6	43171268	43181505
+ZFP36L2	ZFP36 ring finger protein like 2	2	43226605	43222401
+ICOSLG	inducible T cell costimulator ligand	21	44240942	44216980
+DNAJA3	DnaJ heat shock protein family (Hsp40) member A3	16	4425867	4456774
+AIRE	autoimmune regulator	21	44285875	44298647
+ADA	adenosine deaminase	20	44651698	44619521
+B2M	beta-2-microglobulin	15	44711516	44718144
+BCL3	BCL3 transcription coactivator	19	44747704	44760043
+RELB	RELB proto-oncogene, NF-kB subunit	19	45001463	45038191
+RUNX2	RUNX family transcription factor 2	6	45328329	45551081
+CCR9	C-C motif chemokine receptor 9	3	45886063	45903173
+PIK3R3	phosphoinositide-3-kinase regulatory subunit 3	1	46174900	46040139
+LCP1	lymphocyte cytosolic protein 1	13	46182176	46125922
+MDK	midkine	11	46380783	46383836
+SEMA6D	semaphorin 6D	15	47184088	47774227
+TBX21	T-box transcription factor 21	17	47733235	47746121
+PRKDC	protein kinase, DNA-activated, catalytic subunit	8	47960135	47773110
+KDELR1	KDEL endoplasmic reticulum protein retention receptor 1	19	48397411	48382574
+WAS	WASP actin nucleation promoting factor	X	48676635	48691426
+WDFY4	WDFY family member 4	10	48684872	48982955
+PREX1	phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 1	20	48888184	48624251
+BAX	BCL2 associated X, apoptosis regulator	19	48954874	48961797
+WNT10B	Wnt family member 10B	12	48971734	48965339
+WNT1	Wnt family member 1	12	48978321	48982619
+LMBR1L	limb development membrane protein 1 like	12	49110846	49097138
+FOXP3	forkhead box P3	X	49264709	49250437
+CD37	CD37 molecule	19	49335405	49340605
+RHOA	ras homolog family member A	3	49411975	49359144
+KAT7	lysine acetyltransferase 7	17	49788680	49835025
+JAK2	Janus kinase 2	9	4984389	5129947
+CEBPB	CCAAT enhancer binding protein beta	20	50190582	50192689
+NCAPH2	non-SMC condensin II complex subunit H2	22	50508223	50524779
+NKG7	natural killer cell granule protein 7	19	51372653	51371619
+SELENOK	selenoprotein K	3	53891858	53884416
+LILRB1	leukocyte immunoglobulin like receptor B1	19	54616321	54638021
+KIT	KIT proto-oncogene, receptor tyrosine kinase	4	54657956	54740714
+TESPA1	thymocyte expressed, positive selection associated 1	12	54985187	54948014
+LGALS3	galectin 3	14	55129251	55145429
+NEDD4	NEDD4 E3 ubiquitin protein ligase	15	55993611	55826916
+IL23A	interleukin 23 subunit alpha	12	56338883	56340409
+MALT1	MALT1 paracaspase	18	58671464	58754476
+CDH26	cadherin 26	20	59958422	60035933
+IL2RA	interleukin 2 receptor subunit alpha	10	6062366	6010688
+CHD7	chromodomain helicase DNA binding protein 7	8	60678739	60868027
+RORA	RAR related orphan receptor A	15	61229301	60488283
+RPL22	ribosomal protein L22	1	6199594	6185019
+SCGB1A1	secretoglobin family 1A member 1	11	62419032	62423194
+BCL2	BCL2 apoptosis regulator	18	63320089	63123345
+PELI1	pellino E3 ubiquitin protein ligase 1	2	64144419	64092651
+CD27	CD27 molecule	12	6443891	6451712
+TBK1	TANK binding kinase 1	12	64452119	64502113
+ZBTB1	zinc finger and BTB domain containing 1	14	64503715	64533692
+MEN1	menin 1	11	64811293	64803515
+LEPR	leptin receptor	1	65420651	65641558
+MSN	moesin	X	65588376	65741930
+PRKCQ	protein kinase C theta	10	6580645	6394096
+CD70	CD70 molecule	19	6591149	6581647
+TNFSF14	TNF superfamily member 14	19	6670587	6661252
+PDP2	pyruvate dehydrogenase phosphatase catalytic subunit 2	16	66880514	66891100
+SMAD3	SMAD family member 3	15	67065601	67195168
+IL12RB2	interleukin 12 receptor subunit beta 2	1	67307363	67398723
+LAG3	lymphocyte activating 3	12	6772519	6778454
+VAV1	vav guanine nucleotide exchange factor 1	19	6772707	6857360
+CD4	CD4 molecule	12	6789527	6820798
+PSMB10	proteasome 20S subunit beta 10	16	67936849	67934505
+TCIRG1	T cell immune regulator 1, ATPase H+ transporting V0 subunit a3	11	68039024	68053761
+NFATC3	nuclear factor of activated T cells 3	16	68085369	68229258
+PIK3R1	phosphoinositide-3-kinase regulatory subunit 1	5	68215755	68301820
+RSAD2	radical S-adenosyl methionine domain containing 2	2	6865884	6898238
+ZFP36L1	ZFP36 ring finger protein like 1	14	68796242	68787654
+EFNB1	ephrin B1	X	68829020	68842159
+PTPN6	protein tyrosine phosphatase non-receptor type 6	12	6946576	6961315
+FADD	Fas associated via death domain	11	70203295	70207389
+IL2RG	interleukin 2 receptor subunit gamma	X	71111576	71107403
+FOXP1	forkhead box P1	3	71583977	70954707
+PSEN1	presenilin 1	14	73136416	73223690
+ANXA1	annexin A1	9	73151864	73170392
+PPP3CB	protein phosphatase 3 catalytic subunit beta	10	73496023	73436432
+CD276	CD276 molecule	15	73683943	73714513
+GRB2	growth factor receptor bound protein 2	17	75405677	75318075
+BATF	basic leucine zipper ATF-like transcription factor	14	75522468	75546991
+JMJD6	jumonji domain containing 6, arginine demethylase and lysine hydroxylase	17	76726605	76712835
+F2RL1	F2R like trypsin receptor 1	5	76819029	76835314
+TP53	tumor protein p53	17	7687489	7668420
+FGL2	fibrinogen like 2	7	77199818	77193368
+CLEC4G	C-type lectin domain family 4 member G	19	7732109	7728956
+ATP7A	ATPase copper transporting alpha	X	77910692	78050394
+GATA3	GATA binding protein 3	10	8045332	8075197
+CLEC4A	C-type lectin domain family 4 member A	12	8102906	8138606
+CD7	CD7 molecule	17	82317607	82314872
+CD151	CD151 molecule (Raph blood group)	11	832951	838830
+CLEC4D	C-type lectin domain family 4 member D	12	8513502	8531695
+CLEC4E	C-type lectin domain family 4 member E	12	8540904	8533274
+CD8A	CD8 subunit alpha	2	86808395	86784604
+CD8B	CD8 subunit beta	2	86861885	86815368
+KITLG	KIT ligand	12	88580470	88492792
+LIPA	lipase A, lysosomal acid type	10	89414678	89213571
+RIPK2	receptor interacting serine/threonine kinase 2	8	89757815	89791063
+SYK	spleen associated tyrosine kinase	9	90801599	90898548
+CDK6	cyclin dependent kinase 6	7	92836572	92604920
+USP44	ubiquitin specific peptidase 44	12	95551680	95516559
+ADAM17	ADAM metallopeptidase domain 17	2	9555829	9488485
+PIK3CD	phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta	1	9627257	9729113
+ITPRIPL1	ITPRIP like 1	2	96325316	96330506
+ZAP70	zeta chain of T cell receptor associated protein kinase 70	2	97713575	97756363
+KLRF1	killer cell lectin like receptor F1	12	9800051	9845004
+CLEC2B	C-type lectin domain family 2 member B	12	9869353	9852368
+GPR18	G protein-coupled receptor 18	13	99258378	99254738
+BCL11B	BCL11 transcription factor B	14	99272196	99169286
+GPR183	G protein-coupled receptor 183	13	99307398	99294538
+NKX2-3	NK2 homeobox 3	10	99532941	99536523
+ENTPD7	ectonucleoside triphosphate diphosphohydrolase 7	10	99659508	99711240

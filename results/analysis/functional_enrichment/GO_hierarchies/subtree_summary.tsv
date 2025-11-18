@@ -1,0 +1,7 @@
+category	n_seed_terms	n_descendant_terms	n_total_terms	n_unique_genes	genes_per_term
+fertility_sperm	4	2	5	705	141.0
+fertility_oocyte	6	3	7	112	16.0
+neurodev_synapse	4	39	42	531	12.642857142857142
+neurodev_axon	3	65	67	459	6.850746268656716
+immunity_tcell	3	75	77	326	4.233766233766234
+immunity_innate	3	72	74	800	10.81081081081081

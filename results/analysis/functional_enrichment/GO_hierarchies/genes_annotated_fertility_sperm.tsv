@@ -1,0 +1,706 @@
+symbol	name	chrom	start	end
+SLC71A1	solute carrier family 71 member 1	1	100038094	100083376
+ZSCAN21	zinc finger and SCAN domain containing 21	7	100049773	100065039
+SASS6	SAS-6 centriolar assembly protein	1	100132929	100083569
+YY1	YY1 transcription factor	14	100239143	100282787
+ZCWPW1	zinc finger CW-type and PWWP domain containing 1	7	100428702	100400871
+SPACDR	sperm acrosome developmental regulator	7	100464259	100456619
+FBXO24	F-box protein 24	7	100586327	100601116
+TAF7L	TATA-box binding protein associated factor 7 like	X	101293082	101268256
+SNRPA1	small nuclear ribonucleoprotein polypeptide A'	15	101295247	101281509
+DPCD	deleted in primary ciliary dyskinesia homolog (mouse)	10	101588320	101609661
+SYCP3	synaptonemal complex protein 3	12	101739461	101728647
+PMCH	pro-melanin concentrating hormone	12	102197832	102196458
+SLCO4C1	solute carrier organic anion transporter family member 4C1	5	102296283	102233985
+BIRC3	baculoviral IAP repeat containing 3	11	102317483	102339402
+SUFU	SUFU negative regulator of hedgehog signaling	10	102502818	102633534
+ODF1	outer dense fiber of sperm tails 1	8	102551588	102561017
+CYLC2	cylicin 2	9	102995332	103018487
+SLC9B1	solute carrier family 9 member B1	4	103019704	102885048
+SLC9B2	solute carrier family 9 member B2	4	103077318	103018028
+ZGLP1	zinc finger GATA like protein 1	19	10309814	10304802
+DPY19L2P2	DPY19L2 pseudogene 2	7	103280465	103175012
+NEURL1	neuralized E3 ubiquitin protein ligase 1	10	103493704	103592545
+TDRD9	tudor domain containing 9	14	103928455	104052666
+CFAP43	cilia and flagella associated protein 43	10	104232363	104129887
+CFAP58	cilia and flagella associated protein 58	10	104338519	104455101
+MKKS	MKKS centrosomal shuttling protein	20	10434221	10401008
+ROPN1L	rhophilin associated tail protein 1 like	5	10441878	10482806
+JAG2	jagged canonical Notch ligand 2	14	105168775	105140994
+PRSS55	serine protease 55	8	10525531	10554165
+TEKT5	tektin 5	16	10694929	10627500
+DNAAF6	dynein axonemal assembly factor 6	X	107206610	107244246
+YBX3	Y-box binding protein 3	12	10723322	10699088
+RAD23B	RAD23 nucleotide excision repair protein B	9	107283278	107332193
+HADH	hydroxyacyl-CoA dehydrogenase	4	107989888	108035170
+MAK	male germ cell associated kinase	6	10838538	10762722
+TMEM119	transmembrane protein 119	12	108598083	108589850
+ARMC2	armadillo repeat containing 2	6	108848421	109053039
+ACTL7A	actin like 7A	9	108862265	108863755
+CFAP276	cilia and flagella associated protein 276	1	109113830	109105950
+MORC1	MORC family CW-type zinc finger 1	3	109118133	108958247
+IFT81	intraflagellar transport 81	12	110124356	110218792
+NPHP1	nephrocystin 1	2	110205012	110123347
+TXNDC8	thioredoxin domain containing 8	9	110337862	110301230
+GPX4	glutathione peroxidase 4	19	1103993	1106778
+SLC22A16	solute carrier family 22 member 16	6	110476612	110424686
+TMEM232	transmembrane protein 232	5	110738953	110387430
+PPP1CC	protein phosphatase 1 catalytic subunit gamma	12	110742890	110708375
+CCDC63	coiled-coil domain containing 63	12	110844485	110907534
+BCL2L11	BCL2 like 11	2	111120913	111168444
+HOATZ	HOATZ cilia and flagella associated protein	11	111514777	111537042
+IMMP2L	inner mitochondrial membrane peptidase subunit 2	7	111562491	110662643
+CFAP68	cilia and flagella associated protein 68	11	111879540	111885974
+MERTK	MER proto-oncogene, tyrosine kinase	2	111898606	112029560
+SLC9C1	solute carrier family 9 member C1	3	112294215	112140897
+SHISA6	shisa family member 6	17	11241212	11564062
+LARP7	La ribonucleoprotein 7, transcriptional regulator	4	112637142	112657585
+TNP2	transition protein 2	16	11269324	11267856
+PRM3	protamine 3	16	11273628	11273198
+PRM2	protamine 2	16	11276479	11275638
+PRM1	protamine 1	16	11281329	11280840
+CUL4A	cullin 4A	13	113208192	113267107
+TSSK1B	testis specific serine kinase 1B	5	113434988	113432552
+CFAP44	cilia and flagella associated protein 44	3	113441513	113286929
+CCDC159	coiled-coil domain containing 159	19	11346518	11354943
+YTHDC2	YTH N6-methyladenosine RNA binding protein C2	5	113513693	113595283
+TDRD1	tudor domain containing 1	10	114174873	114232665
+UPF3A	UPF3A regulator of nonsense mediated mRNA decay	13	114281600	114305816
+ODAD3	outer dynein arm docking complex subunit 3	19	11435781	11420604
+SYCP1	synaptonemal complex protein 1	1	114854087	114995369
+CADM1	cell adhesion molecule 1	11	115504414	115169235
+PAFAH1B2	platelet activating factor acetylhydrolase 1b catalytic subunit 2	11	117144286	117178172
+ROS1	ROS proto-oncogene 1, receptor tyrosine kinase	6	117425941	117287352
+ASZ1	ankyrin repeat, SAM and basic leucine zipper domain containing 1	7	117427492	117363221
+SPAG17	sperm associated antigen 17	1	118185227	117953589
+PLN	phospholamban	6	118548295	118561715
+METTL14	methyltransferase 14, N6-adenosine-methyltransferase non-catalytic subunit	4	118685391	118715429
+DDX6	DEAD-box helicase 6	11	118791743	118747762
+H2AX	H2A.X variant histone	11	119095464	119093873
+SEPTIN6	septin 6	X	119693167	119615723
+CFAP91	cilia and flagella associated protein 91	3	119703021	119767101
+INHBB	inhibin subunit beta B	2	120346135	120351802
+DYNLL1	dynein light chain LC8-type 1	12	120469841	120498492
+STK11	serine/threonine kinase 11	19	1205777	1228430
+GJA1	gap junction protein alpha 1	6	121435645	121449726
+KDM2B	lysine demethylase 2B	12	121582278	121408460
+CFAP251	cilia and flagella associated protein 251	12	121918591	122003918
+PLEKHA1	pleckstrin homology domain containing A1	10	122374707	122442599
+ADAD1	adenosine deaminase domain containing 1	4	122379010	122429783
+HSF2	heat shock transcription factor 2	6	122399550	122433118
+CCDC62	coiled-coil domain containing 62	12	122774571	122827527
+AFG2A	AAA ATPase AFG2A	4	122923077	123319432
+STRBP	spermatid perinuclear RNA binding protein	9	123268585	123109493
+IQUB	IQ motif and ubiquitin domain containing	7	123534594	123452192
+ROPN1	rhophilin associated tail protein 1	3	123992123	123969014
+SPA17	sperm autoantigenic protein 17	11	124673903	124697517
+MKRN2	makorin ring finger protein 2	3	12557086	12583712
+ACRV1	acrosomal vesicle protein 1	11	125680846	125671521
+DDX25	DEAD-box helicase 25	11	125903327	125928842
+ROPN1B	rhophilin associated tail protein 1B	3	125969177	125983453
+SPMIP10	sperm microtubule inner protein 10	5	126631704	126636283
+TXNRD3	thioredoxin reductase 3	3	126655123	126607049
+USP9Y	ubiquitin specific peptidase 9 Y-linked	Y	12701230	12860838
+CFAP107	cilia and flagella associated protein 107	1	12746199	12763698
+CFAP157	cilia and flagella associated protein 157	9	127706987	127716001
+SLC25A31	solute carrier family 25 member 31	4	127730399	127774291
+WDR33	WD repeat domain 33	2	127811170	127701026
+RUVBL1	RuvB like AAA ATPase 1	3	128153913	128064784
+ODF2	outer dense fiber of sperm tails 2	9	128455184	128501291
+CCDC136	coiled-coil domain containing 136	7	128790760	128822129
+LRRC8A	leucine rich repeat containing 8 VRAC subunit A	9	128882132	128918038
+CALR	calreticulin	19	12938608	12944488
+PIWIL1	piwi like RNA-mediated gene silencing 1	12	130337886	130426259
+FAM9C	family with sequence similarity 9 member C	X	13044619	13035616
+RAN	RAN, member RAS oncogene family	12	130872065	130877677
+SETX	senataxin	9	132356743	132261355
+CFAP77	cilia and flagella associated protein 77	9	132410210	132573318
+DNAAF11	dynein axonemal assembly factor 11	8	132702912	132570415
+BMAL1	basic helix-loop-helix ARNT like 1	11	13276651	13387265
+SPACA9	sperm acrosome associated 9	9	132878343	132890313
+AFF4	ALF transcription elongation factor 4	5	132963633	132875394
+USP26	ubiquitin specific peptidase 26	X	133097108	133023167
+SPATA19	spermatogenesis associated 19	11	133845512	133835929
+TBPL1	TATA-box binding protein like 1	6	133952173	133990431
+JAM3	junctional adhesion molecule 3	11	134069071	134152000
+LRGUK	leucine rich repeats and guanylate kinase domain containing	7	134127339	134276684
+UBE2B	ubiquitin conjugating enzyme E2 B	5	134371568	134392107
+CATSPER3	cation channel sperm associated 3	5	134967906	135011695
+CT55	cancer/testis antigen 55	X	135171826	135156535
+STRA8	stimulated by retinoic acid 8	7	135231914	135258662
+PIERCE1	piercer of microtubule wall 1	9	135499868	135495180
+SOHLH1	spermatogenesis and oogenesis specific basic helix-loop-helix 1	9	135702111	135693406
+NOTCH1	notch receptor 1	9	136546047	136494432
+TMEM203	transmembrane protein 203	9	137205647	137204081
+TUBB4B	tubulin beta 4B class IVb	9	137241286	137243706
+CIMIP2A	ciliary microtubule inner protein 2A	9	137255121	137243598
+NME5	NME/NM23 family member 5	5	138139427	138115174
+NANOS3	nanos C2HC-type zinc finger 3	19	13862035	13880756
+BRME1	break repair meiotic recombinase recruitment factor 1	19	13906116	13882347
+IFT56	intraflagellar transport 56	7	139133777	139191985
+PAIP2	poly(A) binding protein interacting protein 2	5	139341853	139369716
+SPATA24	spermatogenesis associated 24	5	139404088	139392499
+DNAH5	dynein axonemal heavy chain 5	5	14011817	13690327
+GAMT	guanidinoacetate N-methyltransferase	19	1401541	1397025
+MGAT4D	MGAT4 family member D	4	140498292	140442261
+DND1	DND microRNA-mediated repression inhibitor 1	5	140673575	140670793
+DAZAP1	DAZ associated protein 1	19	1407585	1435683
+SPANXB1	SPANX family member B1	X	141002593	141003705
+ASF1B	anti-silencing function 1B histone chaperone	19	14136588	14119511
+SPANXA1	sperm protein associated with the nucleus, X-linked, family member A1	X	141584737	141583673
+SPANXA2	SPANX family member A2	X	141589707	141590761
+ZFP41	ZFP41 zinc finger protein	8	143246938	143262704
+HSF1	heat shock transcription factor 1	8	144291603	144314719
+ADGB	androglobin	6	146598971	146815461
+ACVR2A	activin A receptor type 2A	2	147844516	147930821
+OR7C1	olfactory receptor family 7 subfamily C member 1	19	14835184	14798514
+NR2C2	nuclear receptor subfamily 2 group C member 2	3	14947582	15049272
+MEIG1	meiosis/spermiogenesis associated 1	10	14954227	14988049
+TEKTL1	tektin like 1	19	15010725	15023275
+MAMLD1	mastermind like domain containing 1	X	150361571	150514172
+HORMAD1	HORMA domain containing 1	1	150720894	150698059
+SLC4A2	solute carrier family 4 member 2	7	151058199	151076526
+CELF3	CUGBP Elav-like family member 3	1	151716802	151700057
+OAZ3	ornithine decarboxylase antizyme 3	1	151762968	151771329
+TDRKH	tudor and KH domain containing	1	151790533	151766485
+GALNTL5	polypeptide N-acetylgalactosaminyltransferase like 5	7	151956445	152019928
+FHAD1	forkhead associated phosphopeptide binding domain 1	1	15236520	15403009
+SYNE1	spectrin repeat containing nuclear envelope protein 1	6	152637361	152121686
+CETN2	centrin 2	X	152830756	152826993
+SMCP	sperm mitochondria associated cysteine rich protein	1	152878321	152885046
+TEKT3	tektin 3	17	15343670	15303811
+BCAP31	B cell receptor associated protein 31	X	153724386	153700491
+CREB3L4	cAMP responsive element binding protein 3 like 4	1	153967486	153974358
+NUP210L	nucleoporin 210 like	1	154155115	153992689
+CFAP141	cilia and flagella associated protein 141	1	154206332	154199084
+DHX36	DEAH-box helicase 36	3	154324486	154272545
+FAM50A	family with sequence similarity 50 member A	X	154444140	154450653
+RBM46	RNA binding motif protein 46	4	154781271	154828812
+PYGO2	pygopus family PHD finger 2	1	154961781	154957025
+ASH1L	ASH1 like histone lysine methyltransferase	1	155563201	155335267
+NTRK1	neurotrophic receptor tyrosine kinase 1	1	156815749	156881849
+GARIN3	golgi associated RAB2 interactor family member 3	5	157166263	157161845
+SOX30	SRY-box transcription factor 30	5	157671479	157625678
+PNLDC1	PARN like ribonuclease domain containing exonuclease 1	6	159799454	159820703
+CFAP45	cilia and flagella associated protein 45	1	159900164	159872363
+IGF2R	insulin like growth factor 2 receptor	6	159969081	160111503
+ATP1A4	ATPase Na+/K+ transporting subunit alpha 4	1	160151602	160186979
+PTTG1	PTTG1 regulator of sister chromatid separation, securin	5	160421854	160428743
+DEDD	death effector domain containing	1	161132666	161120973
+CFAP126	cilia and flagella associated protein 126	1	161367875	161364732
+SPATA46	spermatogenesis associated 46	1	162376853	162373202
+PACRG	parkin coregulated	6	162727131	163315499
+QKI	QKI, KH domain containing RNA binding	6	163414717	163578591
+CALR3	calreticulin 3	19	16496166	16479060
+GALNT3	polypeptide N-acetylgalactosaminyltransferase 3	2	165794691	165747587
+DAZL	deleted in azoospermia like	3	16605422	16586791
+MAEL	maelstrom spermatogenic transposon silencer	1	166975581	167022213
+ADCY10	adenylate cyclase 10	1	167914133	167809385
+NME7	NME/NM23 family member 7	1	169367796	169132530
+CCDC181	coiled-coil domain containing 181	1	169460668	169394869
+SLC19A2	solute carrier family 19 member 2	1	169485969	169463908
+CFAP210	cilia and flagella associated protein 210	2	169694404	169645424
+SKIL	SKI like proto-oncogene	3	170357714	170396848
+CLDN11	claudin 11	3	170418867	170434690
+TBP	TATA-box binding protein	6	170554368	170572858
+EIF5A2	eukaryotic translation initiation factor 5A2	3	170908636	170888417
+GORASP2	golgi reassembly stacking protein 2	2	170928476	170967129
+CNTLN	centlein	9	17135039	17528633
+DCAF17	DDB1 and CUL4 associated factor 17	2	171434225	171485051
+PLD6	phospholipase D family member 6	17	17206332	17200994
+EFCAB9	EF-hand calcium binding domain 9	5	172194171	172203453
+GHSR	growth hormone secretagogue receptor	3	172448455	172443290
+SPATA16	spermatogenesis associated 16	3	173141234	172889356
+HMGB2	high mobility group box 2	4	173334357	173331375
+ADAM29	ADAM metallopeptidase domain 29	4	174918357	174978179
+GMCL2	germ cell-less 2, spermatogenesis associated	5	178187370	178184504
+INSL3	insulin like 3	19	17821518	17816511
+CDY2B	chromodomain Y-linked 2B	Y	17880219	17878259
+ADAMTS2	ADAM metallopeptidase with thrombospondin type 1 motif 2	5	179345460	179110852
+AXDND1	axonemal dynein light chain domain containing 1	1	179365704	179554734
+TDRD5	tudor domain containing 5	1	179591612	179691271
+CBY3	chibby family member 3	5	179681033	179678559
+CDY2A	chromodomain Y-linked 2A	Y	18025786	18027745
+CCDC39	coiled-coil domain 39 molecular ruler complex subunit	3	180679488	180614007
+FXR1	FMR1 autosomal homolog 1	3	180912669	180982752
+TUBA8	tubulin alpha 8	22	18110808	18131731
+ALKBH5	alkB homolog 5, RNA demethylase	17	18183827	18209953
+IQCN	IQ motif containing N	19	18274451	18257097
+SHCBP1L	SHC binding and spindle associated 1 like	1	182953165	182899864
+ING2	inhibitor of growth family member 2	4	183505057	183512428
+LDHC	lactate dehydrogenase C	11	18412317	18452062
+FSIP2	fibrous sheath interacting protein 2	2	185737133	185833289
+RIMBP3	RIMS binding protein 3	22	18611918	18605814
+RPL39L	ribosomal protein L39 like	3	187139495	187120947
+CAPZA3	capping actin protein of muscle Z-line subunit alpha 3	12	18738118	18739187
+BCL6	BCL6 transcription repressor	3	187745467	187721376
+TP63	tumor protein p63	3	189596745	189897275
+GMNC	geminin coiled-coil domain containing	3	190862693	190843270
+ADGRG2	adhesion G protein-coupled receptor G2	X	19122955	18989306
+TSSK2	testis specific serine kinase 2	22	19131307	19132621
+RGS2	regulator of G protein signaling 2	1	192809038	192812274
+TSSK6	testis specific serine kinase 6	19	19515547	19514218
+RNF151	ring finger protein 151	16	1966855	1968948
+CIMAP1A	ciliary microtubule associated protein 1A	11	196760	200257
+ASPM	assembly factor for spindle microtubules	1	197146668	197084126
+BOLL	boule RNA binding protein	2	197786205	197726889
+DRC9	dynein regulatory complex subunit 9	3	197960176	197889076
+EFHB	EF-hand domain family member B	3	19946982	19879471
+NR5A2	nuclear receptor subfamily 5 group A member 2	1	200027709	200177414
+SMARCA2	SWI/SNF related BAF chromatin remodeling complex subunit ATPase 2	9	2015346	2193619
+CATSPERT	catsper channel auxiliary subunit tau	2	201619177	201487420
+ICA1L	islet cell autoantigen 1 like	2	202871765	202773175
+CCNB1IP1	cyclin B1 interacting protein 1	14	20333278	20311369
+ATP2B4	ATPase plasma membrane Ca2+ transporting 4	1	203626831	203744080
+NICOL1	NELL2 interacting cell ontogeny regulator 1	4	2036553	2043963
+PDILT	protein disulfide isomerase like, testis expressed	16	20404736	20359174
+CCNYL1	cyclin Y like 1	2	207711639	207756173
+CRKL	CRK like proto-oncogene, adaptor protein	22	20917406	20953746
+TPPP2	tubulin polymerization promoting protein family member 2	14	21024298	21036351
+APOB	apolipoprotein B	2	21044072	21001428
+EIF4G3	eukaryotic translation initiation factor 4 gamma 3	1	21176896	20806291
+GARIN4	golgi associated RAB2 interactor family member 4	1	212624473	212626774
+XRN2	5'-3' exoribonuclease 2	20	21303330	21389824
+RIMBP3B	RIMS binding protein 3B	22	21383750	21389477
+RBMY1B	RNA binding motif protein Y-linked family 1 member B	Y	21511337	21527215
+METTL3	methyltransferase 3, N6-adenosine-methyltransferase complex catalytic subunit	14	21511339	21498137
+DNAH11	dynein axonemal heavy chain 11	7	21543038	21901838
+RIMBP3C	RIMS binding protein 3C	22	21551460	21545665
+TNP1	transition protein 1	2	216860063	216859457
+CFAP65	cilia and flagella associated protein 65	2	219041550	219002845
+PIWIL2	piwi like RNA-mediated gene silencing 2	8	22275315	22357567
+H3-3A	H3.3 histone A	1	226061830	226072018
+RHBDD1	rhomboid domain containing 1	2	226800158	226999209
+AGFG1	ArfGAP with FG repeats 1	2	227472155	227561216
+ARMC3	armadillo repeat containing 3	10	22928052	23038522
+BPY2	basic charge Y-linked 2	Y	22984262	23005464
+TSNAX	translin associated factor X	1	231528668	231566523
+DAZ1	deleted in azoospermia 1	Y	23199093	23129354
+DAZ2	deleted in azoospermia 2	Y	23219456	23291355
+BCL2L2	BCL2 like 2	14	23306832	23311750
+ARID4B	AT-rich interaction domain 4B	1	235328178	235166901
+PRDX4	peroxiredoxin 4	X	23667492	23686396
+PITHD1	PITH domain containing 1	1	23778417	23788231
+CDY1B	chromodomain Y-linked 1B	Y	24048018	24044619
+PFN4	profilin family member 4	2	24123490	24114808
+SEPTIN2	septin 2	2	241315354	241354026
+REC8	REC8 meiotic recombination protein	14	24172079	24180922
+TSSK4	testis specific serine kinase 4	14	24205695	24208247
+ADAM28	ADAM metallopeptidase domain 28	8	24294068	24359013
+CATSPERE	catsper channel auxiliary subunit epsilon	1	244451241	244640503
+IZUMO3	IZUMO family member 3	9	24545896	24542951
+GGT1	gamma-glutamyltransferase 1	22	24583749	24628995
+BPY2B	basic charge Y-linked 2B	Y	24618003	24639206
+PCYT1B	phosphate cytidylyltransferase 1B, choline	X	24672886	24558086
+NPAP1	nuclear pore associated protein 1	15	24675774	24683392
+RNF17	ring finger protein 17	13	24747766	24888580
+PIWIL3	piwi like RNA-mediated gene silencing 3	22	24774719	24719033
+DAZ3	deleted in azoospermia 3	Y	24813392	24763068
+DAZ4	deleted in azoospermia 4	Y	24833819	24907039
+ADCY3	adenylate cyclase 3	2	24920236	24819168
+BPY2C	basic charge Y-linked 2C	Y	25052103	25030900
+ENKUR	enkurin, TRPC channel interacting protein	10	25062326	24981984
+DNMT3A	DNA methyltransferase 3 alpha	2	25342589	25227873
+CDY1	chromodomain Y-linked 1	Y	25622114	25625510
+JAM2	junctional adhesion molecule 2	21	25639257	25717561
+H1-1	H1.1 linker histone, cluster member	6	26017786	26017031
+H1-6	H1.6 linker histone, cluster member	6	26108134	26107411
+PSMA8	proteasome 20S subunit alpha 8	18	26133868	26193354
+CATSPER4	cation channel sperm associated 4	1	26190601	26202963
+TAF4B	TATA-box binding protein associated factor 4b	18	26226444	26391684
+DRC1	dynein regulatory complex subunit 1	2	26401919	26456710
+CIMIP2C	ciliary microtubule inner protein 2C	2	26562586	26579523
+INTS13	integrator complex subunit 13	12	26938331	26905180
+HOXA9	homeobox A9	7	27165536	27162437
+HOXA10	homeobox A10	7	27179860	27170604
+HOXA11	homeobox A11	7	27185231	27181156
+CCDC34	coiled-coil domain containing 34	11	27363214	27338511
+LGR4	leucine rich repeat containing G protein-coupled receptor 4	11	27472789	27365960
+OCA2	OCA2 melanosomal transmembrane protein	15	28099314	27719007
+PRSS21	serine protease 21	16	2817236	2821718
+NKAPL	NFKB activating protein like	6	28259296	28260957
+HERC2	HECT and RLD domain containing E3 ubiquitin protein ligase 2	15	28322178	28111039
+IFT20	intraflagellar transport 20	17	28335471	28328325
+YTHDF2	YTH N6-methyladenosine RNA binding protein F2	1	28736623	28769774
+SPDYA	speedy/RINGO cell cycle regulator family member A	2	28810833	28850609
+TRIM27	tripartite motif containing 27	6	28923984	28903001
+ZFY	zinc finger protein Y-linked	Y	2935380	2982505
+TLE6	TLE family member 6, subcortical maternal complex member	19	2977400	2995178
+WIPF3	WAS/WASL interacting protein family member 3	7	29806507	29917060
+SSH2	slingshot protein phosphatase 2	17	29930227	29625937
+FSHB	follicle stimulating hormone subunit beta	11	30231013	30235193
+KATNAL1	katanin catalytic subunit A1 like 1	13	30307550	30202629
+NR0B1	nuclear receptor subfamily 0 group B member 1	X	30309389	30304205
+GAL3ST1	galactose-3-O-sulfotransferase 1	22	30574664	30554634
+ATAT1	alpha tubulin acetyltransferase 1	6	30626873	30646820
+OSBP2	oxysterol binding protein 2	22	30693781	30907812
+TEX15	testis expressed 15, meiosis and synapsis associated	8	30913007	30831543
+ADCYAP1R1	ADCYAP receptor type I	7	31052307	31111473
+PUM1	pumilio RNA binding family member 1	1	31065716	30931505
+BCKDK	branched chain keto acid dehydrogenase kinase	16	31108385	31117639
+LIMK2	LIM domain kinase 2	22	31212297	31280079
+PATZ1	POZ/BTB and AT hook containing zinc finger 1	22	31346345	31325803
+DEFB118	defensin beta 118	20	31368600	31373922
+BAG6	BAG cochaperone 6	6	31652660	31639027
+SOD1	superoxide dismutase 1	21	31659692	31668930
+BCL2L1	BCL2 like 1	20	31723962	31664451
+SPOCD1	SPOC domain containing 1	1	31816021	31790421
+TTLL9	tubulin tyrosine ligase like 9	20	31870633	31944999
+EHMT2	euchromatic histone lysine methyltransferase 2	6	31897697	31879758
+KHDRBS1	KH RNA binding domain containing, signal transduction associated 1	1	32013867	32060849
+BRCA2	BRCA2 DNA repair associated	13	32315076	32400267
+TSSK3	testis specific serine kinase 3	1	32362538	32364311
+EPC1	enhancer of polycomb 1	10	32378768	32267750
+TDRD12	tudor domain containing 12	19	32719766	32829579
+BRD2	bromodomain containing 2	6	32968593	32981504
+SUN5	Sad1 and UNC84 domain containing 5	20	33004432	32983774
+AZIN2	antizyme inhibitor 2	1	33081152	33166794
+CRTAP	cartilage associated protein	3	33114013	33147772
+KIFC1	kinesin family member C1	6	33391460	33409895
+PHC2	polyhomeotic homolog 2	1	33431094	33323625
+CCDC178	coiled-coil domain containing 178	18	33441039	32937405
+GGNBP1	gametogenetin binding protein 1 (pseudogene)	6	33583698	33589025
+E2F1	E2F transcription factor 1	20	33686384	33675476
+DCAF12	DDB1 and CUL4 associated factor 12	9	34126697	34086386
+SPMIP6	sperm microtubule inner protein 6	9	34397809	34379018
+DNAI1	dynein axonemal intermediate chain 1	9	34458804	34520983
+RAI14	retinoic acid induced 14	5	34656327	34832611
+FANCG	FA complementation group G	9	35079941	35073838
+CREM	cAMP responsive element modulator	10	35126845	35212957
+TCP11	t-complex 11	6	35141338	35118074
+CCNY	cyclin Y	10	35247024	35572666
+TEKTIP1	tektin bundle interacting protein 1	19	3539173	3544029
+GAPDHS	glyceraldehyde-3-phosphate dehydrogenase, spermatogenic	19	35533455	35545318
+KIAA0319L	KIAA0319 like	1	35557660	35433491
+TESK1	testis associated actin remodelling kinase 1	9	35605261	35610032
+SPAG4	sperm associated antigen 4	20	35615828	35621093
+SPEF2	sperm flagellar 2	5	35617862	35814610
+HERPUD2	HERPUD family member 2	7	35695134	35632658
+ARMC12	armadillo repeat containing 12	6	35731523	35749078
+NPR2	natriuretic peptide receptor 2	9	35791590	35809730
+SEPTIN7	septin 7	7	35800985	35915762
+SPAG8	sperm associated antigen 8	9	35812261	35807784
+CNBD2	cyclic nucleotide binding domain containing 2	20	35954385	36030699
+SLC26A8	solute carrier family 26 member 8	6	36024640	35943515
+TEKT2	tektin 2	1	36084093	36088274
+CCIN	calicin	9	36169387	36171333
+SOHLH2	spermatogenesis and oogenesis specific basic helix-loop-helix 2	13	36214555	36168216
+CCNA1	cyclin A1	13	36431516	36442869
+GGNBP2	gametogenetin binding protein 2	17	36544918	36589847
+IFTAP	intraflagellar transport associated protein	11	36594501	36659271
+NDRG3	NDRG family member 3	20	36746089	36651770
+IFT27	intraflagellar transport 27	22	36776118	36758210
+MLH1	mutL homolog 1	3	36993465	37050845
+PAX5	paired box 5	9	37034267	36833268
+SPMAP2	sperm microtubule associated protein 2	19	376025	361746
+NME8	NME/NM23 family member 8	7	37848596	37900396
+INPP5B	inositol polyphosphate-5-phosphatase B	1	37947056	37860696
+DLEC1	DLEC1 cilia and flagella associated protein	3	38039207	38124024
+SSTR1	somatostatin receptor 1	14	38207903	38213066
+SLC22A14	solute carrier family 22 member 14	3	38278831	38318574
+CATSPERG	catsper channel auxiliary subunit gamma	19	38335829	38370942
+GGN	gametogenetin	19	38388383	38384266
+DMC1	DNA meiotic recombinase 1	22	38570182	38509146
+ADIG	adipogenin	20	38581196	38588462
+PARP11	poly(ADP-ribose) polymerase family member 11	12	3873398	3808860
+MYCBP	MYC binding protein	1	38873377	38862489
+MORN2	MORN repeat containing 2	2	38875975	38882708
+PANK2	pantothenate kinase 2	20	3888780	3929886
+WDR48	WD repeat domain 48	3	39052015	39096663
+TTC21A	tetratricopeptide repeat domain 21A	3	39107679	39138899
+SPATA31A1	SPATA31 subfamily A member 1	9	39355666	39361961
+ADAM18	ADAM metallopeptidase domain 18	8	39584567	39730064
+LRRK2	leucine rich repeat kinase 2	12	40224996	40369284
+RARA	retinoic acid receptor alpha	17	40309179	40357642
+RBX1	ring-box 1	22	40951377	40973308
+MROH2B	maestro heat like repeat family member 2B	5	41071341	40998019
+AXL	AXL receptor tyrosine kinase	19	41219222	41261765
+TYRO3	TYRO3 protein tyrosine kinase	15	41559211	41583588
+KRT9	keratin 9	17	41572058	41565835
+KLHL10	kelch like family member 10	17	41835684	41848383
+SPATA31A6	SPATA31 subfamily A member 6	9	42183658	42189886
+PAFAH1B3	platelet activating factor acetylhydrolase 1b catalytic subunit 3	19	42302799	42297032
+FOXJ3	forkhead box J3	1	42335879	42176547
+VDAC3	voltage dependent anion channel 3	8	42391879	42405936
+ZMYND12	zinc finger MYND-type containing 12	1	42456021	42430328
+RSPH1	radial spoke head component 1	21	42496223	42472485
+UBR2	ubiquitin protein ligase E3 component n-recognin 2	6	42564028	42693504
+CNTD1	cyclin N-terminal domain containing 1	17	42798784	42811586
+MEA1	male-enhanced antigen 1	6	43016885	43011142
+TTLL1	TTL family tubulin polyglutamylase complex subunit L1	22	43089390	43039515
+CFAP144	cilia and flagella associated protein 144	1	43142961	43156395
+TEX101	testis expressed 101	19	43388610	43418596
+CATSPER2	cation channel sperm associated 2	15	43648883	43628502
+HSF2BP	heat shock transcription factor 2 binding protein	21	43659487	43444971
+ELL3	elongation factor for RNA polymerase II 3	15	43776965	43772619
+EFCAB6	EF-hand calcium binding domain 6	22	43812304	43528777
+PGAM2	phosphoglycerate mutase 2	7	44065566	44062726
+TOPAZ1	testis and ovary specific TOPAZ 1	3	44241885	44336688
+DNMT3L	DNA methyltransferase 3 like	21	44261896	44246338
+DRC5	dynein regulatory complex subunit 5	6	44297697	44278733
+EFHC2	EF-hand domain containing 2	X	44343671	44147871
+ZNF35	zinc finger protein 35	3	44646505	44660790
+MEIOC	meiosis specific with coiled-coil domain	17	44656467	44677086
+DUSP21	dual specificity phosphatase 21	X	44844020	44844887
+NECTIN2	nectin cell adhesion molecule 2	19	44846296	44889222
+TERB2	telomere repeat binding bouquet formation protein 2	15	44956686	44979228
+SORD	sorbitol dehydrogenase	15	45023194	45077184
+ZNF296	zinc finger protein 296	19	45076477	45071499
+SPATA32	spermatogenesis associated 32	17	45262093	45254392
+KLC3	kinesin light chain 3	19	45340749	45351518
+RIBC2	RIB43A domain with coiled-coils 2	22	45413692	45432508
+ERCC1	ERCC excision repair 1, endonuclease non-catalytic subunit	19	45451546	45407333
+WFDC2	WAP four-disulfide core domain 2	20	45469752	45481531
+TESK2	testis associated actin remodelling kinase 2	1	45491162	45343882
+MEIOSIN	meiosis initiator	19	45733438	45764540
+SIX5	SIX homeobox 5	19	45769251	45764784
+SPPL2C	signal peptide peptidase like 2C	17	45844880	45847066
+FOXA3	forkhead box A3	19	45864325	45873796
+SPATA25	spermatogenesis associated 25	20	45891015	45886490
+FREY1	Frey regulator of sperm-oocyte fusion 1	11	45907270	45906533
+PLTP	phospholipid transfer protein	20	45912154	45898619
+NANOS2	nanos C2HC-type zinc finger 2	19	45914777	45913213
+LZTFL1	leucine zipper transcription factor like 1	3	45915723	45823315
+SPATC1L	spermatogenesis and centriole associated 1 like	21	46184458	46161159
+TBC1D20	TBC1 domain family member 20	20	462532	435479
+AKAP3	A-kinase anchoring protein 3	12	4649050	4615517
+RPL10L	ribosomal protein L10 like	14	46651780	46651009
+SPATA6L	spermatogenesis associated 6 like	9	4666479	4588820
+TDRD6	tudor domain containing 6	6	46680267	46704318
+PRSS42P	serine protease 42, pseudogene	3	46834094	46829541
+COX7B2	cytochrome c oxidase subunit 7B2	4	46909244	46734826
+CDYL	chromodomain Y like	6	4706137	4955543
+CDK16	cyclin dependent kinase 16	X	47218302	47229996
+ZMYND15	zinc finger MYND-type containing 15	17	4739832	4746118
+ZNF541	zinc finger protein 541	19	47573308	47520689
+MSH6	mutS homolog 6	2	47783144	47810100
+LRRC46	leucine rich repeat containing 46	17	47831669	47837718
+SEPTIN12	septin 12	16	4791827	4777605
+SSX1	SSX family member 1	X	48255391	48267443
+RB1	RB transcriptional corepressor 1	13	48303750	48481889
+H1-7	H1.7 linker histone	12	48328979	48330278
+SIAH1	siah E3 ubiquitin protein ligase 1	16	48387245	48360530
+SPATA6	spermatogenesis associated 6	1	48472203	48261388
+SPMIP11	sperm microtubule inner protein 11	12	48727434	48771458
+LHCGR	luteinizing hormone/choriogonadotropin receptor	2	48755723	48686773
+BAX	BCL2 associated X, apoptosis regulator	19	48954874	48961797
+FNDC3A	fibronectin type III domain containing 3A	13	48975290	49209778
+PRKAG1	protein kinase AMP-activated non-catalytic subunit gamma 1	12	49018775	49002273
+DHH	desert hedgehog signaling molecule	12	49094800	49086655
+FSHR	follicle stimulating hormone receptor	2	49154514	48962156
+ARRDC5	arrestin domain containing 5	19	4916819	4890436
+TUBA1A	tubulin alpha 1a	12	49189079	49184794
+IHO1	interactor of HORMAD1 1	3	49191308	49258105
+C3orf62	chromosome 3 open reading frame 62	3	49277231	49268595
+KASH5	KASH domain containing 5	19	49388248	49417989
+PGK2	phosphoglycerate kinase 2	6	49787284	49785659
+SLC9A8	solute carrier family 9 member A8	20	49812827	49892241
+SPATA2	spermatogenesis associated 2	20	49915528	49903390
+RNF114	ring finger protein 114	20	49936396	49953884
+PCDH11Y	protocadherin 11 Y-linked	Y	5000295	5742227
+RACGAP1	Rac GTPase activating protein 1	12	50033439	49989161
+TTLL8	tubulin tyrosine ligase like 8	22	50058297	50018574
+MOV10L1	Mov10 like RNA helicase 1	22	50090005	50161686
+SPMIP7	sperm microtubule inner protein 7	7	50095882	50159255
+H1-9P	H1.9 linker histone, pseudogene	17	50172475	50171427
+AKAP4	A-kinase anchoring protein 4	X	50201006	50190776
+CFAP53	cilia and flagella associated protein 53	18	50266494	50227192
+SBF1	SET binding factor 1	22	50475034	50444999
+MYCBPAP	MYCBP associated protein	17	50507777	50531500
+SPATA20	spermatogenesis associated 20	17	50547173	50555851
+SYCE3	synaptonemal complex central element protein 3	22	50562918	50551111
+TPGS1	tubulin polyglutamylase complex subunit 1	19	507496	519653
+TMPRSS12	transmembrane serine protease 12	12	50842925	50887883
+PRKG1	protein kinase cGMP-dependent 1	10	50990887	52298349
+SMAD4	SMAD family member 4	18	51030212	51085041
+UTP14C	UTP14C small subunit processome component	13	52024690	52033599
+BCL2L10	BCL2 like 10	15	52112774	52109262
+POC1A	POC1 centriolar protein A	3	52154422	52075225
+DNAH1	dynein axonemal heavy chain 1	3	52310919	52400491
+EFHC1	EF-hand domain containing 1	6	52420341	52497197
+SFMBT1	Scm like with four mbt domains 1	3	53046072	52903571
+RIBC1	RIB43A domain with coiled-coils 1	X	53422872	53431114
+TARBP2	TARBP2 subunit of RISC loading complex	12	53500922	53506430
+NDC1	NDC1 transmembrane nucleoporin	1	53838295	53765477
+IFT25	intraflagellar transport 25	1	53946304	53911575
+PSME4	proteasome activator subunit 4	2	53970992	53864068
+SOX17	SRY-box transcription factor 17	8	54457934	54460891
+GTSF1	gametocyte specific factor 1	12	54473601	54455956
+TDRP	testis development related protein	8	545779	489945
+KIT	KIT proto-oncogene, receptor tyrosine kinase	4	54657956	54740714
+DNAAF3	dynein axonemal assembly factor 3	19	55166721	55158660
+MCIDAS	multiciliate differentiation and DNA synthesis associated cell cycle protein	5	55227314	55219563
+CCNO	cyclin O	5	55233607	55231151
+PIERCE2	piercer of microtubule wall 2	15	55408494	55418797
+ZNF628	zinc finger protein 628	19	55476616	55484486
+CLOCK	clock circadian regulator	4	55546908	55427902
+PYGO1	pygopus family PHD finger 1	15	55588970	55538883
+PDCL2	phosducin like 2	4	55592244	55556518
+DDX4	DEAD-box helicase 4	5	55738060	55817156
+SEPTIN14	septin 14	7	55862751	55793539
+MNS1	meiosis specific nuclear structural 1	15	56465136	56428723
+FAM209A	family with sequence similarity 209 member A	20	56524743	56533589
+FAM209B	family with sequence similarity 209 member B	20	56533245	56536519
+SPINK2	serine peptidase inhibitor Kazal type 2	4	56821868	56809859
+CATSPERD	catsper channel auxiliary subunit delta	19	5720636	5778733
+SPO11	SPO11 initiator of meiotic double strand breaks	20	57329802	57343992
+GLI1	GLI family zinc finger 1	12	57459784	57472267
+B4GALNT1	beta-1,4-N-acetyl-galactosaminyltransferase 1	12	57633200	57623408
+DRC7	dynein regulatory complex subunit 7	16	57694805	57731804
+BTBD18	BTB domain containing 18	11	57753165	57743513
+SPMIP8	sperm microtubule inner protein 8	16	57976543	57988115
+CFAP20	cilia and flagella associated protein 20	16	58129380	58113591
+CSNK2A2	casein kinase 2 alpha 2	16	58198105	58157906
+ARID4A	AT-rich interaction domain 4A	14	58298554	58373875
+HSF5	heat shock transcription factor 5	17	58488407	58420166
+SEPTIN4	septin 4	17	58544327	58520255
+RAD51C	RAD51 paralog C	17	58692572	58735610
+HOOK1	hook microtubule tethering protein 1	1	59814948	59876321
+NPHP4	nephrocystin 4	1	5992424	5862810
+C14orf39	chromosome 14 open reading frame 39	14	60515543	60435955
+USP42	ubiquitin specific peptidase 42	7	6081240	6161563
+SPATA31A5	SPATA31 subfamily A member 5	9	60914371	60920652
+RFX2	regulatory factor X2	19	6110499	5993163
+SPATA31A7	SPATA31 subfamily A member 7	9	61190035	61196279
+ACSBG2	acyl-CoA synthetase bubblegum family member 2	19	6135632	6193090
+SAXO4	stabilizer of axonemal microtubules 4	11	61481119	61490927
+CHD5	chromodomain helicase DNA binding protein 5	1	6180320	6101786
+BRIP1	BRCA1 interacting DNA helicase 1	17	61863527	61679138
+TSPY2	testis specific protein Y-linked 2	Y	6246222	6249017
+TCFL5	transcription factor like 5	20	62861821	62841004
+ACE	angiotensin I converting enzyme	17	63477060	63498372
+DPY19L2	dpy-19 like 2	12	63668804	63558912
+CATSPERZ	catsper channel auxiliary subunit zeta	11	64300357	64304769
+HSPA2	heat shock protein family A (Hsp70) member 2	14	64535904	64543236
+MAJIN	membrane anchored junction protein	11	64972107	64938229
+DNHD1	dynein heavy chain domain 1	11	6497279	6572019
+KAT5	lysine acetyltransferase 5	11	65712017	65719603
+OVOL1	ovo like transcriptional repressor 1	11	65787062	65797213
+HMGA2	high mobility group AT-hook 2	12	65824459	65966290
+CATSPER1	cation channel sperm associated 1	11	66026478	66016751
+NSUN2	NOP2/Sun RNA methyltransferase 2	5	6633043	6599238
+ACRBP	acrosin binding protein	12	6647431	6638074
+CCDC87	coiled-coil domain containing 87	11	66593062	66590175
+MYBL1	MYB proto-oncogene like 1	8	66613217	66562174
+MCMDC2	minichromosome maintenance domain containing 2	8	66870770	66926381
+SPATA31A3	SPATA31 subfamily A member 3	9	66992549	66986303
+GARIN2	golgi associated RAB2 interactor family member 2	14	67189439	67228557
+KCTD19	potassium channel tetramerization domain containing 19	16	67326740	67289431
+AR	androgen receptor	X	67544020	67730618
+TSNAXIP1	translin associated factor X interacting protein 1	16	67806888	67828067
+SIRT1	sirtuin 1	10	67884655	67918389
+PIAS1	protein inhibitor of activated STAT 1	15	68054314	68193846
+HERC4	HECT and RLD domain containing E3 ubiquitin protein ligase 4	10	68075282	67921904
+TEKT1	tektin 1	17	6831728	6797992
+YTHDC1	YTH N6-methyladenosine RNA binding protein C1	4	68350089	68310386
+TESMIN	testis expressed metallothionein like protein	11	68751519	68704795
+PRKACG	protein kinase cAMP-activated catalytic subunit gamma	9	69014112	69012503
+LRRC23	leucine rich repeat containing 23	12	6904821	6914228
+TMF1	TATA element modulatory factor 1	3	69052332	69019826
+CCNB1	cyclin B1	5	69167149	69178244
+ATN1	atrophin 1	12	6924458	6942320
+CFAP95	cilia and flagella associated protein 95	9	69820816	69906226
+GMCL1	germ cell-less 1, spermatogenesis associated	2	69829659	69881383
+NLRP14	NLR family pyrin domain containing 14	11	7020445	7090899
+CABS1	calcium binding protein, spermatid associated 1	4	70334980	70337115
+TBATA	thymus, brain and testes associated	10	70785376	70771237
+SGPL1	sphingosine-1-phosphate lyase 1	10	70815947	70881183
+TSPAN8	tetraspanin 8	12	71157998	71125095
+PROK2	prokineticin 2	3	71785147	71771654
+SOX9	SRY-box transcription factor 9	17	72121019	72126415
+CYP26B1	cytochrome P450 family 26 subfamily B member 1	2	72147861	72129237
+PMFBP1	polyamine modulated factor 1 binding protein 1	16	72249948	72116656
+BBS4	Bardet-Biedl syndrome 4	15	72686206	72738472
+YBX2	Y-box binding protein 2	17	7294638	7288262
+NEURL4	neuralized E3 ubiquitin protein ligase 4	17	7329334	7315627
+FKBP6	FKBP prolyl isomerase family member 6 (inactive)	7	73328160	73358624
+REC114	REC114 meiotic recombination protein	15	73443163	73560012
+TBC1D21	TBC1 domain family member 21	15	73873563	73910023
+BBOF1	basal body orientation factor 1	14	74019348	74082863
+SPEM1	spermatid maturation 1	17	7420323	7421631
+SPEM3	SPEM family member 3	17	7428856	7432819
+SPAG11B	sperm associated antigen 11B	8	7463541	7447753
+M1AP	meiosis 1 associated protein	2	74648329	74557882
+DUSP13B	dual specificity phosphatase 13B	10	75109190	75094433
+H3-3B	H3.3 histone B	17	75779778	75776433
+MSH4	mutS homolog 4	1	75796881	75913241
+ACOX1	acyl-CoA oxidase 1	17	75979165	75941506
+FOXJ1	forkhead box J1	17	76141244	76136332
+QRICH2	glutamine rich 2	17	76310963	76274048
+SCAPER	S-phase cyclin A associated protein in the ER	15	76905339	76347903
+CCNI	cyclin I	4	77075988	77047154
+CCDC146	coiled-coil domain containing 146	7	77122614	77295203
+VPS13A	vacuolar protein sorting 13 homolog A	9	77177533	77421536
+VIPAS39	VPS33B interacting protein, apical-basolateral polarity regulator, spe-39 homolog	14	77457600	77426674
+MEI4	meiotic double-stranded break formation protein 4	6	77650273	77927044
+SLIRP	SRA stem-loop interacting RNA binding protein	14	77708070	77717597
+ATRX	ATRX chromatin remodeler	X	77786215	77504879
+CEP78	centrosomal protein 78	9	78236074	78279689
+AP3B1	adaptor related protein complex 3 subunit beta 1	5	78294697	78000521
+VCX	variable charge X-linked	X	7842261	7844142
+CFAP90	cilia and flagella associated protein 90	5	7851132	7830377
+SLC2A14	solute carrier family 2 member 14	12	7891195	7812513
+CTSH	cathepsin H	15	78945045	78921057
+GK2	glycerol kinase 2	4	79408227	79406360
+CCDC40	coiled-coil domain 40 molecular ruler complex subunit	17	80036641	80100612
+FOXJ2	forkhead box J2	12	8032715	8055516
+CEP128	centrosomal protein 128	14	80959501	80476968
+CFAP161	cilia and flagella associated protein 161	15	81099407	81149178
+CEP131	centrosomal protein 131	17	81222964	81189595
+SUN1	Sad1 and UNC84 domain containing 1	7	815556	874933
+SPATA31D4	SPATA31 subfamily D member 4	9	81928427	81934997
+SPATA31D3	SPATA31 subfamily D member 3	9	81943499	81950092
+SPATA31D1	SPATA31 subfamily D member 1	9	81987404	81995252
+TEX19	testis expressed 19	17	82359246	82363774
+PGM3	phosphoglucomutase 3	6	83193899	83148704
+BNC1	basonuclin zinc finger protein 1	15	83284663	83255883
+ODF4	outer dense fiber of sperm tails 4	17	8339839	8346045
+CYLC1	cylicin 1	X	83861145	83886697
+DMRT1	doublesex and mab-3 related transcription factor 1	9	841696	969089
+ADAD2	adenosine deaminase domain containing 2	16	84191156	84197165
+ZSCAN2	zinc finger and SCAN domain containing 2	15	84601008	84623715
+STK33	serine/threonine kinase 33	11	8594227	8334823
+KDM3A	lysine demethylase 3A	2	86437043	86492715
+CCDC42	coiled-coil domain containing 42	17	8744835	8729934
+SPATA31E1	SPATA31 subfamily E member 1	9	87882876	87888902
+SPATA31C1	SPATA31 subfamily C member 1	9	87913935	87923656
+FAM9A	family with sequence similarity 9 member A	X	8801382	8790794
+SPACA1	sperm acrosome associated 1	6	88046900	88066837
+SPATA31C2	SPATA31 subfamily C member 2	9	88138474	88129304
+SPMIP9	sperm microtubule inner protein 9	2	88524648	88529584
+ZC3H14	zinc finger CCCH-type containing 14	14	88563036	88627595
+TRIP13	thyroid hormone receptor interactor 13	5	892883	919347
+UBE2J1	ubiquitin conjugating enzyme E2 J1	6	89352721	89326624
+POC1B	POC1 centriolar protein B	12	89526046	89401466
+DRC4	dynein regulatory complex subunit 4	16	90019632	90044959
+CFAP69	cilia and flagella associated protein 69	7	90245173	90323722
+CIB1	calcium and integrin binding 1	15	90265758	90229974
+FAM9B	family with sequence similarity 9 member B	X	9034126	9024231
+CCER1	coiled-coil glutamate rich protein 1	12	90955175	90952214
+CATSPERB	catsper channel auxiliary subunit beta	14	91732085	91580697
+BRDT	bromodomain testis associated	1	91949370	92014427
+BTG1	BTG anti-proliferation factor 1	12	92145845	92140277
+TSPY4	testis specific protein Y-linked 4	Y	9337463	9340277
+TSPY8	testis specific protein Y-linked 8	Y	9357796	9360592
+RBP4	retinol binding protein 4	10	93601743	93591693
+CIBAR1	CBY1 interacting BAR domain containing 1	8	93700549	93731526
+TSPY3	testis specific protein Y-linked 3	Y	9398420	9401216
+ANKRD49	ankyrin repeat domain 49	11	94493983	94499577
+PIWIL4	piwi like RNA-mediated gene silencing 4	11	94567367	94621420
+SERPINA5	serpin family A member 5	14	94581425	94593117
+TSPY1	testis specific protein Y-linked 1	Y	9466954	9469748
+TEKT4	tektin 4	2	94871429	94876822
+TSPY9	testis specific protein Y-linked 9	Y	9487266	9490080
+TSPY10	testis specific protein Y-linked 10	Y	9527879	9530675
+PTCH1	patched 1	9	95516970	95442979
+DZIP1	DAZ interacting zinc finger protein 1	13	95644705	95578201
+SPATA9	spermatogenesis associated 9	5	95732101	95652180
+CFAP52	cilia and flagella associated protein 52	17	9576641	9645553
+CEP57	centrosomal protein 57	11	95790013	95832692
+CCDC38	coiled-coil domain containing 38	12	95943232	95867047
+CFAP54	cilia and flagella associated protein 54	12	96489576	96875554
+TDRD7	tudor domain containing 7	9	97412095	97496124
+TTLL3	tubulin tyrosine ligase like 3	3	9809726	9836364
+SOX8	SRY-box transcription factor 8	16	981769	986978
+TXNDC2	thioredoxin domain containing 2	18	9885972	9889274
+TSGA10	testis specific 10	2	99154965	98997260

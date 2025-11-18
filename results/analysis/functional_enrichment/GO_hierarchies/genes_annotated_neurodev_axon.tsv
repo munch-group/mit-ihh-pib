@@ -1,0 +1,460 @@
+symbol	name	chrom	start	end
+NYAP1	neuronal tyrosine phosphorylated phosphoinositide-3-kinase adaptor 1	7	100483926	100494801
+PAX2	paired box 2	10	100735395	100829943
+SEMA4G	semaphorin 4G	10	100969503	100985615
+PPP3CA	protein phosphatase 3 catalytic subunit alpha	4	101347525	101023417
+RPL24	ribosomal protein L24	3	101686717	101681090
+MAP4K4	mitogen-activated protein kinase kinase kinase kinase 4	2	101697706	101894689
+FGF8	fibroblast growth factor 8	10	101780368	101770108
+GAS7	growth arrest specific 7	17	10198605	9910605
+RELN	reelin	7	103989657	103471788
+ALCAM	activated leukocyte cell adhesion molecule	3	105366908	105576899
+EFNB2	ephrin B2	13	106535661	106489744
+NTNG1	netrin G1	1	107140087	107484922
+DNM2	dynamin 2	19	10718078	10831902
+EFNA5	ephrin A5	5	107670936	107376893
+NR2E1	nuclear receptor subfamily 2 group E member 1	6	108166021	108188808
+NRCAM	neuronal cell adhesion molecule	7	108456719	108147648
+MYO16	myosin XVI	13	108495715	109208004
+ABITRAM	actin binding transcription modulator	9	108934399	108950743
+WDR47	WD repeat domain 47	1	109042101	108970213
+CELSR2	cadherin EGF LAG seven-pass G-type receptor 2	1	109249538	109275750
+CNTN6	contactin 6	3	1093023	1404216
+COL25A1	collagen type XXV alpha 1 chain	4	109302657	108808724
+AMIGO1	adhesion molecule with Ig like domain 1	1	109509726	109504177
+TCTN1	tectonic family member 1	12	110614128	110649429
+SLC25A46	solute carrier family 25 member 46	5	110738144	110765156
+PAK3	p21 (RAC1) activated kinase 3	X	110944396	111227360
+FYN	FYN proto-oncogene, Src family tyrosine kinase	6	111873451	111660331
+PTPN11	protein tyrosine phosphatase non-receptor type 11	12	112418946	112509917
+NCAM1	neural cell adhesion molecule 1	11	112961419	113278435
+BOC	BOC cell adhesion associated, oncogene regulated	3	113210925	113287458
+DRD2	dopamine receptor D2	11	113475397	113409604
+UGT8	UDP glycosyltransferase 8	4	114598401	114678224
+ABLIM1	actin binding LIM protein 1	10	114801372	114431109
+NGF	nerve growth factor	1	115338248	115285916
+GAP43	growth associated protein 43	3	115623509	115721482
+SEMA6A	semaphorin 6A	5	116574822	116443554
+DRAXIN	dorsal inhibitory axon guidance protein	1	11686634	11725856
+SHTN1	shootin 1	10	117126585	116881476
+VAX1	ventral anterior homeobox 1	10	117138269	117128519
+DSCAML1	DS cell adhesion molecule like 1	11	117817513	117427771
+EXT1	exostosin glycosyltransferase 1	8	118111825	117794489
+TAOK3	TAO kinase 3	12	118372906	118149800
+BTBD3	BTB domain containing 3	20	11890816	11926594
+CTNND2	catenin delta 2	5	11904445	10971835
+PGRMC1	progesterone receptor membrane component 1	X	119236284	119244465
+NECTIN1	nectin cell adhesion molecule 1	11	119729199	119638097
+NOTCH2	notch receptor 2	1	120069661	119911552
+STK11	serine/threonine kinase 11	19	1205777	1228430
+GLI2	GLI family zinc finger 2	2	120735867	120992652
+DAB2IP	DAB2 interacting protein	9	121567073	121785529
+FGFR2	fibroblast growth factor receptor 2	10	121598457	121478329
+PTPRZ1	protein tyrosine phosphatase receptor type Z1	7	121873160	122062035
+BCL7A	BAF chromatin remodeling complex subunit BCL7A	12	122021883	122062043
+TMEM106B	transmembrane protein 106B	7	12211293	12243366
+EDN1	endothelin 1	6	12230515	12297193
+FEZF1	FEZ family zinc finger 1	7	122310722	122301302
+SEMA5B	semaphorin 5B	3	123028604	122909081
+WASL	WASP like actin nucleation promoting factor	7	123749002	123681942
+AFG3L2	AFG3 like matrix AAA peptidase subunit 2	18	12377226	12328943
+LHX2	LIM homeobox 2	9	124011767	124033300
+KALRN	kalirin RhoGEF kinase	3	124033368	124726324
+ROBO3	roundabout guidance receptor 3	11	124865431	124881470
+ROBO4	roundabout guidance receptor 4	11	124897864	124883690
+FAT4	FAT atypical cadherin 4	4	125314954	125492931
+FEZ1	fasciculation and elongation protein zeta 1	11	125496264	125442880
+KIRREL3	kirre like nephrin family adhesion molecule 3	11	127003393	126423357
+PHACTR1	phosphatase and actin regulator 1	6	12716766	13287836
+EFNA2	ephrin A2	19	1284226	1301430
+LAMA2	laminin subunit alpha 2	6	128883137	129516565
+SMO	smoothened, frizzled class receptor	7	129188632	129213544
+APLP2	amyloid beta precursor like protein 2	11	130069893	130144804
+POTEF	POTE ankyrin domain family member F	2	130129221	130073534
+HMCN2	hemicentin 2	9	130265759	130434122
+POTEI	POTE ankyrin domain family member I	2	130509706	130459454
+POTEJ	POTE ankyrin domain family member J	2	130611077	130658036
+POTEE	POTE ankyrin domain family member E	2	131209535	131265277
+POTEKP	POTE ankyrin domain family member K, pseudogene	2	131592041	131626428
+ULK1	unc-51 like autophagy activating kinase 1	12	131894621	131923149
+NTNG2	netrin G2	9	132161688	132244525
+PLXNA4	plexin A4	7	132648687	132123339
+RYK	receptor like tyrosine kinase	3	134250858	134157132
+SGK1	serum/glucocorticoid regulated kinase 1	6	134318111	134169255
+HPRT1	hypoxanthine phosphoribosyltransferase 1	X	134460164	134500667
+EPHB1	EPH receptor B1	3	134795259	135260466
+DVL1	dishevelled segment polarity protein 1	1	1349417	1335277
+SLC9A6	solute carrier family 9 member A6	X	135973836	136047268
+LHX3	LIM homeobox 3	9	136205127	136196249
+NOTCH1	notch receptor 1	9	136546047	136494432
+SSNA1	SS nuclear autoantigen 1	9	137188675	137190365
+PTN	pleiotrophin	7	137343732	137227340
+MYOT	myotilin	5	137867859	137887850
+GFRA3	GDNF family receptor alpha 3	5	138274620	138252379
+WNT7A	Wnt family member 7A	3	13880070	13816257
+BRSK2	BR serine/threonine kinase 2	11	1389933	1462688
+CC2D1A	coiled-coil and C2 domain containing 1A	19	13906200	13930878
+ETV1	ETS variant transcription factor 1	7	13991424	13891228
+PCDHAC2	protocadherin alpha subfamily C, 2	5	140966475	141012346
+PTK2	protein tyrosine kinase 2	8	141002078	140657899
+TRIO	trio Rho guanine nucleotide exchange factor	5	14143341	14510203
+ADGRB1	adhesion G protein-coupled receptor B1	8	142449648	142545006
+ARC	activity regulated cytoskeleton associated protein	8	142614478	142611048
+EPHB6	EPH receptor B6	7	142855075	142871092
+FLRT3	fibronectin leucine rich transmembrane protein 3	20	14337611	14322984
+SLITRK4	SLIT and NTRK like family member 4	X	143636100	143622789
+KIFC2	kinesin family member C2	8	144466048	144474201
+ZEB2	zinc finger E-box binding homeobox 2	2	144520118	144384080
+NFIB	nuclear factor I B	9	14532076	14081842
+SLITRK2	SLIT and NTRK like family member 2	X	145817828	145829855
+CNTNAP2	contactin associated protein 2	7	146116800	148420997
+POU4F3	POU class 4 homeobox 3	5	146338838	146341727
+POU4F2	POU class 4 homeobox 2	4	146638892	146642473
+PLA2G10	phospholipase A2 group X	16	14701849	14672547
+EDNRA	endothelin receptor type A	4	147481096	147544953
+KIF5C	kinesin family member 5C	2	148875226	149026758
+CSF1R	colony stimulating factor 1 receptor	5	150113364	150053294
+CDK5	cyclin dependent kinase 5	7	151057896	151053814
+SEMA6C	semaphorin 6C	1	151146630	151131684
+GBX1	gastrulation brain homeobox 1	7	151167693	151148008
+NOTCH3	notch receptor 3	19	15200994	15159037
+PTPRO	protein tyrosine phosphatase receptor type O	12	15322507	15598330
+S100A6	S100 calcium binding protein A6	1	153535990	153534598
+L1CAM	L1 cell adhesion molecule	X	153886172	153861513
+PLXNA3	plexin A3	X	154458280	154477778
+DCHS2	dachsous cadherin-related 2	4	154491798	154231741
+CHRNB2	cholinergic receptor nicotinic beta 2 subunit	1	154567777	154580012
+EFNA4	ephrin A4	1	155063739	155069552
+EFNA3	ephrin A3	1	155078836	155087537
+EFNA1	ephrin A1	1	155127875	155134898
+TRIM46	tripartite motif containing 46	1	155173848	155184970
+SHH	sonic hedgehog signaling molecule	7	155812462	155799979
+SEMA4A	semaphorin 4A	1	156147372	156177743
+PITPNA	phosphatidylinositol transfer protein alpha	17	1562791	1517717
+NR4A2	nuclear receptor subfamily 4 group A member 2	2	156332720	156324436
+DTNBP1	dystrobrevin binding protein 1	6	15663057	15522806
+NTRK1	neurotrophic receptor tyrosine kinase 1	1	156815749	156881849
+MNX1	motor neuron and pancreas homeobox 1	7	157010662	157004853
+CYFIP2	cytoplasmic FMR1 interacting protein 2	5	157266122	157395593
+IGSF9	immunoglobulin superfamily member 9	1	159945612	159927040
+VANGL2	VANGL planar cell polarity protein 2	1	160400563	160428669
+RAB8A	RAB8A, member RAS oncogene family	19	16111888	16134233
+UBB	ubiquitin B	17	16380778	16382744
+CRPPA	CDP-L-ribitol pyrophosphorylase A	7	16421537	16087524
+SLITRK3	SLIT and NTRK like family member 3	3	165197108	165186719
+LMX1A	LIM homeobox transcription factor 1 alpha	1	165356714	165201866
+PALLD	palladin, cytoskeletal associated protein	4	168497051	168928440
+SLIT3	slit guidance ligand 3	5	169301138	168661739
+LRP2	LDL receptor related protein 2	2	169362533	169127108
+TNIK	TRAF2 and NCK interacting kinase	3	171460407	171058413
+NLGN1	neuroligin 1	3	173395951	174294371
+CHN1	chimerin 1	2	175005380	174798808
+TNN	tenascin N	1	175067832	175148074
+TNR	tenascin R	1	175743594	175315193
+GPM6A	glycoprotein M6A	4	176002392	175632936
+CDHR2	cadherin related family member 2	5	176542510	176595973
+UNC5A	unc-5 netrin receptor A	5	176810558	176880897
+MAP1S	microtubule associated protein 1S	19	17719479	17734512
+ACTL8	actin like 8	1	17755332	17827062
+LHX4	LIM homeobox 4	1	180228374	180278983
+CCDC39	coiled-coil domain 39 molecular ruler complex subunit	3	180679488	180614007
+ITGA4	integrin subunit alpha 4	2	181457204	181538939
+RAB3A	RAB3A, member RAS oncogene family	19	18204041	18196783
+LLGL1	LLGL scribble cell polarity complex component 1	17	18225634	18244874
+NCKAP1	NCK associated protein 1	2	183038456	182909114
+EPHB3	EPH receptor B3	3	184561784	184582407
+MICOS10-NBL1	MICOS10-NBL1 readthrough	1	19596978	19658451
+NBL1	NBL1, DAN family BMP antagonist	1	19643228	19658451
+FBXO45	F-box protein 45	3	196568659	196589058
+CHL1	cell adhesion molecule L1 like	3	196762	409416
+LHX9	LIM homeobox 9	1	197912463	197935477
+ULK2	unc-51 like autophagy activating kinase 2	17	19867935	19770829
+TRAK2	trafficking kinesin protein 2	2	201451457	201377206
+ALS2	alsin Rho guanine nucleotide exchange factor ALS2	2	201780932	201700266
+LGR6	leucine rich repeat containing G protein-coupled receptor 6	1	202193798	202319760
+PPP1R12B	protein phosphatase 1 regulatory subunit 12B	1	202348698	202592701
+SLIT2	slit guidance ligand 2	4	20251904	20620560
+RTN4R	reticulon 4 receptor	22	20268317	20241414
+NFASC	neurofascin	1	204828651	205022821
+CNTN2	contactin 2	1	205042948	205078288
+NRP2	neuropilin 2	2	205682500	205798130
+SRGAP2	SLIT-ROBO Rho GTPase activating protein 2	1	206203540	206464435
+GDF7	growth differentiation factor 7	2	20667143	20679242
+KLF7	KLF transcription factor 7	2	207173850	207074136
+CREB1	cAMP responsive element binding protein 1	2	207529961	207605987
+MAP2	microtubule associated protein 2	2	209424046	209734111
+CNTN4	contactin 4	3	2098865	3057958
+ARHGEF40	Rho guanine nucleotide exchange factor 40	14	21061263	21090247
+ROCK1	Rho associated coiled-coil containing protein kinase 1	18	21111812	20946905
+ECE1	endothelin converting enzyme 1	1	21345503	21217249
+TGFB2	transforming growth factor beta 2	1	218345335	218444618
+CDK5R2	cyclin dependent kinase 5 regulatory subunit 2	2	218959665	218962154
+CDC42	cell division cycle 42	1	22052708	22101359
+EPHA4	EPH receptor A4	2	221574201	221418026
+DOCK10	dedicator of cytokinesis 10	2	225042467	224765089
+NYAP2	neuronal tyrosine-phosphorylated phosphoinositide-3-kinase adaptor 2	2	225397938	225703653
+EPHA8	EPH receptor A8	1	22563488	22603594
+ENAH	ENAH actin regulator	1	225653877	225486828
+EPHB2	EPH receptor B2	1	22710837	22921499
+WNT3A	Wnt family member 3A	1	228006997	228061270
+CYFIP1	cytoplasmic FMR1 interacting protein 1	15	22980897	22867051
+ATG16L1	autophagy related 16 like 1	2	233251672	233295668
+TBCE	tubulin folding cofactor E	1	235367426	235452442
+GBX2	gastrulation brain homeobox 2	2	236168385	236161339
+NDN	necdin, MAGE family member	15	23687304	23685399
+LYPLA2	lysophospholipase 2	1	23791144	23795538
+STK25	serine/threonine kinase 25	2	241509571	241492669
+NFATC4	nuclear factor of activated T cells 4	14	24366910	24379603
+DCDC2	doublecortin domain containing 2	6	24383291	24171754
+ADORA2A	adenosine A2a receptor	22	24423596	24442356
+NTN3	netrin 3	16	2471296	2474144
+NEFL	neurofilament light chain	8	24956611	24950954
+ARX	aristaless related homeobox	X	25015964	25003693
+ATP8A2	ATPase phospholipid transporting 8A2	13	25371973	26025850
+TOP2B	DNA topoisomerase II beta	3	25664906	25597904
+STMN1	stathmin 1	1	25906879	25884178
+PAFAH1B1	platelet activating factor acetylhydrolase 1b regulatory subunit 1	17	2593182	2685614
+RAB10	RAB10, member RAS oncogene family	2	26033284	26137453
+APP	amyloid beta precursor protein	21	26171127	25880549
+VLDLR	very low density lipoprotein receptor	9	2621786	2660055
+CCKAR	cholecystokinin A receptor	4	26490483	26481395
+DPYSL5	dihydropyrimidinase like 5	2	26847994	26950350
+ABI1	abl interactor 1	10	26860957	26746595
+HOXA2	homeobox A2	7	27102682	27100353
+EVX1	even-skipped homeobox 1	7	27242801	27247829
+BDNF	brain derived neurotrophic factor	11	27722029	27654892
+FZD3	frizzled class receptor 3	8	28494211	28574257
+NEFH	neurofilament heavy chain	22	29480217	29491389
+TAOK2	TAO kinase 2	16	29973867	29992260
+FLOT1	flotillin 1	6	30742686	30727708
+B4GALT6	beta-1,4-galactosyltransferase 6	18	31724640	31622245
+PAX6	paired box 6	11	31817960	31789025
+CHRNA7	cholinergic receptor nicotinic alpha 7 subunit	15	32030482	32173017
+KIF5B	kinesin family member 5B	10	32056424	32009014
+SPAST	spastin	2	32063555	32157636
+CDK5R1	cyclin dependent kinase 5 regulatory subunit 1	17	32486992	32491252
+ANKRD27	ankyrin repeat domain 27	19	32675179	32597005
+ITGB1	integrin subunit beta 1	10	32958229	32900317
+NRP1	neuropilin 1	10	33334666	33177492
+SYNGAP1	synaptic Ras GTPase activating protein 1	6	33418166	33453688
+PACSIN1	protein kinase C and casein kinase substrate in neurons 1	6	34466075	34535222
+PARD3	par-3 family cell polarity regulator	10	34815295	34109560
+SCN1B	sodium voltage-gated channel beta subunit 1	19	35030469	35040448
+UNC5D	unc-5 netrin receptor D	8	35235474	35796539
+NPR2	natriuretic peptide receptor 2	9	35791590	35809730
+APLP1	amyloid beta precursor like protein 1	19	35868573	35879791
+NKX2-1	NK2 homeobox 1	14	36520231	36516396
+NKX2-8	NK2 homeobox 8	14	36582613	36580003
+FEZ2	fasciculation and elongation protein zeta 2	2	36598167	36552257
+LHX1	LIM homeobox 1	17	36936784	36944611
+EPHA10	EPH receptor A10	1	37765119	37713879
+GDNF	glial cell derived neurotrophic factor	5	37840040	37812676
+KIAA1755	KIAA1755	20	38260734	38210502
+SCN11A	sodium voltage-gated channel alpha subunit 11	3	39051943	38845763
+SOS1	SOS Ras/Rac guanine nucleotide exchange factor 1	2	39124867	38981548
+ERBB2	erb-b2 receptor tyrosine kinase 2	17	39688093	39728657
+LRRK2	leucine rich repeat kinase 2	12	40224996	40369284
+PAK6	p21 (RAC1) activated kinase 6	15	40239062	40277486
+SPTBN4	spectrin beta, non-erythrocytic 4	19	40467000	40576463
+NUMBL	NUMB like endocytic adaptor protein	19	40690650	40665904
+CNTN1	contactin 1	12	40692438	41072414
+DSCAM	DS cell adhesion molecule	21	40847157	40010998
+APBB2	amyloid beta precursor protein binding family B member 2	4	41214541	40810026
+UCHL1	ubiquitin C-terminal hydrolase L1	4	41256927	41268454
+PHOX2B	paired like homeobox 2B	4	41748724	41744081
+CNP	2'',3''-cyclic nucleotide 3'' phosphodiesterase	17	41966794	41977739
+TRAK1	trafficking kinesin protein 1	3	42013092	42225889
+GLI3	GLI family zinc finger 3	7	42264267	41960948
+CCK	cholecystokinin	3	42266184	42257825
+PRICKLE1	prickle planar cell polarity protein 1	12	42589745	42456756
+CNTNAP1	contactin associated protein 1	17	42682530	42699992
+PTK7	protein tyrosine kinase 7 (inactive)	6	43076313	43161714
+RET	ret proto-oncogene	10	43077068	43130350
+SZT2	SZT2 subunit of KICSTOR complex	1	43389898	43454246
+MAP1A	microtubule associated protein 1A	15	43510953	43531610
+VEGFA	vascular endothelial growth factor A	6	43770210	43786486
+SULT4A1	sulfotransferase family 4A member 1	22	43862512	43824508
+ARTN	artemin	1	43933800	43937239
+NDP	norrin cystine knot growth factor NDP	X	43973389	43948775
+DBNL	drebrin like	7	44044701	44069455
+CXCL12	C-X-C motif chemokine ligand 12	10	44385096	44370164
+SPG11	SPG11 vesicle trafficking associated, spatacsin	15	44663661	44562695
+NELL2	neural EGFL like 2	12	44921847	44508274
+ADARB1	adenosine deaminase RNA specific B1	21	45074577	45226562
+VASP	vasodilator stimulated phosphoprotein	19	45507478	45526982
+ADCY1	adenylate cyclase 1	7	45574139	45723115
+SEMA6B	semaphorin 6B	19	4559683	4542592
+ZNF335	zinc finger protein 335	20	45972202	45948659
+WNT7B	Wnt family member 7B	22	45977161	45920365
+ARK2C	arkadia (RNF111) C-terminal like ring finger ubiquitin ligase 2C	18	46334017	46463139
+DIP2A	disco interacting protein 2 homolog A	21	46458890	46583870
+CELSR1	cadherin EGF LAG seven-pass G-type receptor 1	22	46537619	46361173
+S100B	S100 calcium binding protein B	21	46605081	46598603
+WNT3	Wnt family member 3	17	46818691	46762505
+ARHGAP35	Rho GTPase activating protein 35	19	46860996	47005076
+LRP4	LDL receptor related protein 4	11	46918549	46856716
+SEMA6D	semaphorin 6D	15	47184088	47774227
+PTPRJ	protein tyrosine phosphatase receptor type J	11	47980558	48170838
+MINK1	misshapen like kinase 1	17	4833339	4898060
+SIAH1	siah E3 ubiquitin protein ligase 1	16	48387245	48360530
+PLXNB1	plexin B1	3	48430309	48403853
+CELSR3	cadherin EGF LAG seven-pass G-type receptor 3	3	48662885	48636462
+HDAC6	histone deacetylase 6	X	48801397	48824981
+IGF2BP1	insulin like growth factor 2 mRNA binding protein 1	17	48996557	49056144
+NTF4	neurotrophin 4	19	49065034	49058283
+LAMB2	laminin subunit beta 2	3	49133049	49121113
+TUBA1A	tubulin alpha 1a	12	49189079	49184794
+DRGX	dorsal root ganglia homeobox	10	49396088	49364065
+DAG1	dystroglycan 1	3	49468947	49535614
+NGFR	nerve growth factor receptor	17	49495292	49515007
+B4GALT5	beta-1,4-galactosyltransferase 5	20	49713877	49632944
+ELAVL4	ELAV like RNA binding protein 4	1	50048054	50203771
+SEMA3F	semaphorin 3F	3	50155057	50189074
+SEMA3B	semaphorin 3B	3	50260225	50277545
+EMB	embigin	5	50443344	50396191
+ATL1	atlastin GTPase 1	14	50533081	50633067
+MAPK8IP2	mitogen-activated protein kinase 8 interacting protein 2	22	50600792	50613977
+SHANK3	SH3 and multiple ankyrin repeat domains 3	22	50672822	50733211
+SHANK1	SH3 and multiple ankyrin repeat domains 1	19	50719801	50659254
+PARD6B	par-6 family cell polarity regulator beta	20	50731579	50753740
+NIN	ninein	14	50831502	50719762
+KLK8	kallikrein related peptidase 8	19	51001603	50996007
+SLC11A2	solute carrier family 11 member 2	12	51028885	50952262
+SMAD4	SMAD family member 4	18	51030212	51085041
+NRXN1	neurexin 1	2	51032131	49918502
+ISL1	ISL LIM homeobox 1	5	51383447	51394729
+ATP9A	ATPase phospholipid transporting 9A (putative)	20	51768389	51596513
+DCC	DCC netrin 1 receptor	18	52340196	53535898
+SEMA3G	semaphorin 3G	3	52445102	52433034
+ITGA1	integrin subunit alpha 1	5	52787915	52959208
+LRP8	LDL receptor related protein 8	1	53328069	53242363
+NTF3	neurotrophin 3	12	5430331	5495298
+NCKAP1L	NCK associated protein 1 like	12	54497751	54548242
+PPP1R12C	protein phosphatase 1 regulatory subunit 12C	19	55117636	55090917
+PTPRH	protein tyrosine phosphatase receptor type H	19	55209500	55181246
+BRSK1	BR serine/threonine kinase 1	19	55283996	55312561
+ACTB	actin beta	7	5530600	5527147
+WNT5A	Wnt family member 5A	3	55505262	55465714
+EPB41L3	erythrocyte membrane protein band 4.1 like 3	18	5630662	5392385
+NOG	noggin	17	56593698	56595610
+OTX2	orthodenticle homeobox 2	14	56810478	56799904
+BSG	basigin (Ok blood group)	19	571282	583492
+BMP7	bone morphogenetic protein 7	20	57266640	57168752
+ACTBL2	actin beta like 2	5	57482810	57480017
+KIF5A	kinesin family member 5A	12	57550043	57586632
+ARHGEF25	Rho guanine nucleotide exchange factor 25	12	57610115	57617244
+DAB1	DAB adaptor protein 1	1	58546725	56994777
+EDN3	endothelin 3	20	59300610	59325991
+ANK3	ankyrin 3	10	60733527	60026297
+CDH4	cadherin 4	20	61252260	61940616
+B3GNT2	UDP-GlcNAc:betaGal beta-1,3-N-acetylglucosaminyltransferase 2	2	62196114	62224730
+ZNF365	zinc finger protein 365	10	62374368	62480284
+DOCK7	dedicator of cytokinesis 7	1	62688385	62454725
+EGR2	early growth response 2	10	62819166	62811995
+BCL2	BCL2 apoptosis regulator	18	63320089	63123345
+RAC1	Rac family small GTPase 1	7	6374526	6403966
+VPS54	VPS54 subunit of GARP complex	2	64019427	63892149
+APBB1	amyloid beta precursor protein binding family B member 1	11	6419452	6395123
+CDH11	cadherin 11	16	65123743	64943752
+EPHA5	EPH receptor A5	4	65670488	65319566
+PRKCQ	protein kinase C theta	10	6580645	6394096
+PRKCA	protein kinase C alpha	17	66302612	66810742
+B4GAT1	beta-1,4-glucuronyltransferase 1	11	66347628	66345373
+MAP2K1	mitogen-activated protein kinase kinase 1	15	66386911	66491543
+PLEKHG4	pleckstrin homology and RhoGEF domain containing G4	16	67277579	67289479
+PREX2	phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 2	8	67952045	68237031
+MYPN	myopalladin	10	68087896	68212016
+OPHN1	oligophrenin 1	X	68433840	68042343
+OR10A4	olfactory receptor family 10 subfamily A member 4	11	6876624	6877618
+EFNB1	ephrin B1	X	68829020	68842159
+KIFBP	kinesin family binding protein	10	68988802	69016981
+C12orf57	chromosome 12 open reading frame 57	12	6943432	6946002
+CTTN	cortactin	11	70398528	70436574
+VAX2	ventral anterior homeobox 2	2	70900575	70933445
+UNC5B	unc-5 netrin receptor B	10	71212569	71302863
+METRN	meteorin, glial cell differentiation regulator	16	715117	719654
+MAP1B	microtubule associated protein 1B	5	72107474	72209564
+DLG4	discs large MAGUK scaffold protein 4	17	7220049	7187186
+NEGR1	neuronal growth regulator 1	1	72282538	71395942
+NEO1	neogenin 1	15	73051691	73305205
+FOXD1	forkhead box D1	5	73448776	73446265
+NUMB	NUMB endocytic adaptor protein	14	73458545	73275215
+ARHGEF28	Rho guanine nucleotide exchange factor 28	5	73626195	73941989
+NPTN	neuroplastin	15	73633388	73560013
+SEMA7A	semaphorin 7A (JohnMiltonHagen blood group)	15	74433957	74409288
+SEMA4F	ssemaphorin 4F	2	74654246	74709410
+MAP6	microtubule associated protein 6	11	75669037	75586917
+PTPRM	protein tyrosine phosphatase receptor type M	18	7567315	8406855
+ROBO2	roundabout guidance receptor 2	3	75906674	77649963
+ISL2	ISL LIM homeobox 2	15	76336772	76342474
+ZDHHC17	zDHHC palmitoyltransferase 17	12	76764114	76853700
+TSKU	tsukushi, small leucine rich proteoglycan	11	76782279	76798143
+EFNB3	ephrin B3	17	7705201	7711371
+VPS13A	vacuolar protein sorting 13 homolog A	9	77177533	77421536
+MYCBP2	MYC binding protein 2	13	77327093	77044656
+PAK1	p21 (RAC1) activated kinase 1	11	77530008	77322016
+USP33	ubiquitin specific peptidase 33	1	77759851	77695986
+NEXN	nexilin F-actin binding protein	1	77888623	77943894
+ATP7A	ATPase copper transporting alpha	X	77910692	78050394
+NRXN3	neurexin 3	14	78170372	79868290
+POU4F1	POU class 4 homeobox 1	13	78603551	78598361
+CTNNA2	catenin alpha 2	2	79185376	80648779
+ROBO1	roundabout guidance receptor 1	3	79767997	78597238
+PPP1R12A	protein phosphatase 1 regulatory subunit 12A	12	79935459	79773562
+PRDM8	PR/SET domain 8	4	80185269	80204328
+GATA3	GATA binding protein 3	10	8045332	8075197
+NPTX1	neuronal pentraxin 1	17	80476606	80466833
+SEMA3C	semaphorin 3C	7	80922388	80742537
+BAIAP2	BAR/IMD domain containing adaptor protein 2	17	81035150	81117433
+ACTG1	actin gamma 1	17	81512798	81509970
+RAC3	Rac family small GTPase 3	17	82031677	82034203
+TPBG	trophoblast glycoprotein	6	82362982	82367419
+SEMA3E	semaphorin 3E	7	83649138	83363237
+SLITRK1	SLIT and NTRK like family member 1	13	83882473	83877204
+NDEL1	nudE neurodevelopment protein 1 like 1	17	8413130	8474327
+SEMA3A	semaphorin 3A	7	84492724	83955776
+SEMA3D	semaphorin 3D	7	85250242	84995552
+FLRT2	fibronectin leucine rich transmembrane protein 2	14	85530143	85654427
+SLITRK6	SLIT and NTRK like family member 6	13	85799418	85792789
+PICALM	phosphatidylinositol binding clathrin assembly protein	11	86069859	85957174
+MYH10	myosin heavy chain 10	17	8630724	8474211
+ANOS1	anosmin 1	X	8732136	8528873
+LMO4	LIM domain only 4	1	87328879	87348922
+SLITRK5	SLIT and NTRK like family member 5	13	87671370	87679615
+PTEN	phosphatase and tensin homolog	10	87863624	87971929
+RERE	arginine-glutamic acid dipeptide repeats	1	8817639	8352403
+KIDINS220	kinase D interacting substrate 220	2	8837612	8721080
+TTC8	tetratricopeptide repeat domain 8	14	88824152	88881078
+EPHA3	EPH receptor A3	3	89107620	89482133
+SEMA4D	semaphorin 4D	9	89498112	89360786
+KIF20B	kinesin family member 20B	10	89701589	89774933
+TUBB3	tubulin beta 3 class III	16	89921924	89936096
+NTN1	netrin 1	17	9003086	9243999
+SEMA4B	semaphorin 4B	15	90184919	90229660
+RPS6KA5	ribosomal protein S6 kinase A5	14	91060640	90847860
+PLEKHG4B	pleckstrin homology and RhoGEF domain containing G4B	5	92167	189965
+EPHA7	EPH receptor A7	6	93419558	93240019
+LGI1	leucine rich glioma inactivated 1	10	93757935	93798158
+ATOH1	atonal bHLH transcription factor 1	4	93828752	93830963
+BMPR1B	bone morphogenetic protein receptor type 1B	4	94757954	95158449
+DICER1	dicer 1, ribonuclease III	14	95158009	95086227
+SEMA5A	semaphorin 5A	5	9546074	9035032
+PTCH1	patched 1	9	95516970	95442979
+UNC5C	unc-5 netrin receptor C	4	95548972	95162503
+ADAM17	ADAM metallopeptidase domain 17	2	9555829	9488485
+WEE1	WEE1 G2 checkpoint kinase	11	9573669	9589984
+NTN4	netrin 4	12	95791154	95657806
+TUNAR	transmembrane neural differentiation associated intracellular calcium regulator	14	95876447	95925570
+SDC2	syndecan 2	8	96493812	96611789
+EPHA6	EPH receptor A6	3	96814593	97761531
+SEMA4C	semaphorin 4C	2	96870829	96859717
+DLX5	distal-less homeobox 5	7	97024830	97020395
+SLIT1	slit guidance ligand 1	10	97185958	96998037
+MATN2	matrilin 2	8	97869063	98036723
+FARP1	FERM, ARH/RhoGEF and pleckstrin domain protein 1	13	98142588	98455175
+CNTN5	contactin 5	11	99020948	100358884
+PLPPR4	phospholipid phosphatase related 4	1	99262923	99309583
+BCL11B	BCL11 transcription factor B	14	99272196	99169286
+MEF2A	myocyte enhancer factor 2A	15	99565416	99716487
+NR4A3	nuclear receptor subfamily 4 group A member 3	9	99821884	99866890
+EVL	Enah/Vasp-like	14	99971421	100144235

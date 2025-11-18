@@ -1,152 +1,518 @@
 #!/usr/bin/env python3
 """
-GO enrichment analysis with functional categories and DAG visualization
+GO Hierarchy Explorer - Create focused gene sets from GO term subtrees
 
-This script:
-1. Searches for GO terms matching functional categories
-2. Performs enrichment analysis for high-confidence genes
-3. Visualizes GO term relationships using DAGs
+This script provides tools to:
+1. Start with specific, biologically meaningful GO terms
+2. Visualize GO hierarchies (DAGs)
+3. Navigate and explore parent/child relationships
+4. Extract coherent subtrees
+5. Generate focused gene sets from selected subtrees
 
 Author: MIT van Bruggen
-Date: 2025-11-11
-Updated: 2025-11-12
+Date: 2025-11-18
 """
 
 import pandas as pd
 from pathlib import Path
-from geneinfo.genelist import GeneList as glist
 import geneinfo.ontology as go
-import shutil
-from scipy.stats import fisher_exact
-from statsmodels.stats.multitest import multipletests
-import numpy as np
+from geneinfo.genelist import GeneList as glist
+import matplotlib.pyplot as plt
+#import networkx as nx
+from typing import List, Dict, Set, Tuple
+import json
 
+# Setup
 go.email('au799024@uni.au.dk')
 
-# Setup paths
+# Load GO DAG (Gene Ontology Directed Acyclic Graph)
+# This gives us access to the GO hierarchy
+godag = go.GODag(go.cache_dir + '/go-basic.obo')
+
 PROJECT_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
 RESULTS_DIR = PROJECT_DIR / 'results/analysis'
-OUTPUT_DIR = RESULTS_DIR / 'functional_enrichment/GO_with_terms'
+OUTPUT_DIR = RESULTS_DIR / 'functional_enrichment/GO_hierarchies'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# My study genes (high-confidence X chromosome genes)
-study_genes = ['DACH2', 'DIAPH2', 'FAAH2', 'GPC3', 'HTR2C',
-               'IL1RAPL2', 'KDM6A', 'NAP1L2', 'NCBP2L',
-               'TRPC5', 'ZMAT1', 'KLHL13', 'PCDH11X']
-
-# Create a GeneList object
-study_gl = glist(study_genes)
-
-print("="*70) #nice output separator
-print("GO Enrichment Analysis with Functional Categories")
-print("="*70)
-print(f"\nStudy genes: {', '.join(study_genes)}")
-print(f"Total: {len(study_genes)} genes")
+print("=" * 80)
+print("GO Hierarchy Explorer")
+print("=" * 80)
 print()
 
 #==============================================================================
-# Step 1: Define functional categories (same as get_GO_annotations.py)
+# Core GO Terms - Specific, biologically meaningful starting points
 #==============================================================================
+#Used amigo.geneontology.org to find GO terms for each category (search terms next to GO terms)
+#Used QuickGo to verify 
 
-print("Step 1: Defining functional categories...") #had some help defining the keywords (Claude)
-print()
+CORE_GO_TERMS = {
+    'fertility_sperm': {
+        'seed_terms': [
+            'GO:0097722',  # sperm motility (specific!)
+            'GO:0030317',  # flagellated sperm motility
+            'GO:0007283',  # spermatogenesis
+            'GO:0007286',  # spermatid development
+        ],
+        'description': 'Male fertility,sperm development and motility'
+    },
 
-KEYWORD_CATEGORIES = {
-    'fertility': [
-        'sperm', 'oocyte', 'spermatogenesis', 'oogenesis','ovary', 'testis', 'meiosis', 'flagellum motor', 'microtubules'
-    ],
+    'fertility_oocyte': {
+        'seed_terms': [
+            'GO:0048599',  # oocyte development
+            'GO:0001556',  # oocyte maturation
+            'GO:0045137',  # development of primary female sexual characteristics
+            'GO:0046545', #development of primary female sexual characteristics 2
+            'GO:0007292', #female gamete generation
+            'GO:0048477', #oogenesis
+        ],
+        'description': 'Female fertility,oocyte development'
+    },
 
-    'immunity': [
-        'immune', 'inflammation','cytokine', 'antibody',
-        'lymphocyte','T cell', 'B cell', 'macrophage', 'neutrophil',
-    ],
-    'neurodevelopment': [
-        'neuron','brain', 'neural','neuronal', 'behavior', 'neurotransmitter',
-        'dopamine', 'neurodegener', 'neurodevelopmental',
-        'sensory', 'psychiatric'
-    ],
-    'development': [
-        'development', 'differentiation', 'morphogenesis', 'organogenesis',
-        'embryo',
-        'embryonic', 'fetal','angiogenesis', 'vasculogenesis', 'cardiogenesis', 'myogenesis', 'osteogenesis',
-        'chondrogenesis', 'adipogenesis', 'hematopoiesis'
-    ]
+    'neurodev_synapse': {
+        'seed_terms': [
+            'GO:0050808',  # synapse organization
+            'GO:0007416',  # synapse assembly
+            'GO:0097105',  # presynaptic membrane assembly
+            'GO:0007268',  # chemical synaptic transmission
+        ],
+        'description': 'Neurodevelopment,synapse formation and function'
+    },
+
+    'neurodev_axon': {
+        'seed_terms': [
+            'GO:0007409',  # axonogenesis
+            'GO:0048812',  # neuron projection morphogenesis
+            'GO:0007411',  # axon guidance
+        ],
+        'description': 'Neurodevelopment,axon growth and guidance'
+    },
+
+    'immunity_tcell': {
+        'seed_terms': [
+            'GO:0042110',  # T cell activation
+            'GO:0030217',  # T cell differentiation
+            'GO:0045058',  # T cell selection
+        ],
+        'description': 'Immunity,T cell development and function'
+    },
+
+    'immunity_innate': {
+        'seed_terms': [
+            'GO:0045087',  # innate immune response
+            'GO:0002218',  # activation of innate immune response
+            'GO:0002758',  # innate immune response-activating signaling pathway
+        ],
+        'description': 'Immunity,innate immune responses'
+    }
 }
 
+
 #==============================================================================
-# Step 2: Search for GO terms matching each category
+# Function 1: Get GO term information
 #==============================================================================
 
-print("Step 2: Searching for GO terms matching each functional category...")
+def get_go_term_info(go_id: str) -> Dict:
+    """
+    Get detailed information about a GO term
+    Args:
+        go_id: GO identifier (e.g., 'GO:0097722')
+    Returns:
+        Dictionary with GO term details
+    """
+    try:
+        # Access term from GO DAG
+        if go_id in godag:
+            term = godag[go_id]
+            info = {
+                'go_id': go_id,
+                'name': term.name,
+                'exists': True
+            }
+        else:
+            info = {
+                'go_id': go_id,
+                'name': 'Unknown',
+                'exists': False
+            }
+
+        return info
+    except Exception as e:
+        # If there's an error accessing the term
+        return {
+            'go_id': go_id,
+            'name': f'Error: {str(e)}',
+            'exists': False
+        }
+
+
+#==============================================================================
+# Function 2: Get all descendants of a GO term (subtree)
+#==============================================================================
+
+def get_go_descendants(go_id: str, include_self: bool = True) -> Set[str]:
+    """
+    Get all descendant GO terms (children, grandchildren, etc.)
+    This will extract the entire subtree below a GO term, which will represent
+    a coherent biological module.
+    Args:
+        go_id: GO identifier
+        include_self: Whether to include the seed term itself
+    Returns:
+        Set of GO IDs in the subtree
+    """
+    try:
+        descendants = set()
+
+        # Check if term exists in GO DAG
+        if go_id not in godag:
+            print(f"Warning: {go_id} not found in GO DAG")
+            return {go_id} if include_self else set()
+
+        term = godag[go_id]
+
+        # Get children (terms more specific than this one)
+        children = term.children
+
+        if children:
+            # Add children IDs
+            for child in children:
+                descendants.add(child.id)
+                # Recursively get descendants of children
+                descendants.update(get_go_descendants(child.id, include_self=False))
+
+        if include_self:
+            descendants.add(go_id)
+
+        return descendants
+
+    except Exception as e:
+        print(f"Warning: Could not get descendants for {go_id}: {e}")
+        return {go_id} if include_self else set()
+
+
+#==============================================================================
+# Function 3: Get all ancestors of a GO term
+#==============================================================================
+
+def get_go_ancestors(go_id: str, include_self: bool = False) -> Set[str]:
+    """
+    Get all ancestor GO terms (parents, grandparents, etc.)
+    Shows where a term fits in the broader hierarchy.
+    Args: idem as above
+    Returns:
+        Set of GO IDs that are ancestors
+    """
+    try:
+        ancestors = set()
+
+        # Check if term exists in GO DAG
+        if go_id not in godag:
+            print(f"Warning: {go_id} not found in GO DAG")
+            return {go_id} if include_self else set()
+
+        term = godag[go_id]
+
+        # Get parents (terms more general than this one)
+        parents = term.parents
+
+        if parents:
+            # Add parent IDs
+            for parent in parents:
+                ancestors.add(parent.id)
+                # Recursively get ancestors of parents
+                ancestors.update(get_go_ancestors(parent.id, include_self=False))
+
+        if include_self:
+            ancestors.add(go_id)
+
+        return ancestors
+
+    except Exception as e:
+        print(f"Warning: Could not get ancestors for {go_id}: {e}")
+        return {go_id} if include_self else set()
+
+
+#==============================================================================
+# Function 4: Build subtree from multiple seed terms
+#==============================================================================
+
+def build_subtree_from_seeds(seed_terms: List[str],
+                              max_depth: int = None) -> Dict[str, Set[str]]:
+    """
+    Build a coherent subtree from multiple seed terms
+    This combines multiple related GO terms into a single focused gene set.
+    Args:
+        seed_terms: List of GO IDs to start from
+        max_depth: Maximum depth to traverse (None = unlimited)
+    Returns:
+        Dict with:
+        - 'seeds': the input seed terms
+        - 'descendants': all descendant terms
+        - 'all_terms': seeds + descendants
+    """
+    all_descendants = set()
+
+    for seed in seed_terms:
+        descendants = get_go_descendants(seed, include_self=False)
+        all_descendants.update(descendants)
+
+    return {
+        'seeds': set(seed_terms),
+        'descendants': all_descendants,
+        'all_terms': set(seed_terms) | all_descendants
+    }
+
+
+#==============================================================================
+# Function 5: Get genes for a subtree
+#==============================================================================
+
+def get_genes_for_subtree(go_terms: Set[str]) -> Tuple[pd.DataFrame, List[str]]:
+    """
+    Get all genes annotated to any GO term in a subtree
+    Args:
+        go_terms: Set of GO term IDs
+    Returns:
+        Tuple of (DataFrame with all annotations, list of unique gene symbols)
+    """
+    if not go_terms:
+        return pd.DataFrame(), []
+
+    try:
+        # Convert set to list for geneinfo
+        terms_list = list(go_terms)
+
+        # Get genes
+        genes_df = go.get_genes_for_go_terms(terms_list)
+
+        # Extract unique gene symbols
+        unique_genes = genes_df['symbol'].unique().tolist() if not genes_df.empty else []
+
+        return genes_df, unique_genes
+
+    except Exception as e: #thx claude 
+        print(f"Warning: Error getting genes: {e}")
+        return pd.DataFrame(), []
+
+
+#==============================================================================
+# Function 6: Visualize GO hierarchy using geneinfo's DAG like in Kasper's guide at https://munch-group.org/geneinfo/pages/go_graphs.html
+#==============================================================================
+
+def visualize_go_dag(go_terms: List[str], output_file: Path = None,
+                     title: str = "GO Term Hierarchy") -> None:
+    """
+    Visualize GO term hierarchy using geneinfo's built-in DAG plotting
+    Args:
+        go_terms: List of GO term IDs to visualize
+        output_file: Path to save the visualization (PNG format)
+        title: Title for the plot
+    """
+    try:
+        # Use geneinfo's built-in DAG visualization
+        print(f"  Creating GO DAG for {len(go_terms)} terms...")
+
+        if output_file:
+            # Save to file using plot_gos
+            go.plot_gos(str(output_file), go_terms, godag)
+            print(f"  Saved DAG to: {output_file}")
+        else:
+            # Display interactively (for in jupyter notebook where I test some things)
+            go.show_go_dag_for_terms(go_terms)
+            print(f"  GO DAG displayed")
+
+    except Exception as e:
+        print(f"  Warning: Could not create GO DAG: {e}")
+
+#==============================================================================
+# Function 7: Create summary report for a subtree
+#==============================================================================
+
+def create_subtree_report(category_name: str,
+                         subtree_info: Dict,
+                         genes_df: pd.DataFrame,
+                         unique_genes: List[str]) -> pd.DataFrame:
+    """
+    Create a detailed report for a subtree-based gene set
+    Returns:
+        DataFrame with summary statistics
+    """
+    n_seeds = len(subtree_info['seeds'])
+    n_descendants = len(subtree_info['descendants'])
+    n_total_terms = len(subtree_info['all_terms'])
+    n_genes = len(unique_genes)
+
+    report = pd.DataFrame([{
+        'category': category_name,
+        'n_seed_terms': n_seeds,
+        'n_descendant_terms': n_descendants,
+        'n_total_terms': n_total_terms,
+        'n_unique_genes': n_genes,
+        'genes_per_term': n_genes / n_total_terms if n_total_terms > 0 else 0
+    }])
+
+    return report
+
+
+#==============================================================================
+# EXECUTION of the functions defined above (parts by claude code + print statements fully by claude code, as well as checks and warnings )
+#==============================================================================
+
+print("Step 1: Validating seed GO terms...")
+print("-" * 80)
+
+# Validate the seed terms
+for category, config in CORE_GO_TERMS.items():
+    print(f"\n{category}: {config['description']}")
+    print(f"  Seed terms:")
+    for term_id in config['seed_terms']:
+        info = get_go_term_info(term_id)
+        status = "✓" if info['exists'] else "✗"
+        print(f"    {status} {term_id}: {info['name']}")
+
+
+print("\n" + "=" * 80)
+print("Step 2: Building subtrees from seed terms...")
+print("-" * 80)
+
+# Build subtrees for each category
+category_subtrees = {}
+category_genes = {}
+all_reports = []
+
+for category, config in CORE_GO_TERMS.items():
+    print(f"\n{category}: {config['description']}")
+    print(f"  Building subtree from {len(config['seed_terms'])} seed terms...")
+
+    # Build subtree
+    subtree = build_subtree_from_seeds(config['seed_terms'])
+    category_subtrees[category] = subtree
+
+    print(f"  → Found {len(subtree['descendants'])} descendant terms")
+    print(f"  → Total: {len(subtree['all_terms'])} GO terms in subtree")
+
+    # Get genes
+    print(f"  Getting genes for all {len(subtree['all_terms'])} terms...")
+    genes_df, unique_genes = get_genes_for_subtree(subtree['all_terms'])
+    category_genes[category] = {
+        'genes_df': genes_df,
+        'unique_genes': unique_genes,
+        'genelist': glist(unique_genes)
+    }
+
+    print(f"  → Found {len(unique_genes)} unique genes")
+
+    # Create report
+    report = create_subtree_report(category, subtree, genes_df, unique_genes)
+    all_reports.append(report)
+
+
+print("\n" + "=" * 80)
+print("Step 3: Saving results...")
+print("-" * 80)
+
+# Save summary report
+summary_df = pd.concat(all_reports, ignore_index=True)
+summary_file = OUTPUT_DIR / 'subtree_summary.tsv'
+summary_df.to_csv(summary_file, sep='\t', index=False)
+print(f"\n✓ Saved summary: {summary_file}")
+
+# Save subtree definitions (GO terms)
+for category, subtree in category_subtrees.items():
+    subtree_file = OUTPUT_DIR / f'subtree_terms_{category}.json'
+
+    # Convert sets to lists for JSON
+    subtree_json = {
+        'category': category,
+        'description': CORE_GO_TERMS[category]['description'],
+        'seed_terms': sorted(list(subtree['seeds'])),
+        'descendant_terms': sorted(list(subtree['descendants'])),
+        'all_terms': sorted(list(subtree['all_terms']))
+    }
+
+    with open(subtree_file, 'w') as f:
+        json.dump(subtree_json, f, indent=2)
+
+    print(f"✓ Saved subtree: {subtree_file}")
+
+# Save gene lists
+for category, gene_data in category_genes.items():
+    # Save full annotations
+    annot_file = OUTPUT_DIR / f'genes_annotated_{category}.tsv'
+    gene_data['genes_df'].to_csv(annot_file, sep='\t', index=False)
+
+    # Save gene list
+    genes_file = OUTPUT_DIR / f'genes_unique_{category}.txt'
+    with open(genes_file, 'w') as f:
+        f.write('\n'.join(sorted(gene_data['unique_genes'])))
+
+    print(f"✓ Saved genes: {genes_file}")
+
+
+print("\n" + "=" * 80)
+print("Step 4: Comparison with keyword approach")
+print("-" * 80)
+
+# Compare sizes
+print("\nGene set sizes (hierarchy-based approach):")
+for category, gene_data in category_genes.items():
+    print(f"  {category:30s}: {len(gene_data['unique_genes']):5d} genes")
+
+print("\n" + "=" * 80)
+print("Step 5: Visualizing GO hierarchies (DAG plots)")
+print("-" * 80)
+
+# Create DAG visualizations for each category
+dag_dir = OUTPUT_DIR / 'dag_plots'
+dag_dir.mkdir(exist_ok=True)
+
+print("\nCreating GO DAG visualizations for each category...")
+print("Note: These show the hierarchical relationships between GO terms")
 print()
 
-category_terms = {}
+for category, subtree in category_subtrees.items():
+    print(f"\n{category}:")
 
-for category, keywords in KEYWORD_CATEGORIES.items(): #so look at each category and its keywords
-    print(f"  Searching for {category} terms...")
+    # Get the seed terms for this category
+    seed_terms = list(subtree['seeds'])
 
-    # Create regex pattern from keywords (combine with OR)
-    pattern = '|'.join(keywords)
+    print(f"  Visualizing {len(seed_terms)} seed terms...")
 
-    # Search for matching GO terms
-    terms = go.get_terms_for_go_regex(pattern)
+    try:
+        # Create DAG for seed terms and save to file
+        output_file = dag_dir / f'dag_{category}.png'
+        visualize_go_dag(seed_terms, output_file=output_file, title=f"{category} - Seed Terms")
+        print(f"  ✓ DAG visualization complete")
+    except Exception as e:
+        print(f"  ✗ Could not create DAG: {e}")
 
-    category_terms[category] = terms
-    print(f"    Found {len(terms)} GO terms matching {category}")
 
+print("\n" + "=" * 80)
+print("Step 6: Example - Show single term hierarchy")
+print("-" * 80)
+
+# Show hierarchy for sperm motility as example
+print("\nExample: Detailed hierarchy for sperm motility (GO:0097722)")
+print("This shows what genes are annotated to this specific term:\n")
+
+try:
+    go.show_go_dag_for_gene('DYNLT3')  # Example gene
+except:
+    print("  Could not show example gene DAG")
+
+print("\n" + "=" * 80)
+print("DONE!")
+print("=" * 80)
+print("\nNext steps:")
+print("1. Review the subtree_summary.tsv to see gene set sizes")
+print("2. Examine individual subtree JSON files to see which GO terms are included")
+print("3. Look at the GO DAG visualizations to understand term relationships")
+print("4. Adjust seed terms if needed to make sets more/less specific")
+print("5. Use the gene lists for enrichment analysis with your study genes")
 print()
-print("Summary of GO terms found:")
-for category, terms in category_terms.items():
-    print(f"  {category:20s}: {len(terms):4d} terms")
-
-#==============================================================================
-# Step 3: Save GO term lists for each category
-#==============================================================================
-
-print("\nStep 3: Saving GO term lists...")
+print("Key files created:")
+print(f"  - Summary: {OUTPUT_DIR / 'subtree_summary.tsv'}")
+print(f"  - Gene lists: {OUTPUT_DIR / 'genes_unique_*.txt'}")
+print(f"  - Subtree definitions: {OUTPUT_DIR / 'subtree_terms_*.json'}")
+print(f"  - DAG plots: {dag_dir / 'dag_*.png'}")
 print()
-
-for category, terms in category_terms.items():
-    output_file = OUTPUT_DIR / f'GO_terms_{category}.tsv'
-
-    # Convert to DataFrame
-    terms_df = pd.DataFrame([
-        {'GO_ID': term_id, 'Category': category}
-        for term_id in terms
-    ])
-
-    terms_df.to_csv(output_file, sep='\t', index=False)
-    print(f"  Saved: {output_file}")
-
-print()
-
-#==============================================================================
-# Step 4: Get genes associated with each GO term
-#==============================================================================
-
-print("\nStep 4: Getting genes associated with each GO term...")
-print()
-
-# Get genes for specific GO terms (returns DataFrames)
-neurodevelopment_df = go.get_genes_for_go_terms(category_terms['neurodevelopment'])
-reproduction_df = go.get_genes_for_go_terms(category_terms['reproduction'])
-immunity_df = go.get_genes_for_go_terms(category_terms['immunity'])
-development_df = go.get_genes_for_go_terms(category_terms['development'])
-
-# Extract gene symbols as lists
-neurodevelopment_genes = neurodevelopment_df['symbol'].unique().tolist()
-reproduction_genes = reproduction_df['symbol'].unique().tolist()
-immunity_genes = immunity_df['symbol'].unique().tolist()
-development_genes = development_df['symbol'].unique().tolist()
-
-# Convert to gene lists
-neurodevelopment_gl = glist(neurodevelopment_genes)
-reproduction_gl = glist(reproduction_genes)
-immunity_gl = glist(immunity_genes)
-development_gl = glist(development_genes)
-
-print(f"  Neurodevelopment: {len(neurodevelopment_genes)} genes")
-print(f"  Reproduction:     {len(reproduction_genes)} genes")
-print(f"  Immunity:         {len(immunity_genes)} genes")
-print(f"  Development:      {len(development_genes)} genes")
-

@@ -1,0 +1,113 @@
+symbol	name	chrom	start	end
+ZGLP1	zinc finger GATA like protein 1	19	10309814	10304802
+DCAF13	DDB1 and CUL4 associated factor 13	8	103415385	103443452
+ATM	ATM serine/threonine kinase	11	108223066	108369101
+FOXO3	forkhead box O3	6	108559824	108684773
+DDX20	DEAD-box helicase 20	1	111755900	111767999
+YTHDC2	YTH N6-methyladenosine RNA binding protein C2	5	113513693	113595283
+BCAS2	BCAS2 pre-mRNA processing factor	1	114581614	114567556
+MCM9	minichromosome maintenance 9 homologous recombination repair factor	6	118935158	118813454
+NANOS1	nanos C2HC-type zinc finger 1	10	119029713	119033729
+INHBB	inhibin subunit beta B	2	120346135	120351802
+WASHC5	WASH complex subunit 5	8	125091791	125024259
+GDF9	growth differentiation factor 9	5	132866650	132861184
+STRA8	stimulated by retinoic acid 8	7	135231914	135258662
+PTN	pleiotrophin	7	137343732	137227340
+NANOS3	nanos C2HC-type zinc finger 3	19	13862035	13880756
+NOBOX	NOBOX oogenesis homeobox	7	144410226	144396893
+PARN	poly(A)-specific ribonuclease	16	14630259	14435700
+HORMAD1	HORMA domain containing 1	1	150720894	150698059
+FBXO5	F-box protein 5	6	152983578	152970534
+SFRP2	secreted frizzled related protein 2	4	153789082	153780590
+RBM46	RNA binding motif protein 46	4	154781271	154828812
+MARF1	meiosis regulator and mRNA stability factor 1	16	15643153	15594386
+IL12B	interleukin 12B	5	159330486	159314779
+DAZL	deleted in azoospermia like	3	16605422	16586791
+RPS6KA2	ribosomal protein S6 kinase A2	6	166862772	166409363
+RAB24	RAB24, member RAS oncogene family	5	177303718	177301197
+ASPM	assembly factor for spindle microtubules	1	197146668	197084126
+PDE3A	phosphodiesterase 3A	12	20368536	20688582
+ANG	angiogenin	14	20684176	20694185
+METTL3	methyltransferase 3, N6-adenosine-methyltransferase complex catalytic subunit	14	21511339	21498137
+WNT4	Wnt family member 4	1	22143096	22117312
+PIWIL2	piwi like RNA-mediated gene silencing 2	8	22275315	22357567
+AMH	anti-Mullerian hormone	19	2249322	2252072
+H3-3A	H3.3 histone A	1	226061830	226072018
+NPPC	natriuretic peptide C	2	231926395	231921808
+PRDM9	PR/SET domain 9	5	23507154	23528092
+FMN2	formin 2	1	240091882	240475186
+REC8	REC8 meiotic recombination protein	14	24172079	24180922
+PAQR7	progestin and adipoQ receptor family member 7	1	25875707	25861483
+TAF4B	TATA-box binding protein associated factor 4b	18	26226444	26391684
+SEBOX	SEBOX homeobox	17	28365198	28363505
+YTHDF2	YTH N6-methyladenosine RNA binding protein F2	1	28736623	28769774
+SPDYA	speedy/RINGO cell cycle regulator family member A	2	28810833	28850609
+ZFY	zinc finger protein Y-linked	Y	2935380	2982505
+FSHB	follicle stimulating hormone subunit beta	11	30231013	30235193
+ADCYAP1R1	ADCYAP receptor type I	7	31052307	31111473
+KAT8	lysine acetyltransferase 8	16	31117663	31131392
+RXFP2	relaxin family peptide receptor 2	13	31739525	31803388
+EHMT2	euchromatic histone lysine methyltransferase 2	6	31897697	31879758
+BRCA2	BRCA2 DNA repair associated	13	32315076	32400267
+ZAR1L	zygote arrest 1 like	13	32315362	32303698
+NPR2	natriuretic peptide receptor 2	9	35791590	35809730
+SOHLH2	spermatogenesis and oogenesis specific basic helix-loop-helix 2	13	36214555	36168216
+MLH1	mutL homolog 1	3	36993465	37050845
+SRC	SRC proto-oncogene, non-receptor tyrosine kinase	20	37344698	37406049
+CDC25B	cell division cycle 25B	20	3786950	3806114
+DMC1	DNA meiotic recombinase 1	22	38570182	38509146
+USP9X	ubiquitin specific peptidase 9 X-linked	X	41085444	41236578
+CTNNB1	catenin beta 1	3	41199504	41240442
+SFRP1	secreted frizzled related protein 1	8	41309472	41261961
+TOB2	transducer of ERBB2, 2	22	41446800	41433493
+HROB	homologous recombination factor with OB-fold	17	44141929	44162475
+MEIOC	meiosis specific with coiled-coil domain	17	44656467	44677086
+PABPC1L	poly(A) binding protein cytoplasmic 1 like	20	44910059	44939315
+TERB2	telomere repeat binding bouquet formation protein 2	15	44956686	44979228
+ERCC1	ERCC excision repair 1, endonuclease non-catalytic subunit	19	45451546	45407333
+MEIOSIN	meiosis initiator	19	45733438	45764540
+NANOS2	nanos C2HC-type zinc finger 2	19	45914777	45913213
+MDK	midkine	11	46380783	46383836
+ZAR1	zygote arrest 1	4	48490251	48497634
+CGB3	chorionic gonadotropin subunit beta 3	19	49024332	49022868
+CGB7	chorionic gonadotropin subunit beta 7	19	49057748	49054273
+KMT2D	lysine methyltransferase 2D	12	49060793	49018977
+FSHR	follicle stimulating hormone receptor	2	49154514	48962156
+IHO1	interactor of HORMAD1 1	3	49191308	49258105
+KASH5	KASH domain containing 5	19	49388248	49417989
+BMP15	bone morphogenetic protein 15	X	50910734	50916640
+BCL2L10	BCL2 like 10	15	52112774	52109262
+PAQR8	progestin and adipoQ receptor family member 8	6	52362150	52407776
+TUT4	terminal uridylyl transferase 4	1	52553462	52423274
+WNT5A	Wnt family member 5A	3	55505262	55465714
+MOS	MOS proto-oncogene, serine/threonine kinase	8	56113981	56112941
+SPO11	SPO11 initiator of meiotic double strand breaks	20	57329802	57343992
+MCM8	minichromosome maintenance 8 homologous recombination repair factor	20	5950651	5998976
+OOSP2	oocyte secreted protein 2	11	60040408	60048043
+C14orf39	chromosome 14 open reading frame 39	14	60515543	60435955
+LSM14B	LSM family member 14B	20	62122474	62135373
+BCL2	BCL2 apoptosis regulator	18	63320089	63123345
+MAJIN	membrane anchored junction protein	11	64972107	64938229
+MCMDC2	minichromosome maintenance domain containing 2	8	66870770	66926381
+CCNB1	cyclin B1	5	69167149	69178244
+PAQR5	progestin and adipoQ receptor family member 5	15	69298911	69407779
+FIGLA	folliculogenesis specific bHLH transcription factor	2	70790642	70777309
+DACH1	dachshund family transcription factor 1	13	71867203	71437965
+YBX2	Y-box binding protein 2	17	7294638	7288262
+REC114	REC114 meiotic recombination protein	15	73443163	73560012
+EREG	epiregulin	4	74365144	74388748
+HEXB	hexosaminidase subunit beta	5	74640022	74721287
+M1AP	meiosis 1 associated protein	2	74648329	74557882
+H3-3B	H3.3 histone B	17	75779778	75776433
+MSH4	mutS homolog 4	1	75796881	75913241
+ZP3	zona pellucida glycoprotein 3	7	76397521	76442068
+TUBB8	tubulin beta 8 class VIII	10	76620	46454
+MEI4	meiotic double-stranded break formation protein 4	6	77650273	77927044
+LHFPL2	LHFPL tetraspan subfamily member 2	5	78648771	78485229
+CBX2	chromobox 2	17	79777310	79787982
+DMRT1	doublesex and mab-3 related transcription factor 1	9	841696	969089
+DACH2	dachshund family transcription factor 2	X	86148450	86832601
+TUT7	terminal uridylyl transferase 7	9	86354409	86287732
+TRIP13	thyroid hormone receptor interactor 13	5	892883	919347
+PANX1	pannexin 1	11	94128840	94181967
+DIAPH2	diaphanous related formin 2	X	96684841	97604996
