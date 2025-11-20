@@ -1,0 +1,23 @@
+{
+  "category": "female_fertility",
+  "description": "Female fertility, oocyte and reproductive organ development",
+  "seed_terms": [
+    "GO:0001556",
+    "GO:0001890",
+    "GO:0007292",
+    "GO:0046545",
+    "GO:0048477",
+    "GO:0060065"
+  ],
+  "descendant_terms": [
+    "GO:0048477"
+  ],
+  "all_terms": [
+    "GO:0001556",
+    "GO:0001890",
+    "GO:0007292",
+    "GO:0046545",
+    "GO:0048477",
+    "GO:0060065"
+  ]
+}

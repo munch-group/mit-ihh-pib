@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Visualization using geneinfo package (professor's style)
+Visualization using geneinfo package 
 Shows high-significance SNPs with gene context
 """
 

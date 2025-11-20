@@ -45,66 +45,93 @@ print()
 #Used amigo.geneontology.org to find GO terms for each category (search terms next to GO terms)
 #Used QuickGo to verify 
 
-CORE_GO_TERMS = {
-    'fertility_sperm': {
+CORE_GO_TERMS: dict[str, dict[str, list[str] | str]] = {
+    #Reproductive cluster
+    'female_fertility': {
         'seed_terms': [
-            'GO:0097722',  # sperm motility (specific!)
-            'GO:0030317',  # flagellated sperm motility
-            'GO:0007283',  # spermatogenesis
-            'GO:0007286',  # spermatid development
+            'GO:0046545', #development of primary female sexual characteristics
+            'GO:0007292', #female gamete generation (DIAPH2)
+            'GO:0048477', #oogenesis (DIAPH2)
+            'GO:0001556', #oocyte maturation
+            'GO:0060065', #uterus development
+            'GO:0001890', #placenta development
         ],
-        'description': 'Male fertility,sperm development and motility'
+        'description': 'Female fertility, oocyte and reproductive organ development'
     },
 
-    'fertility_oocyte': {
+    'ovarian_function': {
         'seed_terms': [
-            'GO:0048599',  # oocyte development
-            'GO:0001556',  # oocyte maturation
-            'GO:0045137',  # development of primary female sexual characteristics
-            'GO:0046545', #development of primary female sexual characteristics 2
-            'GO:0007292', #female gamete generation
-            'GO:0048477', #oogenesis
+            'GO:0030716',  # oocyte fate determination
+            'GO:0046620',  # regulation of organ growth (ovary context)
+            'GO:0008585',  # female gonad development
         ],
-        'description': 'Female fertility,oocyte development'
+        'description': 'Ovarian development and function, DIAPH2 linked to POF2A'
     },
 
-    'neurodev_synapse': {
-        'seed_terms': [
-            'GO:0050808',  # synapse organization
-            'GO:0007416',  # synapse assembly
-            'GO:0097105',  # presynaptic membrane assembly
-            'GO:0007268',  # chemical synaptic transmission
+    #Neuroendocrine function 
+    'neuroendocrine_reproduction':{
+        'seed_terms':[
+            'GO:0007631', #feeding behavior (HTR2C)
+            'GO:0032098', #regulation of appetite (HTR2C)
+            'GO:0007610', #behavior(HTR2C, TRPC5) 
+            'GO:0007200', #phospholipase C-activating GPCR signaling (HTR2C)
         ],
-        'description': 'Neurodevelopment,synapse formation and function'
+        'description': 'neuroendocrine control of reproduction and energy balance'
     },
+    #Neurodevelopment
+    'synapse_assembly':{
+        'seed_terms':[
+            'GO:0098978', #glutamatergic synapse (IL1RAPL2)
+            'GO:1905606', #regulation of presynapse assembly (IL1RAPL2)
+            'GO:0007399', #nervous system development (IL1RAPL2)
+            'GO:0007417', #central nervous system development (IL1RAPL2)
+            'GO:0007268', #chemical synaptic transmission
+            'GO:0050808', #synapse organization
+        ],
+        'description':'Synaptic formation and function'
+    }, 
 
-    'neurodev_axon': {
+    'axon_dendrite_morphogenesis': {
         'seed_terms': [
+            'GO:0045773',  # positive regulation of axon extension (TRPC5)
+            'GO:0050774',  # negative regulation of dendrite morphogenesis (TRPC5)
             'GO:0007409',  # axonogenesis
-            'GO:0048812',  # neuron projection morphogenesis
-            'GO:0007411',  # axon guidance
+            'GO:0030182',  # neuron differentiation (NAP1L2, IL1RAPL2, TRPC5)
         ],
-        'description': 'Neurodevelopment,axon growth and guidance'
+        'description': 'Neuron structure and differentiation',
     },
 
-    'immunity_tcell': {
-        'seed_terms': [
-            'GO:0042110',  # T cell activation
-            'GO:0030217',  # T cell differentiation
-            'GO:0045058',  # T cell selection
+    #Calcium signaling 
+    'calcium_homeostasis':{
+        'seed_terms':[
+            'GO:0005262',  # calcium channel activity (TRPC5)
+            'GO:0051480',  # regulation of cytosolic calcium (TRPC5)
+            'GO:0070588',  # calcium ion transmembrane transport (TRPC5)
+            'GO:0015279',  # store-operated calcium channel (TRPC5)
         ],
-        'description': 'Immunity,T cell development and function'
-    },
+        'description':'Calcium channel activity and signaling'
+    }, 
 
-    'immunity_innate': {
+    #Wnt/Developmental signaling (GPC3 cluster)
+   'wnt_signaling': {
         'seed_terms': [
-            'GO:0045087',  # innate immune response
-            'GO:0002218',  # activation of innate immune response
-            'GO:0002758',  # innate immune response-activating signaling pathway
+            'GO:0090263',  # positive regulation of canonical Wnt (GPC3)
+            'GO:0060828',  # regulation of canonical Wnt pathway (GPC3)
+            'GO:0001822',  # kidney development (GPC3)
+            'GO:0072111',  # cell proliferation involved in kidney development (GPC3)
         ],
-        'description': 'Immunity,innate immune responses'
-    }
-}
+        'description': 'Wnt signaling and organogenesis'
+    },
+    #Immunity 
+    'neuroimmune_crosstalk':{
+        'seed_terms':[
+            'GO:0019221', # cytokine-mediated signaling pathway (IL1RAPL2)
+            'GO:0002758', #innate immune response-activating signaling 
+            'GO:0007165', #signal transduction (IL1RAPL2)
+        ], 
+        'description':'Immune signaling (neuro-immune)'
+    },
+}   
 
 
 #==============================================================================
@@ -269,11 +296,11 @@ def build_subtree_from_seeds(seed_terms: List[str],
 
 def get_genes_for_subtree(go_terms: Set[str]) -> Tuple[pd.DataFrame, List[str]]:
     """
-    Get all genes annotated to any GO term in a subtree
+    Get all genes annotated to any GO term in a subtree, filtered for X chromosome only
     Args:
         go_terms: Set of GO term IDs
     Returns:
-        Tuple of (DataFrame with all annotations, list of unique gene symbols)
+        Tuple of (DataFrame with all annotations for X chromosome genes, list of unique gene symbols)
     """
     if not go_terms:
         return pd.DataFrame(), []
@@ -282,15 +309,23 @@ def get_genes_for_subtree(go_terms: Set[str]) -> Tuple[pd.DataFrame, List[str]]:
         # Convert set to list for geneinfo
         terms_list = list(go_terms)
 
-        # Get genes
+        # Get genes for GO terms
         genes_df = go.get_genes_for_go_terms(terms_list)
 
-        # Extract unique gene symbols
-        unique_genes = genes_df['symbol'].unique().tolist() if not genes_df.empty else []
+        # Get X chromosome gene symbols from gene annotation table
+        gene_table = go.gene_annotation_table()
+        x_gene_symbols = set(gene_table[gene_table['chromosome'] == 'X']['Symbol'].tolist())
+
+        # Filter genes to only those on X chromosome
+        if not genes_df.empty:
+            genes_df = genes_df[genes_df['symbol'].isin(x_gene_symbols)]
+            unique_genes = genes_df['symbol'].unique().tolist()
+        else:
+            unique_genes = []
 
         return genes_df, unique_genes
 
-    except Exception as e: #thx claude 
+    except Exception as e: #thx claude
         print(f"Warning: Error getting genes: {e}")
         return pd.DataFrame(), []
 

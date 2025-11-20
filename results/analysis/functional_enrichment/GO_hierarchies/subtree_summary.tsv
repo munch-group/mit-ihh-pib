@@ -1,7 +1,9 @@
 category	n_seed_terms	n_descendant_terms	n_total_terms	n_unique_genes	genes_per_term
-fertility_sperm	4	2	5	705	141.0
-fertility_oocyte	6	3	7	112	16.0
-neurodev_synapse	4	39	42	531	12.642857142857142
-neurodev_axon	3	65	67	459	6.850746268656716
-immunity_tcell	3	75	77	326	4.233766233766234
-immunity_innate	3	72	74	800	10.81081081081081
+female_fertility	6	1	6	8	1.3333333333333333
+ovarian_function	3	16	19	4	0.21052631578947367
+neuroendocrine_reproduction	4	154	157	24	0.15286624203821655
+synapse_assembly	6	46	52	61	1.1730769230769231
+axon_dendrite_morphogenesis	4	106	110	24	0.21818181818181817
+calcium_homeostasis	4	55	58	8	0.13793103448275862
+wnt_signaling	4	26	29	12	0.41379310344827586
+neuroimmune_crosstalk	3	584	585	160	0.27350427350427353

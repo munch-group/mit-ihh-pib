@@ -1,0 +1,62 @@
+symbol	name	chrom	start	end
+SRPX2	sushi repeat containing protein X-linked 2	X	100644198	100675787
+DRP2	dystrophin related protein 2	X	101219785	101264501
+TIMM8A	translocase of inner mitochondrial membrane 8A	X	101348741	101345660
+BEX1	brain expressed X-linked 1	X	103064170	103062650
+PLP1	proteolipid protein 1	X	103776505	103792618
+IL1RAPL2	interleukin 1 receptor accessory protein like 2	X	104566198	105767828
+PRPS1	phosphoribosyl pyrophosphate synthetase 1	X	107628509	107651025
+COL4A5	collagen type IV alpha 5 chain	X	108439837	108697544
+CHRDL1	chordin like 1	X	110795816	110673855
+PAK3	p21 (RAC1) activated kinase 3	X	110944396	111227360
+DCX	doublecortin	X	111412191	111293778
+TRPC5	transient receptor potential cation channel subfamily C member 5	X	112082775	111768010
+AMOT	angiomotin	X	112840830	112774876
+HTR2C	5-hydroxytryptamine receptor 2C	X	114584085	114910060
+PGRMC1	progesterone receptor membrane component 1	X	119236284	119244465
+GRIA3	glutamate ionotropic receptor AMPA type subunit 3	X	123184277	123490914
+TENM1	teneurin transmembrane protein 1	X	125204311	124375902
+FRMD7	FERM domain containing 7	X	132128019	132076989
+GPC4	glypican 4	X	133415488	133300102
+ZIC3	Zic family zinc finger 3	X	137566126	137577690
+FGF13	fibroblast growth factor 13	X	139205022	138614726
+GPM6B	glycoprotein M6B	X	13938637	13770938
+SOX3	SRY-box transcription factor 3	X	140505068	140502984
+SLITRK4	SLIT and NTRK like family member 4	X	143636100	143622789
+SLITRK2	SLIT and NTRK like family member 2	X	145817828	145829855
+FMR1	fragile X messenger ribonucleoprotein 1	X	147911918	147951124
+GABRE	gamma-aminobutyric acid type A receptor subunit epsilon	X	151974675	151953123
+GABRA3	gamma-aminobutyric acid type A receptor subunit alpha3	X	152451314	152166233
+GABRQ	gamma-aminobutyric acid type A receptor subunit theta	X	152637894	152658964
+ATP2B3	ATPase plasma membrane Ca2+ transporting 3	X	153517641	153582928
+PLXNB3	plexin B3	X	153764248	153779340
+L1CAM	L1 cell adhesion molecule	X	153886172	153861513
+ARHGAP4	Rho GTPase activating protein 4	X	153926263	153907377
+MECP2	methyl-CpG binding protein 2	X	154097716	154021572
+FLNA	filamin A	X	154374633	154348530
+PLXNA3	plexin A3	X	154458280	154477778
+RAB39B	RAB39B, member RAS oncogene family	X	155264490	155258234
+CDKL5	cyclin dependent kinase like 5	X	18425607	18653628
+SH3KBP1	SH3 domain containing kinase binding protein 1	X	19887599	19533976
+RPS6KA3	ribosomal protein S6 kinase A3	X	20267096	20149910
+CNKSR2	connector enhancer of kinase suppressor of Ras 2	X	21374417	21654688
+PTCHD1	patched domain containing 1	X	23334395	23404373
+ARX	aristaless related homeobox	X	25015964	25003693
+IL1RAPL1	interleukin 1 receptor accessory protein like 1	X	28587445	29956717
+NDP	norrin cystine knot growth factor NDP	X	43973389	43948775
+SYN1	synapsin I	X	47619856	47571900
+PORCN	porcupine O-acyltransferase	X	48508991	48520813
+GRIPAP1	GRIP1 associated protein 1	X	49002263	48973722
+PRAF2	PRA1 domain family member 2	X	49074001	49071160
+SHROOM4	shroom family member 4	X	50814193	50575533
+NLGN4X	neuroligin 4 X-linked	X	6228866	5890041
+ZC4H2	zinc finger C4H2-type containing	X	65034740	64915806
+OPHN1	oligophrenin 1	X	68433840	68042343
+EFNB1	ephrin B1	X	68829020	68842159
+DLG3	discs large MAGUK scaffold protein 3	X	70444834	70505489
+NLGN3	neuroligin 3	X	71144840	71175306
+GJB1	gap junction protein beta 1	X	71215238	71225515
+OGT	O-linked N-acetylglucosamine (GlcNAc) transferase	X	71533103	71575891
+NEXMIF	neurite extension and migration factor	X	74925451	74732855
+COX7B	cytochrome c oxidase subunit 7B	X	77899467	77907375
+RPS6KA6	ribosomal protein S6 kinase A6	X	84188498	84058345

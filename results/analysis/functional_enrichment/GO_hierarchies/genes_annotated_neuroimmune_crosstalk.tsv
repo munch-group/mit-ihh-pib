@@ -1,0 +1,161 @@
+symbol	name	chrom	start	end
+WWC3	WWC family member 3	X	10015253	10144473
+NOX1	NADPH oxidase 1	X	100874358	100843323
+BTK	Bruton tyrosine kinase	X	101390795	101349449
+BEX5	brain expressed X-linked 5	X	102155976	102153711
+RAB40AL	RAB40A like	X	102937271	102938299
+BEX1	brain expressed X-linked 1	X	103064170	103062650
+BEX2	brain expressed X-linked 2	X	103310989	103309345
+BEX3	brain expressed X-linked 3	X	103376322	103378163
+RAB40A	RAB40A, member RAS oncogene family	X	103519488	103493265
+RAB9B	RAB9B, member RAS oncogene family	X	103832256	103776323
+IL1RAPL2	interleukin 1 receptor accessory protein like 2	X	104566198	105767828
+COL4A6	collagen type IV alpha 6 chain	X	108439457	108155613
+COL4A5	collagen type IV alpha 5 chain	X	108439837	108697544
+IRS4	insulin receptor substrate 4	X	108736562	108719945
+GUCY2F	guanylate cyclase 2F, retinal	X	109482085	109372905
+GNG5B	G protein subunit gamma 5B	X	110346972	110346453
+CRIPTO3	cripto, EGF-CFC family member 3	X	110520895	110523020
+CHRDL1	chordin like 1	X	110795816	110673855
+PAK3	p21 (RAC1) activated kinase 3	X	110944396	111227360
+DCX	doublecortin	X	111412191	111293778
+AMOT	angiomotin	X	112840830	112774876
+AMELX	amelogenin X-linked	X	11293412	11309587
+HTR2C	5-hydroxytryptamine receptor 2C	X	114584085	114910060
+IL13RA2	interleukin 13 receptor subunit alpha 2	X	115017615	115003981
+AGTR2	angiotensin II receptor type 2	X	116170743	116174973
+ARHGAP6	Rho GTPase activating protein 6	X	11665919	11137543
+DOCK11	dedicator of cytokinesis 11	X	118495814	118686146
+IL13RA1	interleukin 13 receptor subunit alpha 1	X	118727605	118805227
+STEEP1	STING1 ER exit protein 1	X	119565408	119538148
+NKAP	NFKB activating protein	X	119943750	119920671
+RHOXF1	Rhox homeobox family member 1	X	120120437	120109050
+ZBTB33	zinc finger and BTB domain containing 33	X	120250811	120258397
+GRIA3	glutamate ionotropic receptor AMPA type subunit 3	X	123184277	123490914
+XIAP	X-linked inhibitor of apoptosis	X	123859707	123913971
+TENM1	teneurin transmembrane protein 1	X	125204311	124375902
+TLR7	toll like receptor 7	X	12867071	12890360
+TLR8	toll like receptor 8	X	12906619	12923168
+OCRL	OCRL inositol polyphosphate-5-phosphatase	X	129540258	129592555
+APLN	apelin	X	129654955	129645258
+TMSB4X	thymosin beta 4 X-linked	X	12975109	12977222
+ZDHHC9	zDHHC palmitoyltransferase 9	X	129843885	129803287
+RAB33A	RAB33A, member RAS oncogene family	X	130110622	130184869
+AIFM1	apoptosis inducing factor mitochondria associated 1	X	130165840	130129361
+GPR119	G protein-coupled receptor 119	X	130385673	130379448
+ARHGAP36	Rho GTPase activating protein 36	X	131058345	131089884
+IGSF1	immunoglobulin superfamily member 1	X	131289456	131273505
+OR13H1	olfactory receptor family 13 subfamily H member 1	X	131544073	131544999
+STK26	serine/threonine kinase 26	X	132023301	132075942
+RAP2C	RAP2C, member of RAS oncogene family	X	132219446	132203024
+GPC4	glypican 4	X	133415488	133300102
+GPC3	glypican 3	X	133985593	133535744
+ADGRG4	adhesion G protein-coupled receptor G4	X	136300962	136416889
+BRS3	bombesin receptor subtype 3	X	136487946	136493779
+CD40LG	CD40 ligand	X	136648157	136660389
+ARHGEF6	Rac/Cdc42 guanine nucleotide exchange factor 6	X	136780931	136665549
+RAB9A	RAB9A, member RAS oncogene family	X	13689127	13710503
+GPR101	G protein-coupled receptor 101	X	137033994	137023928
+ZIC3	Zic family zinc finger 3	X	137566126	137577690
+FGF13	fibroblast growth factor 13	X	139205022	138614726
+MCF2	MCF.2 cell line derived transforming sequence	X	139708166	139581769
+SLITRK4	SLIT and NTRK like family member 4	X	143636100	143622789
+GLRA2	glycine receptor alpha 2	X	14448778	14731811
+FMR1	fragile X messenger ribonucleoprotein 1	X	147911918	147951124
+MTM1	myotubularin 1	X	150562652	150673142
+GPR50	G protein-coupled receptor 50	X	151176583	151182855
+GABRQ	gamma-aminobutyric acid type A receptor subunit theta	X	152637894	152658964
+ASB9	ankyrin repeat and SOCS box containing 9	X	15270466	15243986
+MAGEA2B	MAGE family member A2B	X	152714585	152718606
+MAGEA2	MAGE family member A2	X	152753883	152749862
+NSDHL	NAD(P) dependent 3-beta-hydroxysteroid dehydrogenase NSDHL	X	152831062	152869728
+ASB11	ankyrin repeat and SOCS box containing 11	X	15315639	15281696
+DUSP9	dual specificity phosphatase 9	X	153642440	153651325
+PNCK	pregnancy up-regulated nonubiquitous CaM kinase	X	153687770	153669732
+PLXNB3	plexin B3	X	153764248	153779340
+SRPK3	SRSF protein kinase 3	X	153781040	153785729
+VEGFD	vascular endothelial growth factor D	X	15384412	15345595
+AVPR2	arginine vasopressin receptor 2	X	153902624	153907165
+ARHGAP4	Rho GTPase activating protein 4	X	153926263	153907377
+IRAK1	interleukin 1 receptor associated kinase 1	X	154019901	154010506
+MECP2	methyl-CpG binding protein 2	X	154097716	154021572
+OPN1LW	opsin 1, long wave sensitive	X	154144242	154159031
+OPN1MW	opsin 1, medium wave sensitive	X	154182595	154196860
+OPN1MW2	opsin 1, medium wave sensitive 2	X	154219755	154233285
+OPN1MW3	opsin 1, medium wave sensitive 3	X	154257581	154271089
+FLNA	filamin A	X	154374633	154348530
+GDI1	GDP dissociation inhibitor 1	X	154437153	154443466
+PLXNA3	plexin A3	X	154458280	154477778
+IKBKG	inhibitor of nuclear factor kappa B kinase regulatory subunit gamma	X	154541237	154565045
+GAB3	GRB2 associated binding protein 3	X	154751565	154675248
+MPP1	MAGUK p55 scaffold protein 1	X	154805484	154778683
+BMX	BMX non-receptor tyrosine kinase	X	15500806	15556518
+MTCP1	mature T cell proliferation 1	X	155071135	155064033
+BRCC3	BRCA1/BRCA2-containing complex subunit 3	X	155071507	155123076
+RAB39B	RAB39B, member RAS oncogene family	X	155264490	155258234
+CLIC2	chloride intracellular channel 2	X	155334613	155276210
+GRPR	gastrin releasing peptide receptor	X	16123564	16153517
+SYAP1	synapse associated protein 1	X	16719611	16765339
+REPS2	RALBP1 associated Eps domain containing 2	X	16946657	17196654
+ADGRG2	adhesion G protein-coupled receptor G2	X	19122955	18989306
+MAP3K15	mitogen-activated protein kinase kinase kinase 15	X	19515507	19360058
+RPS6KA3	ribosomal protein S6 kinase A3	X	20267096	20149910
+CNKSR2	connector enhancer of kinase suppressor of Ras 2	X	21374417	21654688
+MBTPS2	membrane bound transcription factor peptidase, site 2	X	21839616	21885422
+PTCHD1	patched domain containing 1	X	23334395	23404373
+PDK3	pyruvate dehydrogenase kinase 3	X	24465285	24550465
+IL1RAPL1	interleukin 1 receptor accessory protein like 1	X	28587445	29956717
+TAB3	TGF-beta activated kinase 1 (MAP3K7) binding protein 3	X	30889253	30827441
+DMD	dystrophin	X	33339387	31119221
+PRKX	protein kinase cAMP-dependent X-linked catalytic subunit	X	3713648	3604339
+CYBB	cytochrome b-245 beta chain	X	37780058	37813460
+USP9X	ubiquitin specific peptidase 9 X-linked	X	41085444	41236578
+DDX3X	DEAD-box helicase 3 X-linked	X	41333307	41364471
+GPR34	G protein-coupled receptor 34	X	41688972	41697274
+GPR82	G protein-coupled receptor 82	X	41724180	41730129
+PPP1R2C	PPP1R2 family member C	X	42778162	42777365
+NDP	norrin cystine knot growth factor NDP	X	43973389	43948775
+ARAF	A-Raf proto-oncogene, serine/threonine kinase	X	47561204	47571907
+TIMP1	TIMP metallopeptidase inhibitor 1	X	47582435	47586788
+PORCN	porcupine O-acyltransferase	X	48508991	48520813
+WAS	WASP actin nucleation promoting factor	X	48676635	48691426
+HDAC6	histone deacetylase 6	X	48801397	48824981
+ERAS	ES cell expressed Ras	X	48826512	48829868
+PCSK1N	proprotein convertase subtilisin/kexin type 1 inhibitor	X	48835609	48831095
+PLP2	proteolipid protein 2	X	49171897	49175234
+FOXP3	forkhead box P3	X	49264709	49250437
+PAGE4	PAGE family member 4	X	49829259	49834263
+AKAP4	A-kinase anchoring protein 4	X	50201006	50190776
+DGKK	diacylglycerol kinase kappa	X	50470824	50365408
+BMP15	bone morphogenetic protein 15	X	50910734	50916640
+GPR173	G protein-coupled receptor 173	X	53048788	53080614
+HUWE1	HECT, UBA and WWE domain containing E3 ubiquitin protein ligase 1	X	53686718	53532095
+WNK3	WNK lysine deficient protein kinase 3	X	54358899	54192822
+FGD1	FYVE, RhoGEF and PH domain containing 1	X	54496233	54445453
+AMER1	APC membrane recruitment protein 1	X	64205707	64185116
+EDA2R	ectodysplasin A2 receptor	X	66639268	66595636
+AR	androgen receptor	X	67544020	67730618
+OPHN1	oligophrenin 1	X	68433840	68042343
+STARD8	StAR related lipid transfer domain containing 8	X	68647665	68725835
+EFNB1	ephrin B1	X	68829020	68842159
+EDA	ectodysplasin A	X	69616112	70039471
+IGBP1	immunoglobulin binding protein 1	X	70133446	70166323
+P2RY4	pyrimidinergic receptor P2Y4	X	70260203	70258165
+ARR3	arrestin 3	X	70268333	70281882
+FOXO4	forkhead box O4	X	71095850	71103531
+IL2RG	interleukin 2 receptor subunit gamma	X	71111576	71107403
+MED12	mediator complex subunit 12	X	71118595	71142449
+ITGB1BP2	integrin subunit beta 1 binding protein 2	X	71301749	71305370
+OGT	O-linked N-acetylglucosamine (GlcNAc) transferase	X	71533103	71575891
+CXCR3	C-X-C motif chemokine receptor 3	X	71618510	71615918
+CITED1	Cbp/p300 interacting transactivator with Glu/Asp rich carboxy-terminal domain 1	X	72307156	72301645
+FGF16	fibroblast growth factor 16	X	77447388	77457277
+ATRX	ATRX chromatin remodeler	X	77786215	77504879
+CYSLTR1	cysteinyl leukotriene receptor 1	X	78327610	78271467
+LPAR4	lysophosphatidic acid receptor 4	X	78747719	78758713
+P2RY10	P2Y receptor family member 10	X	78945390	78963726
+GPR174	G protein-coupled receptor 174	X	79144687	79175317
+RPS6KA6	ribosomal protein S6 kinase A6	X	84188498	84058345
+CHM	CHM Rab escort protein	X	86047557	85861179
+RPA4	replication protein A4	X	96883907	96885466
+GPR143	G protein-coupled receptor 143	X	9778601	9725345
