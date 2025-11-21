@@ -1,0 +1,2 @@
+n_ihs_candidates	n_relate_signals	n_relate_positions	n_populations	n_overlaps	n_unique_ihs_with_relate	n_unique_relate_with_ihs	pct_ihs_with_relate	pct_relate_with_ihs	n_ihs_only	n_relate_only	correlation_ihs_relate
+20507	1629	638	25	11	5	4	0.0243819183693373	0.6269592476489028	20502	1625	0.05397779700184316

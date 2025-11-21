@@ -49,12 +49,11 @@ CORE_GO_TERMS: dict[str, dict[str, list[str] | str]] = {
     #Reproductive cluster
     'female_fertility': {
         'seed_terms': [
-            'GO:0046545', #development of primary female sexual characteristics
+            'GO:0046545', #development of primary female sexual characteristics (DACH2)
             'GO:0007292', #female gamete generation (DIAPH2)
             'GO:0048477', #oogenesis (DIAPH2)
             'GO:0001556', #oocyte maturation
             'GO:0060065', #uterus development
-            'GO:0001890', #placenta development
         ],
         'description': 'Female fertility, oocyte and reproductive organ development'
     },
@@ -73,7 +72,7 @@ CORE_GO_TERMS: dict[str, dict[str, list[str] | str]] = {
         'seed_terms':[
             'GO:0007631', #feeding behavior (HTR2C)
             'GO:0032098', #regulation of appetite (HTR2C)
-            'GO:0007610', #behavior(HTR2C, TRPC5) 
+            #'GO:0007610', #behavior(HTR2C, TRPC5) 
             'GO:0007200', #phospholipase C-activating GPCR signaling (HTR2C)
         ],
         'description': 'neuroendocrine control of reproduction and energy balance'

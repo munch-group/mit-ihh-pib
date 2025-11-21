@@ -1,0 +1,2 @@
+namespace	term_id	e/p	pval_uncorr	p_fdr_bh	ratio	bg_ratio	obj	study_genes	category	priority
+MF	GO:0004930	e	7.001069124026201e-05	0.0025203848846494328	0.29411764705882354	0.029342723004694836	<GO:0004930>	['OPN1MW', 'HTR2C', 'OPN1LW', 'OPN1MW2', 'OPN1MW3']	neuroimmune_crosstalk	2

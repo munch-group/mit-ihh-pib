@@ -1,0 +1,6 @@
+category	description	n_category_genes_x	n_overlap	overlap_genes	odds_ratio	p_value	fdr	significant
+calcium_homeostasis	Calcium signaling and homeostasis	21	2	HTR2C, TRPC5	7.84688995215311	0.03833789820400919	0.19168949102004593	False
+female_fertility	Female fertility and reproduction	7	1	DIAPH2	11.569444444444445	0.10238552799967875	0.2137674100371343	False
+synapse_assembly	Synaptic structure and function	84	3	HTR2C, IL1RAPL2, TRPC5	2.8074074074074074	0.12826044602228057	0.2137674100371343	False
+neuroimmune_crosstalk	Neuroimmune crosstalk	46	1	IL1RAPL2	1.4703703703703703	0.5165533240929946	0.6456916551162432	False
+chromatin_regulation	Chromatin remodeling	159	2	KDM6A, NAP1L2	0.7898089171974523	0.7305588272935206	0.7305588272935206	False

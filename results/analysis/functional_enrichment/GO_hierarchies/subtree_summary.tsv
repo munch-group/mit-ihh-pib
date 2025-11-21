@@ -1,5 +1,5 @@
 category	n_seed_terms	n_descendant_terms	n_total_terms	n_unique_genes	genes_per_term
-female_fertility	6	1	6	8	1.3333333333333333
+female_fertility	5	1	5	4	0.8
 ovarian_function	3	16	19	4	0.21052631578947367
 neuroendocrine_reproduction	4	154	157	24	0.15286624203821655
 synapse_assembly	6	46	52	61	1.1730769230769231
