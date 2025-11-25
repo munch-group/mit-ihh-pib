@@ -24,8 +24,8 @@ import sys
 
 # Input/output paths
 PROJECT_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
-GENE_LIST_FILE = PROJECT_DIR / 'results/analysis/high_significance_genes/high_confidence_X_genes.txt'
-OUTPUT_DIR = PROJECT_DIR / 'results/analysis/high_significance_genes'
+GENE_LIST_FILE = PROJECT_DIR / 'results/ihs_fixed_par1/analysis/high_significance_genes/high_confidence_X_genes.txt'
+OUTPUT_DIR = PROJECT_DIR / 'results/ihs_fixed_par1/analysis/high_significance_genes'
 OUTPUT_FILE = OUTPUT_DIR / 'gene_details_complete.tsv'
 
 # Genome assembly

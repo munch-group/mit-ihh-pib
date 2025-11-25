@@ -18,7 +18,7 @@ plt.rcParams['savefig.dpi'] = 300
 
 def load_snp_data():
     """Load SNP data"""
-    snp_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/high_significance_genes/snp_to_nearest_gene_only.tsv'
+    snp_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/snp_to_nearest_gene_only.tsv'
     df = pd.read_csv(snp_file, sep='\t')
 
     # Use 'pos' column for position (snp_location is the variant ID)
@@ -102,7 +102,7 @@ def create_full_chromosome_view():
     
     plt.tight_layout()
     
-    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/high_significance_genes/figures/geneinfo_full_chromosome.png'
+    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/geneinfo_full_chromosome.png'
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"✓ Saved full chromosome view: {output_path}")
     plt.close()
@@ -197,32 +197,19 @@ def create_regional_views():
         sns.despine(ax=ax)
         plt.tight_layout()
         
-        output_path = f'/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/high_significance_genes/figures/geneinfo_{region["name"]}.png'
+        output_path = f'/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/geneinfo_{region["name"]}.png'
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
         print(f"  ✓ Saved: {output_path}")
         plt.close()
 
 def create_simple_manhattan():
     """
-    Simple Manhattan plot without gene context - cleaner for overview
+    Simple Manhattan plot without chromosome bar - clean version with gene annotations
     """
-    from geneinfo.plot import ChromIdeogram
-
     df = load_snp_data()
 
-    # Temporarily reduce DPI to avoid huge figure with ChromIdeogram
-    original_dpi = plt.rcParams['figure.dpi']
-    plt.rcParams['figure.dpi'] = 100
-
-    # Create ChromIdeogram and draw chromosome
-    g = ChromIdeogram('chrX', assembly='hg38')
-    g.draw_chromosomes(base=9, height=0.5, facecolor='lightgray')
-
-    # Add axis for the Manhattan plot
-    ax = g.add_axes(1, height_ratio=0.85)
-
-    # Restore original DPI
-    plt.rcParams['figure.dpi'] = original_dpi
+    # Create regular matplotlib figure (no ChromIdeogram)
+    fig, ax = plt.subplots(figsize=(16, 8))
 
     # Color by significance
     colors = plt.cm.Reds(plt.Normalize(
@@ -230,7 +217,7 @@ def create_simple_manhattan():
         vmax=df['neg_log_p'].max()
     )(df['neg_log_p']))
 
-    # Main scatter
+    # Main scatter - plot all SNPs
     scatter = ax.scatter(
         df['snp_pos'] / 1e6,  # Convert to Mb
         df['neg_log_p'],
@@ -240,20 +227,18 @@ def create_simple_manhattan():
         edgecolors='black',
         linewidths=0.5
     )
-    
+
     # Threshold line
-    ax.axhline(y=6, color='red', linestyle='--', linewidth=1.5, alpha=0.5, 
+    ax.axhline(y=6, color='red', linestyle='--', linewidth=1.5, alpha=0.5,
                label='Threshold: p = 10⁻⁶')
-    
+
     # Centromere region
     ax.axvspan(58.1, 63.8, alpha=0.1, color='gray', label='Centromere')
-    
-    # Label top 43 SNPs, but group by gene to avoid duplicate labels
-    top43 = df.nlargest(43, 'neg_log_p')
 
-    # Group SNPs by gene
+    # Annotate ALL SNPs with their gene names
+    # Group SNPs by gene to avoid duplicate labels
     gene_groups = {}
-    for _, row in top43.iterrows():
+    for _, row in df.iterrows():
         gene = row['nearest_gene']
         if gene not in gene_groups:
             gene_groups[gene] = []
@@ -265,39 +250,42 @@ def create_simple_manhattan():
         # Use the most significant SNP's position for the label placement
         most_sig_snp = max(snps, key=lambda x: x['neg_log_p'])
 
-        # Create text label
+        # Create text label with smaller font for clarity
         text = ax.text(
             most_sig_snp['snp_pos']/1e6,
             most_sig_snp['neg_log_p'],
             gene,
-            fontsize=9,
-            weight='bold',
-            bbox=dict(boxstyle='round,pad=0.5', facecolor='white',
-                     edgecolor='black', linewidth=0.5, alpha=0.9),
+            fontsize=7,
+            weight='bold' if most_sig_snp['neg_log_p'] > 7 else 'normal',
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='white',
+                     edgecolor='red' if most_sig_snp['neg_log_p'] > 7 else 'black',
+                     linewidth=0.8 if most_sig_snp['neg_log_p'] > 7 else 0.4,
+                     alpha=0.9),
             zorder=3
         )
         texts.append(text)
 
     # Use adjustText to prevent label overlap
+    print(f"Adjusting {len(texts)} gene labels...")
     adjust_text(
         texts,
         arrowprops=dict(
             arrowstyle='-',
             color='black',
-            lw=0.5,
-            alpha=0.7,
-            shrinkA=0,  # Don't shrink arrow at annotation point
-            shrinkB=5   # Shrink arrow at text box to avoid overlap
+            lw=0.4,
+            alpha=0.6,
+            shrinkA=0,
+            shrinkB=3
         ),
-        expand_points=(2.0, 2.5),  # More space around data points
-        expand_text=(1.5, 1.8),    # More space around text boxes
-        force_points=(0.8, 0.8),   # Stronger force to avoid points
-        force_text=(1.0, 1.0),     # Stronger force to avoid text overlap
-        min_arrow_len=15,          # Minimum arrow length to ensure visibility
-        only_move={'points': 'xy', 'text': 'xy'},  # Allow text to move in all directions
-        avoid_self=True,           # Avoid overlapping with own arrow
+        expand_points=(1.5, 2.0),
+        expand_text=(1.2, 1.5),
+        force_points=(0.5, 0.6),
+        force_text=(0.8, 0.9),
+        min_arrow_len=10,
+        only_move={'points': 'xy', 'text': 'xy'},
+        avoid_self=True,
         ax=ax,
-        time_lim=2.0               # Allow even more time for optimization
+        time_lim=3.0
     )
 
     # Add additional arrows for genes with multiple SNPs
@@ -305,26 +293,26 @@ def create_simple_manhattan():
         if len(snps) > 1:
             most_sig_snp = max(snps, key=lambda x: x['neg_log_p'])
             for snp in snps:
-                if snp['snp_pos'] != most_sig_snp['snp_pos']:  # Skip the one we already labeled
+                if snp['snp_pos'] != most_sig_snp['snp_pos']:
                     ax.annotate(
-                        '',  # Empty string - just an arrow, no text
+                        '',
                         xy=(snp['snp_pos']/1e6, snp['neg_log_p']),
                         xytext=(most_sig_snp['snp_pos']/1e6, most_sig_snp['neg_log_p']),
                         textcoords='data',
                         arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0.2',
-                                      color='gray', lw=0.5, alpha=0.5)
+                                      color='gray', lw=0.4, alpha=0.4)
                     )
-    
+
     ax.set_xlabel('Position on X Chromosome (Mb)', fontsize=12, weight='bold')
     ax.set_ylabel('-log₁₀(p-value)', fontsize=12, weight='bold')
     ax.set_title(
         f'Distribution of {len(df)} High-Significance SNPs on X Chromosome\n'
-        f'({len(gene_groups)} unique genes labeled from top 43 SNPs)',
+        f'All {len(gene_groups)} unique genes labeled',
         fontsize=13,
         weight='bold',
         pad=15
     )
-    
+
     ax.set_xlim(0, 156)
     ax.set_ylim(5.8, df['neg_log_p'].max() + 0.5)
 
@@ -339,11 +327,11 @@ def create_simple_manhattan():
     sm.set_array([])
     cbar = plt.colorbar(sm, ax=ax, pad=0.02, aspect=30, shrink=0.8)
     cbar.set_label('-log₁₀(p-value)', rotation=270, labelpad=20, weight='bold', fontsize=10)
-    
+
     sns.despine(ax=ax)
     plt.tight_layout()
-    
-    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/high_significance_genes/figures/simple_manhattan_clean.png'
+
+    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/simple_manhattan_clean.png'
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"✓ Saved simple Manhattan: {output_path}")
     plt.close()
@@ -356,7 +344,7 @@ def main():
     
     # Create output directory
     import os
-    output_dir = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/high_significance_genes/figures'
+    output_dir = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures'
     os.makedirs(output_dir, exist_ok=True)
     
     print("1. Creating simple clean Manhattan plot...")

@@ -23,8 +23,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-ihs_dir = base_dir / "results/ihs"
-output_dir = base_dir / "results/analysis"
+ihs_dir = base_dir / "results/ihs_fixed_par1"
+output_dir = base_dir / "results/ihs_fixed_par1/analysis/candidates"
 
 # Create output directories
 (output_dir / "candidates/per_chromosome").mkdir(parents=True, exist_ok=True)

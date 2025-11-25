@@ -29,8 +29,8 @@ from collections import defaultdict
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
 data_dir = base_dir / "data/annotations"
-regions_dir = base_dir / "results/analysis/regions"
-output_dir = base_dir / "results/analysis/gene_annotation"
+regions_dir = base_dir / "results/ihs_fixed_par1/analysis/regions"
+output_dir = base_dir / "results/ihs_fixed_par1/analysis/gene_annotation"
 
 # Create directories
 data_dir.mkdir(parents=True, exist_ok=True)

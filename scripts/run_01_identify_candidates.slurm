@@ -19,7 +19,7 @@ echo "Start time: $(date)"
 echo ""
 
 # Run the Python analysis script using pixi environment
-pixi run python scripts/01_identify_ihs_candidates.py
+pixi run python scripts/ThisWorks/01_identify_ihs_candidates.py
 
 echo ""
 echo "=========================================="
