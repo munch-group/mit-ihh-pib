@@ -10,13 +10,13 @@
 set -euo pipefail
 
 REPO_ROOT="/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib"
-DATA_HAPBIN_DIR="/faststorage/project/mit-ihh-pib/data/grch38/hapbin"
+DATA_HAPBIN_DIR="/faststorage/project/mit-ihh-pib/data/grch38/hapbin_with_dummy"
 
 cd "$REPO_ROOT"
 
 CHR="X"
 
-OUT_DIR="$REPO_ROOT/results/ihs_fixed_par1"
+OUT_DIR="$REPO_ROOT/results/ihs_with_dummy"
 mkdir -p "$OUT_DIR" "$REPO_ROOT/logs"
 
 HAP="$DATA_HAPBIN_DIR/chr${CHR}.hapbin.hap"
@@ -72,7 +72,7 @@ fi
 echo "Running iHS for chr${CHR}..."
 echo ""
 
-pixi run ihsbin --hap "$HAP" --map "$MAP" --out "$OUT"
+#pixi run ihsbin --hap "$HAP" --map "$MAP" --out "$OUT"
 
 echo ""
 echo "=========================================="

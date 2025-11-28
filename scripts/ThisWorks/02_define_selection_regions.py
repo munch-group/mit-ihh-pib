@@ -27,8 +27,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-candidates_dir = base_dir / "results/ihs_fixed_par1/analysis/candidates/candidates"
-regions_dir = base_dir / "results/ihs_fixed_par1/analysis/regions"
+candidates_dir = base_dir / "results/ihs_with_dummy/analysis/candidates/candidates"
+regions_dir = base_dir / "results/ihs_with_dummy/analysis/regions"
 regions_dir.mkdir(parents=True, exist_ok=True)
 
 print("=" * 70)

@@ -23,8 +23,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-ihs_dir = base_dir / "results/ihs_fixed_par1"
-output_dir = base_dir / "results/ihs_fixed_par1/analysis/candidates"
+ihs_dir = base_dir / "results/ihs_with_dummy"
+output_dir = base_dir / "results/ihs_with_dummy/analysis/candidates"
 
 # Create output directories
 (output_dir / "candidates/per_chromosome").mkdir(parents=True, exist_ok=True)
@@ -61,7 +61,7 @@ chr_stats_list = []
 all_candidates = {}
 
 for chr_name in chroms:
-    file = ihs_dir / f"ALL.chr{chr_name}.ihs.tsv"
+    file = ihs_dir / f"ALL.chr{chr_name}.ihs_reformatted.tsv"
 
     if not file.exists():
         print(f"  WARNING: Missing file for chr{chr_name}")

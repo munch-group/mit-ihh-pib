@@ -11,8 +11,8 @@ from scipy import stats
 import sys
 
 # File paths
-file1 = "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/candidates/candidates/high_significance_snps.tsv"
-file2 = "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/analysis/candidates/chrX_high_significance.tsv"
+file1 = "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_with_dummy/ALL.chrX.ihs_reformatted.tsv"
+file2 = "/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs/ALL.chrX.ihs.tsv"
 
 print("=" * 80)
 print("IHS Results Comparison")
@@ -165,7 +165,7 @@ for idx, metric in enumerate(metrics):
     ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-output_file = '/home/vanbruggenmit//mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/comparison_to_old/ihs_comparison_scatter_highsig.png'
+output_file = '/home/vanbruggenmit//mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_with_dummy/comparison_to_OctIHS/ihs_comparison_scatter.png'
 plt.savefig(output_file, dpi=300, bbox_inches='tight')
 print(f"Saved: {output_file}")
 
@@ -217,12 +217,12 @@ for idx, metric in enumerate(metrics):
     ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-output_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/comparison_to_old/ihs_comparison_differences_highsig.png'
+output_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_with_dummy/comparison_to_OctIHS/ihs_comparison_differences.png'
 plt.savefig(output_file, dpi=300, bbox_inches='tight')
 print(f"Saved: {output_file}")
 
 # Save detailed comparison to CSV
-output_csv = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/comparison_to_old/ihs_comparison_detailed_highsig.csv'
+output_csv = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_with_dummy/comparison_to_OctIHS/ihs_comparison_detailed_highsig.csv'
 df_output = df_valid[['Location', 'iHH_0_fixed', 'iHH_0_orig', 'iHH_1_fixed', 'iHH_1_orig',
                        'iHS_fixed', 'iHS_orig', 'Std iHS_fixed', 'Std iHS_orig']].copy()
 

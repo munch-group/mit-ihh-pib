@@ -28,8 +28,8 @@ ENHANCER_DISTANCE = 50000  # Enhancer/regulatory region <50kb
 
 # Input/output paths
 PROJECT_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
-INPUT_FILE = PROJECT_DIR / 'results/ihs_fixed_par1/analysis/candidates/candidates/high_significance_snps.tsv'
-OUTPUT_DIR = PROJECT_DIR / 'results/ihs_fixed_par1/analysis/high_significance_genes'
+INPUT_FILE = PROJECT_DIR / 'results/ihs_with_dummy/analysis/candidates/candidates/high_significance_snps_4.tsv'
+OUTPUT_DIR = PROJECT_DIR / 'results/ihs_with_dummy/analysis/high_significance_genes_4'
 OUTPUT_FILE = OUTPUT_DIR / 'snp_to_gene_mapping.tsv'
 
 # Create output directory
@@ -249,7 +249,18 @@ def main():
     results_df = pd.DataFrame(all_mappings)
 
     # For each SNP, keep only the nearest gene(s)
-    nearest_df = results_df.loc[results_df.groupby('snp_location')['distance'].idxmin()]
+    # Filter out entries with no genes found (where distance is NaN)
+    results_with_genes = results_df[results_df['distance'].notna()].copy()
+
+    if len(results_with_genes) > 0:
+        nearest_df = results_with_genes.loc[results_with_genes.groupby('snp_location')['distance'].idxmin()]
+    else:
+        nearest_df = pd.DataFrame()
+
+    # Add back SNPs with no genes found
+    no_genes = results_df[results_df['distance'].isna()].copy()
+    if len(no_genes) > 0:
+        nearest_df = pd.concat([nearest_df, no_genes], ignore_index=True)
 
     print(f"  - {len(nearest_df)} unique SNP-to-nearest-gene mappings\n")
 
