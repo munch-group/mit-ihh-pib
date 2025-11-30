@@ -11,48 +11,149 @@ PED_FILE="/home/vanbruggenmit/mit-ihh-pib/data/grch38/integrated_call_samples_v3
 cd "$WORK_DIR"
 
 echo "==================================================================="
-echo "Step 1: Creating sample table in format the Perl script expects"
+echo "Step 1: Creating sample table in VCF order"
 echo "==================================================================="
 
+# CRITICAL: Sample table must be in the same order as samples in the VCF
 # The Perl script expects: sample_id  pop_id  group_id  sex
-# We have PED file with: FamilyID IndividualID PaternalID MaternalID Gender Phenotype Population ...
-# We need to create: sample_id pop_id group_id sex
 
-tail -n +2 "$PED_FILE" | \
-awk 'BEGIN {OFS="\t"} {
-    sample_id = $2
-    pop_id = $7        # Population column
-    group_id = $7      # Use population as group for now
-    sex = $5           # Gender: 1=male, 2=female
-    print sample_id, pop_id, group_id, sex
-}' > chrX.sample_table.txt
+# First, get the sample list from VCF (in VCF order)
+bcftools query -l "$VCF" > chrX.vcf_samples.txt
 
-echo "Sample table created with $(wc -l < chrX.sample_table.txt) samples"
+# Then, create sample table by looking up each VCF sample in the PED file
+while read sample_id; do
+    # Look up this sample in the PED file
+    tail -n +2 "$PED_FILE" | awk -v sample="$sample_id" '
+        $2 == sample {
+            pop_id = $7        # Population column
+            group_id = $7      # Use population as group
+            sex = $5           # Gender: 1=male, 2=female
+            print sample, pop_id, group_id, sex
+        }
+    '
+done < chrX.vcf_samples.txt > chrX.sample_table.txt
+
+echo "Sample table created with $(wc -l < chrX.sample_table.txt) samples (matching VCF order)"
 echo ""
 echo "First 10 lines:"
 head -10 chrX.sample_table.txt
 
 echo ""
 echo "==================================================================="
-echo "Step 2: Running IMPUTE2 conversion (FULL chrX including PAR)"
+echo "Step 2: Indexing VCF file if needed"
 echo "==================================================================="
 echo ""
-echo "This will create:"
-echo "  - chrX.impute.legend.gz"
-echo "  - chrX.impute.hap.gz"
-echo "  - chrX.impute.sample_list"
+
+# Check if index exists, create if needed
+if [[ ! -f "${VCF}.tbi" ]]; then
+    echo "Index not found. Creating tabix index for VCF file..."
+    tabix -p vcf "$VCF"
+    echo "✓ Index created: ${VCF}.tbi"
+else
+    echo "✓ Index already exists: ${VCF}.tbi"
+fi
+
+echo ""
+echo "==================================================================="
+echo "Step 3: Splitting chrX VCF by region (PAR1, non-PAR, PAR2)"
+echo "==================================================================="
 echo ""
 
-# Run the Perl script for FULL chrX (PAR + non-PAR)
+# GRCh38 coordinates for chrX regions
+PAR1_START=60001
+PAR1_END=2781479
+NONPAR_START=2781480  # Start immediately after PAR1
+NONPAR_END=155701383  # End right before PAR2
+PAR2_START=155701384
+PAR2_END=156030895
+
+echo "Creating region-specific VCF files..."
+echo "  PAR1:    X:${PAR1_START}-${PAR1_END}"
+echo "  non-PAR: X:${NONPAR_START}-${NONPAR_END}"
+echo "  PAR2:    X:${PAR2_START}-${PAR2_END}"
+echo ""
+
+# Extract PAR1
+bcftools view -r X:${PAR1_START}-${PAR1_END} "$VCF" -Oz -o chrX.PAR1.vcf.gz
+tabix -p vcf chrX.PAR1.vcf.gz
+
+# Extract non-PAR region
+echo "  Extracting non-PAR region..."
+bcftools view -r X:${NONPAR_START}-${NONPAR_END} "$VCF" -Oz -o chrX.nonPAR.vcf.gz
+tabix -p vcf chrX.nonPAR.vcf.gz
+
+echo "  Note: Converting non-PAR without genotype fixing - will process as-is"
+echo "  Males will have diploid format (0|0, 1|1) which the Perl script should handle"
+
+# Extract PAR2
+bcftools view -r X:${PAR2_START}-${PAR2_END} "$VCF" -Oz -o chrX.PAR2.vcf.gz
+tabix -p vcf chrX.PAR2.vcf.gz
+
+echo "VCF files created:"
+ls -lh chrX.PAR*.vcf.gz chrX.nonPAR.vcf.gz
+
+echo ""
+echo "==================================================================="
+echo "Step 4: Running IMPUTE2 conversion for each region"
+echo "==================================================================="
+echo ""
+
+# Convert PAR1 (diploid in both males and females)
+echo "Converting PAR1..."
 perl /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/Impute2/vcf2impute_legend_haps.pl \
-    -vcf "$VCF" \
-    -leghap chrX.impute \
+    -vcf chrX.PAR1.vcf.gz \
+    -leghap chrX.PAR1.impute \
+    -chr X \
+    -samp_tab chrX.sample_table.txt
+
+# Convert non-PAR (hemizygous in males)
+echo ""
+echo "Converting non-PAR (with -chrX_nonpar flag)..."
+perl /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/Impute2/vcf2impute_legend_haps.pl \
+    -vcf chrX.nonPAR.vcf.gz \
+    -leghap chrX.nonPAR.impute \
+    -chr X \
+    -chrX_nonpar \
+    -samp_tab chrX.sample_table.txt
+
+# Convert PAR2 (diploid in both males and females)
+echo ""
+echo "Converting PAR2..."
+perl /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/scripts/Impute2/vcf2impute_legend_haps.pl \
+    -vcf chrX.PAR2.vcf.gz \
+    -leghap chrX.PAR2.impute \
     -chr X \
     -samp_tab chrX.sample_table.txt
 
 echo ""
 echo "==================================================================="
-echo "Step 3: Verifying output files"
+echo "Step 5: Combining regions into single files"
+echo "==================================================================="
+echo ""
+
+# Combine legend files (skip header from non-PAR and PAR2)
+echo "Combining legend files..."
+zcat chrX.PAR1.impute.legend.gz > chrX.impute.legend
+zcat chrX.nonPAR.impute.legend.gz | tail -n +2 >> chrX.impute.legend
+zcat chrX.PAR2.impute.legend.gz | tail -n +2 >> chrX.impute.legend
+gzip chrX.impute.legend
+
+# Combine haplotype files
+echo "Combining haplotype files..."
+zcat chrX.PAR1.impute.hap.gz > chrX.impute.hap
+zcat chrX.nonPAR.impute.hap.gz >> chrX.impute.hap
+zcat chrX.PAR2.impute.hap.gz >> chrX.impute.hap
+gzip chrX.impute.hap
+
+# Use sample list from PAR1 (should be identical across all regions)
+cp chrX.PAR1.impute.sample_list chrX.impute.sample_list
+
+echo "Combined files created:"
+ls -lh chrX.impute.legend.gz chrX.impute.hap.gz chrX.impute.sample_list
+
+echo ""
+echo "==================================================================="
+echo "Step 6: Verifying output files"
 echo "==================================================================="
 
 if [[ -f chrX.impute.legend.gz ]] && [[ -f chrX.impute.hap.gz ]]; then
