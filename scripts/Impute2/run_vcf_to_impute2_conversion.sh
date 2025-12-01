@@ -4,7 +4,7 @@ set -euo pipefail
 cd /home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib
 
 WORK_DIR="/home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX_impute2_conversion"
-VCF="/home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/X.vcf.gz"
+VCF="/home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX_impute2_conversion/X.normalized.vcf.gz"
 SAMPLE_FILE="/home/vanbruggenmit/mit-ihh-pib/data/grch38/raw/chrX/chrX.complete.sample"
 PED_FILE="/home/vanbruggenmit/mit-ihh-pib/data/grch38/integrated_call_samples_v3.20200731.ALL.ped"
 
@@ -82,8 +82,9 @@ echo "  Extracting non-PAR region..."
 bcftools view -r X:${NONPAR_START}-${NONPAR_END} "$VCF" -Oz -o chrX.nonPAR.vcf.gz
 tabix -p vcf chrX.nonPAR.vcf.gz
 
-echo "  Note: Converting non-PAR without genotype fixing - will process as-is"
-echo "  Males will have diploid format (0|0, 1|1) which the Perl script should handle"
+echo "  Note: Using normalized VCF where male genotypes have been converted:"
+echo "    - Homozygous diploid (0|0, 1|1) → Haploid (0, 1)"
+echo "    - Heterozygous diploid (0|1, 1|0) → Missing (.)"
 
 # Extract PAR2
 bcftools view -r X:${PAR2_START}-${PAR2_END} "$VCF" -Oz -o chrX.PAR2.vcf.gz
