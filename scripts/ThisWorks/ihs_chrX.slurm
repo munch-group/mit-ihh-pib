@@ -10,17 +10,17 @@
 set -euo pipefail
 
 REPO_ROOT="/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib"
-DATA_HAPBIN_DIR="/faststorage/project/mit-ihh-pib/data/grch38/hapbin_with_dummy"
+DATA_DIR="/home/vanbruggenmit/mit-ihh-pib/data/grch38/work/chrX_impute2_conversion"
 
 cd "$REPO_ROOT"
 
 CHR="X"
 
-OUT_DIR="$REPO_ROOT/results/ihs_with_dummy"
+OUT_DIR="$REPO_ROOT/results/ihs_impute2"
 mkdir -p "$OUT_DIR" "$REPO_ROOT/logs"
 
-HAP="$DATA_HAPBIN_DIR/chr${CHR}.hapbin.hap"
-MAP="$DATA_HAPBIN_DIR/chr${CHR}.hapbin.map"
+HAP="$DATA_DIR/chr${CHR}.impute.hap.gz"
+MAP="$DATA_DIR/chr${CHR}.impute.map"
 OUT="$OUT_DIR/ALL.chr${CHR}.ihs.tsv"
 
 echo "=========================================="
@@ -36,11 +36,11 @@ echo ""
 
 # Check HAP file format
 echo "Verifying HAP file format..."
-HAP_LINES=$(wc -l < "$HAP")
+HAP_LINES=$(zcat "$HAP" | wc -l)
 HAP_SIZE=$(du -h "$HAP" | cut -f1)
-FIELDS_LINE1=$(head -1 "$HAP" | awk '{print NF}')
+FIELDS_LINE1=$(zcat "$HAP" | head -1 | awk '{print NF}')
 echo "  HAP file: $HAP_SIZE, $HAP_LINES SNPs"
-echo "  First line: $FIELDS_LINE1 fields"
+echo "  First line: $FIELDS_LINE1 fields (should be 6404)"
 echo ""
 
 # Check MAP file

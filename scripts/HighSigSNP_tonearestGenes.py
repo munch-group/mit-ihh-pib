@@ -28,8 +28,8 @@ ENHANCER_DISTANCE = 50000  # Enhancer/regulatory region <50kb
 
 # Input/output paths
 PROJECT_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
-INPUT_FILE = PROJECT_DIR / 'results/ihs_with_dummy/analysis/candidates/candidates/high_significance_snps_4.tsv'
-OUTPUT_DIR = PROJECT_DIR / 'results/ihs_with_dummy/analysis/high_significance_genes_4'
+INPUT_FILE = PROJECT_DIR / 'results/analysis/candidates/per_chromosome/chrX_candidates_stringent.tsv'
+OUTPUT_DIR = PROJECT_DIR / 'results/ihs_revised_HCsnps_logic/analysis/high_significance_genes'
 OUTPUT_FILE = OUTPUT_DIR / 'snp_to_gene_mapping.tsv'
 
 # Create output directory
