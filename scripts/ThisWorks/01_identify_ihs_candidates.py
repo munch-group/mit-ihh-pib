@@ -285,7 +285,7 @@ enrichment_results.to_csv(output_dir / "candidates/x_enrichment_test.tsv",
 print("  Saved: candidates/x_enrichment_test.tsv")
 print()
 
-print("Step 5: Creating visualizations...")
+print("Step 5: Creating visualizations...") #this doesn't work
 print()
 
 # Set plot style

@@ -18,7 +18,7 @@ plt.rcParams['savefig.dpi'] = 300
 
 def load_snp_data():
     """Load SNP data"""
-    snp_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/snp_to_nearest_gene_only.tsv'
+    snp_file = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_revised_HCsnps_logic/analysis/high_significance_genes/snp_to_nearest_gene_only.tsv'
     df = pd.read_csv(snp_file, sep='\t')
 
     # Use 'pos' column for position (snp_location is the variant ID)
@@ -102,7 +102,7 @@ def create_full_chromosome_view():
     
     plt.tight_layout()
     
-    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/geneinfo_full_chromosome.png'
+    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_revised_HCsnps_logic/analysis/high_significance_genes/figures/geneinfo_full_chromosome.png'
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"✓ Saved full chromosome view: {output_path}")
     plt.close()
@@ -197,7 +197,7 @@ def create_regional_views():
         sns.despine(ax=ax)
         plt.tight_layout()
         
-        output_path = f'/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/geneinfo_{region["name"]}.png'
+        output_path = f'/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_revised_HCsnps_logic/analysis/high_significance_genes/figures/geneinfo_{region["name"]}.png'
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
         print(f"  ✓ Saved: {output_path}")
         plt.close()
@@ -331,7 +331,7 @@ def create_simple_manhattan():
     sns.despine(ax=ax)
     plt.tight_layout()
 
-    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures/simple_manhattan_clean.png'
+    output_path = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_revised_HCsnps_logic/analysis/high_significance_genes/figures/simple_manhattan_clean.png'
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"✓ Saved simple Manhattan: {output_path}")
     plt.close()
@@ -344,7 +344,7 @@ def main():
     
     # Create output directory
     import os
-    output_dir = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_fixed_par1/analysis/high_significance_genes/figures'
+    output_dir = '/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/ihs_revised_HCsnps_logic/analysis/high_significance_genes/figures'
     os.makedirs(output_dir, exist_ok=True)
     
     print("1. Creating simple clean Manhattan plot...")
