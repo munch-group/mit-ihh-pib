@@ -1,0 +1,15 @@
+	value
+total_ihs_regions	44.0
+unique_ihs_regions_confirmed	33.0
+ihs_only_regions	11.0
+total_xpehh_regions	78.0
+unique_xpehh_regions_confirmed	76.0
+xpehh_only_regions	2.0
+total_overlap_instances	80.0
+ihs_validation_rate_percent	75.0
+xpehh_validation_rate_percent	97.43589743589743
+mean_overlap_size_kb	512.4860000000001
+median_overlap_size_kb	226.35000000000002
+mean_ihs_score_high_conf	4.755391250000001
+mean_xpehh_score_high_conf	10.80923
+correlation_ihs_xpehh	-0.20154899317975283

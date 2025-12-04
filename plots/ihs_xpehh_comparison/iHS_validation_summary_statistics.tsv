@@ -1,0 +1,17 @@
+	value
+analysis_date	2025-12-04
+ihs_analysis_date	October 2024
+total_ihs_regions	44
+ihs_regions_validated_by_xpehh	33
+ihs_regions_not_validated	11
+validation_rate_percent	75.0
+total_overlap_instances	80
+xpehh_comparison	EUR vs EAS
+ihs_threshold	2.0
+xpehh_threshold	3.0
+mean_overlap_size_kb	512.4860000000001
+median_overlap_size_kb	226.35000000000002
+mean_ihs_score_validated	4.755391250000001
+mean_xpehh_score	10.80923
+correlation_ihs_xpehh	-0.20154899317975283
+eur_specific_variants	100
