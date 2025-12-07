@@ -4,18 +4,19 @@ Script: Define selection regions from iHS candidates
 Purpose: Cluster nearby significant SNPs into selection regions
 
 Approach (based on literature):
-- Liu et al. (2013): Multiple contiguous SNPs needed, not single outliers
-- Common approach: 200-500kb windows requiring ≥2-3 significant SNPs
-- We'll use 500kb windows with ≥2 SNPs for initial scan
+- Villegas-Miron 2021: Multiple contiguous SNPs needed, not single outliers
+- Approach: 20kb windows requiring ≥20 significant SNPs
+- We'll use 20kb windows with ≥20 SNPs for initial scan, more stringent with ≥50 
 - Then merge overlapping windows
 
 Key considerations for X chromosome:
-- Use empirical 99th percentile (2.90) instead of fixed 2.5 threshold
+- Use empirical 99th percentile (as calculated in 01 script) instead of fixed 2.5 threshold
 - Account for lower candidate density
 - May require adjusted window parameters
 
 Author: MIT IHH PIB Project
 Date: 2025-10-23
+Updated: 2025-12-07
 """
 
 import pandas as pd
@@ -27,8 +28,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-candidates_dir = base_dir / "results/ihs_with_dummy/analysis/candidates/candidates"
-regions_dir = base_dir / "results/ihs_with_dummy/analysis/regions"
+candidates_dir = base_dir / "results/ihs_EAS/analysis/candidates/candidates"
+regions_dir = base_dir / "results/ihs_EAS/analysis/regions"
 regions_dir.mkdir(parents=True, exist_ok=True)
 
 print("=" * 70)
@@ -37,14 +38,14 @@ print("=" * 70)
 print()
 
 # Configuration
-WINDOW_SIZE = 500000  # 500kb windows
-MIN_SNPS = 2          # Minimum SNPs per region (Liu et al. 2013)
-MIN_SNPS_STRINGENT = 3  # More stringent filter
+WINDOW_SIZE = 20000  # windows
+MIN_SNPS = 20          # Minimum SNPs per region 
+MIN_SNPS_STRINGENT = 50  # More stringent filter
 
 # Threshold configuration
-# Use X-specific empirical threshold based on depletion analysis
+# Use X-specific empirical threshold 
 AUTOSOME_THRESHOLD = 2.5
-X_THRESHOLD = 2.9  # X chromosome 99th percentile
+X_THRESHOLD = 3.131  # X chromosome 99th percentile for that population
 
 print(f"Configuration:")
 print(f"  Window size: {WINDOW_SIZE:,} bp ({WINDOW_SIZE/1000:.0f} kb)")
@@ -249,7 +250,7 @@ if len(x_regions) > 0:
 print("Step 5: Saving results...")
 
 # Save all regions
-output_file = regions_dir / "selection_regions_500kb_min2snps.tsv"
+output_file = regions_dir / "selection_regions_250kb_min2snps.tsv"
 regions.to_csv(output_file, sep='\t', index=False)
 print(f"  Saved: {output_file.name}")
 
@@ -271,40 +272,12 @@ print(f"Creating stringent regions (min {MIN_SNPS_STRINGENT} SNPs)...")
 regions_stringent = cluster_candidates_to_regions(
     filtered_candidates, WINDOW_SIZE, MIN_SNPS_STRINGENT
 )
-stringent_file = regions_dir / "selection_regions_500kb_min3snps.tsv"
+stringent_file = regions_dir / "selection_regions_250kb_min3snps.tsv"
 regions_stringent.to_csv(stringent_file, sep='\t', index=False)
 print(f"  Saved: {stringent_file.name} ({len(regions_stringent)} regions)")
 
-# Step 6: Create BED files for genome browsers
-print()
-print("Step 6: Creating BED files for genome visualization...")
 
-def regions_to_bed(regions_df, output_file, description="iHS_selection"):
-    """Convert regions to BED format"""
-    bed_df = regions_df[['chr', 'start', 'end', 'max_std_ihs', 'n_snps']].copy()
-    bed_df['name'] = description + "_" + bed_df.index.astype(str)
-    bed_df['score'] = (bed_df['max_std_ihs'] * 100).astype(int).clip(0, 1000)
-    bed_df = bed_df[['chr', 'start', 'end', 'name', 'score', 'n_snps']]
 
-    # Add 'chr' prefix if not present
-    bed_df['chr'] = 'chr' + bed_df['chr'].astype(str)
-
-    bed_df.to_csv(output_file, sep='\t', index=False, header=False)
-
-bed_file = regions_dir / "selection_regions.bed"
-regions_to_bed(regions, bed_file)
-print(f"  Saved: {bed_file.name}")
-
-bed_file_stringent = regions_dir / "selection_regions_stringent.bed"
-regions_to_bed(regions_stringent, bed_file_stringent)
-print(f"  Saved: {bed_file_stringent.name}")
-
-print()
 print("=" * 70)
 print("Region definition complete!")
 print("=" * 70)
-print()
-print("Next steps:")
-print("  1. Review regions in genome browser using BED files")
-print("  2. Annotate regions with genes (Phase 3)")
-print("  3. Test for enrichment of reproductive/immune genes")
