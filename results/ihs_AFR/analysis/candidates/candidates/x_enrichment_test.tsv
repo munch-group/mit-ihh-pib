@@ -1,0 +1,2 @@
+test	threshold	x_candidates	x_total	x_pct	auto_candidates	auto_total	auto_pct	odds_ratio	p_value
+Fisher's exact test	moderate (|Std iHS| >= 2.5)	10495	463227	2.265627867114827	0	0			1.0
