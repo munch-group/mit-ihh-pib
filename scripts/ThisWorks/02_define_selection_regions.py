@@ -28,8 +28,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-candidates_dir = base_dir / "results/ihs_EAS/analysis/candidates/candidates"
-regions_dir = base_dir / "results/ihs_EAS/analysis/regions"
+candidates_dir = base_dir / "results/ihs_EUR/analysis/candidates/candidates"
+regions_dir = base_dir / "results/ihs_EUR/analysis/regions"
 regions_dir.mkdir(parents=True, exist_ok=True)
 
 print("=" * 70)
@@ -38,17 +38,20 @@ print("=" * 70)
 print()
 
 # Configuration
-WINDOW_SIZE = 20000  # windows
-MIN_SNPS = 20          # Minimum SNPs per region 
+WINDOW_SIZE = 20000  # 20kb windows
+STEP_SIZE = 4000      # 4kb steps (80% overlap - Villegas-Mirón approach)
+MIN_SNPS = 20          # Minimum SNPs per region
 MIN_SNPS_STRINGENT = 50  # More stringent filter
 
 # Threshold configuration
 # Use X-specific empirical threshold 
 AUTOSOME_THRESHOLD = 2.5
-X_THRESHOLD = 3.131  # X chromosome 99th percentile for that population
+X_THRESHOLD = 3.024  # X chromosome 99th percentile for that population
 
 print(f"Configuration:")
 print(f"  Window size: {WINDOW_SIZE:,} bp ({WINDOW_SIZE/1000:.0f} kb)")
+print(f"  Step size: {STEP_SIZE:,} bp ({STEP_SIZE/1000:.0f} kb)")
+print(f"  Window overlap: {100 * (1 - STEP_SIZE/WINDOW_SIZE):.0f}%")
 print(f"  Minimum SNPs per region: {MIN_SNPS}")
 print(f"  Autosome threshold: |Std iHS| >= {AUTOSOME_THRESHOLD}")
 print(f"  X chromosome threshold: |Std iHS| >= {X_THRESHOLD}")
@@ -79,12 +82,13 @@ def apply_chromosome_specific_threshold(df, autosome_thresh, x_thresh):
 def cluster_candidates_to_regions(candidates, window_size, min_snps):
     """
     Cluster candidates into selection regions using sliding windows
+    (Villegas-Mirón et al. 2021 approach)
 
     Algorithm:
     1. Sort candidates by chromosome and position
-    2. For each chromosome, scan with sliding window
+    2. For each chromosome, scan with overlapping sliding windows (80% overlap)
     3. Identify windows with >= min_snps candidates
-    4. Merge overlapping windows
+    4. Merge consecutive/overlapping windows into regions
     5. Calculate region statistics
     """
     regions = []
@@ -112,50 +116,69 @@ def cluster_candidates_to_regions(candidates, window_size, min_snps):
         # Sort by position
         chr_data = chr_data.sort_values('pos')
         positions = chr_data['pos'].values
+        chr_start = int(positions.min())
+        chr_end = int(positions.max())
 
-        # Identify clusters using window approach
-        clusters = []
-        i = 0
-        while i < len(positions):
-            window_start = positions[i]
-            window_end = window_start + window_size
+        # SLIDING WINDOW SCAN with fixed step size
+        outlier_windows = []
+        for win_start in range(chr_start, chr_end, STEP_SIZE):
+            win_end = win_start + window_size
 
             # Find all SNPs in this window
-            in_window = (positions >= window_start) & (positions < window_end)
+            in_window = (positions >= win_start) & (positions < win_end)
             window_indices = np.where(in_window)[0]
 
+            # Keep windows with sufficient SNPs
             if len(window_indices) >= min_snps:
-                # Create a region from this window
-                region_snps = chr_data.iloc[window_indices]
-                region_start = region_snps['pos'].min()
-                region_end = region_snps['pos'].max()
+                outlier_windows.append({
+                    'start': win_start,
+                    'end': win_end,
+                    'indices': window_indices.tolist()
+                })
 
-                # Check if this overlaps with previous region
-                if clusters and clusters[-1]['end'] >= region_start:
-                    # Merge with previous region
-                    clusters[-1]['indices'].extend(window_indices.tolist())
-                    clusters[-1]['indices'] = sorted(list(set(clusters[-1]['indices'])))
-                    clusters[-1]['end'] = max(clusters[-1]['end'], region_end)
-                else:
-                    # New region
-                    clusters.append({
-                        'start': region_start,
-                        'end': region_end,
-                        'indices': window_indices.tolist()
-                    })
+        # MERGE overlapping/consecutive windows into regions
+        if len(outlier_windows) == 0:
+            print(f"-> 0 regions")
+            continue
 
-                # Move to next window starting from last SNP in current window
-                i = window_indices[-1] + 1
+        clusters = []
+        current_cluster = {
+            'start': outlier_windows[0]['start'],
+            'end': outlier_windows[0]['end'],
+            'indices': set(outlier_windows[0]['indices'])
+        }
+
+        for window in outlier_windows[1:]:
+            # Check if window overlaps with current cluster
+            if window['start'] <= current_cluster['end']:
+                # Extend and merge
+                current_cluster['end'] = max(current_cluster['end'], window['end'])
+                current_cluster['indices'].update(window['indices'])
             else:
-                i += 1
+                # Save current cluster and start new one
+                clusters.append(current_cluster)
+                current_cluster = {
+                    'start': window['start'],
+                    'end': window['end'],
+                    'indices': set(window['indices'])
+                }
+
+        # Don't forget last cluster
+        clusters.append(current_cluster)
 
         # Calculate statistics for each region
         for cluster in clusters:
-            region_snps = chr_data.iloc[cluster['indices']]
+            # Convert indices back to list and get SNPs
+            indices_list = sorted(list(cluster['indices']))
+            region_snps = chr_data.iloc[indices_list]
+
+            # Use actual SNP positions for region boundaries (not window boundaries)
+            region_start = region_snps['pos'].min()
+            region_end = region_snps['pos'].max()
 
             # Calculate region statistics
             n_snps = len(region_snps)
-            region_length = cluster['end'] - cluster['start']
+            region_length = region_end - region_start
             mean_std_ihs = region_snps['Std iHS'].mean()
             max_std_ihs = region_snps['Std iHS'].abs().max()
             mean_pvalue = region_snps['p_value'].mean()
@@ -167,8 +190,8 @@ def cluster_candidates_to_regions(candidates, window_size, min_snps):
 
             regions.append({
                 'chr': chr_name,
-                'start': cluster['start'],
-                'end': cluster['end'],
+                'start': region_start,
+                'end': region_end,
                 'length': region_length,
                 'n_snps': n_snps,
                 'mean_std_ihs': mean_std_ihs,
@@ -250,7 +273,7 @@ if len(x_regions) > 0:
 print("Step 5: Saving results...")
 
 # Save all regions
-output_file = regions_dir / "selection_regions_250kb_min2snps.tsv"
+output_file = regions_dir / "selection_regions_20kb_min20snps.tsv"
 regions.to_csv(output_file, sep='\t', index=False)
 print(f"  Saved: {output_file.name}")
 
@@ -266,13 +289,13 @@ if len(x_regions) > 0:
     x_regions.to_csv(x_file, sep='\t', index=False)
     print(f"  Saved: {x_file.name} ({len(x_regions)} regions)")
 
-# Save stringent regions (min 3 SNPs)
+# Save stringent regions (min 50 SNPs)
 print()
 print(f"Creating stringent regions (min {MIN_SNPS_STRINGENT} SNPs)...")
 regions_stringent = cluster_candidates_to_regions(
     filtered_candidates, WINDOW_SIZE, MIN_SNPS_STRINGENT
 )
-stringent_file = regions_dir / "selection_regions_250kb_min3snps.tsv"
+stringent_file = regions_dir / "selection_regions_20kb_min50snps.tsv"
 regions_stringent.to_csv(stringent_file, sep='\t', index=False)
 print(f"  Saved: {stringent_file.name} ({len(regions_stringent)} regions)")
 

@@ -29,8 +29,8 @@ from collections import defaultdict
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
 data_dir = base_dir / "data/annotations"
-regions_dir = base_dir / "results/ihs_EUR/analysis/regions"
-output_dir = base_dir / "results/ihs_EUR/analysis/gene_annotation"
+regions_dir = base_dir / "results/ihs_EAS/analysis/regions"
+output_dir = base_dir / "results/ihs_EAS/analysis/gene_annotation"
 
 # Create directories
 data_dir.mkdir(parents=True, exist_ok=True)
@@ -438,7 +438,7 @@ def main():
     genes_df = load_gencode_genes()
 
     # Annotate all regions
-    regions_file = regions_dir / "selection_regions_500kb_min2snps.tsv"
+    regions_file = regions_dir / "selection_regions_20kb_min20snps.tsv"
     annotated_regions, genes_in_regions = annotate_all_regions(regions_file, genes_df, flank=50000)
 
     # Save annotated regions
