@@ -23,8 +23,8 @@ warnings.filterwarnings('ignore')
 
 # Setup paths
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
-ihs_dir = base_dir / "results/ihs_EAS"
-output_dir = base_dir / "results/ihs_EAS/analysis/candidates"
+ihs_dir = base_dir / "results/ihs_AFR"
+output_dir = base_dir / "results/ihs_AFR/analysis/candidates"
 
 # Create output directories
 (output_dir / "candidates/per_chromosome").mkdir(parents=True, exist_ok=True)
@@ -61,7 +61,7 @@ chr_stats_list = []
 all_candidates = {}
 
 for chr_name in chroms:
-    file = ihs_dir / f"EAS.chr{chr_name}.ihs.tsv"
+    file = ihs_dir / f"AFR.chr{chr_name}.ihs.tsv"
 
     if not file.exists():
         print(f"  WARNING: Missing file for chr{chr_name}")
@@ -301,11 +301,14 @@ candidates_by_chr['chr'] = pd.Categorical(candidates_by_chr['chr'],
                                           ordered=True)
 candidates_by_chr = candidates_by_chr.sort_values('chr')
 
+# Convert categorical to string for plotting
+candidates_by_chr['chr_str'] = candidates_by_chr['chr'].astype(str)
+
 fig, ax = plt.subplots(figsize=(12, 6))
 colors = {'Autosome': 'gray', 'X chromosome': '#E41A1C'}
 for chr_type in ['Autosome', 'X chromosome']:
     data = candidates_by_chr[candidates_by_chr['chr_type'] == chr_type]
-    ax.bar(data['chr'], data['n'], label=chr_type, color=colors[chr_type])
+    ax.bar(data['chr_str'], data['n'], label=chr_type, color=colors[chr_type])
 
 ax.set_xlabel('Chromosome')
 ax.set_ylabel('Number of Candidates')
@@ -325,7 +328,7 @@ candidate_rates['rate'] = candidate_rates['n'] / candidate_rates['n_variants'] *
 fig, ax = plt.subplots(figsize=(12, 6))
 for chr_type in ['Autosome', 'X chromosome']:
     data = candidate_rates[candidate_rates['chr_type'] == chr_type]
-    ax.bar(data['chr'], data['rate'], label=chr_type, color=colors[chr_type])
+    ax.bar(data['chr_str'], data['rate'], label=chr_type, color=colors[chr_type])
 
 ax.set_xlabel('Chromosome')
 ax.set_ylabel('Candidate Rate (%)')
