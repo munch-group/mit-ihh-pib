@@ -1,0 +1,2 @@
+ihs_cluster_id	ihs_cluster_start	ihs_cluster_end	ihs_cluster_size	ihs_cluster_max_score	relate_cluster_id	relate_cluster_start	relate_cluster_end	relate_cluster_size	relate_cluster_max_score	overlap_start	overlap_end	overlap_size_bp	center_distance
+29	35515649	35524736	3	6.54787	8	35431367	35526498	18	7.59619	35515649	35524736	9088	44099.5

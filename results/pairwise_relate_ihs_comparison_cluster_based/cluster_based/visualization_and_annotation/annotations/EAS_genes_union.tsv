@@ -1,0 +1,3 @@
+gene_name	gene_id	subpopulations	n_subpopulations	gene_type	x_inactivation_status	gene_start	gene_end	strand
+ENSG00000288098	ENSG00000288098	CDX,JPT	2	lncRNA	subject	141934496	142740581	+
+ENSG00000236205	ENSG00000236205	JPT	1	unprocessed_pseudogene	subject	142147862	142148866	-

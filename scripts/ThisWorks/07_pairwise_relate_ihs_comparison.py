@@ -2,15 +2,16 @@
 """
 Pairwise comparison of RELATE and iHS selection signals by individual populations.
 
-This script uses a percentile-based approach for iHS filtering:
-1. Calculates population-specific 99th percentile threshold for each population
+This script uses a percentile-based approach for iHS filtering and bidirectional matching:
+1. Calculates population-specific 99.5th percentile threshold for each population
 2. Ensures comparable stringency across populations with different distributions
-3. Compares each individual population's iHS vs RELATE results pairwise
-4. Creates visualizations showing separate signals and overlaps for each population
-5. Aggregates the pairwise results into continental groups (AFR, AMR, EAS, EUR, SAS)
+3. Uses BIDIRECTIONAL matching: finds iHS signals with nearby RELATE AND RELATE signals with nearby iHS
+4. Compares each individual population's iHS vs RELATE results pairwise
+5. Creates visualizations showing separate signals and overlaps for each population
+6. Aggregates the pairwise results into continental groups (AFR, AMR, EAS, EUR, SAS)
 
-This approach should capture more overlaps than p-value filtering, as it uses empirical
-thresholds tailored to each population's distribution.
+The bidirectional approach ensures that both iHS and RELATE peaks are properly highlighted,
+addressing the issue where multiple signals in a peak might match the same counterpart signal.
 """
 
 import pandas as pd
@@ -39,7 +40,7 @@ for continent, pops in POPULATION_MAPPING.items():
         POP_TO_CONTINENT[pop] = continent
 
 
-def calculate_ihs_threshold(pop_code: str, percentile: float = 99.0) -> Optional[float]:
+def calculate_ihs_threshold(pop_code: str, percentile: float = 99.5) -> Optional[float]:
     """
     Calculate the percentile-based threshold for iHS scores for a population.
 
@@ -72,7 +73,7 @@ def calculate_ihs_threshold(pop_code: str, percentile: float = 99.0) -> Optional
 
 
 def read_ihs_results(pop_code: str,
-                     percentile_threshold: float = 99.0) -> Optional[pd.DataFrame]:
+                     percentile_threshold: float = 99.5) -> Optional[pd.DataFrame]:
     """
     Read iHS results for a single population and filter by percentile-based threshold.
 
@@ -81,7 +82,7 @@ def read_ihs_results(pop_code: str,
 
     Args:
         pop_code: Population code (e.g., 'CEU', 'YRI')
-        percentile_threshold: Percentile to use for threshold (default: 99.0)
+        percentile_threshold: Percentile to use for threshold (default: 99.0, but trying 99.5 to make it more stringent)
 
     Returns:
         DataFrame with significant iHS signals or None if file not found
@@ -165,9 +166,10 @@ def read_relate_results(pop_code: str,
 
 def find_regional_overlaps(ihs_df: pd.DataFrame,
                           relate_df: pd.DataFrame,
-                          window_size: int = 50000) -> Tuple[pd.DataFrame, pd.DataFrame]:
+                          window_size: int = 50000) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """
     Find overlapping selection signals between iHS and RELATE within a genomic window.
+    Uses bidirectional matching and identifies mutual overlaps.
 
     Args:
         ihs_df: DataFrame with iHS signals
@@ -175,11 +177,17 @@ def find_regional_overlaps(ihs_df: pd.DataFrame,
         window_size: Window size in base pairs for considering signals as overlapping
 
     Returns:
-        Tuple of (overlapping_ihs_snps, overlap_details)
+        Tuple of (overlapping_ihs_snps, overlapping_relate_snps, mutual_ihs, mutual_relate, overlap_details)
+        - overlapping_ihs_snps: iHS signals with nearby RELATE (one-directional)
+        - overlapping_relate_snps: RELATE signals with nearby iHS (one-directional)
+        - mutual_ihs: iHS signals that are in mutual overlap
+        - mutual_relate: RELATE signals that are in mutual overlap
     """
     overlapping_ihs = []
+    overlapping_relate = []
     overlap_details = []
 
+    # Direction 1: For each iHS signal, find nearby RELATE signals
     for _, ihs_snp in ihs_df.iterrows():
         ihs_pos = ihs_snp['pos']
 
@@ -205,36 +213,108 @@ def find_regional_overlaps(ihs_df: pd.DataFrame,
                 'n_relate_nearby': len(nearby_relate)
             })
 
+    # Direction 2: For each RELATE signal, check if it has nearby iHS signals
+    for _, relate_snp in relate_df.iterrows():
+        relate_pos = relate_snp['pos']
+
+        # Find iHS signals within window
+        nearby_ihs = ihs_df[
+            (ihs_df['pos'] >= relate_pos - window_size) &
+            (ihs_df['pos'] <= relate_pos + window_size)
+        ]
+
+        if len(nearby_ihs) > 0:
+            overlapping_relate.append(relate_snp.to_dict())
+
     overlap_ihs_df = pd.DataFrame(overlapping_ihs) if overlapping_ihs else pd.DataFrame()
+    overlap_relate_df = pd.DataFrame(overlapping_relate) if overlapping_relate else pd.DataFrame()
     overlap_details_df = pd.DataFrame(overlap_details) if overlap_details else pd.DataFrame()
 
-    return overlap_ihs_df, overlap_details_df
+    # Identify mutual overlaps
+    # Mutual iHS: iHS signals that have nearby RELATE, AND those RELATE signals also have nearby iHS
+    mutual_ihs = []
+    if len(overlap_ihs_df) > 0 and len(overlap_relate_df) > 0:
+        overlap_relate_positions = set(overlap_relate_df['pos'].values)
+
+        for _, ihs_snp in overlap_ihs_df.iterrows():
+            ihs_pos = ihs_snp['pos']
+            # Find RELATE signals within window
+            nearby_relate = relate_df[
+                (relate_df['pos'] >= ihs_pos - window_size) &
+                (relate_df['pos'] <= ihs_pos + window_size)
+            ]
+            # Check if any of these nearby RELATE signals are also in overlap_relate_df
+            if any(pos in overlap_relate_positions for pos in nearby_relate['pos'].values):
+                mutual_ihs.append(ihs_snp.to_dict())
+
+    # Mutual RELATE: RELATE signals that have nearby iHS, AND those iHS signals also have nearby RELATE
+    mutual_relate = []
+    if len(overlap_ihs_df) > 0 and len(overlap_relate_df) > 0:
+        overlap_ihs_positions = set(overlap_ihs_df['pos'].values)
+
+        for _, relate_snp in overlap_relate_df.iterrows():
+            relate_pos = relate_snp['pos']
+            # Find iHS signals within window
+            nearby_ihs = ihs_df[
+                (ihs_df['pos'] >= relate_pos - window_size) &
+                (ihs_df['pos'] <= relate_pos + window_size)
+            ]
+            # Check if any of these nearby iHS signals are also in overlap_ihs_df
+            if any(pos in overlap_ihs_positions for pos in nearby_ihs['pos'].values):
+                mutual_relate.append(relate_snp.to_dict())
+
+    mutual_ihs_df = pd.DataFrame(mutual_ihs) if mutual_ihs else pd.DataFrame()
+    mutual_relate_df = pd.DataFrame(mutual_relate) if mutual_relate else pd.DataFrame()
+
+    return overlap_ihs_df, overlap_relate_df, mutual_ihs_df, mutual_relate_df, overlap_details_df
 
 
 def create_pairwise_comparison_plot(ihs_df: pd.DataFrame,
                                    relate_df: pd.DataFrame,
                                    overlap_ihs_df: pd.DataFrame,
+                                   overlap_relate_df: pd.DataFrame,
+                                   mutual_ihs_df: pd.DataFrame,
+                                   mutual_relate_df: pd.DataFrame,
                                    overlap_details_df: pd.DataFrame,
                                    pop_code: str,
                                    output_dir: Path):
     """
     Create a 3-panel plot showing iHS signals, RELATE signals, and their overlaps.
+    Uses three-color scheme:
+    - Orange: One-directional overlap (iHS→RELATE or RELATE→iHS)
+    - Red: Mutual/bidirectional overlap (strong reciprocal evidence)
+    - Blue/Purple: No overlap
     """
     fig, axes = plt.subplots(3, 1, figsize=(18, 14), sharex=True)
 
     # Panel 1: iHS signals
     ax = axes[0]
-    # Use abs_std_ihs (percentile-based filtering)
     y_col = 'abs_std_ihs'
     y_label = '|Standardized iHS|'
 
-    ax.scatter(ihs_df['pos']/1e6, ihs_df[y_col],
-              c='dodgerblue', s=15, alpha=0.5, label='All iHS signals', rasterized=True)
+    # Get positions for categorization
+    mutual_ihs_positions = set(mutual_ihs_df['pos'].values) if len(mutual_ihs_df) > 0 else set()
+    overlap_ihs_positions = set(overlap_ihs_df['pos'].values) if len(overlap_ihs_df) > 0 else set()
 
-    if len(overlap_ihs_df) > 0:
-        ax.scatter(overlap_ihs_df['pos']/1e6, overlap_ihs_df[y_col],
-                  c='red', s=30, alpha=0.8, label='Also in RELATE',
-                  zorder=5, edgecolors='darkred', linewidths=0.5)
+    # One-directional only: in overlap but not in mutual
+    onedir_ihs_positions = overlap_ihs_positions - mutual_ihs_positions
+
+    # Plot all signals first
+    ax.scatter(ihs_df['pos']/1e6, ihs_df[y_col],
+              c='dodgerblue', s=15, alpha=0.5, label='No overlap', rasterized=True)
+
+    # Plot one-directional overlaps (orange)
+    if len(onedir_ihs_positions) > 0:
+        onedir_ihs = ihs_df[ihs_df['pos'].isin(onedir_ihs_positions)]
+        ax.scatter(onedir_ihs['pos']/1e6, onedir_ihs[y_col],
+                  c='orange', s=30, alpha=0.7, label='One-directional (iHS→RELATE)',
+                  zorder=4, edgecolors='darkorange', linewidths=0.5)
+
+    # Plot mutual overlaps (red) - plot last so they're on top
+    if len(mutual_ihs_df) > 0:
+        ax.scatter(mutual_ihs_df['pos']/1e6, mutual_ihs_df[y_col],
+                  c='red', s=35, alpha=0.9, label='Mutual overlap',
+                  zorder=5, edgecolors='darkred', linewidths=0.6)
 
     ax.set_ylabel(y_label, fontsize=12, fontweight='bold')
     ax.set_title(f'{pop_code}: iHS Selection Signals (n={len(ihs_df):,})',
@@ -246,12 +326,29 @@ def create_pairwise_comparison_plot(ihs_df: pd.DataFrame,
 
     # Panel 2: RELATE signals
     ax = axes[1]
-    ax.scatter(relate_df['pos']/1e6, relate_df['relate_score'],
-              c='mediumpurple', s=15, alpha=0.5, label='All RELATE signals', rasterized=True)
 
-    if len(overlap_details_df) > 0:
-        ax.scatter(overlap_details_df['relate_pos']/1e6, overlap_details_df['relate_score'],
-                  c='red', s=40, alpha=0.9, label='Also in iHS',
+    # Get positions for categorization
+    mutual_relate_positions = set(mutual_relate_df['pos'].values) if len(mutual_relate_df) > 0 else set()
+    overlap_relate_positions = set(overlap_relate_df['pos'].values) if len(overlap_relate_df) > 0 else set()
+
+    # One-directional only: in overlap but not in mutual
+    onedir_relate_positions = overlap_relate_positions - mutual_relate_positions
+
+    # Plot all signals first
+    ax.scatter(relate_df['pos']/1e6, relate_df['relate_score'],
+              c='mediumpurple', s=15, alpha=0.5, label='No overlap', rasterized=True)
+
+    # Plot one-directional overlaps (orange/gold)
+    if len(onedir_relate_positions) > 0:
+        onedir_relate = relate_df[relate_df['pos'].isin(onedir_relate_positions)]
+        ax.scatter(onedir_relate['pos']/1e6, onedir_relate['relate_score'],
+                  c='orange', s=35, alpha=0.7, label='One-directional (RELATE→iHS)',
+                  zorder=4, edgecolors='darkorange', linewidths=0.6)
+
+    # Plot mutual overlaps (red) - plot last so they're on top
+    if len(mutual_relate_df) > 0:
+        ax.scatter(mutual_relate_df['pos']/1e6, mutual_relate_df['relate_score'],
+                  c='red', s=40, alpha=0.9, label='Mutual overlap',
                   zorder=5, edgecolors='darkred', linewidths=0.7)
 
     ax.set_ylabel('RELATE -log₁₀(P)', fontsize=12, fontweight='bold')
@@ -379,37 +476,59 @@ def process_single_population(pop_code: str,
         print(f"    Skipping {pop_code} due to no significant signals")
         return None
 
-    # Find overlaps
-    overlap_ihs_df, overlap_details_df = find_regional_overlaps(
+    # Find overlaps (bidirectional with mutual identification)
+    overlap_ihs_df, overlap_relate_df, mutual_ihs_df, mutual_relate_df, overlap_details_df = find_regional_overlaps(
         ihs_df, relate_df, window_size
     )
 
-    n_overlap = len(overlap_ihs_df)
-    overlap_pct_ihs = n_overlap / len(ihs_df) * 100 if len(ihs_df) > 0 else 0
-    overlap_pct_relate = n_overlap / len(relate_df) * 100 if len(relate_df) > 0 else 0
+    n_overlap_ihs = len(overlap_ihs_df)  # Number of iHS signals with nearby RELATE
+    n_overlap_relate = len(overlap_relate_df)  # Number of RELATE signals with nearby iHS
+    n_mutual_ihs = len(mutual_ihs_df)  # Number of iHS in mutual overlap
+    n_mutual_relate = len(mutual_relate_df)  # Number of RELATE in mutual overlap
 
-    print(f"    Overlaps (±{window_size/1000:.0f} kb): {n_overlap:,}")
-    print(f"    {overlap_pct_ihs:.1f}% of iHS confirmed by RELATE")
-    print(f"    {overlap_pct_relate:.1f}% of RELATE confirmed by iHS")
+    overlap_pct_ihs = n_overlap_ihs / len(ihs_df) * 100 if len(ihs_df) > 0 else 0
+    overlap_pct_relate = n_overlap_relate / len(relate_df) * 100 if len(relate_df) > 0 else 0
+    mutual_pct_ihs = n_mutual_ihs / len(ihs_df) * 100 if len(ihs_df) > 0 else 0
+    mutual_pct_relate = n_mutual_relate / len(relate_df) * 100 if len(relate_df) > 0 else 0
+
+    print(f"    Overlaps (±{window_size/1000:.0f} kb):")
+    print(f"      {n_overlap_ihs:,} iHS signals have nearby RELATE ({overlap_pct_ihs:.1f}%)")
+    print(f"      {n_overlap_relate:,} RELATE signals have nearby iHS ({overlap_pct_relate:.1f}%)")
+    print(f"      {n_mutual_ihs:,} iHS in mutual overlap ({mutual_pct_ihs:.1f}%)")
+    print(f"      {n_mutual_relate:,} RELATE in mutual overlap ({mutual_pct_relate:.1f}%)")
 
     # Save overlap tables
-    pop_output_dir = output_dir / 'pairwise' / pop_code
+    pop_output_dir = output_dir / 'pairwise_bidirectional' / pop_code
     pop_output_dir.mkdir(parents=True, exist_ok=True)
 
-    if n_overlap > 0:
+    if n_overlap_ihs > 0:
         overlap_ihs_df.to_csv(pop_output_dir / f'{pop_code}_ihs_overlapping.tsv',
                             sep='\t', index=False)
         overlap_details_df.to_csv(pop_output_dir / f'{pop_code}_overlap_details.tsv',
                                  sep='\t', index=False)
 
+    if n_overlap_relate > 0:
+        overlap_relate_df.to_csv(pop_output_dir / f'{pop_code}_relate_overlapping.tsv',
+                                sep='\t', index=False)
+
+    if n_mutual_ihs > 0:
+        mutual_ihs_df.to_csv(pop_output_dir / f'{pop_code}_ihs_mutual.tsv',
+                            sep='\t', index=False)
+
+    if n_mutual_relate > 0:
+        mutual_relate_df.to_csv(pop_output_dir / f'{pop_code}_relate_mutual.tsv',
+                               sep='\t', index=False)
+
     # Create visualizations
-    create_pairwise_comparison_plot(ihs_df, relate_df, overlap_ihs_df,
+    create_pairwise_comparison_plot(ihs_df, relate_df, overlap_ihs_df, overlap_relate_df,
+                                   mutual_ihs_df, mutual_relate_df,
                                    overlap_details_df, pop_code, pop_output_dir)
-    create_venn_diagram(len(ihs_df), len(relate_df), n_overlap,
+    create_venn_diagram(len(ihs_df), len(relate_df), n_overlap_ihs,
                        pop_code, pop_output_dir)
 
     # Return summary statistics
-    jaccard = n_overlap / (len(ihs_df) + len(relate_df) - n_overlap) if (len(ihs_df) + len(relate_df) - n_overlap) > 0 else 0
+    # For Jaccard index, use n_overlap_ihs as the primary metric (iHS signals confirmed by RELATE)
+    jaccard = n_overlap_ihs / (len(ihs_df) + len(relate_df) - n_overlap_ihs) if (len(ihs_df) + len(relate_df) - n_overlap_ihs) > 0 else 0
 
     # Get the actual threshold used (percentile-based)
     ihs_threshold = ihs_df['abs_std_ihs'].min() if len(ihs_df) > 0 else None
@@ -420,9 +539,14 @@ def process_single_population(pop_code: str,
         'ihs_threshold': ihs_threshold,  # Minimum |Std iHS| in filtered set (= percentile threshold)
         'n_ihs': len(ihs_df),
         'n_relate': len(relate_df),
-        'n_overlap': n_overlap,
+        'n_overlap_ihs': n_overlap_ihs,  # iHS signals with nearby RELATE
+        'n_overlap_relate': n_overlap_relate,  # RELATE signals with nearby iHS
+        'n_mutual_ihs': n_mutual_ihs,  # iHS in mutual overlap
+        'n_mutual_relate': n_mutual_relate,  # RELATE in mutual overlap
         'pct_ihs_confirmed': overlap_pct_ihs,
         'pct_relate_confirmed': overlap_pct_relate,
+        'pct_mutual_ihs': mutual_pct_ihs,
+        'pct_mutual_relate': mutual_pct_relate,
         'jaccard_index': jaccard
     }
 
@@ -456,11 +580,14 @@ def aggregate_to_continents(all_results: list, output_dir: Path):
             'populations': ','.join(continent_pops['population'].values),
             'mean_ihs_signals': continent_pops['n_ihs'].mean(),
             'mean_relate_signals': continent_pops['n_relate'].mean(),
-            'mean_overlap': continent_pops['n_overlap'].mean(),
+            'mean_overlap_ihs': continent_pops['n_overlap_ihs'].mean(),
+            'mean_overlap_relate': continent_pops['n_overlap_relate'].mean(),
             'mean_pct_ihs_confirmed': continent_pops['pct_ihs_confirmed'].mean(),
             'mean_pct_relate_confirmed': continent_pops['pct_relate_confirmed'].mean(),
-            'min_pct_confirmed': continent_pops['pct_ihs_confirmed'].min(),
-            'max_pct_confirmed': continent_pops['pct_ihs_confirmed'].max(),
+            'min_pct_ihs_confirmed': continent_pops['pct_ihs_confirmed'].min(),
+            'max_pct_ihs_confirmed': continent_pops['pct_ihs_confirmed'].max(),
+            'min_pct_relate_confirmed': continent_pops['pct_relate_confirmed'].min(),
+            'max_pct_relate_confirmed': continent_pops['pct_relate_confirmed'].max(),
             'mean_jaccard': continent_pops['jaccard_index'].mean()
         })
 
@@ -531,15 +658,15 @@ def create_comparison_figure(results_df: pd.DataFrame, output_dir: Path):
 def main():
     """Main analysis pipeline."""
     print(f"{'='*70}")
-    print("PAIRWISE RELATE vs iHS COMPARISON")
+    print("PAIRWISE RELATE vs iHS COMPARISON (BIDIRECTIONAL)")
     print(f"{'='*70}")
 
     # Setup
-    output_dir = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/pairwise_relate_ihs_comparison')
+    output_dir = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib/results/pairwise_relate_ihs_comparison_bidirectional')
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Parameters
-    ihs_percentile = 99.0  # Use 99th percentile for each population
+    ihs_percentile = 99.5  # Use 99th percentile for each population / now 99.5
     relate_threshold = 5.0  # -log10(p) >= 5.0
     window_size = 50000  # 50kb window for overlaps
 
@@ -609,7 +736,7 @@ def main():
 
             print(f"\n{continent}:")
             print(f"  Populations: {row['n_populations']}")
-            print(f"  Mean overlap: {mean_pct:.1f}% (range: {row['min_pct_confirmed']:.1f}% - {row['max_pct_confirmed']:.1f}%)")
+            print(f"  Mean overlap: {mean_pct:.1f}% (range: {row['min_pct_ihs_confirmed']:.1f}% - {row['max_pct_ihs_confirmed']:.1f}%)")
 
             if mean_pct >= 20 and mean_pct <= 40:
                 print(f"  EXCELLENT: Within expected range (20-40%) from Relate paper")

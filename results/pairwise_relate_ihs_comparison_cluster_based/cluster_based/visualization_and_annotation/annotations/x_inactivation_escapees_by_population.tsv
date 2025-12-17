@@ -1,0 +1,4 @@
+chr	gene_start	gene_end	strand	gene_id	gene_name	gene_type	x_inactivation_status	overlap_type	region_start	region_end	population	overlap_start	overlap_end	overlap_size_bp	ihs_max_score	relate_max_score
+X	44873188	45112779	+	ENSG00000147050	KDM6A	protein_coding	escape	contains_region	44899537	44937468	MXL	44899537	44937468	37932	4.79484	6.09409
+X	44873188	45112779	+	ENSG00000147050	KDM6A	protein_coding	escape	contains_region	44941269	44958505	PEL	44941269	44958505	17237	5.98004	6.1219
+X	44873188	45112779	+	ENSG00000147050	KDM6A	protein_coding	escape	contains_region	44958505	44958505	PUR	44958505	44958505	1	5.76072	5.9449

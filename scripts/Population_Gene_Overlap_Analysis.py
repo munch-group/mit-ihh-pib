@@ -192,8 +192,8 @@ print()
 # Set style
 sns.set_style("whitegrid")
 
-# Figure Venn diagram
-fig, ax = plt.subplots(figsize=(10, 8))
+# Figure Venn diagram - larger to accommodate annotations
+fig, ax = plt.subplots(figsize=(18, 14))
 
 venn = venn3(
     [gene_sets['EUR'], gene_sets['EAS'], gene_sets['AFR']],
@@ -204,15 +204,70 @@ venn = venn3(
 )
 venn3_circles(
     [gene_sets['EUR'], gene_sets['EAS'], gene_sets['AFR']],
-    linewidth=1.5,
+    linewidth=2,
     ax=ax
 )
 
 plt.title('Overlap of Genes Under Selection (iHS)\nAcross EUR, EAS, and AFR Populations',
-          fontsize=14, fontweight='bold', pad=20)
+          fontsize=16, fontweight='bold', pad=30)
+
+# Add gene names with text boxes and arrows
+# Each tuple: (gene_set, label, text_position, arrow_target, horizontal_align, vertical_align, arrow_curve)
+annotations = [
+    # EUR only - top left
+    (eur_unique, 'EUR only', (-0.72, 0.30), (-0.28, 0.32), 'right', 'bottom', 'arc3,rad=0.2'),
+    # EAS only - top right
+    (eas_unique, 'EAS only', (0.72, 0.60), (0.28, 0.32), 'left', 'bottom', 'arc3,rad=-0.2'),
+    # AFR only - bottom center
+    (afr_unique, 'AFR only', (-0.20, -0.70), (0.0, -0.32), 'center', 'top', 'arc3,rad=0'),
+    # EUR & EAS only - top center (skip if empty)
+    (eur_eas_only, 'EUR & EAS', (0.0, 0.80), (0.0, 0.30), 'center', 'bottom', 'arc3,rad=0'),
+    # EUR & AFR only - far left
+    (eur_afr_only, 'EUR & AFR', (-0.82, -0.30), (-0.20, -0.10), 'right', 'center', 'arc3,rad=-0.2'),
+    # EAS & AFR only - far right
+    (eas_afr_only, 'EAS & AFR', (0.82, -0.15), (0.15, -0.05), 'left', 'center', 'arc3,rad=0.2'),
+    # All 3 populations - TOP CENTER, arrow pointing straight down to center
+    (all_three, 'All 3 pops', (-0.15, 0.75), (-0.05, 0.14), 'center', 'bottom', 'arc3,rad=0'),
+]
+
+for gene_set, label, text_pos, arrow_pos, ha, va, connection_style in annotations:
+    if gene_set:  # Only annotate if there are genes in this region
+        # Create gene list text
+        gene_text = '\n'.join(sorted(gene_set))
+        full_text = f"{label} (n={len(gene_set)}):\n{gene_text}"
+
+        # Add text box with arrow
+        ax.annotate(
+            full_text,
+            xy=arrow_pos,           # Arrow points to this location (inside Venn region)
+            xytext=text_pos,        # Text box location
+            fontsize=11,
+            family='monospace',
+            ha=ha,
+            va=va,
+            bbox=dict(
+                boxstyle='round,pad=0.5',
+                facecolor='wheat',
+                alpha=0.9,
+                edgecolor='#8B4513',
+                linewidth=1.5
+            ),
+            arrowprops=dict(
+                arrowstyle='-|>',
+                connectionstyle=connection_style,
+                color='#555555',
+                lw=1.5,
+                mutation_scale=12
+            )
+        )
+
+# Adjust axis limits to accommodate all annotations
+ax.set_xlim(-1.1, 1.1)
+ax.set_ylim(-1.15, 0.95)
+ax.axis('off')
 
 venn_file = OUTPUT_DIR / 'venn_diagram_population_overlap.png'
-plt.savefig(venn_file, dpi=300, bbox_inches='tight')
+plt.savefig(venn_file, dpi=300, bbox_inches='tight', facecolor='white', edgecolor='none')
 plt.close()
 print(f"  Venn diagram saved to: {venn_file}")
 

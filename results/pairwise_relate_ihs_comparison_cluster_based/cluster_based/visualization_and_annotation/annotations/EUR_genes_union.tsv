@@ -1,0 +1,9 @@
+gene_name	gene_id	subpopulations	n_subpopulations	gene_type	x_inactivation_status	gene_start	gene_end	strand
+ATP11C	ENSG00000101974	IBS	1	protein_coding	subject	139726346	139945276	-
+DMD	ENSG00000198947	IBS	1	protein_coding	subject	31097677	33339609	-
+ENSG00000228855	ENSG00000228855	IBS	1	processed_pseudogene	subject	147591612	147591909	-
+MID1	ENSG00000101871	GBR	1	protein_coding	subject	10445310	10833654	-
+RNU6ATAC23P	ENSG00000221375	IBS	1	snRNA	subject	139885481	139885603	+
+RTL4	ENSG00000187823	IBS	1	protein_coding	subject	112083016	112457514	+
+TRPC5	ENSG00000072315	IBS	1	protein_coding	subject	111768011	112082776	-
+VCX3A	ENSG00000169059	IBS	1	protein_coding	subject	6533618	6535118	-

@@ -1,0 +1,4 @@
+ihs_cluster_id	ihs_cluster_start	ihs_cluster_end	ihs_cluster_size	ihs_cluster_max_score	relate_cluster_id	relate_cluster_start	relate_cluster_end	relate_cluster_size	relate_cluster_max_score	overlap_start	overlap_end	overlap_size_bp	center_distance
+60	81968091	82167219	2	4.52042	15	82138311	82203456	5	5.40987	82138311	82167219	28909	71112.0
+82	97483258	97924867	8	5.67064	8	97797256	97833845	3	6.61031	97797256	97833845	36590	128711.0
+159	35517460	35543063	9	4.67664	30	35235002	35529847	9	6.19175	35517460	35529847	12388	137662.0
