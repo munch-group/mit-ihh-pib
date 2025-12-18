@@ -1,0 +1,66 @@
+SAS: Gene Overlap Details
+================================================================================
+
+Set 1: PJL
+  Populations: 1
+  Number of genes: 7
+  Genes: CFAP47, FAM9B, NLGN4X, OTC, RPGR, RTL4, TRPC5
+
+--------------------------------------------------------------------------------
+
+Set 2: ITU
+  Populations: 1
+  Number of genes: 6
+  Genes: CITED1, ENSG00000285547, HDAC8, PCDH11X, PIN4, RPS4X
+
+--------------------------------------------------------------------------------
+
+Set 3: BEB + ITU + PJL + STU
+  Populations: 4
+  Number of genes: 3
+  Genes: ACSL4, KCNE5, NXT2
+
+--------------------------------------------------------------------------------
+
+Set 4: ITU + PJL
+  Populations: 2
+  Number of genes: 2
+  Genes: DYNLT3, ENSG00000250349
+
+--------------------------------------------------------------------------------
+
+Set 5: BEB
+  Populations: 1
+  Number of genes: 2
+  Genes: FAM47A, ZFX
+
+--------------------------------------------------------------------------------
+
+Set 6: STU
+  Populations: 1
+  Number of genes: 2
+  Genes: AFF2, TDGF1P3
+
+--------------------------------------------------------------------------------
+
+Set 7: BEB + ITU + STU
+  Populations: 3
+  Number of genes: 1
+  Genes: USP9X
+
+--------------------------------------------------------------------------------
+
+Set 8: BEB + ITU
+  Populations: 2
+  Number of genes: 1
+  Genes: WDR44
+
+--------------------------------------------------------------------------------
+
+Set 9: ITU + STU
+  Populations: 2
+  Number of genes: 1
+  Genes: DMD
+
+--------------------------------------------------------------------------------
+

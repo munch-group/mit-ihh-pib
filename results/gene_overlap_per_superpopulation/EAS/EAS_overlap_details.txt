@@ -1,0 +1,73 @@
+EAS: Gene Overlap Details
+================================================================================
+
+Set 1: JPT
+  Populations: 1
+  Number of genes: 10
+  Genes: ACSL4, CPXCR1, DIAPH2, ENSG00000250349, FAM9B, KCNE5, NLGN4X, NXT2, OTC, RPGR
+
+--------------------------------------------------------------------------------
+
+Set 2: KHV
+  Populations: 1
+  Number of genes: 4
+  Genes: F9, MCF2, TGIF2LX, USP9X
+
+--------------------------------------------------------------------------------
+
+Set 3: CHB + JPT
+  Populations: 2
+  Number of genes: 2
+  Genes: RTL4, TRPC5
+
+--------------------------------------------------------------------------------
+
+Set 4: CHB
+  Populations: 1
+  Number of genes: 2
+  Genes: DACH2, PGRMC1
+
+--------------------------------------------------------------------------------
+
+Set 5: CHS
+  Populations: 1
+  Number of genes: 2
+  Genes: KDM6A, PPP1R2C
+
+--------------------------------------------------------------------------------
+
+Set 6: CDX + CHB + JPT + KHV
+  Populations: 4
+  Number of genes: 1
+  Genes: MID1
+
+--------------------------------------------------------------------------------
+
+Set 7: CDX + KHV
+  Populations: 2
+  Number of genes: 1
+  Genes: DMD
+
+--------------------------------------------------------------------------------
+
+Set 8: CHB + CHS
+  Populations: 2
+  Number of genes: 1
+  Genes: EDA
+
+--------------------------------------------------------------------------------
+
+Set 9: CHB + KHV
+  Populations: 2
+  Number of genes: 1
+  Genes: STS
+
+--------------------------------------------------------------------------------
+
+Set 10: CDX
+  Populations: 1
+  Number of genes: 1
+  Genes: TEX11
+
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,6 @@
+superpopulation	n_populations_with_data	total_unique_genes	genes_in_all_populations	min_genes_per_population	max_genes_per_population	mean_genes_per_population
+AFR	7	60	0	5	24	14.571428571428571
+AMR	4	60	0	4	51	16.75
+EAS	5	25	0	3	13	6.6
+EUR	4	13	0	3	6	4.5
+SAS	4	25	3	7	14	10.0

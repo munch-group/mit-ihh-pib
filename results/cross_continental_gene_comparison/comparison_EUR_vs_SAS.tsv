@@ -1,0 +1,34 @@
+gene_name	category	pattern	in_EUR	in_SAS	EUR_n_subpops	EUR_total_subpops	EUR_proportion	EUR_subpops	SAS_n_subpops	SAS_total_subpops	SAS_proportion	SAS_subpops
+DACH2	EUR_specific	narrow	1	0	1	5	0.2	FIN	0	5	0.0	
+KDM6A	EUR_specific	narrow	1	0	1	5	0.2	FIN	0	5	0.0	
+MID1	EUR_specific	narrow	1	0	1	5	0.2	IBS	0	5	0.0	
+MID2	EUR_specific	narrow	1	0	1	5	0.2	CEU	0	5	0.0	
+NCBP2L	EUR_specific	narrow	1	0	1	5	0.2	CEU	0	5	0.0	
+STS	EUR_specific	narrow	1	0	2	5	0.4	CEU,GBR	0	5	0.0	
+TSC22D3	EUR_specific	narrow	1	0	1	5	0.2	CEU	0	5	0.0	
+ZMAT1	EUR_specific	narrow	1	0	1	5	0.2	CEU	0	5	0.0	
+ACSL4	SAS_specific	broad	0	1	0	5	0.0		4	5	0.8	BEB,ITU,PJL,STU
+KCNE5	SAS_specific	broad	0	1	0	5	0.0		4	5	0.8	BEB,ITU,PJL,STU
+NXT2	SAS_specific	broad	0	1	0	5	0.0		4	5	0.8	BEB,ITU,PJL,STU
+AFF2	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	STU
+CFAP47	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+CITED1	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+DYNLT3	SAS_specific	narrow	0	1	0	5	0.0		2	5	0.4	ITU,PJL
+ENSG00000250349	SAS_specific	narrow	0	1	0	5	0.0		2	5	0.4	ITU,PJL
+ENSG00000285547	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+FAM47A	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	BEB
+FAM9B	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+HDAC8	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+NLGN4X	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+OTC	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+PIN4	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+RPGR	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+RPS4X	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+RTL4	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+TDGF1P3	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	STU
+TRPC5	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+DMD	shared	broad-narrow	1	1	3	5	0.6	FIN,GBR,IBS	2	5	0.4	ITU,STU
+WDR44	shared	broad-narrow	1	1	3	5	0.6	FIN,GBR,IBS	2	5	0.4	BEB,ITU
+USP9X	shared	narrow-broad	1	1	1	5	0.2	FIN	3	5	0.6	BEB,ITU,STU
+PCDH11X	shared	narrow-narrow	1	1	1	5	0.2	FIN	1	5	0.2	ITU
+ZFX	shared	narrow-narrow	1	1	1	5	0.2	GBR	1	5	0.2	BEB

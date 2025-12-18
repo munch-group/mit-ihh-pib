@@ -1,0 +1,129 @@
+AFR: Gene Overlap Details
+================================================================================
+
+Set 1: ASW
+  Populations: 1
+  Number of genes: 21
+  Genes: ACOT9, AGTR2, APOO, CLDN34, CYBB, DYNLT3, ENSG00000288706, FGF13, GPR143, IQSEC2, LHFPL1, MAGEB16, RPL39, SAT1, SEPTIN6, SHROOM2, SHROOM4, SOWAHD, SPRY3, TENM1, TMLHE
+
+--------------------------------------------------------------------------------
+
+Set 2: MSL
+  Populations: 1
+  Number of genes: 6
+  Genes: DACH2, EFNB1, NKAP, RHOXF1P3, ZCCHC13, ZMAT1
+
+--------------------------------------------------------------------------------
+
+Set 3: ACB + YRI
+  Populations: 2
+  Number of genes: 5
+  Genes: CITED1, ENSG00000285547, HDAC8, PIN4, RPS4X
+
+--------------------------------------------------------------------------------
+
+Set 4: ACB + ESN + GWD + YRI
+  Populations: 4
+  Number of genes: 4
+  Genes: FAM9B, NXT2, RTL4, TRPC5
+
+--------------------------------------------------------------------------------
+
+Set 5: LWK
+  Populations: 1
+  Number of genes: 4
+  Genes: GK, RRAGB, USP9X, ZFX
+
+--------------------------------------------------------------------------------
+
+Set 6: GWD + YRI
+  Populations: 2
+  Number of genes: 3
+  Genes: ACSL4, KCNE5, PRDX4
+
+--------------------------------------------------------------------------------
+
+Set 7: ACB + ESN + MSL
+  Populations: 3
+  Number of genes: 2
+  Genes: MID1, PGRMC1
+
+--------------------------------------------------------------------------------
+
+Set 8: ESN + MSL + YRI
+  Populations: 3
+  Number of genes: 2
+  Genes: OTC, RPGR
+
+--------------------------------------------------------------------------------
+
+Set 9: ESN + YRI
+  Populations: 2
+  Number of genes: 2
+  Genes: STS, TEX11
+
+--------------------------------------------------------------------------------
+
+Set 10: GWD
+  Populations: 1
+  Number of genes: 2
+  Genes: HTR2C, NLGN4X
+
+--------------------------------------------------------------------------------
+
+Set 11: YRI
+  Populations: 1
+  Number of genes: 2
+  Genes: PUDP, SPANXD
+
+--------------------------------------------------------------------------------
+
+Set 12: ACB + ASW + GWD + YRI
+  Populations: 4
+  Number of genes: 1
+  Genes: PCDH11X
+
+--------------------------------------------------------------------------------
+
+Set 13: ACB + GWD + LWK + MSL
+  Populations: 4
+  Number of genes: 1
+  Genes: DMD
+
+--------------------------------------------------------------------------------
+
+Set 14: ASW + ESN + MSL + YRI
+  Populations: 4
+  Number of genes: 1
+  Genes: ENSG00000250349
+
+--------------------------------------------------------------------------------
+
+Set 15: ESN + GWD + YRI
+  Populations: 3
+  Number of genes: 1
+  Genes: CPXCR1
+
+--------------------------------------------------------------------------------
+
+Set 16: ACB + ASW
+  Populations: 2
+  Number of genes: 1
+  Genes: CFAP47
+
+--------------------------------------------------------------------------------
+
+Set 17: ACB
+  Populations: 1
+  Number of genes: 1
+  Genes: WDR44
+
+--------------------------------------------------------------------------------
+
+Set 18: ESN
+  Populations: 1
+  Number of genes: 1
+  Genes: TDGF1P3
+
+--------------------------------------------------------------------------------
+

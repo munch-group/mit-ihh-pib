@@ -1,0 +1,111 @@
+gene_name	category	pattern	in_AFR	in_AMR	AFR_n_subpops	AFR_total_subpops	AFR_proportion	AFR_subpops	AMR_n_subpops	AMR_total_subpops	AMR_proportion	AMR_subpops
+FAM9B	AFR_specific	broad	1	0	4	7	0.5714285714285714	ACB,ESN,GWD,YRI	0	4	0.0	
+NXT2	AFR_specific	broad	1	0	4	7	0.5714285714285714	ACB,ESN,GWD,YRI	0	4	0.0	
+PCDH11X	AFR_specific	broad	1	0	4	7	0.5714285714285714	ACB,ASW,GWD,YRI	0	4	0.0	
+RTL4	AFR_specific	broad	1	0	4	7	0.5714285714285714	ACB,ESN,GWD,YRI	0	4	0.0	
+TRPC5	AFR_specific	broad	1	0	4	7	0.5714285714285714	ACB,ESN,GWD,YRI	0	4	0.0	
+ACOT9	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+ACSL4	AFR_specific	narrow	1	0	2	7	0.2857142857142857	GWD,YRI	0	4	0.0	
+AGTR2	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+APOO	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+CFAP47	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,ASW	0	4	0.0	
+CITED1	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,YRI	0	4	0.0	
+CLDN34	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+CPXCR1	AFR_specific	narrow	1	0	3	7	0.42857142857142855	ESN,GWD,YRI	0	4	0.0	
+CYBB	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+DYNLT3	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+EFNB1	AFR_specific	narrow	1	0	1	7	0.14285714285714285	MSL	0	4	0.0	
+ENSG00000285547	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,YRI	0	4	0.0	
+ENSG00000288706	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+FGF13	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+GK	AFR_specific	narrow	1	0	1	7	0.14285714285714285	LWK	0	4	0.0	
+GPR143	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+HDAC8	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,YRI	0	4	0.0	
+HTR2C	AFR_specific	narrow	1	0	1	7	0.14285714285714285	GWD	0	4	0.0	
+IQSEC2	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+KCNE5	AFR_specific	narrow	1	0	2	7	0.2857142857142857	GWD,YRI	0	4	0.0	
+LHFPL1	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+MAGEB16	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+NKAP	AFR_specific	narrow	1	0	1	7	0.14285714285714285	MSL	0	4	0.0	
+NLGN4X	AFR_specific	narrow	1	0	1	7	0.14285714285714285	GWD	0	4	0.0	
+OTC	AFR_specific	narrow	1	0	3	7	0.42857142857142855	ESN,MSL,YRI	0	4	0.0	
+PIN4	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,YRI	0	4	0.0	
+PRDX4	AFR_specific	narrow	1	0	2	7	0.2857142857142857	GWD,YRI	0	4	0.0	
+RHOXF1P3	AFR_specific	narrow	1	0	1	7	0.14285714285714285	MSL	0	4	0.0	
+RPGR	AFR_specific	narrow	1	0	3	7	0.42857142857142855	ESN,MSL,YRI	0	4	0.0	
+RPL39	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+RPS4X	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ACB,YRI	0	4	0.0	
+SAT1	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+SEPTIN6	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+SHROOM2	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+SHROOM4	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+SOWAHD	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+SPANXD	AFR_specific	narrow	1	0	1	7	0.14285714285714285	YRI	0	4	0.0	
+SPRY3	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+TDGF1P3	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ESN	0	4	0.0	
+TENM1	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+TEX11	AFR_specific	narrow	1	0	2	7	0.2857142857142857	ESN,YRI	0	4	0.0	
+TMLHE	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ASW	0	4	0.0	
+WDR44	AFR_specific	narrow	1	0	1	7	0.14285714285714285	ACB	0	4	0.0	
+ZCCHC13	AFR_specific	narrow	1	0	1	7	0.14285714285714285	MSL	0	4	0.0	
+ZMAT1	AFR_specific	narrow	1	0	1	7	0.14285714285714285	MSL	0	4	0.0	
+EDA	AMR_specific	broad	0	1	0	7	0.0		2	4	0.5	CLM,MXL
+KDM6A	AMR_specific	broad	0	1	0	7	0.0		2	4	0.5	CLM,MXL
+ABCB7	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+ADGRG4	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+ARHGEF9	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+ATP11C	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+ATP6AP1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+BEX2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	PEL
+BRWD3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+DIAPH2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+DIPK2B	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+DNASE1L1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+EMD	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+ENOX2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+F9	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	CLM
+FAAH2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+FAM47A	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+FAM50A	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+GDI1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+GPC3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+GRIPAP1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+IL1RAPL1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	CLM
+IL1RAPL2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+KCND1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+LAGE3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+LPAR4	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+MAGEA1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+MAGED1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+MID2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+NAP1L2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+NCBP2L	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+OTUD5	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+P2RY10	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+PIM2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+PLXNA3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+PQBP1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+PRRG1	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+RADX	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+RNF128	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+RPL10	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+RTL3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+SLC10A3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+SLC35A2	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+TAFAZZIN	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+TCEAL5	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	PEL
+TCEAL7	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	PEL
+TCEAL8	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	PEL
+TIMM17B	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+TSC22D3	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+UBL4A	AMR_specific	narrow	0	1	0	7	0.0		1	4	0.25	MXL
+DMD	shared	broad-broad	1	1	4	7	0.5714285714285714	ACB,GWD,LWK,MSL	3	4	0.75	CLM,MXL,PUR
+ENSG00000250349	shared	broad-narrow	1	1	4	7	0.5714285714285714	ASW,ESN,MSL,YRI	1	4	0.25	MXL
+USP9X	shared	narrow-broad	1	1	1	7	0.14285714285714285	LWK	3	4	0.75	CLM,MXL,PUR
+ZFX	shared	narrow-broad	1	1	1	7	0.14285714285714285	LWK	2	4	0.5	CLM,PUR
+DACH2	shared	narrow-narrow	1	1	1	7	0.14285714285714285	MSL	1	4	0.25	PUR
+MID1	shared	narrow-narrow	1	1	3	7	0.42857142857142855	ACB,ESN,MSL	1	4	0.25	MXL
+PGRMC1	shared	narrow-narrow	1	1	3	7	0.42857142857142855	ACB,ESN,MSL	1	4	0.25	PEL
+PUDP	shared	narrow-narrow	1	1	1	7	0.14285714285714285	YRI	1	4	0.25	MXL
+RRAGB	shared	narrow-narrow	1	1	1	7	0.14285714285714285	LWK	1	4	0.25	MXL
+STS	shared	narrow-narrow	1	1	2	7	0.2857142857142857	ESN,YRI	1	4	0.25	MXL

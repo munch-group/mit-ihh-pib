@@ -1,0 +1,64 @@
+gene_name	category	pattern	in_AMR	in_EUR	AMR_n_subpops	AMR_total_subpops	AMR_proportion	AMR_subpops	EUR_n_subpops	EUR_total_subpops	EUR_proportion	EUR_subpops
+EDA	AMR_specific	broad	1	0	2	4	0.5	CLM,MXL	0	5	0.0	
+ABCB7	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ADGRG4	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ARHGEF9	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ATP11C	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ATP6AP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+BEX2	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+BRWD3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+DIAPH2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+DIPK2B	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+DNASE1L1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+EMD	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ENOX2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ENSG00000250349	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+F9	AMR_specific	narrow	1	0	1	4	0.25	CLM	0	5	0.0	
+FAAH2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+FAM47A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+FAM50A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GDI1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GPC3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GRIPAP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+IL1RAPL1	AMR_specific	narrow	1	0	1	4	0.25	CLM	0	5	0.0	
+IL1RAPL2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+KCND1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+LAGE3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+LPAR4	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+MAGEA1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+MAGED1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+NAP1L2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+OTUD5	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+P2RY10	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PGRMC1	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+PIM2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PLXNA3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PQBP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PRRG1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PUDP	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RADX	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RNF128	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RPL10	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RRAGB	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RTL3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+SLC10A3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+SLC35A2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+TAFAZZIN	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+TCEAL5	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TCEAL7	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TCEAL8	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TIMM17B	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+UBL4A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+WDR44	EUR_specific	broad	0	1	0	4	0.0		3	5	0.6	FIN,GBR,IBS
+PCDH11X	EUR_specific	narrow	0	1	0	4	0.0		1	5	0.2	FIN
+ZMAT1	EUR_specific	narrow	0	1	0	4	0.0		1	5	0.2	CEU
+DMD	shared	broad-broad	1	1	3	4	0.75	CLM,MXL,PUR	3	5	0.6	FIN,GBR,IBS
+KDM6A	shared	broad-narrow	1	1	2	4	0.5	CLM,MXL	1	5	0.2	FIN
+USP9X	shared	broad-narrow	1	1	3	4	0.75	CLM,MXL,PUR	1	5	0.2	FIN
+ZFX	shared	broad-narrow	1	1	2	4	0.5	CLM,PUR	1	5	0.2	GBR
+DACH2	shared	narrow-narrow	1	1	1	4	0.25	PUR	1	5	0.2	FIN
+MID1	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	IBS
+MID2	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	CEU
+NCBP2L	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	CEU
+STS	shared	narrow-narrow	1	1	1	4	0.25	MXL	2	5	0.4	CEU,GBR
+TSC22D3	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	CEU

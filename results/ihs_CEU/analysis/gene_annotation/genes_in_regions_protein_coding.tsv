@@ -1,0 +1,6 @@
+gene_name	gene_id	gene_type	chr	start	end	strand	x_inactivation_status	overlap_type	region_chr	region_start	region_end	region_length	region_n_snps	region_max_std_ihs
+STS	ENSG00000101846	protein_coding	X	7147237	7804358	+	subject	contains_region	X	7198572	7220673	22101	24	5.36077
+ZMAT1	ENSG00000166432	protein_coding	X	101882288	101932031	-	subject	flanking	X	101972051	101994171	22120	25	4.87956
+TSC22D3	ENSG00000157514	protein_coding	X	107713221	107777342	-	subject	flanking	X	107781784	107797249	15465	25	4.98802
+NCBP2L	ENSG00000170935	protein_coding	X	107774899	107795829	+	subject	overlapping	X	107781784	107797249	15465	25	4.98802
+MID2	ENSG00000080561	protein_coding	X	107825755	107931637	+	subject	flanking	X	107781784	107797249	15465	25	4.98802

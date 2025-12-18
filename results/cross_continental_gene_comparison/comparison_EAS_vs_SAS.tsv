@@ -1,0 +1,39 @@
+gene_name	category	pattern	in_EAS	in_SAS	EAS_n_subpops	EAS_total_subpops	EAS_proportion	EAS_subpops	SAS_n_subpops	SAS_total_subpops	SAS_proportion	SAS_subpops
+MID1	EAS_specific	broad	1	0	4	5	0.8	CDX,CHB,JPT,KHV	0	5	0.0	
+CPXCR1	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+DACH2	EAS_specific	narrow	1	0	1	5	0.2	CHB	0	5	0.0	
+DIAPH2	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+EDA	EAS_specific	narrow	1	0	2	5	0.4	CHB,CHS	0	5	0.0	
+F9	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+KDM6A	EAS_specific	narrow	1	0	1	5	0.2	CHS	0	5	0.0	
+MCF2	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+PGRMC1	EAS_specific	narrow	1	0	1	5	0.2	CHB	0	5	0.0	
+PPP1R2C	EAS_specific	narrow	1	0	1	5	0.2	CHS	0	5	0.0	
+STS	EAS_specific	narrow	1	0	2	5	0.4	CHB,KHV	0	5	0.0	
+TEX11	EAS_specific	narrow	1	0	1	5	0.2	CDX	0	5	0.0	
+TGIF2LX	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+AFF2	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	STU
+CFAP47	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	PJL
+CITED1	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+DYNLT3	SAS_specific	narrow	0	1	0	5	0.0		2	5	0.4	ITU,PJL
+ENSG00000285547	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+FAM47A	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	BEB
+HDAC8	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+PCDH11X	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+PIN4	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+RPS4X	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	ITU
+TDGF1P3	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	STU
+WDR44	SAS_specific	narrow	0	1	0	5	0.0		2	5	0.4	BEB,ITU
+ZFX	SAS_specific	narrow	0	1	0	5	0.0		1	5	0.2	BEB
+ACSL4	shared	narrow-broad	1	1	1	5	0.2	JPT	4	5	0.8	BEB,ITU,PJL,STU
+KCNE5	shared	narrow-broad	1	1	1	5	0.2	JPT	4	5	0.8	BEB,ITU,PJL,STU
+NXT2	shared	narrow-broad	1	1	1	5	0.2	JPT	4	5	0.8	BEB,ITU,PJL,STU
+USP9X	shared	narrow-broad	1	1	1	5	0.2	KHV	3	5	0.6	BEB,ITU,STU
+DMD	shared	narrow-narrow	1	1	2	5	0.4	CDX,KHV	2	5	0.4	ITU,STU
+ENSG00000250349	shared	narrow-narrow	1	1	1	5	0.2	JPT	2	5	0.4	ITU,PJL
+FAM9B	shared	narrow-narrow	1	1	1	5	0.2	JPT	1	5	0.2	PJL
+NLGN4X	shared	narrow-narrow	1	1	1	5	0.2	JPT	1	5	0.2	PJL
+OTC	shared	narrow-narrow	1	1	1	5	0.2	JPT	1	5	0.2	PJL
+RPGR	shared	narrow-narrow	1	1	1	5	0.2	JPT	1	5	0.2	PJL
+RTL4	shared	narrow-narrow	1	1	2	5	0.4	CHB,JPT	1	5	0.2	PJL
+TRPC5	shared	narrow-narrow	1	1	2	5	0.4	CHB,JPT	1	5	0.2	PJL

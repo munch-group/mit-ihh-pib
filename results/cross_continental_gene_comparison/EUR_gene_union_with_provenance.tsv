@@ -1,0 +1,14 @@
+gene_name	n_subpopulations	total_subpopulations	proportion	signal_breadth	subpopulations
+DMD	3	5	0.6	broad	FIN,GBR,IBS
+WDR44	3	5	0.6	broad	FIN,GBR,IBS
+STS	2	5	0.4	narrow	CEU,GBR
+DACH2	1	5	0.2	narrow	FIN
+KDM6A	1	5	0.2	narrow	FIN
+MID1	1	5	0.2	narrow	IBS
+MID2	1	5	0.2	narrow	CEU
+NCBP2L	1	5	0.2	narrow	CEU
+PCDH11X	1	5	0.2	narrow	FIN
+TSC22D3	1	5	0.2	narrow	CEU
+USP9X	1	5	0.2	narrow	FIN
+ZFX	1	5	0.2	narrow	GBR
+ZMAT1	1	5	0.2	narrow	CEU

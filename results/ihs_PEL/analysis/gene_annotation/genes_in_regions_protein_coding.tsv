@@ -1,0 +1,6 @@
+gene_name	gene_id	gene_type	chr	start	end	strand	x_inactivation_status	overlap_type	region_chr	region_start	region_end	region_length	region_n_snps	region_max_std_ihs
+TCEAL8	ENSG00000180964	protein_coding	X	103252995	103255192	-	subject	overlapping	X	103277529	103294472	16943	20	4.5982
+TCEAL5	ENSG00000204065	protein_coding	X	103273691	103276750	-	subject	overlapping	X	103277529	103294472	16943	20	4.5982
+BEX2	ENSG00000133134	protein_coding	X	103309346	103311007	-	subject	overlapping	X	103277529	103294472	16943	20	4.5982
+TCEAL7	ENSG00000182916	protein_coding	X	103330229	103332326	+	subject	overlapping	X	103277529	103294472	16943	20	4.5982
+PGRMC1	ENSG00000101856	protein_coding	X	119236245	119244466	+	subject	flanking	X	119293215	119311028	17813	21	6.11446

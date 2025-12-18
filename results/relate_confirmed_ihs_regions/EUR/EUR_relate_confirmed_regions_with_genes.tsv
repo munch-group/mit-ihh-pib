@@ -1,0 +1,5 @@
+chr	start	end	length	n_snps	mean_std_ihs	max_std_ihs	mean_pvalue	min_pvalue	top_snp_location	top_snp_std_ihs	chr_type	superpopulation	n_ihs_overlap_positions	n_relate_overlap_positions	n_bidirectional_pairs	n_populations_with_overlap	populations_with_overlap	has_relate_confirmation	gene_name	gene_id	gene_type	gene_start	gene_end	gene_strand	x_inactivation_status
+X	10776442	10796361	19919	44	3.4125188636363637	3.88378	0.0008237314812412	0.0001028449714049	X:10777526:CTCTTT:C	3.88378	X chromosome	EUR	1	0	0	1	GBR	True	MID1	ENSG00000101871	protein_coding	10445310.0	10833654.0	-	subject
+X	94852096	94867573	15477	26	3.693414615384616	4.81797	0.0007273602172123	1.4502616938755563e-06	X:94853788:GAA:G	4.81797	X chromosome	EUR	8	0	0	1	IBS	True	none	none	none			none	none
+X	99790728	99811187	20459	23	3.341578260869566	3.6173	0.000894198728407	0.0002976921951301	X:99795041:C:T	3.6173	X chromosome	EUR	1	0	0	1	FIN	True	none	none	none			none	none
+X	139818680	139857791	39111	53	3.696257735849057	5.41692	0.0007467008995122	6.063445385201526e-08	X:139822423:GT:G	5.41692	X chromosome	EUR	14	14	14	1	IBS	True	ATP11C	ENSG00000101974	protein_coding	139726346.0	139945276.0	-	subject

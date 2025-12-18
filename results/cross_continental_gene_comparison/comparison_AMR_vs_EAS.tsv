@@ -1,0 +1,75 @@
+gene_name	category	pattern	in_AMR	in_EAS	AMR_n_subpops	AMR_total_subpops	AMR_proportion	AMR_subpops	EAS_n_subpops	EAS_total_subpops	EAS_proportion	EAS_subpops
+ZFX	AMR_specific	broad	1	0	2	4	0.5	CLM,PUR	0	5	0.0	
+ABCB7	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ADGRG4	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ARHGEF9	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ATP11C	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ATP6AP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+BEX2	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+BRWD3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+DIPK2B	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+DNASE1L1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+EMD	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ENOX2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+FAAH2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+FAM47A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+FAM50A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GDI1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GPC3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+GRIPAP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+IL1RAPL1	AMR_specific	narrow	1	0	1	4	0.25	CLM	0	5	0.0	
+IL1RAPL2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+KCND1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+LAGE3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+LPAR4	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+MAGEA1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+MAGED1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+MID2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+NAP1L2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+NCBP2L	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+OTUD5	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+P2RY10	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PIM2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PLXNA3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PQBP1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PRRG1	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+PUDP	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RADX	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RNF128	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RPL10	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RRAGB	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+RTL3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+SLC10A3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+SLC35A2	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+TAFAZZIN	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+TCEAL5	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TCEAL7	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TCEAL8	AMR_specific	narrow	1	0	1	4	0.25	PEL	0	5	0.0	
+TIMM17B	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+TSC22D3	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+UBL4A	AMR_specific	narrow	1	0	1	4	0.25	MXL	0	5	0.0	
+ACSL4	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+CPXCR1	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+FAM9B	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+KCNE5	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+MCF2	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	KHV
+NLGN4X	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+NXT2	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+OTC	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+PPP1R2C	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	CHS
+RPGR	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	JPT
+RTL4	EAS_specific	narrow	0	1	0	4	0.0		2	5	0.4	CHB,JPT
+TEX11	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	CDX
+TGIF2LX	EAS_specific	narrow	0	1	0	4	0.0		1	5	0.2	KHV
+TRPC5	EAS_specific	narrow	0	1	0	4	0.0		2	5	0.4	CHB,JPT
+DMD	shared	broad-narrow	1	1	3	4	0.75	CLM,MXL,PUR	2	5	0.4	CDX,KHV
+EDA	shared	broad-narrow	1	1	2	4	0.5	CLM,MXL	2	5	0.4	CHB,CHS
+KDM6A	shared	broad-narrow	1	1	2	4	0.5	CLM,MXL	1	5	0.2	CHS
+USP9X	shared	broad-narrow	1	1	3	4	0.75	CLM,MXL,PUR	1	5	0.2	KHV
+MID1	shared	narrow-broad	1	1	1	4	0.25	MXL	4	5	0.8	CDX,CHB,JPT,KHV
+DACH2	shared	narrow-narrow	1	1	1	4	0.25	PUR	1	5	0.2	CHB
+DIAPH2	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	JPT
+ENSG00000250349	shared	narrow-narrow	1	1	1	4	0.25	MXL	1	5	0.2	JPT
+F9	shared	narrow-narrow	1	1	1	4	0.25	CLM	1	5	0.2	KHV
+PGRMC1	shared	narrow-narrow	1	1	1	4	0.25	PEL	1	5	0.2	CHB
+STS	shared	narrow-narrow	1	1	1	4	0.25	MXL	2	5	0.4	CHB,KHV

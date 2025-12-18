@@ -1,0 +1,6 @@
+superpopulation	total_unique_genes	n_subpopulations	genes_broad_signal	genes_narrow_signal	proportion_broad	mean_subpops_per_gene	median_subpops_per_gene
+AFR	60	7	7	53	0.11666666666666667	1.7	1.0
+AMR	60	4	5	55	0.08333333333333333	1.1166666666666667	1.0
+EAS	25	5	1	24	0.04	1.32	1.0
+EUR	13	5	2	11	0.15384615384615385	1.3846153846153846	1.0
+SAS	25	5	4	21	0.16	1.6	1.0

@@ -1,0 +1,4 @@
+superpopulation	n_regions_total	n_regions_with_relate	pct_regions_with_relate	n_bidirectional_pairs	n_position_region_mappings	n_unique_genes_in_confirmed_regions
+AFR	23	2	8.695652173913043	278	68	1
+EAS	37	0	0.0	8	0	0
+EUR	54	4	7.407407407407407	51	24	2

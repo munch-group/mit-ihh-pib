@@ -1,0 +1,4 @@
+gene_name	gene_id	gene_type	chr	start	end	strand	x_inactivation_status	overlap_type	region_chr	region_start	region_end	region_length	region_n_snps	region_max_std_ihs
+MID1	ENSG00000101871	protein_coding	X	10445310	10833654	-	subject	contains_region	X	10777644	10804394	26750	36	6.2391
+DMD	ENSG00000198947	protein_coding	X	31097677	33339609	-	subject	contains_region	X	31794522	31807273	12751	21	6.58517
+WDR44	ENSG00000131725	protein_coding	X	118346073	118449961	+	subject	contains_region	X	118414297	118445236	30939	35	6.01722

@@ -1,0 +1,115 @@
+gene_name	n_continents	continents	AFR_present	AFR_n_subpops	AFR_proportion	AFR_breadth	AFR_subpops	AMR_present	AMR_n_subpops	AMR_proportion	AMR_breadth	AMR_subpops	EAS_present	EAS_n_subpops	EAS_proportion	EAS_breadth	EAS_subpops	EUR_present	EUR_n_subpops	EUR_proportion	EUR_breadth	EUR_subpops	SAS_present	SAS_n_subpops	SAS_proportion	SAS_breadth	SAS_subpops
+DMD	5	AFR,AMR,EAS,EUR,SAS	1	4	0.5714285714285714	broad	ACB,GWD,LWK,MSL	1	3	0.75	broad	CLM,MXL,PUR	1	2	0.4	narrow	CDX,KHV	1	3	0.6	broad	FIN,GBR,IBS	1	2	0.4	narrow	ITU,STU
+USP9X	5	AFR,AMR,EAS,EUR,SAS	1	1	0.14285714285714285	narrow	LWK	1	3	0.75	broad	CLM,MXL,PUR	1	1	0.2	narrow	KHV	1	1	0.2	narrow	FIN	1	3	0.6	broad	BEB,ITU,STU
+DACH2	4	AFR,AMR,EAS,EUR	1	1	0.14285714285714285	narrow	MSL	1	1	0.25	narrow	PUR	1	1	0.2	narrow	CHB	1	1	0.2	narrow	FIN	0	0	0.0	absent	
+ENSG00000250349	4	AFR,AMR,EAS,SAS	1	4	0.5714285714285714	broad	ASW,ESN,MSL,YRI	1	1	0.25	narrow	MXL	1	1	0.2	narrow	JPT	0	0	0.0	absent		1	2	0.4	narrow	ITU,PJL
+MID1	4	AFR,AMR,EAS,EUR	1	3	0.42857142857142855	narrow	ACB,ESN,MSL	1	1	0.25	narrow	MXL	1	4	0.8	broad	CDX,CHB,JPT,KHV	1	1	0.2	narrow	IBS	0	0	0.0	absent	
+STS	4	AFR,AMR,EAS,EUR	1	2	0.2857142857142857	narrow	ESN,YRI	1	1	0.25	narrow	MXL	1	2	0.4	narrow	CHB,KHV	1	2	0.4	narrow	CEU,GBR	0	0	0.0	absent	
+ZFX	4	AFR,AMR,EUR,SAS	1	1	0.14285714285714285	narrow	LWK	1	2	0.5	broad	CLM,PUR	0	0	0.0	absent		1	1	0.2	narrow	GBR	1	1	0.2	narrow	BEB
+ACSL4	3	AFR,EAS,SAS	1	2	0.2857142857142857	narrow	GWD,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	4	0.8	broad	BEB,ITU,PJL,STU
+FAM9B	3	AFR,EAS,SAS	1	4	0.5714285714285714	broad	ACB,ESN,GWD,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+KCNE5	3	AFR,EAS,SAS	1	2	0.2857142857142857	narrow	GWD,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	4	0.8	broad	BEB,ITU,PJL,STU
+KDM6A	3	AMR,EAS,EUR	0	0	0.0	absent		1	2	0.5	broad	CLM,MXL	1	1	0.2	narrow	CHS	1	1	0.2	narrow	FIN	0	0	0.0	absent	
+NLGN4X	3	AFR,EAS,SAS	1	1	0.14285714285714285	narrow	GWD	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+NXT2	3	AFR,EAS,SAS	1	4	0.5714285714285714	broad	ACB,ESN,GWD,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	4	0.8	broad	BEB,ITU,PJL,STU
+OTC	3	AFR,EAS,SAS	1	3	0.42857142857142855	narrow	ESN,MSL,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+PCDH11X	3	AFR,EUR,SAS	1	4	0.5714285714285714	broad	ACB,ASW,GWD,YRI	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	FIN	1	1	0.2	narrow	ITU
+PGRMC1	3	AFR,AMR,EAS	1	3	0.42857142857142855	narrow	ACB,ESN,MSL	1	1	0.25	narrow	PEL	1	1	0.2	narrow	CHB	0	0	0.0	absent		0	0	0.0	absent	
+RPGR	3	AFR,EAS,SAS	1	3	0.42857142857142855	narrow	ESN,MSL,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+RTL4	3	AFR,EAS,SAS	1	4	0.5714285714285714	broad	ACB,ESN,GWD,YRI	0	0	0.0	absent		1	2	0.4	narrow	CHB,JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+TRPC5	3	AFR,EAS,SAS	1	4	0.5714285714285714	broad	ACB,ESN,GWD,YRI	0	0	0.0	absent		1	2	0.4	narrow	CHB,JPT	0	0	0.0	absent		1	1	0.2	narrow	PJL
+WDR44	3	AFR,EUR,SAS	1	1	0.14285714285714285	narrow	ACB	0	0	0.0	absent		0	0	0.0	absent		1	3	0.6	broad	FIN,GBR,IBS	1	2	0.4	narrow	BEB,ITU
+CFAP47	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	PJL
+CITED1	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	ITU
+CPXCR1	2	AFR,EAS	1	3	0.42857142857142855	narrow	ESN,GWD,YRI	0	0	0.0	absent		1	1	0.2	narrow	JPT	0	0	0.0	absent		0	0	0.0	absent	
+DIAPH2	2	AMR,EAS	0	0	0.0	absent		1	1	0.25	narrow	MXL	1	1	0.2	narrow	JPT	0	0	0.0	absent		0	0	0.0	absent	
+DYNLT3	2	AFR,SAS	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	2	0.4	narrow	ITU,PJL
+EDA	2	AMR,EAS	0	0	0.0	absent		1	2	0.5	broad	CLM,MXL	1	2	0.4	narrow	CHB,CHS	0	0	0.0	absent		0	0	0.0	absent	
+ENSG00000285547	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	ITU
+F9	2	AMR,EAS	0	0	0.0	absent		1	1	0.25	narrow	CLM	1	1	0.2	narrow	KHV	0	0	0.0	absent		0	0	0.0	absent	
+FAM47A	2	AMR,SAS	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	BEB
+HDAC8	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	ITU
+MID2	2	AMR,EUR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		1	1	0.2	narrow	CEU	0	0	0.0	absent	
+NCBP2L	2	AMR,EUR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		1	1	0.2	narrow	CEU	0	0	0.0	absent	
+PIN4	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	ITU
+PUDP	2	AFR,AMR	1	1	0.14285714285714285	narrow	YRI	1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RPS4X	2	AFR,SAS	1	2	0.2857142857142857	narrow	ACB,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	ITU
+RRAGB	2	AFR,AMR	1	1	0.14285714285714285	narrow	LWK	1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TDGF1P3	2	AFR,SAS	1	1	0.14285714285714285	narrow	ESN	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	STU
+TEX11	2	AFR,EAS	1	2	0.2857142857142857	narrow	ESN,YRI	0	0	0.0	absent		1	1	0.2	narrow	CDX	0	0	0.0	absent		0	0	0.0	absent	
+TSC22D3	2	AMR,EUR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		1	1	0.2	narrow	CEU	0	0	0.0	absent	
+ZMAT1	2	AFR,EUR	1	1	0.14285714285714285	narrow	MSL	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	CEU	0	0	0.0	absent	
+ABCB7	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ACOT9	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ADGRG4	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+AFF2	1	SAS	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	STU
+AGTR2	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+APOO	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ARHGEF9	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ATP11C	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ATP6AP1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+BEX2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	PEL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+BRWD3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+CLDN34	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+CYBB	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+DIPK2B	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+DNASE1L1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+EFNB1	1	AFR	1	1	0.14285714285714285	narrow	MSL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+EMD	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ENOX2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ENSG00000288706	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+FAAH2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+FAM50A	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+FGF13	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+GDI1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+GK	1	AFR	1	1	0.14285714285714285	narrow	LWK	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+GPC3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+GPR143	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+GRIPAP1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+HTR2C	1	AFR	1	1	0.14285714285714285	narrow	GWD	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+IL1RAPL1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	CLM	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+IL1RAPL2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+IQSEC2	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+KCND1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+LAGE3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+LHFPL1	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+LPAR4	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+MAGEA1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+MAGEB16	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+MAGED1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+MCF2	1	EAS	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	KHV	0	0	0.0	absent		0	0	0.0	absent	
+NAP1L2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+NKAP	1	AFR	1	1	0.14285714285714285	narrow	MSL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+OTUD5	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+P2RY10	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+PIM2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+PLXNA3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+PPP1R2C	1	EAS	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	CHS	0	0	0.0	absent		0	0	0.0	absent	
+PQBP1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+PRDX4	1	AFR	1	2	0.2857142857142857	narrow	GWD,YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+PRRG1	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RADX	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RHOXF1P3	1	AFR	1	1	0.14285714285714285	narrow	MSL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RNF128	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RPL10	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RPL39	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+RTL3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SAT1	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SEPTIN6	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SHROOM2	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SHROOM4	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SLC10A3	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SLC35A2	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SOWAHD	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SPANXD	1	AFR	1	1	0.14285714285714285	narrow	YRI	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+SPRY3	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TAFAZZIN	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TCEAL5	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	PEL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TCEAL7	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	PEL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TCEAL8	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	PEL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TENM1	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TGIF2LX	1	EAS	0	0	0.0	absent		0	0	0.0	absent		1	1	0.2	narrow	KHV	0	0	0.0	absent		0	0	0.0	absent	
+TIMM17B	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+TMLHE	1	AFR	1	1	0.14285714285714285	narrow	ASW	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+UBL4A	1	AMR	0	0	0.0	absent		1	1	0.25	narrow	MXL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	
+ZCCHC13	1	AFR	1	1	0.14285714285714285	narrow	MSL	0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent		0	0	0.0	absent	

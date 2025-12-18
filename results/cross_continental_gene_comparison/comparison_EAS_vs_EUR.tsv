@@ -1,0 +1,33 @@
+gene_name	category	pattern	in_EAS	in_EUR	EAS_n_subpops	EAS_total_subpops	EAS_proportion	EAS_subpops	EUR_n_subpops	EUR_total_subpops	EUR_proportion	EUR_subpops
+ACSL4	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+CPXCR1	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+DIAPH2	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+EDA	EAS_specific	narrow	1	0	2	5	0.4	CHB,CHS	0	5	0.0	
+ENSG00000250349	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+F9	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+FAM9B	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+KCNE5	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+MCF2	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+NLGN4X	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+NXT2	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+OTC	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+PGRMC1	EAS_specific	narrow	1	0	1	5	0.2	CHB	0	5	0.0	
+PPP1R2C	EAS_specific	narrow	1	0	1	5	0.2	CHS	0	5	0.0	
+RPGR	EAS_specific	narrow	1	0	1	5	0.2	JPT	0	5	0.0	
+RTL4	EAS_specific	narrow	1	0	2	5	0.4	CHB,JPT	0	5	0.0	
+TEX11	EAS_specific	narrow	1	0	1	5	0.2	CDX	0	5	0.0	
+TGIF2LX	EAS_specific	narrow	1	0	1	5	0.2	KHV	0	5	0.0	
+TRPC5	EAS_specific	narrow	1	0	2	5	0.4	CHB,JPT	0	5	0.0	
+WDR44	EUR_specific	broad	0	1	0	5	0.0		3	5	0.6	FIN,GBR,IBS
+MID2	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	CEU
+NCBP2L	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	CEU
+PCDH11X	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	FIN
+TSC22D3	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	CEU
+ZFX	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	GBR
+ZMAT1	EUR_specific	narrow	0	1	0	5	0.0		1	5	0.2	CEU
+MID1	shared	broad-narrow	1	1	4	5	0.8	CDX,CHB,JPT,KHV	1	5	0.2	IBS
+DMD	shared	narrow-broad	1	1	2	5	0.4	CDX,KHV	3	5	0.6	FIN,GBR,IBS
+DACH2	shared	narrow-narrow	1	1	1	5	0.2	CHB	1	5	0.2	FIN
+KDM6A	shared	narrow-narrow	1	1	1	5	0.2	CHS	1	5	0.2	FIN
+STS	shared	narrow-narrow	1	1	2	5	0.4	CHB,KHV	2	5	0.4	CEU,GBR
+USP9X	shared	narrow-narrow	1	1	1	5	0.2	KHV	1	5	0.2	FIN

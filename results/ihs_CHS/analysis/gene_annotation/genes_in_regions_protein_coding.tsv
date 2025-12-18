@@ -1,0 +1,4 @@
+gene_name	gene_id	gene_type	chr	start	end	strand	x_inactivation_status	overlap_type	region_chr	region_start	region_end	region_length	region_n_snps	region_max_std_ihs
+PPP1R2C	ENSG00000102055	protein_coding	X	42777366	42778163	-	subject	overlapping	X	42810527	42818428	7901	21	4.40076
+KDM6A	ENSG00000147050	protein_coding	X	44873188	45112779	+	escapee	contains_region	X	44929827	44956284	26457	30	5.01947
+EDA	ENSG00000158813	protein_coding	X	69616067	70039472	+	subject	contains_region	X	69674102	69695333	21231	27	4.25447
