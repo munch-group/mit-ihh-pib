@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Master pipeline to run iHS analysis on ALL individual populations
+# Master pipeline to run iHS analysis on ALL individual populations (mainly done by claude code)
 #
 # This pipeline will:
 # 1. Subset chromosome X data to each population separately
@@ -116,7 +116,7 @@ if [[ ${#NEED_RUN[@]} -eq 0 ]]; then
     exit 0
 fi
 
-# Ask for confirmation
+# Ask for confirmation -- this is from claude code. I wanted to optimize running iHS on all 26 populations at once without having to constantly check if the previous one had finished.
 echo "=========================================="
 echo "Ready to proceed?"
 echo "=========================================="
@@ -234,7 +234,7 @@ if [[ ${#JOB_IDS[@]} -gt 0 ]]; then
     done
     echo ""
 fi
-
+#this was added by claude code
 if [[ ${#SUBSET_FAILED[@]} -gt 0 ]] || [[ ${#SUBMIT_FAILED[@]} -gt 0 ]]; then
     log "=========================================="
     log "FAILURES DETECTED"
