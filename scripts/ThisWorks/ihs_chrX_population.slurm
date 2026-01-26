@@ -47,12 +47,12 @@ echo ""
 
 # Check if output already exists
 if [[ -s "$OUT" ]]; then
-    echo "✓ Output already exists: $OUT"
+    echo "Output already exists: $OUT"
     echo "  If you want to rerun, delete this file first."
     exit 0
 fi
 
-# Validate inputs
+# Validate inputs (by claude)
 if [[ ! -s "$HAP" ]]; then
     echo "ERROR: HAP file missing or empty: $HAP"
     echo "Did you run: python scripts/ThisWorks/subset_population_hapbin.py ${POP}"
@@ -64,7 +64,7 @@ if [[ ! -s "$MAP" ]]; then
     exit 1
 fi
 
-# Check HAP file format
+# Check HAP file format (claude)
 echo "Verifying HAP file format..."
 HAP_LINES=$(wc -l < "$HAP")
 HAP_SIZE=$(du -h "$HAP" | cut -f1)
@@ -73,7 +73,7 @@ echo "  HAP file: $HAP_SIZE, $HAP_LINES variants"
 echo "  First line: $FIELDS_LINE1 haplotypes (${POP} samples only)"
 echo ""
 
-# Check MAP file
+# Check MAP file (claude)
 echo "Verifying MAP file..."
 MAP_LINES=$(wc -l < "$MAP")
 MAP_FIRST_POS=$(head -1 "$MAP" | awk '{print $4}')
@@ -99,7 +99,7 @@ echo "=========================================="
 if [[ -s "$OUT" ]]; then
     OUT_LINES=$(wc -l < "$OUT")
     OUT_SIZE=$(du -h "$OUT" | cut -f1)
-    echo "✓ iHS completed for chr${CHR} (${POP})"
+    echo "iHS completed for chr${CHR} (${POP})"
     echo "=========================================="
     echo ""
     echo "Output file: $OUT"
@@ -113,7 +113,7 @@ if [[ -s "$OUT" ]]; then
     echo ""
 
     # Statistics
-    echo "Quick statistics:"
+    echo "First statistics:"
     tail -n +2 "$OUT" | awk '{
         if ($5 != "NA" && $5 != "nan") {
             sum += $5;
