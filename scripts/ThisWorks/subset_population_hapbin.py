@@ -25,7 +25,9 @@ def subset_population(pop_code):
     # Sample files
     sample_pop_file = base_dir / "data/grch38/sample_population.txt"
 
-    # Input files (October backup - what was actually used)
+    # Input files (October 2025 backup - what was actually used)
+    # I tried to re-run iHS in multiple ways because at some point I thought the 1000G data wasn't suitable for the hapbin software
+    # In the end it turned out my initial approach was fine, which is why I'm using these backup files here
     hap_file = data_dir / "chrX.hapbin.hap.backup_20251122_185513"
     map_file = data_dir / "chrX.hapbin.map.backup_20251122_185513"
 
@@ -38,7 +40,7 @@ def subset_population(pop_code):
     print(f"Subsetting Chromosome X Hapbin Data to {pop_code} Samples")
     print("=" * 80)
     print()
-    print("Using October 2024 backup files")
+    print("Using October 2025 backup files")
     print()
 
     # Load sample IDs for this population
@@ -142,33 +144,6 @@ def subset_population(pop_code):
 
     print(f"  Copied: {output_map}")
     print(f"  MAP lines: {map_lines:,}")
-    print()
-
-    # Verify output
-    if output_hap.exists() and output_map.exists():
-        with open(output_hap, 'r') as f:
-            first_line_out = f.readline().strip().split()
-            print(f"Verification:")
-            print(f"  Output HAP haplotypes: {len(first_line_out)}")
-            print(f"  Expected: ~{len(pop_column_indices)}")
-
-        with open(output_map, 'r') as f:
-            map_lines_out = sum(1 for _ in f)
-            print(f"  Output MAP lines: {map_lines_out:,}")
-            print(f"  Match with HAP: {map_lines_out == lines_processed}")
-
-    print()
-    print("=" * 80)
-    print("Subsetting Complete!")
-    print("=" * 80)
-    print()
-    print("Output files:")
-    print(f"  HAP: {output_hap}")
-    print(f"  MAP: {output_map}")
-    print(f"  Samples: {output_sample_list}")
-    print()
-    print("Next step:")
-    print(f"  Run iHS on {pop_code}-only data")
     print()
 
 if __name__ == "__main__":
