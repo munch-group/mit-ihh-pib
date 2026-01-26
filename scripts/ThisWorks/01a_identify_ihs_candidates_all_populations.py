@@ -3,6 +3,13 @@
 Run iHS candidate identification for all populations.
 This processes all 26 populations to identify significant iHS candidates
 with p-values based on standard normal distribution.
+
+This reads iHS data from chrX for each population and calculates p-values from standard normal distribution
+It then extracts candidates at fixed thresholds (In order to compare to original paper)
+Then it computes population statistics including Q99, Q99.5 and Q99.9 thresholds 
+Outputs are: 
+- per-population candidate files at liberal/moderate/stringent thresholds 
+- results/ihs_candidates_summary_all_populations.tsv (contains Q99 thresholds per population, which is what I used in further analyses)
 """
 
 import pandas as pd
