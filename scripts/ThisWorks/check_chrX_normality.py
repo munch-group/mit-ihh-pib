@@ -3,8 +3,7 @@
 Script: Check normality of Std iHS distribution on X chromosome
 Purpose: Visualize and test if |Std iHS| follows a normal distribution
          across all 26 sub-populations
-
-Author: MIT IHH PIB Project
+Author: Mit Van Bruggen
 Date: 2025-12-16
 """
 
@@ -125,10 +124,10 @@ for pop, df in data.items():
     else:
         shapiro_stat, shapiro_p = stats.shapiro(std_ihs)
 
-    # Kolmogorov-Smirnov test against standard normal
+    # Kolmogorov-Smirnov test against standard normal, suggested by claude
     ks_stat, ks_p = stats.kstest(std_ihs, 'norm', args=(0, 1))
 
-    # Anderson-Darling test
+    # Anderson-Darling test, suggested by claude
     anderson_result = stats.anderson(std_ihs, dist='norm')
 
     print(f"{pop} Population:")
@@ -222,7 +221,7 @@ normality_df.to_csv(output_dir / "chrX_normality_statistics.tsv", sep='\t', inde
 print(f"Saved: {output_dir / 'chrX_normality_statistics.tsv'}")
 print()
 
-# Create comparison plots by super-population group
+# Create comparison plots by super-population group (this was done by claude and is not that useful after all)
 for group_name, group_pops in pop_groups.items():
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
@@ -351,22 +350,3 @@ plt.savefig(output_dir / "chrX_comparison_all.png", dpi=300, bbox_inches='tight'
 print(f"Saved: {output_dir / 'chrX_comparison_all.png'}")
 print()
 
-print("=" * 70)
-print("Interpretation")
-print("=" * 70)
-print()
-print("Under the null hypothesis of neutrality, Std iHS should be ~ N(0, 1)")
-print()
-print("Deviations from normality may indicate:")
-print("  - Widespread selection on the X chromosome")
-print("  - Population-specific demographic history")
-print("  - Technical artifacts in iHS calculation")
-print()
-print("For the normality tests:")
-print("  - p < 0.05 suggests significant deviation from normality")
-print("  - Q-Q plots show how well data matches theoretical normal distribution")
-print("  - Skewness and kurtosis should be close to 0 for normal distribution")
-print()
-print("If distributions are non-normal, consider using empirical percentiles")
-print("rather than fixed thresholds (|Std iHS| >= 2.5) for defining candidates")
-print()
