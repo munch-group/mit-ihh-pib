@@ -6,15 +6,10 @@ Purpose: Cluster nearby significant SNPs into selection regions
 Approach (based on literature):
 - Villegas-Miron 2021: Multiple contiguous SNPs needed, not single outliers
 - Approach: 20kb windows requiring ≥20 significant SNPs
-- We'll use 20kb windows with ≥20 SNPs for initial scan, more stringent with ≥50 
+- We use 20kb windows with ≥20 SNPs for initial scan, more stringent with ≥50 
 - Then merge overlapping windows
 
-Key considerations for X chromosome:
-- Use empirical 99th percentile (as calculated in 01 script) instead of fixed 2.5 threshold
-- Account for lower candidate density
-- May require adjusted window parameters
-
-Author: MIT IHH PIB Project
+Author: Mit Van Bruggen
 Date: 2025-10-23
 Updated: 2025-12-07
 """
@@ -26,7 +21,7 @@ from scipy import stats
 import warnings
 warnings.filterwarnings('ignore')
 
-# Setup paths
+# Setup paths (inefficient because you need to do it for 26 populations in the end and manually put in their Q99, which is why I made script 11 in the end)
 base_dir = Path("/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib")
 candidates_dir = base_dir / "results/ihs_EUR/analysis/candidates/candidates"
 regions_dir = base_dir / "results/ihs_EUR/analysis/regions"
@@ -48,14 +43,6 @@ MIN_SNPS_STRINGENT = 50  # More stringent filter
 AUTOSOME_THRESHOLD = 2.5
 X_THRESHOLD = 3.024  # X chromosome 99th percentile for that population
 
-print(f"Configuration:")
-print(f"  Window size: {WINDOW_SIZE:,} bp ({WINDOW_SIZE/1000:.0f} kb)")
-print(f"  Step size: {STEP_SIZE:,} bp ({STEP_SIZE/1000:.0f} kb)")
-print(f"  Window overlap: {100 * (1 - STEP_SIZE/WINDOW_SIZE):.0f}%")
-print(f"  Minimum SNPs per region: {MIN_SNPS}")
-print(f"  Autosome threshold: |Std iHS| >= {AUTOSOME_THRESHOLD}")
-print(f"  X chromosome threshold: |Std iHS| >= {X_THRESHOLD}")
-print()
 
 def load_candidates(threshold_level="moderate"):
     """Load candidate variants for specified threshold"""
@@ -66,16 +53,11 @@ def load_candidates(threshold_level="moderate"):
     return df
 
 def apply_chromosome_specific_threshold(df, autosome_thresh, x_thresh):
-    """Apply different thresholds for autosomes vs X chromosome"""
+    """Apply different thresholds for autosomes vs X chromosome""" #in the end we didn't analyze autosomes, refer to script 11 
     autosome_mask = (df['chr_type'] == 'Autosome') & (np.abs(df['Std iHS']) >= autosome_thresh)
     x_mask = (df['chr_type'] == 'X chromosome') & (np.abs(df['Std iHS']) >= x_thresh)
 
     filtered = df[autosome_mask | x_mask].copy()
-
-    print(f"  After chromosome-specific thresholds:")
-    print(f"    Autosomes (|Std iHS| >= {autosome_thresh}): {autosome_mask.sum():,}")
-    print(f"    X chromosome (|Std iHS| >= {x_thresh}): {x_mask.sum():,}")
-    print(f"    Total retained: {len(filtered):,}")
 
     return filtered
 
@@ -99,7 +81,7 @@ def cluster_candidates_to_regions(candidates, window_size, min_snps):
         if x == 'X':
             return (1, 0)  # X comes last
         else:
-            # Handle both "21" and "chr21" formats, and integer types
+            # Handle both "21" and "chr21" formats, and integer types, had some issues with this initially so instead of changing the data I added this
             chr_str = str(x).replace('chr', '')
             return (0, int(chr_str))  # Autosomes sorted numerically
 
@@ -226,7 +208,7 @@ print(f"Step 3: Clustering candidates into regions (min {MIN_SNPS} SNPs)...")
 regions = cluster_candidates_to_regions(filtered_candidates, WINDOW_SIZE, MIN_SNPS)
 print()
 
-# Step 4: Summary statistics
+# Step 4: Summary statistics 
 print("=" * 70)
 print("Region Summary")
 print("=" * 70)
