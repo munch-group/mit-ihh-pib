@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Script: Annotate selection regions with genes using GENCODE
-Purpose: Fast, reliable gene annotation without API dependencies
+Purpose: Gene annotation without API dependencies
 
-Uses GENCODE v44 (GRCh38.p14) - the gold standard for human genome annotation
+Uses GENCODE v44 (GRCh38.p14) Gold standard for human genome annotation
 Downloads and caches GTF file locally for fast repeated queries
 
 Features:
@@ -14,7 +14,7 @@ Features:
 - Generates gene lists for enrichment testing
 - No rate limits, 100% reproducible
 
-Author: MIT IHH PIB Project
+Author: Mit Van Bruggen
 Date: 2025-10-23
 """
 
@@ -51,10 +51,6 @@ X_INACTIVATION_ESCAPEES = {
     'XG', 'ZBED1', 'SSR4', 'PRKX', 'NLGN4X', 'VCX', 'ANOS1'
 }
 
-print("=" * 70)
-print("Gene Annotation using GENCODE v44")
-print("=" * 70)
-print()
 
 def download_gencode():
     """Download GENCODE GTF file if not already cached"""
@@ -62,14 +58,6 @@ def download_gencode():
         file_size = GENCODE_GTF.stat().st_size / (1024**2)  # MB
         print(f"✓ GENCODE v{GENCODE_VERSION} already downloaded ({file_size:.1f} MB)")
         return
-
-    print(f"Downloading GENCODE v{GENCODE_VERSION} GTF file...")
-    print(f"  URL: {GENCODE_URL}")
-    print(f"  Destination: {GENCODE_GTF}")
-    print(f"  Size: ~45 MB (compressed), ~1.5 GB (uncompressed)")
-    print()
-    print("  This is a one-time download and will be cached for future use.")
-    print("  Downloading... (may take 2-5 minutes depending on connection)")
 
     try:
         def report_progress(block_num, block_size, total_size):
@@ -81,10 +69,10 @@ def download_gencode():
                   end='', file=sys.stderr)
 
         urllib.request.urlretrieve(GENCODE_URL, GENCODE_GTF, reporthook=report_progress)
-        print("\n✓ Download complete!")
+        print("\n Download complete!")
         print()
     except Exception as e:
-        print(f"\n✗ Error downloading GENCODE: {e}", file=sys.stderr)
+        print(f"\n Error downloading GENCODE: {e}", file=sys.stderr)
         sys.exit(1)
 
 def parse_gtf_attributes(attr_string):
@@ -135,7 +123,6 @@ def load_gencode_genes():
             gene_type = attributes.get('gene_type', 'N/A')
 
             # Gene description if available
-            # Note: basic GENCODE GTF doesn't have descriptions, we'll add later if needed
 
             genes.append({
                 'chr': chrom,
@@ -151,7 +138,7 @@ def load_gencode_genes():
             if line_num % 100000 == 0:
                 print(f"  Processed {line_num:,} lines...", end='\r', file=sys.stderr)
 
-    print(f"\r  ✓ Parsed {len(genes):,} genes from GENCODE v{GENCODE_VERSION}")
+    print(f"\r  Parsed {len(genes):,} genes from GENCODE v{GENCODE_VERSION}")
 
     # Convert to DataFrame
     genes_df = pd.DataFrame(genes)
@@ -288,7 +275,7 @@ def annotate_all_regions(regions_file, genes_df, flank=50000):
         if (idx + 1) % 500 == 0:
             print(f"  Processed {idx + 1:,}/{len(regions):,} regions...", end='\r', file=sys.stderr)
 
-    print(f"\r  ✓ Annotated all {len(regions):,} regions")
+    print(f"\r   Annotated all {len(regions):,} regions") #progress trackers by claude
     print()
 
     return pd.DataFrame(annotated_regions), pd.DataFrame(all_region_genes)
@@ -308,12 +295,12 @@ def generate_gene_lists(genes_in_regions_df, output_dir):
 
     # All unique genes
     all_genes = genes_in_regions_df.drop_duplicates(subset=['gene_id'])
-    print(f"  Total unique genes in regions: {len(all_genes):,}")
+    print(f"  Total unique genes in regions: {len(all_genes):,}") #added later by claude
 
     # Save comprehensive gene list
     all_genes_file = output_dir / "all_genes_in_selection_regions.tsv"
     all_genes.to_csv(all_genes_file, sep='\t', index=False)
-    print(f"  Saved: {all_genes_file.name}")
+    print(f"  Saved: {all_genes_file.name}") #added later by claude
 
     # X chromosome vs autosomes
     x_genes = all_genes[all_genes['chr'] == 'X']
@@ -321,23 +308,23 @@ def generate_gene_lists(genes_in_regions_df, output_dir):
 
     x_genes_file = output_dir / "X_chromosome_genes_in_selection.tsv"
     x_genes.to_csv(x_genes_file, sep='\t', index=False)
-    print(f"  Saved: {x_genes_file.name} ({len(x_genes):,} genes)")
+    print(f"  Saved: {x_genes_file.name} ({len(x_genes):,} genes)") #added later by claude
 
     autosome_genes_file = output_dir / "autosome_genes_in_selection.tsv"
     autosome_genes.to_csv(autosome_genes_file, sep='\t', index=False)
-    print(f"  Saved: {autosome_genes_file.name} ({len(autosome_genes):,} genes)")
+    print(f"  Saved: {autosome_genes_file.name} ({len(autosome_genes):,} genes)") # added later by claude 
 
     # Protein-coding genes only (for enrichment)
     protein_coding = all_genes[all_genes['gene_type'] == 'protein_coding']
     protein_coding_file = output_dir / "protein_coding_genes_in_selection.tsv"
     protein_coding.to_csv(protein_coding_file, sep='\t', index=False)
-    print(f"  Saved: {protein_coding_file.name} ({len(protein_coding):,} genes)")
+    print(f"  Saved: {protein_coding_file.name} ({len(protein_coding):,} genes)") #added later by claude
 
     # X chromosome protein-coding
     x_protein_coding = protein_coding[protein_coding['chr'] == 'X']
     x_protein_coding_file = output_dir / "X_protein_coding_genes.tsv"
     x_protein_coding.to_csv(x_protein_coding_file, sep='\t', index=False)
-    print(f"  Saved: {x_protein_coding_file.name} ({len(x_protein_coding):,} genes)")
+    print(f"  Saved: {x_protein_coding_file.name} ({len(x_protein_coding):,} genes)") #added later by claude
 
     # Simple gene name lists for g:Profiler / enrichment tools
     gene_names_dir = output_dir / "gene_name_lists"
@@ -370,6 +357,7 @@ def generate_gene_lists(genes_in_regions_df, output_dir):
         'x_protein_coding': len(x_protein_coding)
     }
 
+#this was done by claude 
 def print_summary(annotated_regions, genes_in_regions, gene_counts):
     """Print summary statistics"""
     print("=" * 70)
@@ -377,7 +365,7 @@ def print_summary(annotated_regions, genes_in_regions, gene_counts):
     print("=" * 70)
     print()
 
-    # Region statistics
+    # Region statistics 
     print("Regions:")
     print(f"  Total regions: {len(annotated_regions):,}")
     regions_with_genes = annotated_regions[annotated_regions['n_genes_total'] > 0]
