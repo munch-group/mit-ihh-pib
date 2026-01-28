@@ -2,7 +2,7 @@
 """
 iHS Analysis Workflow Visualization
 
-Visualizes the complete iHS analysis pipeline for EUR, EAS, and AFR populations:
+Visualizes the complete iHS analysis pipeline for all subpopulations:
 1. SNPs with |Std.iHS| > q99 along the X chromosome
 2. Selection regions defined by clustering significant SNPs
 3. Genes annotated within selection regions
@@ -10,7 +10,7 @@ Visualizes the complete iHS analysis pipeline for EUR, EAS, and AFR populations:
 Creates multi-panel figures showing the analysis workflow for each population.
 
 Author: Mit Van Bruggen
-Date: 2025-12-10
+Date: 2025-12-22
 """
 
 import pandas as pd
@@ -26,12 +26,43 @@ warnings.filterwarnings('ignore')
 
 BASE_DIR = Path('/home/vanbruggenmit/mit-ihh-pib/people/vanbruggenmit/mit-ihh-pib')
 RESULTS_DIR = BASE_DIR / 'results'
-OUTPUT_DIR = BASE_DIR / 'results/iHSperpop_genes_overlap/ihs_workflow_viz'
+OUTPUT_DIR = BASE_DIR / 'results/subpopulation_ihs_pipeline_viz'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-POPS = ['EUR', 'EAS', 'AFR']
-COLORS = {'EUR': '#3498db', 'EAS': '#e74c3c', 'AFR': '#2ecc71'}
-NAMES = {'EUR': 'European', 'EAS': 'East Asian', 'AFR': 'African'}
+# All subpopulations (excluding pooled AFR, EAS, EUR which were methodologically incorrect)
+POPS = ['ACB', 'ASW', 'BEB', 'CDX', 'CEU', 'CHB', 'CHS', 'CLM', 'ESN', 'FIN',
+        'GBR', 'GIH', 'GWD', 'IBS', 'ITU', 'JPT', 'KHV', 'LWK', 'MSL', 'MXL',
+        'PEL', 'PJL', 'PUR', 'STU', 'TSI', 'YRI']
+
+# Population colors by superpopulation affiliation
+COLORS = {
+    # African
+    'ACB': '#2ecc71', 'ASW': '#27ae60', 'ESN': '#229954', 'GWD': '#1e8449',
+    'LWK': '#196f3d', 'MSL': '#145a32', 'YRI': '#0e4b2b',
+    # East Asian
+    'CDX': '#e74c3c', 'CHB': '#cb4335', 'CHS': '#b03a2e', 'JPT': '#943126', 'KHV': '#78281f',
+    # European
+    'CEU': '#3498db', 'FIN': '#2e86c1', 'GBR': '#2874a6', 'IBS': '#21618c', 'TSI': '#1b4f72',
+    # South Asian
+    'BEB': '#9b59b6', 'GIH': '#884ea0', 'ITU': '#76448a', 'PJL': '#633974', 'STU': '#512e5f',
+    # Admixed American
+    'CLM': '#f39c12', 'MXL': '#e67e22', 'PEL': '#d68910', 'PUR': '#ca6f1e'
+}
+
+# Full population names
+NAMES = {
+    'ACB': 'African Caribbean (Barbados)', 'ASW': 'African American (SW USA)',
+    'ESN': 'Esan (Nigeria)', 'GWD': 'Gambian (Mandinka)', 'LWK': 'Luhya (Kenya)',
+    'MSL': 'Mende (Sierra Leone)', 'YRI': 'Yoruba (Nigeria)',
+    'CDX': 'Chinese Dai (Xishuangbanna)', 'CHB': 'Han Chinese (Beijing)',
+    'CHS': 'Han Chinese (South)', 'JPT': 'Japanese (Tokyo)', 'KHV': 'Kinh (Vietnam)',
+    'CEU': 'Utah Residents (CEPH)', 'FIN': 'Finnish', 'GBR': 'British (England/Scotland)',
+    'IBS': 'Iberian (Spain)', 'TSI': 'Toscani (Italy)',
+    'BEB': 'Bengali (Bangladesh)', 'GIH': 'Gujarati Indian (Houston)',
+    'ITU': 'Indian Telugu (UK)', 'PJL': 'Punjabi (Lahore)', 'STU': 'Sri Lankan Tamil (UK)',
+    'CLM': 'Colombian (Medellin)', 'MXL': 'Mexican (Los Angeles)',
+    'PEL': 'Peruvian (Lima)', 'PUR': 'Puerto Rican'
+}
 
 print("="*80)
 print("iHS Workflow Visualization")
@@ -45,8 +76,8 @@ def load_data(pop):
 
     # Load ALL X chromosome SNPs to calculate proper q99
     all_snps_file = pdir / f'{pop}.chrX.ihs.tsv'
-    rfile = pdir / 'analysis/regions/selection_regions_20kb_min20snps.tsv'
-    gfile = pdir / 'analysis/gene_annotation/genes_in_selection_regions_detailed.tsv'
+    rfile = pdir / 'analysis/regions/selection_regions_X_chromosome.tsv'
+    gfile = pdir / 'analysis/gene_annotation/genes_in_regions.tsv'
 
     # Load all SNPs
     if all_snps_file.exists():
@@ -145,10 +176,10 @@ def plot_workflow(pop, data):
         # First pass: assign genes to horizontal tracks
         for _, g in ug.iterrows():
             y = 0
-            while any((y == oy and not (g['gene_end'] < os or g['gene_start'] > oe))
+            while any((y == oy and not (g['end'] < os or g['start'] > oe))
                      for os, oe, oy in tracks.values()):
                 y += 1
-            tracks[g['gene_name']] = (g['gene_start'], g['gene_end'], y)
+            tracks[g['gene_name']] = (g['start'], g['end'], y)
             my = max(my, y)
 
         # Draw gene rectangles
@@ -156,15 +187,15 @@ def plot_workflow(pop, data):
             y = tracks[g['gene_name']][2]
             col = '#2c3e50' if g['gene_type']=='protein_coding' else '#95a5a6'
             alph = 0.9 if g['gene_type']=='protein_coding' else 0.6
-            rect = Rectangle((g['gene_start'], y), g['gene_end']-g['gene_start'], 0.8,
+            rect = Rectangle((g['start'], y), g['end']-g['start'], 0.8,
                            facecolor=col, edgecolor='black', linewidth=0.3, alpha=alph)
             ax3.add_patch(rect)
 
-        # Second pass: add labels for protein-coding genes with smart positioning
+        # Second pass: add labels for protein-coding genes with smart positioning (had help from Claude because they were often overlapping, they still do)
         protein_coding = ug[ug['gene_type'] == 'protein_coding'].copy()
         if len(protein_coding) > 0:
             # Sort by position
-            protein_coding = protein_coding.sort_values('gene_start')
+            protein_coding = protein_coding.sort_values('start')
 
             # Track label positions to avoid overlap
             label_positions = []  # (center_x, label_height)
@@ -172,7 +203,7 @@ def plot_workflow(pop, data):
 
             for _, g in protein_coding.iterrows():
                 y = tracks[g['gene_name']][2]
-                gene_center = (g['gene_start'] + g['gene_end']) / 2
+                gene_center = (g['start'] + g['end']) / 2
 
                 # Determine label height - stagger if too close to previous labels
                 label_height = 1.0  # Base height above gene
@@ -226,72 +257,28 @@ def plot_workflow(pop, data):
     plt.close()
     print(f"  Saved: {outfile.name}")
 
-def plot_comparison(all_data):
-    """Compare all populations"""
-    print("Creating population comparison...")
-
-    fig, axes = plt.subplots(3, 1, figsize=(20, 10), sharex=True)
-
-    for i, pop in enumerate(POPS):
-        ax = axes[i]
-        reg = all_data[pop]['reg']
-        if reg is not None:
-            for _, r in reg.iterrows():
-                intensity = min(r['max_std_ihs']/8, 1)
-                # Use population-specific color with intensity-based darkness
-                color_map = plt.cm.Reds if pop == 'EUR' else (plt.cm.Blues if pop == 'EAS' else plt.cm.Greens)
-                color = color_map(0.5 + 0.5*intensity)
-
-                # Draw vertical bar at region midpoint
-                midpoint = (r['start'] + r['end']) / 2
-                ax.plot([midpoint, midpoint], [0, 1],
-                       color=color, linewidth=2, alpha=0.9, solid_capstyle='butt')
-            ax.set_ylabel(f'{NAMES[pop]}\n({len(reg)} regions)',
-                         fontsize=11, fontweight='bold')
-        ax.set_xlim(0, 155_000_000)
-        ax.set_ylim(0, 1)
-        ax.set_yticks([])
-        ax.grid(alpha=0.3, axis='x')
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
-        ax.spines['left'].set_visible(False)
-
-    axes[2].set_xlabel('X Chromosome Position (Mb)', fontsize=12, fontweight='bold')
-    axes[2].set_xticks(np.arange(0, 160_000_000, 20_000_000))
-    axes[2].set_xticklabels([f'{int(x/1e6)}' for x in np.arange(0, 160_000_000, 20_000_000)])
-
-    plt.suptitle('Selection Regions Comparison Across Populations',
-                fontsize=14, fontweight='bold', y=0.995)
-    plt.tight_layout()
-    outfile = OUTPUT_DIR / 'population_comparison.png'
-    plt.savefig(outfile, dpi=300, bbox_inches='tight')
-    plt.close()
-    print(f"  Saved: {outfile.name}")
 
 # Main execution
 all_data = {}
+print("\nLoading data for all populations...")
 for p in POPS:
     all_data[p] = load_data(p)
 
-print()
-print("="*80)
-print("Creating Visualizations")
-print("="*80)
-print()
 
+successful_plots = []
 for p in POPS:
     plot_workflow(p, all_data[p])
-
-print()
-plot_comparison(all_data)
+    if all_data[p]['cand'] is not None and all_data[p]['reg'] is not None:
+        successful_plots.append(p)
 
 print()
 print("="*80)
-print("Complete!")
+print("Complete")
 print("="*80)
 print(f"\nAll outputs saved to: {OUTPUT_DIR}")
-print("\nGenerated files:")
-print("  - EUR_ihs_workflow.png")
-print("  - EAS_ihs_workflow.png")
-print("  - AFR_ihs_workflow.png")
-print("  - population_comparison.png")
+print(f"\nSuccessfully generated {len(successful_plots)} workflow visualizations:")
+for pop in successful_plots:
+    print(f"  - {pop}_ihs_workflow.png ({NAMES[pop]})")
+if len(successful_plots) < len(POPS):
+    skipped = set(POPS) - set(successful_plots)
+    print(f"\nSkipped {len(skipped)} populations due to missing data: {', '.join(sorted(skipped))}")
